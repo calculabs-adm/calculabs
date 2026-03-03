@@ -57,6 +57,53 @@ function evaluateClientFormula(
         if (sexo === "masculino") return 88.362 + 13.397 * peso + 4.799 * altura_cm - 5.677 * idade;
         return 447.593 + 9.247 * peso + 3.098 * altura_cm - 4.33 * idade;
       },
+      calcular_mdc: (numerosStr: string) => {
+        const numeros = numerosStr.split(",").map((n) => Math.abs(parseInt(n.trim(), 10))).filter((n) => !isNaN(n) && n > 0);
+        if (numeros.length === 0) return 0;
+        if (numeros.length === 1) return numeros[0];
+        
+        // Algoritmo de Euclides
+        const mdc2 = (a: number, b: number): number => b === 0 ? a : mdc2(b, a % b);
+        
+        let resultado = numeros[0];
+        for (let i = 1; i < numeros.length; i++) {
+          resultado = mdc2(resultado, numeros[i]);
+        }
+        return resultado;
+      },
+      calcular_mmc: (numerosStr: string) => {
+        const numeros = numerosStr.split(",").map((n) => Math.abs(parseInt(n.trim(), 10))).filter((n) => !isNaN(n) && n > 0);
+        if (numeros.length === 0) return 0;
+        if (numeros.length === 1) return numeros[0];
+        
+        // MMC(a,b) = |a*b| / MDC(a,b)
+        const mdc2 = (a: number, b: number): number => b === 0 ? a : mdc2(b, a % b);
+        
+        let resultado = numeros[0];
+        for (let i = 1; i < numeros.length; i++) {
+          resultado = (resultado * numeros[i]) / mdc2(resultado, numeros[i]);
+        }
+        return Math.round(resultado);
+      },
+      calcular_idade_exata: (dataNascimento: string, dataAtual: string) => {
+        const nasc = new Date(dataNascimento);
+        const atual = new Date(dataAtual);
+        let anos = atual.getFullYear() - nasc.getFullYear();
+        let meses = atual.getMonth() - nasc.getMonth();
+        let dias = atual.getDate() - nasc.getDate();
+        
+        if (dias < 0) {
+          meses--;
+          const ultimoDiaMes = new Date(atual.getFullYear(), atual.getMonth(), 0).getDate();
+          dias += ultimoDiaMes;
+        }
+        if (meses < 0) {
+          anos--;
+          meses += 12;
+        }
+        
+        return `${anos} anos, ${meses} meses e ${dias} dias`;
+      },
     };
 
     const allVars = { ...mathHelpers, ...vars };
