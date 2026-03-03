@@ -1448,7 +1448,7 @@
     "title": "Calculadora de Diferença entre Datas",
     "description": "Calcule a diferença entre duas datas em dias, meses e anos",
     "introduction": "Calcular a diferença entre duas datas é uma necessidade comum em diversas situações: calcular prazos contratuais, verificar tempo de serviço, calcular vencimentos, planejar eventos e muito mais. Esta calculadora mostra a diferença em dias, semanas, meses e anos.",
-    "formula": "diferenca_dias = (data_final - data_inicial) / (1000 * 60 * 60 * 24)",
+    "formula": "diferenca_dias = calcular_diferenca_datas(data_inicial, data_final)",
     "formula_display": "Diferença = Data Final - Data Inicial",
     "variables": "[{\"id\":\"data_inicial\",\"label\":\"Data inicial\",\"type\":\"date\",\"placeholder\":\"2024-01-01\"},{\"id\":\"data_final\",\"label\":\"Data final\",\"type\":\"date\",\"placeholder\":\"2024-12-31\"}]",
     "steps": "[\"Informe a data inicial e a data final\",\"O sistema calcula a diferença em milissegundos\",\"Converte para dias, semanas, meses e anos\"]",

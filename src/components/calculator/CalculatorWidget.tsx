@@ -104,6 +104,12 @@ function evaluateClientFormula(
         
         return `${anos} anos, ${meses} meses e ${dias} dias`;
       },
+      calcular_diferenca_datas: (dataInicial: string, dataFinal: string) => {
+        const ini = new Date(dataInicial);
+        const fim = new Date(dataFinal);
+        const diffMs = fim.getTime() - ini.getTime();
+        return diffMs / (1000 * 60 * 60 * 24);
+      },
     };
 
     const allVars = { ...mathHelpers, ...vars };
