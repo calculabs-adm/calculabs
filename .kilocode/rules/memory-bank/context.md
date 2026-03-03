@@ -28,6 +28,7 @@ O projeto foi transformado de um template Next.js em um portal completo de calcu
 - [x] JSON-LD estruturado (Article, FAQPage, BreadcrumbList, WebSite)
 - [x] Breadcrumbs em todas as páginas
 - [x] TypeScript sem erros, lint sem warnings
+- [x] Fix domain: atualizados todos os referências de 'portaldocalculo.com.br' para 'www.calculabs.com.br'
 
 ## Current Structure
 
@@ -99,3 +100,4 @@ O projeto foi transformado de um template Next.js em um portal completo de calcu
 | 2026-03-03 | Portal do Cálculo criado do zero com 50 calculadoras, banco de dados, SEO completo |
 | 2026-03-03 | Fix crítico: banco de dados migrado de @kilocode/app-builder-db (proxy remoto) para @libsql/client (SQLite local). Adicionado serverExternalPackages no next.config.ts. Migrações e seed executados com sucesso. |
 | 2026-03-03 | Rename from 'Portal do Cálculo' to 'CalcuLabs' for domain calculabs.com.br |
+| 2026-03-03 | Fix domain: updated all hardcoded 'portaldocalculo.com.br' references to 'www.calculabs.com.br' |
