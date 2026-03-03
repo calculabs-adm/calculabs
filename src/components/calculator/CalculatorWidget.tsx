@@ -74,14 +74,17 @@ function evaluateClientFormula(
       }
     }
 
+    // Declare all result variables
+    const varDeclarations = resultVarNames.map((v) => `var ${v};`).join(" ");
+
     const returnStatements = resultVarNames
       .map((v) => `try { _r[${JSON.stringify(v)}] = ${v}; } catch(e) {}`)
       .join("\n");
 
     const fnBody = `
-      "use strict";
-      let _r = {};
+      var _r = {};
       try {
+        ${varDeclarations}
         ${formula}
       } catch(e) {}
       ${returnStatements}
