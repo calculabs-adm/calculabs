@@ -50,12 +50,12 @@ export default async function CategoryPage({ params }: Props) {
     "@type": "CollectionPage",
     name: `Calculadoras de ${data.name}`,
     description: data.description,
-    url: `https://portaldocalculo.com.br/${data.slug}`,
+    url: `https://www.calculabs.com.br/${data.slug}`,
     breadcrumb: {
       "@type": "BreadcrumbList",
       itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Início", item: "https://portaldocalculo.com.br" },
-        { "@type": "ListItem", position: 2, name: data.name, item: `https://portaldocalculo.com.br/${data.slug}` },
+        { "@type": "ListItem", position: 1, name: "Início", item: "https://www.calculabs.com.br" },
+        { "@type": "ListItem", position: 2, name: data.name, item: `https://www.calculabs.com.br/${data.slug}` },
       ],
     },
   };

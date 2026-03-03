@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!data) return { title: "Calculadora não encontrada" };
 
   const { calculator, category, subcategory } = data;
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://portaldocalculo.com.br";
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.calculabs.com.br";
   const canonicalUrl = `${siteUrl}/${category?.slug}/${subcategory?.slug}/${calculator.slug}`;
 
   return {
@@ -83,7 +83,7 @@ export default async function CalculatorPage({ params }: Props) {
     ? JSON.parse(calculator.faqs)
     : [];
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://portaldocalculo.com.br";
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.calculabs.com.br";
   const canonicalUrl = `${siteUrl}/${category?.slug}/${subcategory?.slug}/${calculator.slug}`;
 
   // JSON-LD structured data
