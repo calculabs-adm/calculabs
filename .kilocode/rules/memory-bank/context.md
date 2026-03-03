@@ -98,3 +98,4 @@ O projeto foi transformado de um template Next.js em um portal completo de calcu
 |------|---------|
 | 2026-03-03 | Portal do Cálculo criado do zero com 50 calculadoras, banco de dados, SEO completo |
 | 2026-03-03 | Fix crítico: banco de dados migrado de @kilocode/app-builder-db (proxy remoto) para @libsql/client (SQLite local). Adicionado serverExternalPackages no next.config.ts. Migrações e seed executados com sucesso. |
+| 2026-03-03 | Barra de busca prominent adicionada ao Header com busca em tempo real, dropdown de resultados e navegação direta para calculadoras |
