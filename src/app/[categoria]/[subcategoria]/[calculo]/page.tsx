@@ -37,19 +37,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const canonicalUrl = `${siteUrl}/${category?.slug}/${subcategory?.slug}/${calculator.slug}`;
 
   return {
-    title: calculator.metaTitle,
-    description: calculator.metaDescription,
+    title: calculator.meta_title,
+    description: calculator.meta_description,
     keywords: calculator.keywords ? JSON.parse(calculator.keywords) : [],
     alternates: { canonical: canonicalUrl },
     openGraph: {
-      title: calculator.metaTitle,
-      description: calculator.metaDescription,
+      title: calculator.meta_title,
+      description: calculator.meta_description,
       url: canonicalUrl,
       type: "article",
-      modifiedTime: calculator.updatedAt?.toISOString(),
+      modifiedTime: calculator.updated_at ? new Date(calculator.updated_at * 1000).toISOString() : undefined,
     },
     other: {
-      "article:modified_time": calculator.updatedAt?.toISOString() ?? "",
+      "article:modified_time": calculator.updated_at ? new Date(calculator.updated_at * 1000).toISOString() : "",
     },
   };
 }
@@ -93,10 +93,10 @@ export default async function CalculatorPage({ params }: Props) {
     headline: calculator.title,
     description: calculator.description,
     url: canonicalUrl,
-    dateModified: calculator.updatedAt?.toISOString(),
+    dateModified: calculator.updated_at ? new Date(calculator.updated_at * 1000).toISOString() : undefined,
     author: {
       "@type": "Organization",
-      name: calculator.authorName ?? "CalcuLabs",
+      name: calculator.author_name ?? "CalcuLabs",
     },
     publisher: {
       "@type": "Organization",
@@ -199,10 +199,10 @@ export default async function CalculatorPage({ params }: Props) {
                 <span className={`text-xs font-semibold px-2.5 py-1 rounded-full ${complexityClass}`}>
                   {complexityLabel}
                 </span>
-                {calculator.updatedAt && (
+                {calculator.updated_at && (
                   <span className="text-xs text-slate-400">
                     Atualizado em{" "}
-                    {new Date(calculator.updatedAt).toLocaleDateString("pt-BR")}
+                    {new Date(calculator.updated_at * 1000).toLocaleDateString("pt-BR")}
                   </span>
                 )}
               </div>
@@ -215,13 +215,13 @@ export default async function CalculatorPage({ params }: Props) {
             </div>
 
             {/* Formula */}
-            {calculator.formulaDisplay && (
+            {calculator.formula_display && (
               <div>
                 <h2 className="text-xl font-bold text-slate-900 mb-3">
                   📐 Fórmula
                 </h2>
                 <div className="formula-display">
-                  {calculator.formulaDisplay}
+                  {calculator.formula_display}
                 </div>
               </div>
             )}
@@ -308,17 +308,17 @@ export default async function CalculatorPage({ params }: Props) {
             )}
 
             {/* Author */}
-            {calculator.authorName && (
+            {calculator.author_name && (
               <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 flex items-start gap-3">
                 <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold flex-shrink-0">
-                  {calculator.authorName.charAt(0)}
+                  {calculator.author_name.charAt(0)}
                 </div>
                 <div>
                   <p className="font-semibold text-slate-800 text-sm">
-                    {calculator.authorName}
+                    {calculator.author_name}
                   </p>
-                  {calculator.authorBio && (
-                    <p className="text-slate-500 text-xs mt-0.5">{calculator.authorBio}</p>
+                  {calculator.author_bio && (
+                    <p className="text-slate-500 text-xs mt-0.5">{calculator.author_bio}</p>
                   )}
                 </div>
               </div>
@@ -332,7 +332,7 @@ export default async function CalculatorPage({ params }: Props) {
               <CalculatorWidget
                 formula={calculator.formula}
                 variables={variables}
-                formulaDisplay={calculator.formulaDisplay ?? undefined}
+                formulaDisplay={calculator.formula_display ?? undefined}
               />
 
               {/* Related calculators */}

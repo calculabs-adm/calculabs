@@ -29,20 +29,20 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const calcs = await getAllCalculators();
   for (const calc of calcs) {
     // Get category and subcategory slugs
-    const cat = cats.find((c) => c.id === calc.categoryId);
+    const cat = cats.find((c) => c.id === calc.category_id);
     if (!cat) continue;
 
     let subSlug = "";
-    if (calc.subcategoryId) {
+    if (calc.subcategory_id) {
       const subs = await getSubcategoriesByCategory(cat.id);
-      const sub = subs.find((s) => s.id === calc.subcategoryId);
+      const sub = subs.find((s) => s.id === calc.subcategory_id);
       subSlug = sub?.slug ?? "";
     }
 
     if (subSlug) {
       urls.push({
         url: `${siteUrl}/${cat.slug}/${subSlug}/${calc.slug}`,
-        lastModified: calc.updatedAt ?? new Date(),
+        lastModified: calc.updated_at ? new Date(calc.updated_at * 1000) : new Date(),
         changeFrequency: "monthly",
         priority: 0.8,
       });
