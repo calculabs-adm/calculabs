@@ -71,7 +71,7 @@ export default function Header() {
             </div>
             <div className="hidden sm:block">
               <span className="font-bold text-slate-900 text-lg leading-none block">
-                Portal do Cálculo
+                CalcuLabs
               </span>
               <span className="text-xs text-slate-500 leading-none">
                 Calculadoras Online

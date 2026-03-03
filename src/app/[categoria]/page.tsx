@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   );
 
   return {
-    title: `Calculadoras de ${data.name} | Portal do Cálculo`,
+    title: `Calculadoras de ${data.name} | CalcuLabs`,
     description: `${totalCalcs} calculadoras de ${data.name} online e gratuitas. ${data.description}`,
     alternates: { canonical: `/${data.slug}` },
     openGraph: {

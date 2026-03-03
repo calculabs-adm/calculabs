@@ -30,7 +30,7 @@ export default function Footer() {
               </div>
               <div>
                 <span className="font-bold text-white text-lg leading-none block">
-                  Portal do Cálculo
+                  CalcuLabs
                 </span>
                 <span className="text-xs text-slate-400 leading-none">
                   Calculadoras Online
@@ -89,7 +89,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link href="/sobre" className="text-sm text-slate-400 hover:text-white transition-colors">
-                  Sobre o Portal
+                  Sobre a CalcuLabs
                 </Link>
               </li>
               <li>
@@ -119,7 +119,7 @@ export default function Footer() {
 
         <div className="border-t border-slate-800 mt-10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-slate-500">
-            © {new Date().getFullYear()} Portal do Cálculo. Todos os direitos reservados.
+            © {new Date().getFullYear()} CalcuLabs. Todos os direitos reservados.
           </p>
           <p className="text-sm text-slate-500">
             Feito com ❤️ para estudantes e profissionais brasileiros

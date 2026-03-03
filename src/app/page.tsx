@@ -3,7 +3,7 @@ import { getCategoriesWithCount } from "@/lib/data";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Portal do Cálculo | Calculadoras Online Gratuitas",
+  title: "CalcuLabs | Calculadoras Online Gratuitas",
   description:
     "Mais de 5.000 calculadoras online gratuitas organizadas por categorias. Matemática, Finanças, Saúde, Engenharia, Trabalhista e muito mais. Rápido, simples e didático.",
   alternates: {
@@ -56,12 +56,12 @@ export default async function HomePage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "Portal do Cálculo",
-    url: "https://portaldocalculo.com.br",
-    description: "Portal com mais de 5.000 calculadoras online gratuitas",
+    name: "CalcuLabs",
+    url: "https://calcu-labs.com",
+    description: "CalcuLabs com mais de 5.000 calculadoras online gratuitas",
     potentialAction: {
       "@type": "SearchAction",
-      target: "https://portaldocalculo.com.br/busca?q={search_term_string}",
+      target: "https://calcu-labs.com/busca?q={search_term_string}",
       "query-input": "required name=search_term_string",
     },
   };
@@ -82,7 +82,7 @@ export default async function HomePage() {
               <span>Mais de 50 calculadoras disponíveis</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Portal do Cálculo
+              CalcuLabs
             </h1>
             <p className="text-xl md:text-2xl text-blue-100 mb-8 leading-relaxed">
               Calculadoras online gratuitas para estudantes, profissionais e empresas.
@@ -247,7 +247,7 @@ export default async function HomePage() {
             O Portal de Calculadoras Online Mais Completo do Brasil
           </h2>
           <p className="text-slate-600 leading-relaxed mb-4">
-            O <strong>Portal do Cálculo</strong> é a plataforma mais completa de calculadoras online
+            O <strong>CalcuLabs</strong> é a plataforma mais completa de calculadoras online
             gratuitas do Brasil. Reunimos em um único lugar calculadoras para todas as necessidades:
             desde operações matemáticas básicas até cálculos financeiros complexos, passando por
             saúde, engenharia, direito trabalhista e muito mais.

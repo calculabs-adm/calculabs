@@ -14,16 +14,16 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://portaldocalculo.com.br";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://calcu-labs.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Portal do Cálculo | Calculadoras Online Gratuitas",
-    template: "%s | Portal do Cálculo",
+    default: "CalcuLabs | Calculadoras Online Gratuitas",
+    template: "%s | CalcuLabs",
   },
   description:
-    "Portal do Cálculo: mais de 5.000 calculadoras online gratuitas organizadas por categorias. Matemática, Finanças, Saúde, Engenharia e muito mais.",
+    "CalcuLabs: mais de 5.000 calculadoras online gratuitas organizadas por categorias. Matemática, Finanças, Saúde, Engenharia e muito mais.",
   keywords: [
     "calculadoras online",
     "calculadora gratuita",
@@ -32,9 +32,9 @@ export const metadata: Metadata = {
     "calculadora matemática",
     "calculadora saúde",
   ],
-  authors: [{ name: "Portal do Cálculo" }],
-  creator: "Portal do Cálculo",
-  publisher: "Portal do Cálculo",
+  authors: [{ name: "CalcuLabs" }],
+  creator: "CalcuLabs",
+  publisher: "CalcuLabs",
   robots: {
     index: true,
     follow: true,
@@ -50,8 +50,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pt_BR",
     url: siteUrl,
-    siteName: "Portal do Cálculo",
-    title: "Portal do Cálculo | Calculadoras Online Gratuitas",
+    siteName: "CalcuLabs",
+    title: "CalcuLabs | Calculadoras Online Gratuitas",
     description:
       "Mais de 5.000 calculadoras online gratuitas. Matemática, Finanças, Saúde, Engenharia e muito mais.",
     images: [
@@ -59,13 +59,13 @@ export const metadata: Metadata = {
         url: `${siteUrl}/og-image.png`,
         width: 1200,
         height: 630,
-        alt: "Portal do Cálculo",
+        alt: "CalcuLabs",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Portal do Cálculo | Calculadoras Online Gratuitas",
+    title: "CalcuLabs | Calculadoras Online Gratuitas",
     description: "Mais de 5.000 calculadoras online gratuitas.",
     images: [`${siteUrl}/og-image.png`],
   },

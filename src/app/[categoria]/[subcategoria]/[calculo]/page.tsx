@@ -96,11 +96,11 @@ export default async function CalculatorPage({ params }: Props) {
     dateModified: calculator.updatedAt?.toISOString(),
     author: {
       "@type": "Organization",
-      name: calculator.authorName ?? "Portal do Cálculo",
+      name: calculator.authorName ?? "CalcuLabs",
     },
     publisher: {
       "@type": "Organization",
-      name: "Portal do Cálculo",
+      name: "CalcuLabs",
       url: siteUrl,
     },
     breadcrumb: {
