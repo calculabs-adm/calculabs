@@ -53,6 +53,23 @@ function evaluateClientFormula(
         else inss = 1412.00 * 0.075 + (2666.68 - 1412.00) * 0.09 + (4000.03 - 2666.68) * 0.12 + (7786.02 - 4000.03) * 0.14;
         return inss;
       },
+      calcular_inss_progressivo: (salario: number) => {
+        let inss = 0;
+        if (salario <= 1412.00) inss = salario * 0.075;
+        else if (salario <= 2666.68) inss = 1412.00 * 0.075 + (salario - 1412.00) * 0.09;
+        else if (salario <= 4000.03) inss = 1412.00 * 0.075 + (2666.68 - 1412.00) * 0.09 + (salario - 2666.68) * 0.12;
+        else if (salario <= 7786.02) inss = 1412.00 * 0.075 + (2666.68 - 1412.00) * 0.09 + (4000.03 - 2666.68) * 0.12 + (salario - 4000.03) * 0.14;
+        else inss = 1412.00 * 0.075 + (2666.68 - 1412.00) * 0.09 + (4000.03 - 2666.68) * 0.12 + (7786.02 - 4000.03) * 0.14;
+        return inss;
+      },
+      calcular_ir: (base: number) => {
+        if (base <= 2259.20) return 0;
+        if (base <= 2826.65) return base * 0.075 - 169.44;
+        if (base <= 3751.05) return base * 0.15 - 381.44;
+        if (base <= 4664.68) return base * 0.225 - 662.77;
+        return base * 0.275 - 896.00;
+      },
+      soma: (arr: number[]) => arr.reduce((a, b) => a + b, 0),
       calcular_tmb: (sexo: string, peso: number, altura_cm: number, idade: number) => {
         if (sexo === "masculino") return 88.362 + 13.397 * peso + 4.799 * altura_cm - 5.677 * idade;
         return 447.593 + 9.247 * peso + 3.098 * altura_cm - 4.33 * idade;
@@ -109,6 +126,79 @@ function evaluateClientFormula(
         const fim = new Date(dataFinal);
         const diffMs = fim.getTime() - ini.getTime();
         return diffMs / (1000 * 60 * 60 * 24);
+      },
+      calcular_simples_nacional: (faturamento_mes: number, rbt12: number, anexo: string) => {
+        // Simplified calculation based on 2024 Simples Nacional tables
+        const tables: Record<string, { aliq: number; parc: number }[]> = {
+          I: [ // Comércio
+            { aliq: 4.0, parc: 0 },      // até 180k
+            { aliq: 7.3, parc: 5940 },   // 180k-360k
+            { aliq: 10.5, parc: 17160 },  // 360k-720k
+            { aliq: 14.6, parc: 45660 },  // 720k-1.8M
+            { aliq: 19.0, parc: 125640 }, // 1.8M-3.6M
+            { aliq: 22.0, parc: 233040 }, // 3.6M-4.8M
+          ],
+          II: [ // Indústria
+            { aliq: 4.5, parc: 0 },       // até 180k
+            { aliq: 7.8, parc: 5940 },    // 180k-360k
+            { aliq: 10.5, parc: 13860 },  // 360k-720k
+            { aliq: 14.7, parc: 45000 },  // 720k-1.8M
+            { aliq: 19.0, parc: 120150 }, // 1.8M-3.6M
+            { aliq: 22.5, parc: 226500 }, // 3.6M-4.8M
+          ],
+          III: [ // Serviços (locação)
+            { aliq: 6.0, parc: 0 },       // até 180k
+            { aliq: 8.21, parc: 3960 },  // 180k-360k
+            { aliq: 10.26, parc: 11880 }, // 360k-720k
+            { aliq: 14.10, parc: 37800 }, // 720k-1.8M
+            { aliq: 19.14, parc: 151200 }, // 1.8M-3.6M
+            { aliq: 22.0, parc: 283800 }, // 3.6M-4.8M
+          ],
+          IV: [ // Serviços (construção)
+            { aliq: 6.0, parc: 0 },       // até 180k
+            { aliq: 8.21, parc: 3960 },  // 180k-360k
+            { aliq: 10.26, parc: 11880 }, // 360k-720k
+            { aliq: 14.10, parc: 37800 }, // 720k-1.8M
+            { aliq: 19.14, parc: 151200 }, // 1.8M-3.6M
+            { aliq: 22.0, parc: 283800 }, // 3.6M-4.8M
+          ],
+          V: [ // Serviços (TI)
+            { aliq: 6.0, parc: 0 },       // até 180k
+            { aliq: 8.21, parc: 3960 },  // 180k-360k
+            { aliq: 10.26, parc: 11880 }, // 360k-720k
+            { aliq: 14.10, parc: 37800 }, // 720k-1.8M
+            { aliq: 19.14, parc: 151200 }, // 1.8M-3.6M
+            { aliq: 22.0, parc: 283800 }, // 3.6M-4.8M
+          ],
+        };
+        
+        const table = tables[anexo] || tables['I'];
+        let aliq = 6.0;
+        let parc = 0;
+        
+        if (rbt12 <= 180000) { aliq = table[0].aliq; parc = table[0].parc; }
+        else if (rbt12 <= 360000) { aliq = table[1].aliq; parc = table[1].parc; }
+        else if (rbt12 <= 720000) { aliq = table[2].aliq; parc = table[2].parc; }
+        else if (rbt12 <= 1800000) { aliq = table[3].aliq; parc = table[3].parc; }
+        else if (rbt12 <= 3600000) { aliq = table[4].aliq; parc = table[4].parc; }
+        else { aliq = table[5].aliq; parc = table[5].parc; }
+        
+        const aliquota_efetiva = (rbt12 * aliq / 100 - parc) / rbt12 * 100;
+        return faturamento_mes * aliquota_efetiva / 100;
+      },
+      calcular_das_mei: (tipo_atividade: string) => {
+        const inss = 75.60; // 5% do salário mínimo
+        let iss = 0;
+        let icms = 0;
+        
+        if (tipo_atividade === 'servicos' || tipo_atividade === 'ambos') {
+          iss = 5.00;
+        }
+        if (tipo_atividade === 'comercio' || tipo_atividade === 'ambos') {
+          icms = 1.00;
+        }
+        
+        return inss + iss + icms;
       },
     };
 
