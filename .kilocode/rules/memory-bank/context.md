@@ -93,6 +93,23 @@ O projeto foi transformado de um template Next.js em um portal completo de calcu
 - lang="pt-BR" no HTML
 - Breadcrumbs visuais e estruturados
 
+## Calculadoras Corrigidas
+
+As seguintes calculadoras foram corrigidas para funcionar corretamente:
+
+| Calculadora | Problema | Correção |
+|------------|----------|----------|
+| Hora Extra | Usava variáveis não definidas (dias_mes, horas_dia) | Fórmula corrigida para usar 220 horas padrão |
+| Média Aritmética | Usava variáveis não definidas (soma_valores, quantidade) | Fórmula corrigida para calcular a média corretamente |
+| Simples Nacional | Usava variáveis não definidas (aliquota_nominal, parcela_deduzir) | Adicionada função calcular_simples_nacional |
+| DAS MEI | Usava variáveis não definidas (inss_mei, iss_mei, icms_mei) | Adicionada função calcular_das_mei |
+| IRPF | Usava variável não definida (deducoes) | Fórmula corrigida para calcular deduções corretamente |
+| Calorias Diárias | Usava variáveis não definidas (fator_atividade, ajuste_objetivo) | Fórmula corrigida para usar nivel_atividade e objetivo |
+| Tabela SAC | Usava saldo_devedor sem inicialização | Fórmula corrigida para inicializar saldo_devedor |
+| MMC/MDC | Já estavam funcionando | Verificadas e OK |
+| Diferença entre Datas | Já estava corrigida | Verificada e OK |
+| Idade Exata | Já estava corrigida | Verificada e OK |
+
 ## Session History
 
 | Date | Changes |
@@ -101,3 +118,4 @@ O projeto foi transformado de um template Next.js em um portal completo de calcu
 | 2026-03-03 | Fix crítico: banco de dados migrado de @kilocode/app-builder-db (proxy remoto) para @libsql/client (SQLite local). Adicionado serverExternalPackages no next.config.ts. Migrações e seed executados com sucesso. |
 | 2026-03-03 | Rename from 'Portal do Cálculo' to 'CalcuLabs' for domain calculabs.com.br |
 | 2026-03-03 | Fix domain: updated all hardcoded 'portaldocalculo.com.br' references to 'www.calculabs.com.br' |
+| 2026-03-03 | Fix calculators: added missing helper functions (calcular_inss_progressivo, calcular_ir, calcular_simples_nacional, calcular_das_mei, soma), fixed formulas (Hora Extra, Média Aritmética, Simples Nacional, DAS MEI, IRPF, Calorias Diárias, Tabela SAC) |
