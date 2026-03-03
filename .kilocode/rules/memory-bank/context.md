@@ -1,87 +1,99 @@
-# Active Context: Next.js Starter Template
+# Active Context: Portal do Cálculo
 
 ## Current State
 
-**Template Status**: ✅ Ready for development
+**Project Status**: 🚀 Portal do Cálculo - MVP Implementado
 
-The template is a clean Next.js 16 starter with TypeScript and Tailwind CSS 4. It's ready for AI-assisted expansion to build any type of application.
+O projeto foi transformado de um template Next.js em um portal completo de calculadoras online.
 
 ## Recently Completed
 
-- [x] Base Next.js 16 setup with App Router
-- [x] TypeScript configuration with strict mode
-- [x] Tailwind CSS 4 integration
-- [x] ESLint configuration
-- [x] Memory bank documentation
-- [x] Recipe system for common features
+- [x] Instalação de dependências: drizzle-orm, @kilocode/app-builder-db, mathjs, drizzle-kit
+- [x] Schema do banco de dados com 3 tabelas: categories, subcategories, calculators
+- [x] Migrações geradas com drizzle-kit
+- [x] Seed com 50 calculadoras completas (fórmulas, variáveis, FAQs, exemplos, SEO)
+- [x] Motor universal de fórmulas (src/lib/formula-engine.ts)
+- [x] Camada de acesso a dados (src/lib/data.ts)
+- [x] Layout raiz com SEO global, Open Graph, metadados em pt-BR
+- [x] Header responsivo com navegação por categorias
+- [x] Footer com links de categorias e calculadoras populares
+- [x] Estilos globais com Tailwind CSS (design system completo)
+- [x] Página inicial (home) com hero, grid de categorias, calculadoras populares
+- [x] Página de categoria (/[categoria]) com subcategorias e calculadoras
+- [x] Página de calculadora individual (/[categoria]/[subcategoria]/[calculo])
+- [x] Componente interativo CalculatorWidget (client-side)
+- [x] Sitemap automático (src/app/sitemap.ts)
+- [x] Robots.txt (src/app/robots.ts)
+- [x] Página 404 personalizada
+- [x] JSON-LD estruturado (Article, FAQPage, BreadcrumbList, WebSite)
+- [x] Breadcrumbs em todas as páginas
+- [x] TypeScript sem erros, lint sem warnings
 
 ## Current Structure
 
 | File/Directory | Purpose | Status |
 |----------------|---------|--------|
-| `src/app/page.tsx` | Home page | ✅ Ready |
-| `src/app/layout.tsx` | Root layout | ✅ Ready |
-| `src/app/globals.css` | Global styles | ✅ Ready |
-| `.kilocode/` | AI context & recipes | ✅ Ready |
+| `src/app/page.tsx` | Home page com hero e grid de categorias | ✅ Ready |
+| `src/app/layout.tsx` | Root layout com SEO global | ✅ Ready |
+| `src/app/[categoria]/page.tsx` | Página de categoria | ✅ Ready |
+| `src/app/[categoria]/[subcategoria]/[calculo]/page.tsx` | Página de calculadora | ✅ Ready |
+| `src/app/sitemap.ts` | Sitemap automático | ✅ Ready |
+| `src/app/robots.ts` | Robots.txt | ✅ Ready |
+| `src/components/layout/Header.tsx` | Header responsivo | ✅ Ready |
+| `src/components/layout/Footer.tsx` | Footer com links | ✅ Ready |
+| `src/components/calculator/CalculatorWidget.tsx` | Widget interativo | ✅ Ready |
+| `src/db/schema.ts` | Schema do banco | ✅ Ready |
+| `src/db/seed.ts` | 50 calculadoras iniciais | ✅ Ready |
+| `src/lib/formula-engine.ts` | Motor de fórmulas | ✅ Ready |
+| `src/lib/data.ts` | Acesso a dados | ✅ Ready |
 
-## Current Focus
+## Categories Implemented
 
-The template is ready. Next steps depend on user requirements:
+1. **Finanças Pessoais** (21 calculadoras)
+   - Juros e Investimentos: Juros compostos, simples, CDB, Tesouro Direto, Poupança, Dividend Yield, Aposentadoria
+   - Financiamentos: Imobiliário, Veículo, Empréstimo, Parcelamento, SAC, Price, Amortização
+   - Gestão Financeira: ROI, ROAS, Margem de Lucro, Markup, Ponto de Equilíbrio
+   - Impostos: IRPF
 
-1. What type of application to build
-2. What features are needed
-3. Design/branding preferences
+2. **Trabalhista e Tributário** (10 calculadoras)
+   - Trabalhista: Rescisão, INSS, FGTS, 13º Salário, Férias, Hora Extra, Comissão
+   - Tributário: Simples Nacional, DAS MEI, ICMS
 
-## Quick Start Guide
+3. **Matemática** (9 calculadoras)
+   - Básica: Porcentagem, Regra de Três, Média Aritmética, MMC, MDC
+   - Álgebra: Equação 1º Grau, Equação 2º Grau (Bhaskara)
+   - Geometria: Área do Círculo, Área do Triângulo, Volume do Cilindro
 
-### To add a new page:
+4. **Saúde** (5 calculadoras)
+   - Corpo e Metabolismo: IMC, TMB, Calorias Diárias, % Gordura Corporal, Peso Ideal
 
-Create a file at `src/app/[route]/page.tsx`:
-```tsx
-export default function NewPage() {
-  return <div>New page content</div>;
-}
+5. **Utilitários** (5 calculadoras)
+   - Conversores: Moeda, Celsius/Fahrenheit, Kg/Libras
+   - Datas: Diferença entre Datas, Idade Exata
+
+## URL Structure
+
+```
+/                                    → Home
+/[categoria]                         → Categoria (ex: /matematica)
+/[categoria]/[subcategoria]/[calculo] → Calculadora (ex: /matematica/algebra/equacao-2-grau)
+/sitemap.xml                         → Sitemap automático
+/robots.txt                          → Robots
 ```
 
-### To add components:
+## SEO Features
 
-Create `src/components/` directory and add components:
-```tsx
-// src/components/ui/Button.tsx
-export function Button({ children }: { children: React.ReactNode }) {
-  return <button className="px-4 py-2 bg-blue-600 text-white rounded">{children}</button>;
-}
-```
-
-### To add a database:
-
-Follow `.kilocode/recipes/add-database.md`
-
-### To add API routes:
-
-Create `src/app/api/[route]/route.ts`:
-```tsx
-import { NextResponse } from "next/server";
-
-export async function GET() {
-  return NextResponse.json({ message: "Hello" });
-}
-```
-
-## Available Recipes
-
-| Recipe | File | Use Case |
-|--------|------|----------|
-| Add Database | `.kilocode/recipes/add-database.md` | Data persistence with Drizzle + SQLite |
-
-## Pending Improvements
-
-- [ ] Add more recipes (auth, email, etc.)
-- [ ] Add example components
-- [ ] Add testing setup recipe
+- Meta title e description únicos por página
+- Canonical URLs configurados
+- Open Graph e Twitter Cards
+- JSON-LD: WebSite, Article, FAQPage, BreadcrumbList
+- Sitemap automático com todas as calculadoras
+- Robots.txt configurado
+- lang="pt-BR" no HTML
+- Breadcrumbs visuais e estruturados
 
 ## Session History
 
 | Date | Changes |
 |------|---------|
-| Initial | Template created with base setup |
+| 2026-03-03 | Portal do Cálculo criado do zero com 50 calculadoras, banco de dados, SEO completo |
