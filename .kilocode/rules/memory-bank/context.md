@@ -120,3 +120,4 @@ As seguintes calculadoras foram corrigidas para funcionar corretamente:
 | 2026-03-03 | Fix domain: updated all hardcoded 'portaldocalculo.com.br' references to 'www.calculabs.com.br' |
 | 2026-03-03 | Fix calculators: added missing helper functions (calcular_inss_progressivo, calcular_ir, calcular_simples_nacional, calcular_das_mei, soma), fixed formulas (Hora Extra, Média Aritmética, Simples Nacional, DAS MEI, IRPF, Calorias Diárias, Tabela SAC) |
 | 2026-03-04 | Add report problem link to disclaimer on all calculator pages with mailto to contato@calculabs.com.br |
+| 2026-03-04 | Fix Financiamento de Veículo calculator - calculate valor_financiado first before computing parcela |
