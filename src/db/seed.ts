@@ -744,8 +744,8 @@ const calculatorsData = [
     example: JSON.stringify({
       title: "Exemplo: Amortizar R$ 20.000 após 24 meses de financiamento de R$ 200.000",
       inputs: { valor_financiado: 200000, taxa: 0.7, prazo_original: 360, meses_pagos: 24, valor_amortizacao: 20000 },
-      result: "Saldo atual: R$ 193.500 | Após amortização: R$ 173.500 | Economia em juros: R$ 42.000 | Redução no prazo: 38 meses",
-      explanation: "Amortizar R$ 20.000 após 2 anos economiza R$ 42.000 em juros e reduz o prazo em 38 meses.",
+      result: "Saldo atual: R$ 196.780 | Após amortização: R$ 176.780 | Economia em juros: R$ 126.711 | Redução no prazo: 96 meses (8 anos)",
+      explanation: "Amortizar R$ 20.000 após 2 anos economiza R$ 126.711 em juros e reduz o prazo em 96 meses (8 anos).",
     }),
     applications: JSON.stringify([
       "Calcular impacto de amortização antecipada",
