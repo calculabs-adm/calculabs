@@ -29,6 +29,7 @@ O projeto foi transformado de um template Next.js em um portal completo de calcu
 - [x] Breadcrumbs em todas as páginas
 - [x] TypeScript sem erros, lint sem warnings
 - [x] Fix domain: atualizados todos os referências de 'portaldocalculo.com.br' para 'www.calculabs.com.br'
+- [x] Fix formula engine: adicionado suporte a if-else nas fórmulas (converte para operador ternário)
 
 ## Current Structure
 
