@@ -52,6 +52,7 @@ O projeto foi transformado de um template Next.js em um portal completo de calcu
 | `src/db/seed.ts` | 50 calculadoras iniciais | ✅ Ready |
 | `src/lib/formula-engine.ts` | Motor de fórmulas | ✅ Ready |
 | `src/lib/data.ts` | Acesso a dados | ✅ Ready |
+| `src/app/api/seed/route.ts` | API para executar seed do banco | ✅ Ready |
 
 ## Categories Implemented
 
@@ -135,3 +136,4 @@ As seguintes calculadoras foram corrigidas para funcionar corretamente:
 | 2026-03-05 | Fix Amortização de Financiamento: corrigida fórmula para calcular corretamente economia_juros, reducao_prazo e variáveis intermediárias |
 | 2026-03-05 | Fix Amortização de Financiamento (novamente): corrigida fórmula de novo_prazo para usar fórmula correta de anuidade com tratamento de edge cases |
 | 2026-03-05 | Remove database files from git tracking: arquivos `portal-calculo.db`, `portal-calculo.db-shm`, `portal-calculo.db-wal` removidos do versionamento para respeitar `.gitignore` |
+| 2026-03-05 | Add /api/seed endpoint: rota POST protegida por secret key para executar o seed do banco via HTTP. Uso: `POST /api/seed?key=calculabs-seed-2024` ou header `x-seed-key` |
