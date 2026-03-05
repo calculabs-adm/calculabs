@@ -79,3 +79,56 @@ bun dev
 - ✅ Build local funciona
 - ✅ Código preparado para Turso DB
 - ⏳ Deploy na Vercel precisa ser feito manualmente
+
+---
+
+## ⚠️ Problema: Push para GitHub não funciona automaticamente
+
+### Diagnóstico
+
+O ambiente Kilo Code usa um repositório git interno (`builder.kiloapps.io`) como `origin`. Quando o AI faz `git push origin main`, ele envia para o servidor interno do Kilo Code, **não para o GitHub**.
+
+Para enviar para o GitHub, é necessário um **Personal Access Token (PAT)** do GitHub configurado.
+
+### Solução Permanente: Configurar GitHub Token
+
+**Passo 1: Criar um Personal Access Token no GitHub**
+1. Acesse https://github.com/settings/tokens
+2. Clique em "Generate new token (classic)"
+3. Selecione o escopo `repo` (acesso completo a repositórios)
+4. Copie o token gerado (começa com `ghp_...`)
+
+**Passo 2: Configurar o token no ambiente**
+
+Antes de cada sessão de trabalho, execute no terminal:
+```bash
+git remote add github https://SEU_TOKEN@github.com/calculabs-adm/calculabs.git
+git push github main
+```
+
+Ou configure permanentemente:
+```bash
+git config --global credential.helper store
+echo "https://calculabs-adm:SEU_TOKEN@github.com" >> ~/.git-credentials
+git remote add github https://github.com/calculabs-adm/calculabs.git
+git push github main
+```
+
+**Passo 3: Push para ambos os remotes**
+```bash
+# Push para o servidor interno do Kilo Code (sempre funciona)
+git push origin main
+
+# Push para o GitHub (requer token configurado)
+git push github main
+```
+
+### Alternativa: Sincronização Manual
+
+Se não quiser configurar o token, você pode sincronizar manualmente:
+1. Baixe o código do servidor Kilo Code
+2. Faça push para o GitHub via sua máquina local
+
+### Repositório GitHub
+- URL: https://github.com/calculabs-adm/calculabs.git
+- Branch principal: `main`
