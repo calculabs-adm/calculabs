@@ -124,3 +124,4 @@ As seguintes calculadoras foram corrigidas para funcionar corretamente:
 | 2026-03-04 | Add report problem link to disclaimer on all calculator pages with mailto to contato@calculabs.com.br |
 | 2026-03-04 | Fix Financiamento de Veículo calculator - calculate valor_financiado first before computing parcela |
 | 2026-03-05 | Push para GitHub: projeto completo enviado para https://github.com/calculabs-adm/calculabs.git. Fluxo Kilo Code → GitHub → Vercel configurado.
+| 2026-03-05 | Fix Financiamento de Veículo: corrigida fórmula para calcular valor_financiado = valor_veiculo - entrada antes de calcular a parcela |
