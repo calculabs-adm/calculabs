@@ -1,6 +1,7 @@
 import { db } from "./index";
 import { categories, subcategories, calculators } from "./schema";
 
+export async function runSeed() {
 // Clear existing data
 await db.delete(calculators);
 await db.delete(subcategories);
@@ -2284,3 +2285,9 @@ for (const calc of calculatorsData) {
 }
 
 console.log(`✅ Seed concluído! ${calculatorsData.length} calculadoras inseridas.`);
+}
+
+// Run seed if this file is executed directly (not imported)
+if (import.meta.url === `file://${process.argv[1]}`) {
+  runSeed().catch(console.error);
+}

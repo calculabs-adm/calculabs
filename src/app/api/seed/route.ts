@@ -1,8 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { exec } from "child_process";
-import { promisify } from "util";
-
-const execAsync = promisify(exec);
+import { runSeed } from "@/db/seed";
 
 export async function POST(request: NextRequest) {
   try {
@@ -19,21 +16,12 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Run the seed script using bun
-    const { stdout, stderr } = await execAsync("bun src/db/seed.ts", {
-      cwd: process.cwd(),
-      timeout: 60000, // 60 seconds timeout
-    });
-
-    if (stderr && !stderr.includes("Already up to date")) {
-      console.error("Seed stderr:", stderr);
-    }
+    // Execute seed function directly
+    await runSeed();
 
     return NextResponse.json({
       success: true,
       message: "Database seeded successfully",
-      output: stdout,
-      errors: stderr || null,
     });
   } catch (error) {
     console.error("Seed error:", error);
@@ -49,6 +37,7 @@ export async function POST(request: NextRequest) {
 }
 
 export async function GET(request: NextRequest) {
+  // Provide usage information
   return NextResponse.json({
     message: "Seed API endpoint",
     usage: "Send a POST request with x-seed-key header or ?key= parameter",
