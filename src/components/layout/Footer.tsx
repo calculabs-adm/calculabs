@@ -122,7 +122,7 @@ export default function Footer() {
             © {new Date().getFullYear()} CalcuLabs. Todos os direitos reservados.
           </p>
           <p className="text-sm text-slate-500">
-            Feito com ❤️ para estudantes e profissionais brasileiros
+            Feito com ❤️ para estudantes e profissionais brasileiros amantes da ciência
           </p>
         </div>
       </div>
