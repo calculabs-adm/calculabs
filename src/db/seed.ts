@@ -2286,8 +2286,3 @@ for (const calc of calculatorsData) {
 
 console.log(`✅ Seed concluído! ${calculatorsData.length} calculadoras inseridas.`);
 }
-
-// Run seed if this file is executed directly (not imported)
-if (import.meta.url === `file://${process.argv[1]}`) {
-  runSeed().catch(console.error);
-}
