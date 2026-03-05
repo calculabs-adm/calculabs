@@ -8,6 +8,7 @@ O projeto foi transformado de um template Next.js em um portal completo de calcu
 
 ## Recently Completed
 
+- [x] Push para GitHub: projeto completo enviado para https://github.com/calculabs-adm/calculabs.git
 - [x] Instalação de dependências: drizzle-orm, @kilocode/app-builder-db, mathjs, drizzle-kit
 - [x] Schema do banco de dados com 3 tabelas: categories, subcategories, calculators
 - [x] Migrações geradas com drizzle-kit
@@ -122,3 +123,4 @@ As seguintes calculadoras foram corrigidas para funcionar corretamente:
 | 2026-03-03 | Fix calculators: added missing helper functions (calcular_inss_progressivo, calcular_ir, calcular_simples_nacional, calcular_das_mei, soma), fixed formulas (Hora Extra, Média Aritmética, Simples Nacional, DAS MEI, IRPF, Calorias Diárias, Tabela SAC) |
 | 2026-03-04 | Add report problem link to disclaimer on all calculator pages with mailto to contato@calculabs.com.br |
 | 2026-03-04 | Fix Financiamento de Veículo calculator - calculate valor_financiado first before computing parcela |
+| 2026-03-05 | Push para GitHub: projeto completo enviado para https://github.com/calculabs-adm/calculabs.git. Fluxo Kilo Code → GitHub → Vercel configurado.
