@@ -253,9 +253,15 @@ function evaluateClientFormula(
     const fn = new Function(...keys, fnBody);
     const rawResults = fn(...values) as Record<string, number | string>;
 
-    const results: ResultEntry[] = Object.entries(rawResults)
+    const allResults: ResultEntry[] = Object.entries(rawResults)
       .filter(([, v]) => v !== undefined && v !== null && !isNaN(Number(v)))
       .map(([k, v]) => ({ key: k, value: typeof v === "number" ? v : Number(v) }));
+
+    // If there are non-zero results, filter out zeros to avoid showing irrelevant conditional results
+    const hasNonZero = allResults.some((r) => (r.value as number) !== 0);
+    const results = hasNonZero
+      ? allResults.filter((r) => (r.value as number) !== 0)
+      : allResults;
 
     if (results.length === 0) {
       return { success: false, results: [], error: "Não foi possível calcular" };
@@ -371,6 +377,9 @@ function formatResultLabel(key: string): string {
     preco_venda: "Preço de Venda",
     markup: "Markup",
     diferenca_dias: "Diferença em Dias",
+    resultado_percentual: "Resultado",
+    resultado_valor: "Resultado",
+    variacao_percentual: "Variação Percentual",
   };
 
   return labels[key] ?? key.replace(/_/g, " ").replace(/\b\w/g, (l) => l.toUpperCase());
