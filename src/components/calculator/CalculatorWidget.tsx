@@ -206,8 +206,24 @@ function evaluateClientFormula(
     const keys = Object.keys(allVars);
     const values = Object.values(allVars);
 
+    // Process if-else statements in formula
+    const ifElsePattern = /if\s*\(([^)]+)\)\s*\{([^}]+)\}\s*else\s*\{([^}]+)\}/g;
+    
+    // Replace if-else with ternary operator for execution
+    let processedFormula = formula.replace(ifElsePattern, (match, condition, ifBlock, elseBlock) => {
+      // Extract variable from if block
+      const ifAssignMatch = ifBlock.trim().match(/^([a-zA-Z_][a-zA-Z0-9_]*)\s*=/);
+      if (ifAssignMatch) {
+        const varName = ifAssignMatch[1];
+        const ifValue = ifBlock.trim().substring(ifBlock.indexOf('=') + 1).trim();
+        const elseValue = elseBlock.trim().substring(elseBlock.indexOf('=') + 1).trim();
+        return `${varName} = (${condition}) ? (${ifValue}) : (${elseValue});`;
+      }
+      return match;
+    });
+
     // Build function that executes formula and returns all assigned variables
-    const assignments = formula.split(";").filter((s) => s.trim());
+    const assignments = processedFormula.split(";").filter((s) => s.trim());
     const resultVarNames: string[] = [];
 
     for (const line of assignments) {
@@ -228,7 +244,7 @@ function evaluateClientFormula(
       var _r = {};
       try {
         ${varDeclarations}
-        ${formula}
+        ${processedFormula}
       } catch(e) {}
       ${returnStatements}
       return _r;

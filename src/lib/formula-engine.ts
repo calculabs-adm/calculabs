@@ -206,10 +206,25 @@ export function evaluateFormula(
       return 447.593 + 9.247 * peso + 3.098 * altura_cm - 4.33 * idade;
     };
 
-    // Execute each line
+      // Execute each line
+    const ifElsePattern = /if\s*\(([^)]+)\)\s*\{([^}]+)\}\s*else\s*\{([^}]+)\}/g;
+    
+    // Replace if-else with ternary operator for execution
+    let processedFormula = formula.replace(ifElsePattern, (match, condition, ifBlock, elseBlock) => {
+      // Extract variable from if block
+      const ifAssignMatch = ifBlock.trim().match(/^([a-zA-Z_][a-zA-Z0-9_]*)\s*=/);
+      if (ifAssignMatch) {
+        const varName = ifAssignMatch[1];
+        const ifValue = ifBlock.trim().substring(ifBlock.indexOf('=') + 1).trim();
+        const elseValue = elseBlock.trim().substring(elseBlock.indexOf('=') + 1).trim();
+        return `${varName} = (${condition}) ? (${ifValue}) : (${elseValue});`;
+      }
+      return match;
+    });
+
     for (const line of assignments) {
       const trimmed = line.trim();
-      if (!trimmed || trimmed.startsWith("//") || trimmed.startsWith("if") || trimmed.startsWith("else")) {
+      if (!trimmed || trimmed.startsWith("//")) {
         continue;
       }
       const match = trimmed.match(/^([a-zA-Z_][a-zA-Z0-9_]*)\s*=/);
@@ -222,7 +237,7 @@ export function evaluateFormula(
           // Execute the full formula to get all variables
           const fullFn = new Function(
             ...contextKeys,
-            `"use strict"; ${formula.replace(/if\s*\([^)]+\)\s*\{[^}]*\}/g, "")}; return typeof ${varName} !== 'undefined' ? ${varName} : undefined;`
+            `"use strict"; ${processedFormula.replace(/if\s*\([^)]+\)\s*\{[^}]*\}\s*else\s*\{[^}]*\}/g, "")}; return typeof ${varName} !== 'undefined' ? ${varName} : undefined;`
           );
           const result = fullFn(...contextValues);
           if (result !== undefined && !isNaN(result as number)) {
@@ -243,7 +258,7 @@ export function evaluateFormula(
         ...contextKeys,
         `"use strict"; 
         let _out = {};
-        try { ${formula} } catch(e) {}
+        try { ${processedFormula} } catch(e) {}
         ${assignments
           .map((line) => {
             const m = line.trim().match(/^([a-zA-Z_][a-zA-Z0-9_]*)\s*=/);
