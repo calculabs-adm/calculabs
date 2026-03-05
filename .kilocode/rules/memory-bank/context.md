@@ -34,6 +34,7 @@ O projeto foi transformado de um template Next.js em um portal completo de calcu
 - [x] Fix header logo: cor do texto "CalcuLabs" alterada de branco (text-white) para preto (text-slate-900)
 - [x] Fix amortização de financiamento: corrigida fórmula para calcular corretamente a economia de juros e redução do prazo
 - [x] Remove database files from git tracking: arquivos `*.db`, `*.db-shm`, `*.db-wal` removidos do versionamento (respeitando `.gitignore`)
+- [x] Fix amortização de financiamento: corrigida fórmula - adicionado cálculo da parcela e todas as variáveis intermediárias (i, parcela, saldo_atual, saldo_apos_amortizacao, novo_prazo, economia_juros)
 
 ## Current Structure
 
@@ -137,3 +138,4 @@ As seguintes calculadoras foram corrigidas para funcionar corretamente:
 | 2026-03-05 | Fix Amortização de Financiamento (novamente): corrigida fórmula de novo_prazo para usar fórmula correta de anuidade com tratamento de edge cases |
 | 2026-03-05 | Remove database files from git tracking: arquivos `portal-calculo.db`, `portal-calculo.db-shm`, `portal-calculo.db-wal` removidos do versionamento para respeitar `.gitignore` |
 | 2026-03-05 | Add /api/seed endpoint: rota POST protegida por secret key para executar o seed do banco via HTTP. Uso: `POST /api/seed?key=calculabs-seed-2024` ou header `x-seed-key` |
+| 2026-03-05 | Fix Amortização de Financiamento: corrigida fórmula para calcular `parcela`, `saldo_atual`, `saldo_apos_amortizacao`, `novo_prazo` e `economia_juros` na ordem correta com tratamento de edge cases |
