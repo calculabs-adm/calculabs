@@ -516,7 +516,7 @@ const calculatorsData = [
     title: "Calculadora de Financiamento de Veículo",
     description: "Simule as parcelas do financiamento do seu carro ou moto",
     introduction: "O financiamento de veículos é uma das modalidades de crédito mais utilizadas no Brasil. Antes de fechar negócio na concessionária, use esta calculadora para simular exatamente quanto você vai pagar em cada parcela e o custo total do financiamento. Lembre-se de considerar também o seguro, IPVA e manutenção no planejamento do orçamento.",
-    formula: "parcela = (valor_financiado * (taxa/100) * pow(1 + taxa/100, prazo)) / (pow(1 + taxa/100, prazo) - 1)",
+    formula: "valor_financiado = valor_veiculo - entrada; parcela = (valor_financiado * (taxa/100) * pow(1 + taxa/100, prazo)) / (pow(1 + taxa/100, prazo) - 1); total_pago = parcela * prazo; juros = total_pago - valor_financiado",
     formulaDisplay: "PMT = PV × [i(1+i)ⁿ] / [(1+i)ⁿ - 1]",
     variables: JSON.stringify([
       { id: "valor_veiculo", label: "Valor do veículo (R$)", type: "number", unit: "R$", placeholder: "50000", min: 0 },
