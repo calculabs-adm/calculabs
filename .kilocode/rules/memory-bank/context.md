@@ -114,7 +114,7 @@ As seguintes calculadoras foram corrigidas para funcionar corretamente:
 | Diferença entre Datas | Já estava corrigida | Verificada e OK |
 | Idade Exata | Já estava corrigida | Verificada e OK |
 | Financiamento de Veículo | Usava valor_financiado não calculado | Fórmula corrigida para calcular valor_financiado = valor_veiculo - entrada |
-| Amortização de Financiamento | Usava parcela e saldo_apos_amortizacao não definidos | Fórmula corrigida para calcular parcela, saldo_atual, saldo_apos_amortizacao e novo_prazo |
+| Amortização de Financiamento | Fórmula de novo_prazo estava matematicamente incorreta | Corrigida para usar fórmula correta de anuidade: n = -ln(1 - (PV×i)/PMT) / ln(1+i) |
 
 ## Session History
 
@@ -132,3 +132,4 @@ As seguintes calculadoras foram corrigidas para funcionar corretamente:
 | 2026-03-05 | Fix Amortização de Financiamento: corrigida fórmula para calcular parcela, saldo_atual, saldo_apos_amortizacao e novo_prazo corretamente |
 | 2026-03-05 | Fix header logo: cor do texto "CalcuLabs" alterada de branco (text-white) para preto (text-slate-900) no Header.tsx |
 | 2026-03-05 | Fix Amortização de Financiamento: corrigida fórmula para calcular corretamente economia_juros, reducao_prazo e variáveis intermediárias |
+| 2026-03-05 | Fix Amortização de Financiamento (novamente): corrigida fórmula de novo_prazo para usar fórmula correta de anuidade com tratamento de edge cases |
