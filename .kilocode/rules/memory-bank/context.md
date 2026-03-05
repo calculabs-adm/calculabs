@@ -111,6 +111,8 @@ As seguintes calculadoras foram corrigidas para funcionar corretamente:
 | MMC/MDC | Já estavam funcionando | Verificadas e OK |
 | Diferença entre Datas | Já estava corrigida | Verificada e OK |
 | Idade Exata | Já estava corrigida | Verificada e OK |
+| Financiamento de Veículo | Usava valor_financiado não calculado | Fórmula corrigida para calcular valor_financiado = valor_veiculo - entrada |
+| Amortização de Financiamento | Usava parcela e saldo_apos_amortizacao não definidos | Fórmula corrigida para calcular parcela, saldo_atual, saldo_apos_amortizacao e novo_prazo |
 
 ## Session History
 
@@ -125,3 +127,4 @@ As seguintes calculadoras foram corrigidas para funcionar corretamente:
 | 2026-03-04 | Fix Financiamento de Veículo calculator - calculate valor_financiado first before computing parcela |
 | 2026-03-05 | Push para GitHub: projeto completo enviado para https://github.com/calculabs-adm/calculabs.git. Fluxo Kilo Code → GitHub → Vercel configurado.
 | 2026-03-05 | Fix Financiamento de Veículo: corrigida fórmula para calcular valor_financiado = valor_veiculo - entrada antes de calcular a parcela |
+| 2026-03-05 | Fix Amortização de Financiamento: corrigida fórmula para calcular parcela, saldo_atual, saldo_apos_amortizacao e novo_prazo corretamente |
