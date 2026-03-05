@@ -1,5 +1,9 @@
 # Active Context: CalcuLabs
 
+## Recently Completed
+
+- [x] Fix calculadora Porcentagem (/matematica/basica/porcentagem): fórmula corrigida para usar variáveis corretas (valor1, valor2, tipo_calculo) em vez de variáveis indefinidas (percentual, valor, valor_final, valor_inicial). Widget atualizado para filtrar zeros quando há resultados não-zero.
+
 ## Current State
 
 **Project Status**: 🚀 CalcuLabs - MVP Implementado
