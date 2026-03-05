@@ -33,6 +33,7 @@ O projeto foi transformado de um template Next.js em um portal completo de calcu
 - [x] Fix formula engine: adicionado suporte a if-else nas fórmulas (converte para operador ternário)
 - [x] Fix header logo: cor do texto "CalcuLabs" alterada de branco (text-white) para preto (text-slate-900)
 - [x] Fix amortização de financiamento: corrigida fórmula para calcular corretamente a economia de juros e redução do prazo
+- [x] Remove database files from git tracking: arquivos `*.db`, `*.db-shm`, `*.db-wal` removidos do versionamento (respeitando `.gitignore`)
 
 ## Current Structure
 
@@ -133,3 +134,4 @@ As seguintes calculadoras foram corrigidas para funcionar corretamente:
 | 2026-03-05 | Fix header logo: cor do texto "CalcuLabs" alterada de branco (text-white) para preto (text-slate-900) no Header.tsx |
 | 2026-03-05 | Fix Amortização de Financiamento: corrigida fórmula para calcular corretamente economia_juros, reducao_prazo e variáveis intermediárias |
 | 2026-03-05 | Fix Amortização de Financiamento (novamente): corrigida fórmula de novo_prazo para usar fórmula correta de anuidade com tratamento de edge cases |
+| 2026-03-05 | Remove database files from git tracking: arquivos `portal-calculo.db`, `portal-calculo.db-shm`, `portal-calculo.db-wal` removidos do versionamento para respeitar `.gitignore` |
