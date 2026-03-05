@@ -726,7 +726,7 @@ const calculatorsData = [
     title: "Calculadora de Amortização de Financiamento",
     description: "Calcule o impacto da amortização antecipada no seu financiamento",
     introduction: "A amortização antecipada é uma das melhores estratégias para reduzir o custo total de um financiamento. Ao pagar parcelas extras ou fazer amortizações extraordinárias, você pode reduzir o prazo do financiamento ou o valor das parcelas, economizando significativamente em juros. Esta calculadora mostra exatamente quanto você economiza ao fazer amortizações antecipadas.",
-    formula: "saldo_atual = valor_financiado * pow(1 + taxa/100, meses_pagos) - parcela * (pow(1 + taxa/100, meses_pagos) - 1) / (taxa/100); novo_prazo = log(parcela / (parcela - saldo_apos_amortizacao * taxa/100)) / log(1 + taxa/100)",
+    formula: "parcela = (valor_financiado * (taxa/100) * pow(1 + taxa/100, prazo_original)) / (pow(1 + taxa/100, prazo_original) - 1); saldo_atual = valor_financiado * pow(1 + taxa/100, meses_pagos) - parcela * (pow(1 + taxa/100, meses_pagos) - 1) / (taxa/100); saldo_apos_amortizacao = saldo_atual - valor_amortizacao; novo_prazo = log(parcela / (parcela - saldo_apos_amortizacao * (taxa/100))) / log(1 + taxa/100); economia_juros = (parcela * (prazo_original - meses_pagos)) - (parcela * novo_prazo + valor_amortizacao)",
     formulaDisplay: "Saldo = PV(1+i)ⁿ - PMT[(1+i)ⁿ-1]/i",
     variables: JSON.stringify([
       { id: "valor_financiado", label: "Valor financiado original (R$)", type: "number", unit: "R$", placeholder: "200000", min: 0 },
