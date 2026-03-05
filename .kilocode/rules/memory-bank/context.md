@@ -31,6 +31,7 @@ O projeto foi transformado de um template Next.js em um portal completo de calcu
 - [x] TypeScript sem erros, lint sem warnings
 - [x] Fix domain: atualizados todos os referências de 'portaldocalculo.com.br' para 'www.calculabs.com.br'
 - [x] Fix formula engine: adicionado suporte a if-else nas fórmulas (converte para operador ternário)
+- [x] Fix header logo: cor do texto "CalcuLabs" alterada de branco (text-white) para preto (text-slate-900)
 
 ## Current Structure
 
@@ -128,3 +129,4 @@ As seguintes calculadoras foram corrigidas para funcionar corretamente:
 | 2026-03-05 | Push para GitHub: projeto completo enviado para https://github.com/calculabs-adm/calculabs.git. Fluxo Kilo Code → GitHub → Vercel configurado.
 | 2026-03-05 | Fix Financiamento de Veículo: corrigida fórmula para calcular valor_financiado = valor_veiculo - entrada antes de calcular a parcela |
 | 2026-03-05 | Fix Amortização de Financiamento: corrigida fórmula para calcular parcela, saldo_atual, saldo_apos_amortizacao e novo_prazo corretamente |
+| 2026-03-05 | Fix header logo: cor do texto "CalcuLabs" alterada de branco (text-white) para preto (text-slate-900) no Header.tsx |
