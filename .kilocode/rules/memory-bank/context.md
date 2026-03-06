@@ -2,6 +2,7 @@
 
 ## Recently Completed
 
+- [x] Fix calculadora Idade Exata (/utilitarios/datas/calculo-de-idade-exata): função calcular_idade_exata não tratava caso data_atual fosse undefined. Corrigido para usar data atual como fallback quando data_atual não for informada.
 - [x] Fix calculadora Porcentagem (/matematica/basica/porcentagem): fórmula corrigida para usar variáveis corretas (valor1, valor2, tipo_calculo) em vez de variáveis indefinidas (percentual, valor, valor_final, valor_inicial). Widget atualizado para filtrar zeros quando há resultados não-zero.
 - [x] Fix calculadora Taxa Metabólica Basal (/saude/corpo-metabolismo/taxa-metabolica-basal): fórmula usava variável 'altura_cm' (não definida) e não selecionava resultado por sexo. Corrigida para usar calcular_tmb(sexo, peso, altura, idade).
 
@@ -148,3 +149,4 @@ As seguintes calculadoras foram corrigidas para funcionar corretamente:
 | 2026-03-06 | Fix Percentual de Gordura Corporal: calculava gordura_homem e gordura_mulher mas não retornava resultado único. Adicionada função calcular_gordura() que retorna resultado baseado no sexo. |
 | 2026-03-06 | Fix Taxa Metabólica Basal: fórmula usava variável 'altura_cm' (não definida) e não selecionava resultado por sexo. Corrigida para usar calcular_tmb(sexo, peso, altura, idade). |
 | 2026-03-06 | Fix Peso Ideal: fórmula usava variável 'altura_cm' (não definida) e não retornava resultado único. Adicionada função calcular_peso_ideal() que retorna resultado baseado no sexo. Push para origin e github. |
+| 2026-03-06 | Fix Idade Exata: função calcular_idade_exata não tratava caso data_atual fosse undefined. Corrigido para usar data atual como fallback quando data_atual não for informada. Push para origin e github. |
