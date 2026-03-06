@@ -1478,7 +1478,7 @@
     "title": "Calculadora de Idade Exata",
     "description": "Calcule sua idade exata em anos, meses e dias",
     "introduction": "Calcular a idade exata vai além de simplesmente subtrair o ano de nascimento do ano atual. Esta calculadora determina sua idade precisa em anos, meses e dias, considerando anos bissextos e a data exata de nascimento. Útil para cálculos jurídicos, médicos e previdenciários.",
-    "formula": "idade = calcular_idade_exata(data_nascimento, data_atual)",
+    "formula": "idade = calcular_idade_exata(data_nascimento)",
     "formula_display": "Idade = Data Atual - Data de Nascimento",
     "variables": "[{\"id\":\"data_nascimento\",\"label\":\"Data de nascimento\",\"type\":\"date\",\"placeholder\":\"1990-05-15\"}]",
     "steps": "[\"Informe a data de nascimento\",\"O sistema usa a data atual como referência\",\"Calcula anos, meses e dias completos\"]",
