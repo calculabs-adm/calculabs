@@ -173,7 +173,7 @@ export default async function CalculatorPage({ params }: Props) {
           url: canonicalUrl,
           step: steps.map((stepText, index) => ({
             "@type": "HowToStep",
-            name: `Passo ${index + 1}`,
+            name: stepText,
             text: stepText,
           })),
         }
