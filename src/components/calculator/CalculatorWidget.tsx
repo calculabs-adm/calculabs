@@ -476,7 +476,7 @@ export default function CalculatorWidget({
     <div className="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
       {/* Header */}
       <div className="bg-gradient-to-r from-blue-600 to-blue-700 px-6 py-4">
-        <h2 className="text-white font-bold text-lg">🧮 Calculadora</h2>
+        <h2 className="!text-white font-bold text-lg">🧮 Calculadora</h2>
         {formulaDisplay && (
           <p className="text-blue-100 text-sm mt-1 font-mono">{formulaDisplay}</p>
         )}
