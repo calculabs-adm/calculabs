@@ -3,6 +3,7 @@
 ## Recently Completed
 
 - [x] Fix calculadora Porcentagem (/matematica/basica/porcentagem): fórmula corrigida para usar variáveis corretas (valor1, valor2, tipo_calculo) em vez de variáveis indefinidas (percentual, valor, valor_final, valor_inicial). Widget atualizado para filtrar zeros quando há resultados não-zero.
+- [x] Fix calculadora Taxa Metabólica Basal (/saude/corpo-metabolismo/taxa-metabolica-basal): fórmula usava variável 'altura_cm' (não definida) e não selecionava resultado por sexo. Corrigida para usar calcular_tmb(sexo, peso, altura, idade).
 
 ## Current State
 
@@ -120,6 +121,7 @@ As seguintes calculadoras foram corrigidas para funcionar corretamente:
 | Idade Exata | Já estava corrigida | Verificada e OK |
 | Financiamento de Veículo | Usava valor_financiado não calculado | Fórmula corrigida para calcular valor_financiado = valor_veiculo - entrada |
 | Amortização de Financiamento | Fórmula de novo_prazo estava matematicamente incorreta | Corrigida para usar fórmula correta de anuidade: n = -ln(1 - (PV×i)/PMT) / ln(1+i) |
+| Taxa Metabólica Basal | Usava variável 'altura_cm' (não definida) e não selecionava resultado por sexo | Fórmula corrigida para usar calcular_tmb(sexo, peso, altura, idade) |
 
 ## Session History
 
@@ -140,3 +142,4 @@ As seguintes calculadoras foram corrigidas para funcionar corretamente:
 | 2026-03-05 | Fix Amortização de Financiamento (novamente): corrigida fórmula de novo_prazo para usar fórmula correta de anuidade com tratamento de edge cases |
 | 2026-03-05 | Diagnóstico: push para GitHub não funciona automaticamente. O `origin` aponta para servidor interno Kilo Code (builder.kiloapps.io), não para GitHub. Solução documentada em VERCEL_DEPLOY.md: configurar GitHub PAT token para push direto ao GitHub. |
 | 2026-03-06 | GitHub PAT configurado com sucesso: remote `github` adicionado com token de autenticação. Históricos divergentes integrados via merge. Push realizado para ambos os remotes (origin e github/main). A partir de agora, `git push github main` funciona automaticamente nesta sessão. |
+| 2026-03-06 | Fix Taxa Metabólica Basal: fórmula usava variável 'altura_cm' (não definida) e não selecionava resultado por sexo. Corrigida para usar calcular_tmb(sexo, peso, altura, idade). |
