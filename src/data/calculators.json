@@ -1238,7 +1238,7 @@
     "title": "Calculadora de Taxa Metabólica Basal (TMB)",
     "description": "Calcule quantas calorias seu corpo queima em repouso",
     "introduction": "A Taxa Metabólica Basal (TMB) representa o número mínimo de calorias que o organismo precisa para manter suas funções vitais em repouso, como respiração, circulação e temperatura corporal. É a base para calcular as necessidades calóricas diárias. A fórmula de Harris-Benedict revisada é a mais utilizada para este cálculo.",
-    "formula": "tmb_homem = 88.362 + (13.397 * peso) + (4.799 * altura_cm) - (5.677 * idade); tmb_mulher = 447.593 + (9.247 * peso) + (3.098 * altura_cm) - (4.330 * idade)",
+    "formula": "tmb = calcular_tmb(sexo, peso, altura, idade)",
     "formula_display": "TMB (homem) = 88,36 + (13,4×P) + (4,8×A) - (5,7×I)",
     "variables": "[{\"id\":\"sexo\",\"label\":\"Sexo\",\"type\":\"select\",\"options\":[{\"value\":\"masculino\",\"label\":\"Masculino\"},{\"value\":\"feminino\",\"label\":\"Feminino\"}]},{\"id\":\"peso\",\"label\":\"Peso (kg)\",\"type\":\"number\",\"unit\":\"kg\",\"placeholder\":\"70\",\"min\":1},{\"id\":\"altura\",\"label\":\"Altura (cm)\",\"type\":\"number\",\"unit\":\"cm\",\"placeholder\":\"175\",\"min\":50},{\"id\":\"idade\",\"label\":\"Idade (anos)\",\"type\":\"number\",\"unit\":\"anos\",\"placeholder\":\"30\",\"min\":1}]",
     "steps": "[\"Informe sexo, peso, altura e idade\",\"Aplique a fórmula de Harris-Benedict\",\"O resultado é a TMB em kcal/dia\"]",
