@@ -262,8 +262,8 @@ function evaluateClientFormula(
     const rawResults = fn(...values) as Record<string, number | string>;
 
     const allResults: ResultEntry[] = Object.entries(rawResults)
-      .filter(([, v]) => v !== undefined && v !== null && !isNaN(Number(v)))
-      .map(([k, v]) => ({ key: k, value: typeof v === "number" ? v : Number(v) }));
+      .filter(([, v]) => v !== undefined && v !== null && (typeof v === "string" || !isNaN(Number(v))))
+      .map(([k, v]) => ({ key: k, value: typeof v === "number" ? v : v }));
 
     // If there are non-zero results, filter out zeros to avoid showing irrelevant conditional results
     const hasNonZero = allResults.some((r) => (r.value as number) !== 0);
@@ -285,7 +285,9 @@ function evaluateClientFormula(
   }
 }
 
-function formatResultValue(key: string, value: number): string {
+function formatResultValue(key: string, value: number | string): string {
+  // If value is already a string (like age result), return it directly
+  if (typeof value === "string") return value;
   // Currency-related keys
   const currencyKeys = [
     "M", "montante", "parcela", "juros", "total", "valor", "saldo", "rendimento",
@@ -387,6 +389,7 @@ function formatResultLabel(key: string): string {
     preco_venda: "Preço de Venda",
     markup: "Markup",
     diferenca_dias: "Diferença em Dias",
+    idade: "Idade Exata",
     resultado_percentual: "Resultado",
     resultado_valor: "Resultado",
     variacao_percentual: "Variação Percentual",
@@ -579,7 +582,7 @@ export default function CalculatorWidget({
                       i === 0 ? "text-2xl text-blue-900" : "text-lg text-blue-800"
                     }`}
                   >
-                    {formatResultValue(r.key, Number(r.value))}
+                    {formatResultValue(r.key, r.value)}
                   </span>
                 </div>
               ))}
