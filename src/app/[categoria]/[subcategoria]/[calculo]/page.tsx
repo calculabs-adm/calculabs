@@ -155,6 +155,11 @@ export default async function CalculatorPage({ params }: Props) {
     applicationCategory: "FinanceApplication",
     operatingSystem: "All",
     url: canonicalUrl,
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "BRL",
+    },
     provider: {
       "@type": "Organization",
       name: "CalcuLabs",
