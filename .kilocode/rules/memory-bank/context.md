@@ -5,6 +5,7 @@
 - [x] Fix calculadora Idade Exata (/utilitarios/datas/calculo-de-idade-exata): resultado era uma string "34 anos, 9 meses e 18 dias" mas o filtro de resultados usava !isNaN(Number(v)) que retornava false para strings, removendo o resultado. Corrigido o filtro para aceitar strings: `typeof v === 'string' || !isNaN(Number(v))`. Também atualizado formatResultValue para aceitar string | number e adicionado label 'idade'.
 - [x] Fix calculadora Porcentagem (/matematica/basica/porcentagem): fórmula corrigida para usar variáveis corretas (valor1, valor2, tipo_calculo) em vez de variáveis indefinidas (percentual, valor, valor_final, valor_inicial). Widget atualizado para filtrar zeros quando há resultados não-zero.
 - [x] Fix calculadora Taxa Metabólica Basal (/saude/corpo-metabolismo/taxa-metabolica-basal): fórmula usava variável 'altura_cm' (não definida) e não selecionava resultado por sexo. Corrigida para usar calcular_tmb(sexo, peso, altura, idade).
+- [x] Sistema de reporte de erros: alterado texto de "Reportar problema" para "Reportar erro" em todas as calculadoras. Criado componente ErrorReportButton com popup/modal para formulário. Criada API route /api/report-error para envio de emails via nodemailer. Requer configuração SMTP em .env.local.
 
 ## Current State
 
@@ -58,6 +59,8 @@ O projeto foi transformado de um template Next.js em um portal completo de calcu
 | `src/lib/formula-engine.ts` | Motor de fórmulas | ✅ Ready |
 | `src/lib/data.ts` | Acesso a dados | ✅ Ready |
 | `src/app/api/seed/route.ts` | API para executar seed do banco | ✅ Ready |
+| `src/app/api/report-error/route.ts` | API para envio de emails de erro | ✅ Ready |
+| `src/components/calculator/ErrorReportButton.tsx` | Botão de reporte de erro com popup | ✅ Ready |
 
 ## Categories Implemented
 
@@ -151,3 +154,4 @@ As seguintes calculadoras foram corrigidas para funcionar corretamente:
 | 2026-03-06 | Fix Peso Ideal: fórmula usava variável 'altura_cm' (não definida) e não retornava resultado único. Adicionada função calcular_peso_ideal() que retorna resultado baseado no sexo. Push para origin e github. |
 | 2026-03-06 | Fix Idade Exata: função calcular_idade_exata não tratava caso data_atual fosse undefined. Corrigido para usar data atual como fallback quando data_atual não for informada. Push para origin e github. |
 | 2026-03-06 | Fix Idade Exata (2ª vez): fórmula passava data_atual como undefined para função. Removido data_atual da fórmula em calculators.json e seed.ts - agora usa apenas calcular_idade_exata(data_nascimento). Push para origin e github. |
+| 2026-03-06 | Sistema de reporte de erros: alterado texto para "Reportar erro" em todas as calculadoras. Criado componente ErrorReportButton com popup/modal. Criada API route /api/report-error para envio de emails via nodemailer. Requer configuracao SMTP em .env.local.
