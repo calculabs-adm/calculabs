@@ -8,6 +8,7 @@
 - [x] Sistema de reporte de erros: alterado texto de "Reportar problema" para "Reportar erro" em todas as calculadoras. Criado componente ErrorReportButton com popup/modal para formulário. Criada API route /api/report-error para envio de emails via nodemailer. Requer configuração SMTP em .env.local.
 - [x] Add WebApplication JSON-LD schema: schema adicionado nas páginas de calculadora para identificar como ferramentas interativas. applicationCategory: FinanceApplication.
 - [x] Add HowTo JSON-LD schema: schema adicionado para passos passo a passo das calculadoras. Usa dados existentes do campo 'steps'. Gera rich results HowToStep na SERP.
+- [x] Improve HowTo schema SEO: alterado campo 'name' de "Passo X" genérico para usar o texto real do passo (stepText), melhorando a descrição nos resultados de busca do Google.
 
 ## Current State
 
