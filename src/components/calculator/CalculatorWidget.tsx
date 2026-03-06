@@ -110,9 +110,9 @@ function evaluateClientFormula(
         }
         return Math.round(resultado);
       },
-      calcular_idade_exata: (dataNascimento: string, dataAtual: string) => {
+      calcular_idade_exata: (dataNascimento: string, dataAtual?: string) => {
         const nasc = new Date(dataNascimento);
-        const atual = new Date(dataAtual);
+        const atual = dataAtual ? new Date(dataAtual) : new Date();
         let anos = atual.getFullYear() - nasc.getFullYear();
         let meses = atual.getMonth() - nasc.getMonth();
         let dias = atual.getDate() - nasc.getDate();
