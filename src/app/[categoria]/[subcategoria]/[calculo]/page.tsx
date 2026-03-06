@@ -8,6 +8,7 @@ import {
   getSubcategoryBySlug,
 } from "@/lib/data";
 import CalculatorWidget from "@/components/calculator/CalculatorWidget";
+import ErrorReportButton from "@/components/calculator/ErrorReportButton";
 import type { Variable } from "@/lib/formula-engine";
 
 interface Props {
@@ -364,14 +365,7 @@ export default async function CalculatorPage({ params }: Props) {
                   <strong>⚠️ Aviso:</strong> Esta calculadora é para fins informativos.
                   Para decisões importantes, consulte um profissional especializado.
                 </p>
-                <p className="text-xs text-amber-600 mt-2">
-                  <a 
-                    href={`mailto:contato@calculabs.com.br?subject=Reportar problema - Calculadora: ${encodeURIComponent(calculator.name)}`}
-                    className="underline hover:text-amber-800"
-                  >
-                    Reportar problema nesta calculadora
-                  </a>
-                </p>
+                <ErrorReportButton calculatorName={calculator.name} />
               </div>
             </div>
           </div>
