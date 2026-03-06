@@ -150,3 +150,4 @@ As seguintes calculadoras foram corrigidas para funcionar corretamente:
 | 2026-03-06 | Fix Taxa Metabólica Basal: fórmula usava variável 'altura_cm' (não definida) e não selecionava resultado por sexo. Corrigida para usar calcular_tmb(sexo, peso, altura, idade). |
 | 2026-03-06 | Fix Peso Ideal: fórmula usava variável 'altura_cm' (não definida) e não retornava resultado único. Adicionada função calcular_peso_ideal() que retorna resultado baseado no sexo. Push para origin e github. |
 | 2026-03-06 | Fix Idade Exata: função calcular_idade_exata não tratava caso data_atual fosse undefined. Corrigido para usar data atual como fallback quando data_atual não for informada. Push para origin e github. |
+| 2026-03-06 | Fix Idade Exata (2ª vez): fórmula passava data_atual como undefined para função. Removido data_atual da fórmula em calculators.json e seed.ts - agora usa apenas calcular_idade_exata(data_nascimento). Push para origin e github. |
