@@ -8,7 +8,10 @@ src/
 │   ├── layout.tsx          # Root layout + metadata
 │   ├── page.tsx            # Home page
 │   ├── globals.css         # Tailwind imports + global styles
-│   └── favicon.ico         # Site icon
+│   ├── favicon.ico         # Site icon
+│   └── api/                # API routes
+│       └── seed/
+│           └── route.ts    # Database seed endpoint
 └── (expand as needed)
     ├── components/         # React components (add when needed)
     ├── lib/                # Utilities and helpers (add when needed)
@@ -81,6 +84,30 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
   );
 }
 ```
+
+### 5. API Routes with Authentication Pattern
+
+API routes with secret key protection for admin operations:
+```tsx
+// src/app/api/seed/route.ts
+export async function POST(request: NextRequest) {
+  const authHeader = request.headers.get("x-seed-key");
+  const { searchParams } = new URL(request.url);
+  const queryKey = searchParams.get("key");
+  const secretKey = process.env.SEED_SECRET_KEY || "default-key";
+
+  if (authHeader !== secretKey && queryKey !== secretKey) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
+  // Execute protected operation
+  // ...
+}
+```
+
+Usage:
+- `POST /api/seed?key=calculabs-seed-2024`
+- Or with header: `x-seed-key: calculabs-seed-2024`
 
 ## Styling Conventions
 

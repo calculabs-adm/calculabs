@@ -55,6 +55,7 @@ O projeto foi transformado de um template Next.js em um portal completo de calcu
 | `src/db/seed.ts` | 50 calculadoras iniciais | ✅ Ready |
 | `src/lib/formula-engine.ts` | Motor de fórmulas | ✅ Ready |
 | `src/lib/data.ts` | Acesso a dados | ✅ Ready |
+| `src/app/api/seed/route.ts` | API para executar seed do banco | ✅ Ready |
 
 ## Categories Implemented
 
