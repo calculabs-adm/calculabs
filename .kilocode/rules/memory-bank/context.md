@@ -139,3 +139,4 @@ As seguintes calculadoras foram corrigidas para funcionar corretamente:
 | 2026-03-05 | Fix Amortização de Financiamento: corrigida fórmula para calcular corretamente economia_juros, reducao_prazo e variáveis intermediárias |
 | 2026-03-05 | Fix Amortização de Financiamento (novamente): corrigida fórmula de novo_prazo para usar fórmula correta de anuidade com tratamento de edge cases |
 | 2026-03-05 | Diagnóstico: push para GitHub não funciona automaticamente. O `origin` aponta para servidor interno Kilo Code (builder.kiloapps.io), não para GitHub. Solução documentada em VERCEL_DEPLOY.md: configurar GitHub PAT token para push direto ao GitHub. |
+| 2026-03-06 | GitHub PAT configurado com sucesso: remote `github` adicionado com token de autenticação. Históricos divergentes integrados via merge. Push realizado para ambos os remotes (origin e github/main). A partir de agora, `git push github main` funciona automaticamente nesta sessão. |
