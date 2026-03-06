@@ -7,6 +7,7 @@
 - [x] Fix calculadora Taxa Metabólica Basal (/saude/corpo-metabolismo/taxa-metabolica-basal): fórmula usava variável 'altura_cm' (não definida) e não selecionava resultado por sexo. Corrigida para usar calcular_tmb(sexo, peso, altura, idade).
 - [x] Sistema de reporte de erros: alterado texto de "Reportar problema" para "Reportar erro" em todas as calculadoras. Criado componente ErrorReportButton com popup/modal para formulário. Criada API route /api/report-error para envio de emails via nodemailer. Requer configuração SMTP em .env.local.
 - [x] Add WebApplication JSON-LD schema: schema adicionado nas páginas de calculadora para identificar como ferramentas interativas. applicationCategory: FinanceApplication.
+- [x] Add HowTo JSON-LD schema: schema adicionado para passos passo a passo das calculadoras. Usa dados existentes do campo 'steps'. Gera rich results HowToStep na SERP.
 
 ## Current State
 
@@ -157,3 +158,4 @@ As seguintes calculadoras foram corrigidas para funcionar corretamente:
 | 2026-03-06 | Fix Idade Exata (2ª vez): fórmula passava data_atual como undefined para função. Removido data_atual da fórmula em calculators.json e seed.ts - agora usa apenas calcular_idade_exata(data_nascimento). Push para origin e github. |
 | 2026-03-06 | Sistema de reporte de erros: alterado texto para "Reportar erro" em todas as calculadoras. Criado componente ErrorReportButton com popup/modal. Criada API route /api/report-error para envio de emails via nodemailer. Requer configuracao SMTP em .env.local.
 | 2026-03-06 | Add WebApplication JSON-LD schema: schema adicionado nas páginas de calculadora para identificar como ferramentas interativas. applicationCategory: FinanceApplication. Push para origin e github.
+| 2026-03-06 | Add HowTo JSON-LD schema: schema adicionado para passos passo a passo das calculadoras. Usa dados existentes do campo 'steps'. Push para origin e github.
