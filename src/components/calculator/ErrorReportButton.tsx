@@ -70,7 +70,7 @@ export default function ErrorReportButton({ calculatorName }: ErrorReportButtonP
     <>
       <button
         onClick={() => setIsOpen(true)}
-        className="text-xs text-amber-600 hover:text-amber-800 underline decoration-dotted underline-offset-2 transition-colors cursor-pointer bg-transparent border-none"
+        className="text-xs text-blue-600 hover:text-blue-800 underline decoration-dotted underline-offset-2 transition-colors cursor-pointer bg-transparent border-none"
       >
         Reportar erro
       </button>
@@ -87,7 +87,7 @@ export default function ErrorReportButton({ calculatorName }: ErrorReportButtonP
           {/* Modal Content */}
           <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-md overflow-hidden z-10 animate-in fade-in zoom-in-95 duration-200">
             {/* Colorful top bar */}
-            <div className="h-2 bg-gradient-to-r from-amber-400 via-orange-500 to-rose-500" />
+            <div className="h-2 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700" />
 
             {submitted ? (
               <div className="p-8 text-center">
@@ -119,8 +119,8 @@ export default function ErrorReportButton({ calculatorName }: ErrorReportButtonP
                 {/* Header */}
                 <div className="px-6 pt-6 pb-2">
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 bg-amber-100 rounded-xl flex items-center justify-center">
-                      <svg className="w-5 h-5 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <div className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center">
+                      <svg className="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                       </svg>
                     </div>
@@ -162,7 +162,7 @@ export default function ErrorReportButton({ calculatorName }: ErrorReportButtonP
                           value={email}
                           onChange={(e) => setEmail(e.target.value)}
                           placeholder="seu@email.com"
-                          className="w-full pl-10 pr-4 py-2.5 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-500/20 focus:border-amber-500 transition-all text-sm"
+                          className="w-full pl-10 pr-4 py-2.5 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all text-sm"
                         />
                       </div>
                     </div>
@@ -180,7 +180,7 @@ export default function ErrorReportButton({ calculatorName }: ErrorReportButtonP
                         value={errorDescription}
                         onChange={(e) => setErrorDescription(e.target.value)}
                         placeholder="Ex: O resultado está incorreto para valores acima de 1000..."
-                        className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-500/20 focus:border-amber-500 transition-all resize-none text-sm"
+                        className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all resize-none text-sm"
                         rows={4}
                         required
                       />
@@ -210,7 +210,7 @@ export default function ErrorReportButton({ calculatorName }: ErrorReportButtonP
                       <button
                         type="submit"
                         disabled={isSubmitting || !errorDescription.trim()}
-                        className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-medium rounded-xl shadow-lg shadow-amber-500/25 transition-all transform hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none text-sm"
+                        className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-medium rounded-xl shadow-lg shadow-blue-500/25 transition-all transform hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none text-sm"
                       >
                         {isSubmitting ? (
                           <>
