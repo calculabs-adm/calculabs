@@ -146,6 +146,22 @@ export default async function CalculatorPage({ params }: Props) {
         }
       : null;
 
+  // WebApplication schema for calculator tools
+  const webApplicationJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    name: calculator.name,
+    description: calculator.description,
+    applicationCategory: "FinanceApplication",
+    operatingSystem: "All",
+    url: canonicalUrl,
+    provider: {
+      "@type": "Organization",
+      name: "CalcuLabs",
+      url: siteUrl,
+    },
+  };
+
   const complexityLabel =
     calculator.complexity === "basico"
       ? "Básico"
@@ -172,6 +188,10 @@ export default async function CalculatorPage({ params }: Props) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
         />
       )}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webApplicationJsonLd) }}
+      />
 
       {/* Breadcrumb */}
       <div className="bg-white border-b border-slate-200">
