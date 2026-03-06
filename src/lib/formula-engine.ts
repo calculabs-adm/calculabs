@@ -87,6 +87,14 @@ export function evaluateFormula(
         }
       }
       
+      function calcular_gordura(sexo, altura, cintura, pescoco, quadril) {
+        if (sexo === 'masculino') {
+          return 495 / (1.0324 - 0.19077 * Math.log10(cintura - pescoco) + 0.15456 * Math.log10(altura)) - 450;
+        } else {
+          return 495 / (1.29579 - 0.35004 * Math.log10(cintura + quadril - pescoco) + 0.22100 * Math.log10(altura)) - 450;
+        }
+      }
+      
       function calcular_mmc(nums) {
         function gcd(a, b) { return b === 0 ? a : gcd(b, a % b); }
         function lcm(a, b) { return (a * b) / gcd(a, b); }
@@ -204,6 +212,13 @@ export function evaluateFormula(
         return 88.362 + 13.397 * peso + 4.799 * altura_cm - 5.677 * idade;
       }
       return 447.593 + 9.247 * peso + 3.098 * altura_cm - 4.33 * idade;
+    };
+
+    context.calcular_gordura = (sexo: string, altura: number, cintura: number, pescoco: number, quadril: number) => {
+      if (sexo === "masculino") {
+        return 495 / (1.0324 - 0.19077 * Math.log10(cintura - pescoco) + 0.15456 * Math.log10(altura)) - 450;
+      }
+      return 495 / (1.29579 - 0.35004 * Math.log10(cintura + quadril - pescoco) + 0.22100 * Math.log10(altura)) - 450;
     };
 
       // Execute each line

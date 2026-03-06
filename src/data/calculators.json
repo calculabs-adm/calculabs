@@ -1298,7 +1298,7 @@
     "title": "Calculadora de Percentual de Gordura Corporal",
     "description": "Estime seu percentual de gordura corporal pela fórmula da Marinha dos EUA",
     "introduction": "O percentual de gordura corporal é uma medida mais precisa que o IMC para avaliar a composição corporal. Indica a proporção de gordura em relação ao peso total. A fórmula da Marinha dos EUA usa medidas de circunferência para estimar o percentual de gordura sem equipamentos especiais.",
-    "formula": "gordura_homem = 495 / (1.0324 - 0.19077 * log10(cintura - pescoco) + 0.15456 * log10(altura)) - 450; gordura_mulher = 495 / (1.29579 - 0.35004 * log10(cintura + quadril - pescoco) + 0.22100 * log10(altura)) - 450",
+    "formula": "gordura = calcular_gordura(sexo, altura, cintura, pescoco, quadril)",
     "formula_display": "% Gordura = 495 / (1,0324 - 0,19077×log(C-P) + 0,15456×log(A)) - 450",
     "variables": "[{\"id\":\"sexo\",\"label\":\"Sexo\",\"type\":\"select\",\"options\":[{\"value\":\"masculino\",\"label\":\"Masculino\"},{\"value\":\"feminino\",\"label\":\"Feminino\"}]},{\"id\":\"altura\",\"label\":\"Altura (cm)\",\"type\":\"number\",\"unit\":\"cm\",\"placeholder\":\"175\",\"min\":50},{\"id\":\"cintura\",\"label\":\"Circunferência da cintura (cm)\",\"type\":\"number\",\"unit\":\"cm\",\"placeholder\":\"85\",\"min\":0},{\"id\":\"pescoco\",\"label\":\"Circunferência do pescoço (cm)\",\"type\":\"number\",\"unit\":\"cm\",\"placeholder\":\"38\",\"min\":0},{\"id\":\"quadril\",\"label\":\"Circunferência do quadril (cm) - apenas mulheres\",\"type\":\"number\",\"unit\":\"cm\",\"placeholder\":\"95\",\"min\":0}]",
     "steps": "[\"Meça as circunferências com uma fita métrica\",\"Aplique a fórmula da Marinha dos EUA\",\"Compare com os valores de referência\"]",

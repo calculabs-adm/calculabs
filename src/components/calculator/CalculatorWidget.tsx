@@ -74,6 +74,10 @@ function evaluateClientFormula(
         if (sexo === "masculino") return 88.362 + 13.397 * peso + 4.799 * altura_cm - 5.677 * idade;
         return 447.593 + 9.247 * peso + 3.098 * altura_cm - 4.33 * idade;
       },
+      calcular_gordura: (sexo: string, altura: number, cintura: number, pescoco: number, quadril: number) => {
+        if (sexo === "masculino") return 495 / (1.0324 - 0.19077 * Math.log10(cintura - pescoco) + 0.15456 * Math.log10(altura)) - 450;
+        return 495 / (1.29579 - 0.35004 * Math.log10(cintura + quadril - pescoco) + 0.22100 * Math.log10(altura)) - 450;
+      },
       calcular_mdc: (numerosStr: string) => {
         const numeros = numerosStr.split(",").map((n) => Math.abs(parseInt(n.trim(), 10))).filter((n) => !isNaN(n) && n > 0);
         if (numeros.length === 0) return 0;
@@ -332,6 +336,7 @@ function formatResultLabel(key: string): string {
     tmb_mulher: "TMB (Feminino)",
     get: "Gasto Energético Total",
     calorias_objetivo: "Calorias para seu Objetivo",
+    gordura: "Percentual de Gordura Corporal",
     gordura_homem: "% Gordura Corporal",
     gordura_mulher: "% Gordura Corporal",
     peso_ideal_homem: "Peso Ideal (Masculino)",
