@@ -1328,7 +1328,7 @@
     "title": "Calculadora de Peso Ideal",
     "description": "Calcule seu peso ideal com base na altura e estrutura corporal",
     "introduction": "O peso ideal é uma estimativa do peso saudável para uma determinada altura. Existem várias fórmulas para calcular o peso ideal, como a fórmula de Devine, Hamwi e Robinson. Cada uma tem suas particularidades e pode variar conforme o sexo e a estrutura corporal. O peso ideal é uma referência, não um valor absoluto.",
-    "formula": "peso_ideal_homem = 50 + 2.3 * ((altura_cm - 152.4) / 2.54); peso_ideal_mulher = 45.5 + 2.3 * ((altura_cm - 152.4) / 2.54)",
+    "formula": "peso_ideal = calcular_peso_ideal(sexo, altura)",
     "formula_display": "Peso Ideal (H) = 50 + 2,3 × (Altura em polegadas - 60)",
     "variables": "[{\"id\":\"sexo\",\"label\":\"Sexo\",\"type\":\"select\",\"options\":[{\"value\":\"masculino\",\"label\":\"Masculino\"},{\"value\":\"feminino\",\"label\":\"Feminino\"}]},{\"id\":\"altura\",\"label\":\"Altura (cm)\",\"type\":\"number\",\"unit\":\"cm\",\"placeholder\":\"175\",\"min\":50}]",
     "steps": "[\"Informe sexo e altura\",\"Aplique a fórmula de Devine\",\"O resultado é o peso ideal estimado\"]",

@@ -95,6 +95,14 @@ export function evaluateFormula(
         }
       }
       
+      function calcular_peso_ideal(sexo, altura) {
+        if (sexo === 'masculino') {
+          return 50 + 2.3 * ((altura - 152.4) / 2.54);
+        } else {
+          return 45.5 + 2.3 * ((altura - 152.4) / 2.54);
+        }
+      }
+      
       function calcular_mmc(nums) {
         function gcd(a, b) { return b === 0 ? a : gcd(b, a % b); }
         function lcm(a, b) { return (a * b) / gcd(a, b); }
@@ -219,6 +227,13 @@ export function evaluateFormula(
         return 495 / (1.0324 - 0.19077 * Math.log10(cintura - pescoco) + 0.15456 * Math.log10(altura)) - 450;
       }
       return 495 / (1.29579 - 0.35004 * Math.log10(cintura + quadril - pescoco) + 0.22100 * Math.log10(altura)) - 450;
+    };
+
+    context.calcular_peso_ideal = (sexo: string, altura: number) => {
+      if (sexo === "masculino") {
+        return 50 + 2.3 * ((altura - 152.4) / 2.54);
+      }
+      return 45.5 + 2.3 * ((altura - 152.4) / 2.54);
     };
 
       // Execute each line

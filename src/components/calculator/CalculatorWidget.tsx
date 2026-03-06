@@ -78,6 +78,10 @@ function evaluateClientFormula(
         if (sexo === "masculino") return 495 / (1.0324 - 0.19077 * Math.log10(cintura - pescoco) + 0.15456 * Math.log10(altura)) - 450;
         return 495 / (1.29579 - 0.35004 * Math.log10(cintura + quadril - pescoco) + 0.22100 * Math.log10(altura)) - 450;
       },
+      calcular_peso_ideal: (sexo: string, altura: number) => {
+        if (sexo === "masculino") return 50 + 2.3 * ((altura - 152.4) / 2.54);
+        return 45.5 + 2.3 * ((altura - 152.4) / 2.54);
+      },
       calcular_mdc: (numerosStr: string) => {
         const numeros = numerosStr.split(",").map((n) => Math.abs(parseInt(n.trim(), 10))).filter((n) => !isNaN(n) && n > 0);
         if (numeros.length === 0) return 0;
@@ -341,6 +345,7 @@ function formatResultLabel(key: string): string {
     gordura_mulher: "% Gordura Corporal",
     peso_ideal_homem: "Peso Ideal (Masculino)",
     peso_ideal_mulher: "Peso Ideal (Feminino)",
+    peso_ideal: "Peso Ideal",
     valor_convertido: "Valor Convertido",
     fahrenheit: "Fahrenheit (°F)",
     kelvin: "Kelvin (K)",
