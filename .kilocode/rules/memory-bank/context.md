@@ -123,6 +123,7 @@ As seguintes calculadoras foram corrigidas para funcionar corretamente:
 | Amortização de Financiamento | Fórmula de novo_prazo estava matematicamente incorreta | Corrigida para usar fórmula correta de anuidade: n = -ln(1 - (PV×i)/PMT) / ln(1+i) |
 | Taxa Metabólica Basal | Usava variável 'altura_cm' (não definida) e não selecionava resultado por sexo | Fórmula corrigida para usar calcular_tmb(sexo, peso, altura, idade) |
 | Percentual de Gordura Corporal | Calculava gordura_homem e gordura_mulher mas não retornava resultado único | Adicionada função calcular_gordura() que retorna resultado baseado no sexo |
+| Peso Ideal | Usava variável 'altura_cm' (não definida) e não selecionava resultado por sexo | Adicionada função calcular_peso_ideal() que retorna resultado baseado no sexo |
 
 ## Session History
 
@@ -146,3 +147,4 @@ As seguintes calculadoras foram corrigidas para funcionar corretamente:
 | 2026-03-06 | Fix Taxa Metabólica Basal: fórmula usava variável 'altura_cm' (não definida) e não selecionava resultado por sexo. Corrigida para usar calcular_tmb(sexo, peso, altura, idade). |
 | 2026-03-06 | Fix Percentual de Gordura Corporal: calculava gordura_homem e gordura_mulher mas não retornava resultado único. Adicionada função calcular_gordura() que retorna resultado baseado no sexo. |
 | 2026-03-06 | Fix Taxa Metabólica Basal: fórmula usava variável 'altura_cm' (não definida) e não selecionava resultado por sexo. Corrigida para usar calcular_tmb(sexo, peso, altura, idade). |
+| 2026-03-06 | Fix Peso Ideal: fórmula usava variável 'altura_cm' (não definida) e não retornava resultado único. Adicionada função calcular_peso_ideal() que retorna resultado baseado no sexo. Push para origin e github. |
