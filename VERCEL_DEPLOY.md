@@ -60,6 +60,18 @@ vercel --prod
 | `TURSO_DATABASE_URL` | URL do banco libsql (ex: libsql://calculabs.turso.io) |
 | `TURSO_AUTH_TOKEN` | Token de autenticação do Turso |
 
+### Variáveis do Sistema de Reporte de Erros (Opcionais)
+| Variável | Descrição |
+|----------|----------|
+| `SMTP_HOST` | Servidor SMTP (ex: smtp.umbler.com) |
+| `SMTP_PORT` | Porta SMTP (ex: 587) |
+| `SMTP_USER` | Usuário SMTP (email) |
+| `SMTP_PASS` | Senha SMTP |
+| `REPORT_FROM_EMAIL` | Email de remetente (ex: contato@calculabs.com.br) |
+| `REPORT_TO_EMAIL` | Email que receberá os relatórios de erro |
+
+> ⚠️ **Importante**: As variáveis acima são necessárias apenas para o sistema de reporte de erros funcionar. Sem elas, o botão "Reportar erro" não enviará emails.
+
 ### Desenvolvimento Local
 ```bash
 # Instalar dependências
