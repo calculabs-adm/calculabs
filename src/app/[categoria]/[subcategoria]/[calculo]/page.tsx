@@ -171,6 +171,7 @@ export default async function CalculatorPage({ params }: Props) {
           name: `Como calcular ${calculator.name}`,
           description: calculator.description,
           url: canonicalUrl,
+          totalTime: "PT1S",
           step: steps.map((stepText, index) => ({
             "@type": "HowToStep",
             name: stepText,
