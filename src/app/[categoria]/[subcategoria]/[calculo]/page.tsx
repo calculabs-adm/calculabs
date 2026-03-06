@@ -19,6 +19,265 @@ interface Props {
   }>;
 }
 
+interface CalculatorData {
+  calculator: {
+    id: number;
+    slug: string;
+    name: string;
+    title: string;
+    description: string;
+    introduction: string;
+    formula: string;
+    formula_display: string | null;
+    variables: string;
+    steps: string | null;
+    example: string | null;
+    applications: string | null;
+    faqs: string | null;
+    keywords: string | null;
+    meta_title: string;
+    meta_description: string;
+    complexity: string | null;
+    author_name: string | null;
+    author_bio: string | null;
+    updated_at: number | null;
+  };
+  category: {
+    id: number;
+    slug: string;
+    name: string;
+  } | null;
+  subcategory: {
+    id: number;
+    slug: string;
+    name: string;
+  } | null;
+  related: Array<{
+    id: number;
+    slug: string;
+    name: string;
+  }>;
+}
+
+interface CategoryData {
+  id: number;
+  slug: string;
+  name: string;
+}
+
+interface SubcategoryData {
+  id: number;
+  slug: string;
+  name: string;
+}
+
+// Financial categories for FinancialProduct schema
+const FINANCIAL_CATEGORIES = [
+  "financas-pessoais",
+  "trabalhista-tributario"
+];
+
+const FINANCIAL_SUBCATEGORIES = [
+  "juros-investimentos",
+  "financiamentos-emprestimos",
+  "gestao-financeira",
+  "impostos",
+  "trabalhista",
+  "tributario"
+];
+
+// Check if calculator is financial
+function isFinancialCalculator(
+  category: CategoryData | null,
+  subcategory: SubcategoryData | null
+): boolean {
+  if (!category || !subcategory) return false;
+  return (
+    FINANCIAL_CATEGORIES.includes(category.slug) ||
+    FINANCIAL_SUBCATEGORIES.includes(subcategory.slug)
+  );
+}
+
+// Generate all JSON-LD schemas for a calculator
+function generateSchemas(
+  calculator: CalculatorData["calculator"],
+  category: CategoryData | null,
+  subcategory: SubcategoryData | null,
+  siteUrl: string,
+  canonicalUrl: string,
+  steps: string[],
+  faqs: { q: string; a: string }[],
+  variables: Variable[]
+) {
+  const schemas: Record<string, unknown>[] = [];
+
+  // 1. Article schema (main)
+  schemas.push({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: calculator.title,
+    description: calculator.description,
+    url: canonicalUrl,
+    dateModified: calculator.updated_at
+      ? new Date(calculator.updated_at * 1000).toISOString()
+      : undefined,
+    author: {
+      "@type": "Organization",
+      name: calculator.author_name ?? "CalcuLabs",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "CalcuLabs",
+      url: siteUrl,
+    },
+  });
+
+  // 2. BreadcrumbList schema
+  schemas.push({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Início", item: siteUrl },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: category?.name,
+        item: `${siteUrl}/${category?.slug}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: subcategory?.name,
+        item: `${siteUrl}/${category?.slug}/${subcategory?.slug}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 4,
+        name: calculator.name,
+        item: canonicalUrl,
+      },
+    ],
+  });
+
+  // 3. WebApplication schema (all calculators)
+  schemas.push({
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    name: calculator.name,
+    description: calculator.description,
+    applicationCategory: "FinanceApplication",
+    operatingSystem: "All",
+    url: canonicalUrl,
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "BRL",
+    },
+    provider: {
+      "@type": "Organization",
+      name: "CalcuLabs",
+      url: siteUrl,
+    },
+  });
+
+  // 4. FinancialProduct schema (only for financial calculators)
+  if (isFinancialCalculator(category, subcategory)) {
+    schemas.push({
+      "@context": "https://schema.org",
+      "@type": "FinancialProduct",
+      name: `Calculadora de ${calculator.name}`,
+      description: calculator.description,
+      url: canonicalUrl,
+      provider: {
+        "@type": "Organization",
+        name: "CalcuLabs",
+        url: siteUrl,
+      },
+      termsOfService: `${siteUrl}/termos-de-uso`,
+    });
+  }
+
+  // 5. Dataset schema (all calculators - describes the data generated)
+  schemas.push({
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    name: `Dados da Calculadora: ${calculator.name}`,
+    description: `Dataset contendo os parâmetros de entrada e resultados da calculadora de ${calculator.name}. ${calculator.description}`,
+    url: canonicalUrl,
+    creator: {
+      "@type": "Organization",
+      name: "CalcuLabs",
+      url: siteUrl,
+    },
+    datePublished: calculator.updated_at
+      ? new Date(calculator.updated_at * 1000).toISOString()
+      : new Date().toISOString(),
+    dateModified: calculator.updated_at
+      ? new Date(calculator.updated_at * 1000).toISOString()
+      : new Date().toISOString(),
+    variableMeasured: [
+      ...variables.map((v) => ({
+        "@type": "PropertyValue",
+        name: v.label,
+        description: v.label,
+      })),
+      {
+        "@type": "PropertyValue",
+        name: "Resultado",
+        description: `Resultado do cálculo de ${calculator.name}`,
+      },
+    ],
+    citation: [
+      {
+        "@type": "CreativeWork",
+        name: calculator.name,
+        url: canonicalUrl,
+      },
+    ],
+  });
+
+  // 6. HowTo schema (if steps exist)
+  if (steps.length > 0) {
+    schemas.push({
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      inLanguage: "pt-BR",
+      name: `Como calcular ${calculator.name}`,
+      description: calculator.description,
+      url: canonicalUrl,
+      totalTime: "PT1M",
+      tool: {
+        "@type": "HowToTool",
+        name: calculator.name,
+        url: canonicalUrl,
+      },
+      step: steps.map((stepText) => ({
+        "@type": "HowToStep",
+        name: stepText,
+        text: stepText,
+      })),
+    });
+  }
+
+  // 7. FAQPage schema (if FAQs exist)
+  if (faqs.length > 0) {
+    schemas.push({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: faqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.q,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: faq.a,
+        },
+      })),
+    });
+  }
+
+  return schemas;
+}
+
 export async function generateStaticParams() {
   const calcs = await getAllCalculators();
   return calcs.map((c) => ({
@@ -87,104 +346,17 @@ export default async function CalculatorPage({ params }: Props) {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.calculabs.com.br";
   const canonicalUrl = `${siteUrl}/${category?.slug}/${subcategory?.slug}/${calculator.slug}`;
 
-  // JSON-LD structured data
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: calculator.title,
-    description: calculator.description,
-    url: canonicalUrl,
-    dateModified: calculator.updated_at ? new Date(calculator.updated_at * 1000).toISOString() : undefined,
-    author: {
-      "@type": "Organization",
-      name: calculator.author_name ?? "CalcuLabs",
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "CalcuLabs",
-      url: siteUrl,
-    },
-    breadcrumb: {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Início", item: siteUrl },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: category?.name,
-          item: `${siteUrl}/${category?.slug}`,
-        },
-        {
-          "@type": "ListItem",
-          position: 3,
-          name: subcategory?.name,
-          item: `${siteUrl}/${category?.slug}/${subcategory?.slug}`,
-        },
-        {
-          "@type": "ListItem",
-          position: 4,
-          name: calculator.name,
-          item: canonicalUrl,
-        },
-      ],
-    },
-  };
-
-  const faqJsonLd =
-    faqs.length > 0
-      ? {
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          mainEntity: faqs.map((faq) => ({
-            "@type": "Question",
-            name: faq.q,
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: faq.a,
-            },
-          })),
-        }
-      : null;
-
-  // WebApplication schema for calculator tools
-  const webApplicationJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    name: calculator.name,
-    description: calculator.description,
-    applicationCategory: "FinanceApplication",
-    operatingSystem: "All",
-    url: canonicalUrl,
-    provider: {
-      "@type": "Organization",
-      name: "CalcuLabs",
-      url: siteUrl,
-    },
-  };
-
-  // HowTo schema for step-by-step instructions
-  const howToJsonLd =
-    steps.length > 0
-      ? {
-          "@context": "https://schema.org",
-          "@type": "HowTo",
-          inLanguage: "pt-BR",
-          name: `Como calcular ${calculator.name}`,
-          description: calculator.description,
-          url: canonicalUrl,
-          totalTime: "PT1M",
-          tool: {
-            "@type": "HowToTool",
-            name: calculator.name,
-            url: canonicalUrl,
-          },
-          step: steps.map((stepText, index) => ({
-            "@type": "HowToStep",
-            name: stepText,
-            text: stepText,
-          })),
-        }
-      : null;
+  // Generate all JSON-LD schemas using centralized function
+  const schemas = generateSchemas(
+    calculator,
+    category,
+    subcategory,
+    siteUrl,
+    canonicalUrl,
+    steps,
+    faqs,
+    variables
+  );
 
   const complexityLabel =
     calculator.complexity === "basico"
@@ -202,26 +374,14 @@ export default async function CalculatorPage({ params }: Props) {
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      {faqJsonLd && (
+      {/* JSON-LD schemas - generated by centralized generateSchemas function */}
+      {schemas.map((schema, index) => (
         <script
+          key={index}
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
         />
-      )}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(webApplicationJsonLd) }}
-      />
-      {howToJsonLd && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }}
-        />
-      )}
+      ))}
 
       {/* Breadcrumb */}
       <div className="bg-white border-b border-slate-200">
