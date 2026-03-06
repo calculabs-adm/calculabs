@@ -162,6 +162,23 @@ export default async function CalculatorPage({ params }: Props) {
     },
   };
 
+  // HowTo schema for step-by-step instructions
+  const howToJsonLd =
+    steps.length > 0
+      ? {
+          "@context": "https://schema.org",
+          "@type": "HowTo",
+          name: `Como calcular ${calculator.name}`,
+          description: calculator.description,
+          url: canonicalUrl,
+          step: steps.map((stepText, index) => ({
+            "@type": "HowToStep",
+            name: `Passo ${index + 1}`,
+            text: stepText,
+          })),
+        }
+      : null;
+
   const complexityLabel =
     calculator.complexity === "basico"
       ? "Básico"
@@ -192,6 +209,12 @@ export default async function CalculatorPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webApplicationJsonLd) }}
       />
+      {howToJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }}
+        />
+      )}
 
       {/* Breadcrumb */}
       <div className="bg-white border-b border-slate-200">
