@@ -9,6 +9,7 @@
 - [x] Add WebApplication JSON-LD schema: schema adicionado nas páginas de calculadora para identificar como ferramentas interativas. applicationCategory: FinanceApplication.
 - [x] Add HowTo JSON-LD schema: schema adicionado para passos passo a passo das calculadoras. Usa dados existentes do campo 'steps'. Gera rich results HowToStep na SERP.
 - [x] Improve HowTo schema SEO: alterado campo 'name' de "Passo X" genérico para usar o texto real do passo (stepText), melhorando a descrição nos resultados de busca do Google.
+- [x] Add totalTime to HowTo schema: adicionado campo "totalTime": "PT1S" para indicar que o cálculo leva ~1 segundo. Melhora a qualidade do Rich Result no Google.
 
 ## Current State
 
