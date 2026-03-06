@@ -168,10 +168,16 @@ export default async function CalculatorPage({ params }: Props) {
       ? {
           "@context": "https://schema.org",
           "@type": "HowTo",
+          inLanguage: "pt-BR",
           name: `Como calcular ${calculator.name}`,
           description: calculator.description,
           url: canonicalUrl,
-          totalTime: "PT1S",
+          totalTime: "PT1M",
+          tool: {
+            "@type": "HowToTool",
+            name: calculator.name,
+            url: canonicalUrl,
+          },
           step: steps.map((stepText, index) => ({
             "@type": "HowToStep",
             name: stepText,
