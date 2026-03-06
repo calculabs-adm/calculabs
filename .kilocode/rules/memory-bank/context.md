@@ -10,6 +10,7 @@
 - [x] Add HowTo JSON-LD schema: schema adicionado para passos passo a passo das calculadoras. Usa dados existentes do campo 'steps'. Gera rich results HowToStep na SERP.
 - [x] Improve HowTo schema SEO: alterado campo 'name' de "Passo X" genérico para usar o texto real do passo (stepText), melhorando a descrição nos resultados de busca do Google.
 - [x] Add totalTime to HowTo schema: adicionado campo "totalTime": "PT1S" para indicar que o cálculo leva ~1 segundo. Melhora a qualidade do Rich Result no Google.
+- [x] Improve HowTo schema with inLanguage, tool, and totalTime PT1M: adicionado inLanguage: "pt-BR", tool: HowToTool apontando para a calculadora, e totalTime alterado para "PT1M" para melhor semântica SEO.
 
 ## Current State
 
