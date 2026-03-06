@@ -2,7 +2,7 @@
 
 ## Recently Completed
 
-- [x] Fix calculadora Idade Exata (/utilitarios/datas/calculo-de-idade-exata): função calcular_idade_exata não tratava caso data_atual fosse undefined. Corrigido para usar data atual como fallback quando data_atual não for informada.
+- [x] Fix calculadora Idade Exata (/utilitarios/datas/calculo-de-idade-exata): resultado era uma string "34 anos, 9 meses e 18 dias" mas o filtro de resultados usava !isNaN(Number(v)) que retornava false para strings, removendo o resultado. Corrigido o filtro para aceitar strings: `typeof v === 'string' || !isNaN(Number(v))`. Também atualizado formatResultValue para aceitar string | number e adicionado label 'idade'.
 - [x] Fix calculadora Porcentagem (/matematica/basica/porcentagem): fórmula corrigida para usar variáveis corretas (valor1, valor2, tipo_calculo) em vez de variáveis indefinidas (percentual, valor, valor_final, valor_inicial). Widget atualizado para filtrar zeros quando há resultados não-zero.
 - [x] Fix calculadora Taxa Metabólica Basal (/saude/corpo-metabolismo/taxa-metabolica-basal): fórmula usava variável 'altura_cm' (não definida) e não selecionava resultado por sexo. Corrigida para usar calcular_tmb(sexo, peso, altura, idade).
 
