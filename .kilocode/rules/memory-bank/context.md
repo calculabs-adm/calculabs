@@ -2,6 +2,7 @@
 
 ## Recently Completed
 
+- [x] Revert brand identity: reverted ∑ icon and blue color scheme changes - user preferred original design
 - [x] Push para GitHub: commit 5353f22 enviado para github.com/calculabs-adm/calculabs.git (curiosity section to calculator pages)
 - [x] Fix calculadora Idade Exata (/utilitarios/datas/calculo-de-idade-exata): resultado era uma string "34 anos, 9 meses e 18 dias" mas o filtro de resultados usava !isNaN(Number(v)) que retornava false para strings, removendo o resultado. Corrigido o filtro para aceitar strings: `typeof v === 'string' || !isNaN(Number(v))`. Também atualizado formatResultValue para aceitar string | number e adicionado label 'idade'.
 - [x] Fix calculadora Porcentagem (/matematica/basica/porcentagem): fórmula corrigida para usar variáveis corretas (valor1, valor2, tipo_calculo) em vez de variáveis indefinidas (percentual, valor, valor_final, valor_inicial). Widget atualizado para filtrar zeros quando há resultados não-zero.
@@ -164,3 +165,4 @@ As seguintes calculadoras foram corrigidas para funcionar corretamente:
 | 2026-03-06 | Add WebApplication JSON-LD schema: schema adicionado nas páginas de calculadora para identificar como ferramentas interativas. applicationCategory: FinanceApplication. Push para origin e github.
 | 2026-03-06 | Add HowTo JSON-LD schema: schema adicionado para passos passo a passo das calculadoras. Usa dados existentes do campo 'steps'. Push para origin e github.
 | 2026-03-07 | Push para GitHub: commit 5353f22 enviado para github.com/calculabs-adm/calculabs.git (curiosity section to calculator pages)
+| 2026-03-07 | Revert brand identity: reverted ∑ icon and blue color scheme changes - user preferred original design
