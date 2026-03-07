@@ -14,6 +14,8 @@
 - [x] Add totalTime to HowTo schema: adicionado campo "totalTime": "PT1S" para indicar que o cálculo leva ~1 segundo. Melhora a qualidade do Rich Result no Google.
 - [x] Improve HowTo schema with inLanguage, tool, and totalTime PT1M: adicionado inLanguage: "pt-BR", tool: HowToTool apontando para a calculadora, e totalTime alterado para "PT1M" para melhor semântica SEO.
 - [x] Add Google Tag Manager: adicionado componente GoogleTagManager no layout global com gtmId GTM-WCJ4FLF7 para tracking em todas as páginas.
+- [x] Add analytics tracking layer: criado módulo src/lib/analytics.ts com função track() para enviar eventos ao dataLayer do GTM
+- [x] Add calculator view tracking: implementado evento "calculadora_visualizada" que envia calculadora_nome, calculadora_categoria e calculadora_subcategoria ao GTM
 
 ## Current State
 
