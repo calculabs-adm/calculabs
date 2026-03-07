@@ -494,7 +494,7 @@ export default async function CalculatorPage({ params }: Props) {
 
             {/* Curiosity Section */}
             {curiosity && (
-              <div className="bg-gradient-to-r from-blue-50 to-cyan-50 border border-blue-200 rounded-2xl p-6">
+              <div className="bg-[#d5d5d5] rounded-2xl p-6">
                 <div
                   className="curiosity-content"
                   dangerouslySetInnerHTML={{ __html: curiosity }}
