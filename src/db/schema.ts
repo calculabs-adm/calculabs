@@ -36,6 +36,7 @@ export const calculators = sqliteTable("calculators", {
   steps: text("steps"), // JSON string - step by step explanation
   example: text("example"), // JSON string - worked example
   applications: text("applications"), // JSON string - real world applications
+  curiosity: text("curiosity"), // JSON string - educational curiosity content
   faqs: text("faqs"), // JSON string - FAQ items
   relatedSlugs: text("related_slugs"), // JSON string - array of slugs
   keywords: text("keywords"), // JSON string - SEO keywords array

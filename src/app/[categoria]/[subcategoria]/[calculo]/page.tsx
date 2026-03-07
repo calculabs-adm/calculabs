@@ -33,6 +33,7 @@ interface CalculatorData {
     steps: string | null;
     example: string | null;
     applications: string | null;
+    curiosity: string | null;
     faqs: string | null;
     keywords: string | null;
     meta_title: string;
@@ -339,6 +340,8 @@ export default async function CalculatorPage({ params }: Props) {
     ? JSON.parse(calculator.applications)
     : [];
 
+  const curiosity: string | null = calculator.curiosity || null;
+
   const faqs: { q: string; a: string }[] = calculator.faqs
     ? JSON.parse(calculator.faqs)
     : [];
@@ -486,6 +489,16 @@ export default async function CalculatorPage({ params }: Props) {
                     </li>
                   ))}
                 </ul>
+              </div>
+            )}
+
+            {/* Curiosity Section */}
+            {curiosity && (
+              <div className="bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 rounded-2xl p-6">
+                <div
+                  className="curiosity-content"
+                  dangerouslySetInnerHTML={{ __html: curiosity }}
+                />
               </div>
             )}
 

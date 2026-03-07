@@ -38,6 +38,7 @@ export type Calculator = {
   steps: string | null;
   example: string | null;
   applications: string | null;
+  curiosity: string | null;
   faqs: string | null;
   related_slugs: string | null;
   keywords: string | null;
