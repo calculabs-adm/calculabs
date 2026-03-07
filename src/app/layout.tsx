@@ -56,7 +56,7 @@ export const metadata: Metadata = {
       "Mais de 5.000 calculadoras online gratuitas. Matemática, Finanças, Saúde, Engenharia e muito mais.",
     images: [
       {
-        url: `${siteUrl}/og-image.png`,
+        url: `${siteUrl}/og-image.svg`,
         width: 1200,
         height: 630,
         alt: "CalcuLabs",
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "CalcuLabs | Calculadoras Online Gratuitas",
     description: "Mais de 5.000 calculadoras online gratuitas.",
-    images: [`${siteUrl}/og-image.png`],
+    images: [`${siteUrl}/og-image.svg`],
   },
   alternates: {
     canonical: siteUrl,
