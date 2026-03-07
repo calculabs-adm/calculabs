@@ -1,74 +1,28 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useMemo } from "react";
 import { useRouter } from "next/navigation";
+import { getAllCalculators, getCategoryByCategoryId, getSubcategoryById, type Calculator } from "@/lib/data";
 
-// Lista de calculadoras para busca (todas as 50 calculadoras)
-const calculators = [
-  // Finanças - Juros e Investimentos
-  { name: "Juros Compostos", slug: "juros-compostos", category: "financas-pessoais", subcategory: "juros-investimentos" },
-  { name: "Juros Simples", slug: "juros-simples", category: "financas-pessoais", subcategory: "juros-investimentos" },
-  { name: "Rendimento CDB", slug: "rendimento-cdb", category: "financas-pessoais", subcategory: "juros-investimentos" },
-  { name: "Tesouro Direto", slug: "rendimento-tesouro-direto", category: "financas-pessoais", subcategory: "juros-investimentos" },
-  { name: "Poupança", slug: "rendimento-poupanca", category: "financas-pessoais", subcategory: "juros-investimentos" },
-  { name: "Dividend Yield", slug: "dividend-yield", category: "financas-pessoais", subcategory: "juros-investimentos" },
-  { name: "Aposentadoria", slug: "simulacao-aposentadoria", category: "financas-pessoais", subcategory: "juros-investimentos" },
-  // Finanças - Financiamentos
-  { name: "Financiamento Imobiliário", slug: "financiamento-imobiliario", category: "financas-pessoais", subcategory: "financiamentos-emprestimos" },
-  { name: "Financiamento de Veículo", slug: "financiamento-veiculo", category: "financas-pessoais", subcategory: "financiamentos-emprestimos" },
-  { name: "Empréstimo Pessoal", slug: "emprestimo-pessoal", category: "financas-pessoais", subcategory: "financiamentos-emprestimos" },
-  { name: "Parcelamento", slug: "simulacao-parcelamento", category: "financas-pessoais", subcategory: "financiamentos-emprestimos" },
-  { name: "Tabela SAC", slug: "tabela-sac", category: "financas-pessoais", subcategory: "financiamentos-emprestimos" },
-  { name: "Tabela Price", slug: "tabela-price", category: "financas-pessoais", subcategory: "financiamentos-emprestimos" },
-  { name: "Amortização", slug: "amortizacao-financiamento", category: "financas-pessoais", subcategory: "financiamentos-emprestimos" },
-  // Finanças - Gestão Financeira
-  { name: "ROI", slug: "roi", category: "financas-pessoais", subcategory: "gestao-financeira" },
-  { name: "ROAS", slug: "roas", category: "financas-pessoais", subcategory: "gestao-financeira" },
-  { name: "Margem de Lucro", slug: "margem-de-lucro", category: "financas-pessoais", subcategory: "gestao-financeira" },
-  { name: "Markup", slug: "markup", category: "financas-pessoais", subcategory: "gestao-financeira" },
-  { name: "Ponto de Equilíbrio", slug: "ponto-de-equilibrio", category: "financas-pessoais", subcategory: "gestao-financeira" },
-  // Finanças - Impostos
-  { name: "IRPF", slug: "imposto-de-renda-irpf", category: "financas-pessoais", subcategory: "impostos" },
-  // Trabalhista
-  { name: "Rescisão Trabalhista", slug: "rescisao-trabalhista", category: "trabalhista-tributario", subcategory: "trabalhista" },
-  { name: "INSS", slug: "inss", category: "trabalhista-tributario", subcategory: "trabalhista" },
-  { name: "FGTS", slug: "fgts", category: "trabalhista-tributario", subcategory: "trabalhista" },
-  { name: "13º Salário", slug: "decimo-terceiro", category: "trabalhista-tributario", subcategory: "trabalhista" },
-  { name: "Férias Proporcionais", slug: "ferias-proporcionais", category: "trabalhista-tributario", subcategory: "trabalhista" },
-  { name: "Hora Extra", slug: "hora-extra", category: "trabalhista-tributario", subcategory: "trabalhista" },
-  { name: "Comissão", slug: "calculo-de-comissao", category: "trabalhista-tributario", subcategory: "trabalhista" },
-  // Tributário
-  { name: "Simples Nacional", slug: "simples-nacional", category: "trabalhista-tributario", subcategory: "tributario" },
-  { name: "DAS MEI", slug: "das-mei", category: "trabalhista-tributario", subcategory: "tributario" },
-  { name: "ICMS", slug: "icms", category: "trabalhista-tributario", subcategory: "tributario" },
-  // Matemática - Básica
-  { name: "Porcentagem", slug: "porcentagem", category: "matematica", subcategory: "basica" },
-  { name: "Regra de Três", slug: "regra-de-tres", category: "matematica", subcategory: "basica" },
-  { name: "Média Aritmética", slug: "media-aritmetica", category: "matematica", subcategory: "basica" },
-  { name: "MMC", slug: "mmc", category: "matematica", subcategory: "basica" },
-  { name: "MDC", slug: "mdc", category: "matematica", subcategory: "basica" },
-  // Matemática - Álgebra
-  { name: "Equação 1º Grau", slug: "equacao-1-grau", category: "matematica", subcategory: "algebra" },
-  { name: "Equação 2º Grau", slug: "equacao-2-grau", category: "matematica", subcategory: "algebra" },
-  // Matemática - Geometria
-  { name: "Área do Círculo", slug: "area-do-circulo", category: "matematica", subcategory: "geometria" },
-  { name: "Área do Triângulo", slug: "area-do-triangulo", category: "matematica", subcategory: "geometria" },
-  { name: "Volume do Cilindro", slug: "volume-do-cilindro", category: "matematica", subcategory: "geometria" },
-  // Saúde
-  { name: "IMC", slug: "imc", category: "saude", subcategory: "corpo-metabolismo" },
-  { name: "TMB", slug: "taxa-metabolica-basal", category: "saude", subcategory: "corpo-metabolismo" },
-  { name: "Calorias Diárias", slug: "calorias-diarias", category: "saude", subcategory: "corpo-metabolismo" },
-  { name: "Gordura Corporal", slug: "percentual-de-gordura-corporal", category: "saude", subcategory: "corpo-metabolismo" },
-  { name: "Peso Ideal", slug: "peso-ideal", category: "saude", subcategory: "corpo-metabolismo" },
-  // Utilitários - Conversores
-  { name: "Conversor de Moeda", slug: "conversor-de-moeda", category: "utilitarios", subcategory: "conversores" },
-  { name: "Conversor de Temperatura", slug: "conversor-celsius-fahrenheit", category: "utilitarios", subcategory: "conversores" },
-  { name: "Conversor Kg/Libras", slug: "conversor-kg-libras", category: "utilitarios", subcategory: "conversores" },
-  // Utilitários - Datas
-  { name: "Diferença entre Datas", slug: "diferenca-entre-datas", category: "utilitarios", subcategory: "datas" },
-  { name: "Idade Exata", slug: "calculo-de-idade-exata", category: "utilitarios", subcategory: "datas" },
-];
+// Transform calculator data for search - need category and subcategory slugs
+function useCalculatorSearchData() {
+  return useMemo(() => {
+    const calcs = getAllCalculators();
+    return calcs.map((calc: Calculator) => {
+      const category = getCategoryByCategoryId(calc.category_id);
+      const subcategory = calc.subcategory_id 
+        ? getSubcategoryById(calc.subcategory_id) 
+        : null;
+      return {
+        name: calc.name,
+        slug: calc.slug,
+        category: category?.slug || "",
+        subcategory: subcategory?.slug || "",
+      };
+    });
+  }, []);
+}
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -77,7 +31,9 @@ export default function Header() {
   const searchRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
 
-  // Filtrar calculadoras baseado na busca (usando useMemo para evitar setState no effect)
+  const calculators = useCalculatorSearchData();
+
+  // Filtrar calculadoras baseado na busca
   const searchResults = searchQuery.length >= 2 
     ? calculators.filter(calc =>
         calc.name.toLowerCase().includes(searchQuery.toLowerCase())
@@ -95,7 +51,7 @@ export default function Header() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const handleSelectCalc = (calc: typeof calculators[0]) => {
+  const handleSelectCalc = (calc: { name: string; slug: string; category: string; subcategory: string }) => {
     router.push(`/${calc.category}/${calc.subcategory}/${calc.slug}`);
     setSearchOpen(false);
     setSearchQuery("");

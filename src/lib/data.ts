@@ -148,6 +148,8 @@ function getSubcategoryById(id: number): Subcategory | null {
   return subcategories.find((s) => s.id === id) ?? null;
 }
 
+export { getCategoryByCategoryId, getSubcategoryById };
+
 export function getCategoriesWithCount() {
   const cats = getAllCategories();
   return cats.map((cat) => {
