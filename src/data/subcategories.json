@@ -106,5 +106,14 @@
     "description": "Calculadoras de imposto de renda e tributos pessoais",
     "order": 4,
     "created_at": 1772505648
+  },
+  {
+    "id": 25,
+    "category_id": 9,
+    "name": "Gravidez",
+    "slug": "gravidez",
+    "description": "Calculadoras de gravidez, idade gestacional, data prevista do parto e período fértil",
+    "order": 2,
+    "created_at": 1772505648
   }
 ]

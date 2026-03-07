@@ -124,6 +124,43 @@ export function evaluateFormula(
         if (meses < 0) { anos--; meses += 12; }
         return { anos, meses, dias };
       }
+      
+      function calcular_idade_gestacional(data_ultima_menstruacao) {
+        const dum = new Date(data_ultima_menstruacao);
+        const hoje = new Date();
+        const diffTime = hoje - dum;
+        const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+        const semanas = Math.floor(diffDays / 7);
+        const diasRestantes = diffDays % 7;
+        return semanas + ' semanas e ' + diasRestantes + ' dias';
+      }
+      
+      function calcular_data_parto(data_ultima_menstruacao) {
+        const dum = new Date(data_ultima_menstruacao);
+        const dataParto = new Date(dum);
+        dataParto.setDate(dataParto.getDate() + 280);
+        const dia = String(dataParto.getDate()).padStart(2, '0');
+        const mes = String(dataParto.getMonth() + 1).padStart(2, '0');
+        const ano = dataParto.getFullYear();
+        return dia + '/' + mes + '/' + ano;
+      }
+      
+      function calcular_ovulacao(data_ultima_menstruacao, duracao_ciclo) {
+        const ciclo = duracao_ciclo || 28;
+        const dum = new Date(data_ultima_menstruacao);
+        const diaOvulacao = dum.getTime() + (ciclo - 14) * 24 * 60 * 60 * 1000;
+        const dataOvulacao = new Date(diaOvulacao);
+        const diaOv = String(dataOvulacao.getDate()).padStart(2, '0');
+        const mesOv = String(dataOvulacao.getMonth() + 1).padStart(2, '0');
+        const anoOv = dataOvulacao.getFullYear();
+        
+        const inicioFertil = new Date(diaOvulacao - 5 * 24 * 60 * 60 * 1000);
+        const diaInicio = String(inicioFertil.getDate()).padStart(2, '0');
+        const mesInicio = String(inicioFertil.getMonth() + 1).padStart(2, '0');
+        const anoInicio = inicioFertil.getFullYear();
+        
+        return 'Ovulacao: ' + diaOv + '/' + mesOv + '/' + anoOv + ' | Periodo fertil: ' + diaInicio + '/' + mesInicio + '/' + anoInicio + ' a ' + diaOv + '/' + mesOv + '/' + anoOv;
+      }
     `;
 
     // Inject variables
@@ -234,6 +271,43 @@ export function evaluateFormula(
         return 50 + 2.3 * ((altura - 152.4) / 2.54);
       }
       return 45.5 + 2.3 * ((altura - 152.4) / 2.54);
+    };
+
+    context.calcular_idade_gestacional = (data_ultima_menstruacao: string) => {
+      const dum = new Date(data_ultima_menstruacao);
+      const hoje = new Date();
+      const diffTime = hoje.getTime() - dum.getTime();
+      const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+      const semanas = Math.floor(diffDays / 7);
+      const diasRestantes = diffDays % 7;
+      return semanas + ' semanas e ' + diasRestantes + ' dias';
+    };
+
+    context.calcular_data_parto = (data_ultima_menstruacao: string) => {
+      const dum = new Date(data_ultima_menstruacao);
+      const dataParto = new Date(dum);
+      dataParto.setDate(dataParto.getDate() + 280);
+      const dia = String(dataParto.getDate()).padStart(2, '0');
+      const mes = String(dataParto.getMonth() + 1).padStart(2, '0');
+      const ano = dataParto.getFullYear();
+      return dia + '/' + mes + '/' + ano;
+    };
+
+    context.calcular_ovulacao = (data_ultima_menstruacao: string, duracao_ciclo?: number) => {
+      const ciclo = duracao_ciclo || 28;
+      const dum = new Date(data_ultima_menstruacao);
+      const diaOvulacao = dum.getTime() + (ciclo - 14) * 24 * 60 * 60 * 1000;
+      const dataOvulacao = new Date(diaOvulacao);
+      const diaOv = String(dataOvulacao.getDate()).padStart(2, '0');
+      const mesOv = String(dataOvulacao.getMonth() + 1).padStart(2, '0');
+      const anoOv = dataOvulacao.getFullYear();
+      
+      const inicioFertil = new Date(diaOvulacao - 5 * 24 * 60 * 60 * 1000);
+      const diaInicio = String(inicioFertil.getDate()).padStart(2, '0');
+      const mesInicio = String(inicioFertil.getMonth() + 1).padStart(2, '0');
+      const anoInicio = inicioFertil.getFullYear();
+      
+      return 'Ovulacao: ' + diaOv + '/' + mesOv + '/' + anoOv + ' | Periodo fertil: ' + diaInicio + '/' + mesInicio + '/' + anoInicio + ' a ' + diaOv + '/' + mesOv + '/' + anoOv;
     };
 
       // Execute each line
