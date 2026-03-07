@@ -2,7 +2,7 @@
 
 ## Recently Completed
 
-- [x] Revert brand identity: reverted ∑ icon and blue color scheme changes - user preferred original design
+- [x] Improve Você Sabia section with blue brand colors: altered gradient from amber/orange to blue/cyan, updated h2, h3, and strong colors to match brand blue palette
 - [x] Push para GitHub: commit 5353f22 enviado para github.com/calculabs-adm/calculabs.git (curiosity section to calculator pages)
 - [x] Fix calculadora Idade Exata (/utilitarios/datas/calculo-de-idade-exata): resultado era uma string "34 anos, 9 meses e 18 dias" mas o filtro de resultados usava !isNaN(Number(v)) que retornava false para strings, removendo o resultado. Corrigido o filtro para aceitar strings: `typeof v === 'string' || !isNaN(Number(v))`. Também atualizado formatResultValue para aceitar string | number e adicionado label 'idade'.
 - [x] Fix calculadora Porcentagem (/matematica/basica/porcentagem): fórmula corrigida para usar variáveis corretas (valor1, valor2, tipo_calculo) em vez de variáveis indefinidas (percentual, valor, valor_final, valor_inicial). Widget atualizado para filtrar zeros quando há resultados não-zero.
