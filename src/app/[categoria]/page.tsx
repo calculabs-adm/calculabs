@@ -132,7 +132,7 @@ export default async function CategoryPage({ params }: Props) {
                   className="calc-card group"
                 >
                   <div className="flex items-start justify-between gap-2 mb-2">
-                    <h3 className="font-semibold text-slate-800 text-sm group-hover:text-emerald-600 transition-colors leading-tight">
+                    <h3 className="font-semibold text-slate-800 text-sm group-hover:text-blue-600 transition-colors leading-tight">
                       {calc.name}
                     </h3>
                     <span
@@ -154,7 +154,7 @@ export default async function CategoryPage({ params }: Props) {
                   <p className="text-xs text-slate-500 leading-relaxed line-clamp-2">
                     {calc.description}
                   </p>
-                  <div className="mt-3 text-xs text-emerald-600 font-medium group-hover:underline">
+                  <div className="mt-3 text-xs text-blue-600 font-medium group-hover:underline">
                     Calcular →
                   </div>
                 </Link>

@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --color-primary: #059669;
-  --color-primary-dark: #047857;
+  --color-primary: #2563eb;
+  --color-primary-dark: #1d4ed8;
   --color-secondary: #10b981;
   --color-accent: #f59e0b;
   --color-bg: #f8fafc;
@@ -41,7 +41,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-geist-mono), 'Courier New', monospace;
   background: #f1f5f9;
   border: 1px solid #e2e8f0;
-  border-left: 4px solid #059669;
+  border-left: 4px solid #2563eb;
   padding: 1rem 1.5rem;
   border-radius: 0.5rem;
   font-size: 1.1rem;
