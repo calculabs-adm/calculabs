@@ -175,7 +175,7 @@ h1, h2, h3, h4, h5, h6 {
 .curiosity-content h2 {
   font-size: 1.25rem;
   font-weight: 700;
-  color: #92400e;
+  color: #1e40af;
   margin-bottom: 1rem;
   margin-top: 1.5rem;
 }
@@ -187,7 +187,7 @@ h1, h2, h3, h4, h5, h6 {
 .curiosity-content h3 {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #78350f;
+  color: #1d4ed8;
   margin-top: 1.25rem;
   margin-bottom: 0.75rem;
 }
@@ -209,5 +209,5 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .curiosity-content strong {
-  color: #451a03;
+  color: #1e3a8a;
 }
