@@ -74,7 +74,7 @@ export default async function HomePage() {
       />
 
       {/* Hero */}
-      <section className="bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 text-white">
+      <section className="bg-gradient-to-br from-emerald-600 via-emerald-700 to-teal-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
           <div className="text-center max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-1.5 text-sm mb-6">
@@ -84,14 +84,14 @@ export default async function HomePage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               CalcuLabs
             </h1>
-            <p className="text-xl md:text-2xl text-blue-100 mb-8 leading-relaxed">
+            <p className="text-xl md:text-2xl text-emerald-100 mb-8 leading-relaxed">
               Calculadoras online gratuitas para estudantes, profissionais e empresas.
               Simples, rápidas e didáticas.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link
                 href="#categorias"
-                className="px-8 py-3.5 bg-white text-blue-700 font-semibold rounded-xl hover:bg-blue-50 transition-colors text-lg"
+                className="px-8 py-3.5 bg-white text-emerald-700 font-semibold rounded-xl hover:bg-emerald-50 transition-colors text-lg"
               >
                 Ver Calculadoras
               </Link>
@@ -117,7 +117,7 @@ export default async function HomePage() {
               { value: "Rápido", label: "Resultado imediato" },
             ].map((stat) => (
               <div key={stat.label}>
-                <div className="text-2xl font-bold text-blue-600">{stat.value}</div>
+                <div className="text-2xl font-bold text-emerald-600">{stat.value}</div>
                 <div className="text-sm text-slate-500 mt-1">{stat.label}</div>
               </div>
             ))}
@@ -138,7 +138,7 @@ export default async function HomePage() {
               className="calc-card text-center group"
             >
               <div className="text-3xl mb-2">{calc.icon}</div>
-              <div className="font-semibold text-slate-800 text-sm group-hover:text-blue-600 transition-colors">
+              <div className="font-semibold text-slate-800 text-sm group-hover:text-emerald-600 transition-colors">
                 {calc.name}
               </div>
               <div className="text-xs text-slate-500 mt-1 leading-tight">{calc.desc}</div>
@@ -173,7 +173,7 @@ export default async function HomePage() {
                   {cat.icon}
                 </div>
                 <div className="flex-1 min-w-0">
-                  <h3 className="font-bold text-slate-900 text-lg group-hover:text-blue-600 transition-colors">
+                  <h3 className="font-bold text-slate-900 text-lg group-hover:text-emerald-600 transition-colors">
                     {cat.name}
                   </h3>
                   <p className="text-slate-500 text-sm mt-1 leading-relaxed line-clamp-2">
@@ -229,7 +229,7 @@ export default async function HomePage() {
               },
             ].map((item) => (
               <div key={item.step} className="text-center">
-                <div className="w-16 h-16 bg-blue-600 text-white rounded-2xl flex items-center justify-center text-2xl mx-auto mb-4">
+                <div className="w-16 h-16 bg-emerald-600 text-white rounded-2xl flex items-center justify-center text-2xl mx-auto mb-4">
                   {item.icon}
                 </div>
                 <h3 className="font-bold text-slate-900 text-lg mb-2">{item.title}</h3>

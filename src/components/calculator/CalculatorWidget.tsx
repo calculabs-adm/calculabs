@@ -509,7 +509,7 @@ export default function CalculatorWidget({
   return (
     <div className="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
       {/* Header */}
-      <div className="bg-gradient-to-r from-blue-600 to-blue-700 px-6 py-4">
+      <div className="bg-gradient-to-r from-emerald-600 to-emerald-700 px-6 py-4">
         <h2 className="!text-white font-bold text-lg">🧮 Calculadora</h2>
         {formulaDisplay && (
           <p className="text-blue-100 text-sm mt-1 font-mono">{formulaDisplay}</p>
@@ -575,7 +575,7 @@ export default function CalculatorWidget({
         <div className="flex gap-3 mb-6">
           <button
             onClick={handleCalculate}
-            className="flex-1 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-colors text-base"
+            className="flex-1 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl transition-colors text-base"
           >
             Calcular
           </button>
@@ -597,7 +597,7 @@ export default function CalculatorWidget({
         {/* Results */}
         {calculated && results && results.length > 0 && (
           <div className="result-box animate-fade-in">
-            <h3 className="font-bold text-blue-900 text-base mb-4 flex items-center gap-2">
+            <h3 className="font-bold text-emerald-900 text-base mb-4 flex items-center gap-2">
               <span className="text-xl">✅</span> Resultado
             </h3>
             <div className="space-y-3">
@@ -608,12 +608,12 @@ export default function CalculatorWidget({
                     i === 0 ? "pb-3 border-b border-blue-200" : ""
                   }`}
                 >
-                  <span className={`text-sm ${i === 0 ? "font-semibold text-blue-800" : "text-blue-700"}`}>
+                  <span className={`text-sm ${i === 0 ? "font-semibold text-emerald-800" : "text-emerald-700"}`}>
                     {formatResultLabel(r.key)}
                   </span>
                   <span
                     className={`font-bold tabular-nums ${
-                      i === 0 ? "text-2xl text-blue-900" : "text-lg text-blue-800"
+                      i === 0 ? "text-2xl text-emerald-900" : "text-lg text-emerald-800"
                     }`}
                   >
                     {formatResultValue(r.key, r.value)}

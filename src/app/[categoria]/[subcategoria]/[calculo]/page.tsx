@@ -449,7 +449,7 @@ export default async function CalculatorPage({ params }: Props) {
                 <ol className="space-y-3">
                   {steps.map((step, i) => (
                     <li key={i} className="flex gap-3">
-                      <span className="flex-shrink-0 w-7 h-7 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
+                      <span className="flex-shrink-0 w-7 h-7 bg-emerald-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
                         {i + 1}
                       </span>
                       <span className="text-slate-700 pt-0.5">{step}</span>
@@ -484,7 +484,7 @@ export default async function CalculatorPage({ params }: Props) {
                 <ul className="space-y-2">
                   {applications.map((app, i) => (
                     <li key={i} className="flex items-start gap-2 text-slate-700">
-                      <span className="text-blue-500 mt-1 flex-shrink-0">✓</span>
+                      <span className="text-emerald-500 mt-1 flex-shrink-0">✓</span>
                       <span>{app}</span>
                     </li>
                   ))}
@@ -534,7 +534,7 @@ export default async function CalculatorPage({ params }: Props) {
             {/* Author */}
             {calculator.author_name && (
               <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 flex items-start gap-3">
-                <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold flex-shrink-0">
+                <div className="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600 font-bold flex-shrink-0">
                   {calculator.author_name.charAt(0)}
                 </div>
                 <div>
@@ -570,10 +570,10 @@ export default async function CalculatorPage({ params }: Props) {
                       <Link
                         key={rel.id}
                         href={`/${category?.slug}/${subcategory?.slug}/${rel.slug}`}
-                        className="flex items-center gap-2 p-2.5 rounded-lg hover:bg-blue-50 transition-colors group"
+                        className="flex items-center gap-2 p-2.5 rounded-lg hover:bg-emerald-50 transition-colors group"
                       >
-                        <span className="w-1.5 h-1.5 bg-blue-400 rounded-full flex-shrink-0"></span>
-                        <span className="text-sm text-slate-700 group-hover:text-blue-600 transition-colors">
+                        <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full flex-shrink-0"></span>
+                        <span className="text-sm text-slate-700 group-hover:text-emerald-600 transition-colors">
                           {rel.name}
                         </span>
                       </Link>
