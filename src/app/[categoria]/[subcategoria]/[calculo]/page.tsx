@@ -9,6 +9,7 @@ import {
 } from "@/lib/data";
 import CalculatorWidget from "@/components/calculator/CalculatorWidget";
 import ErrorReportButton from "@/components/calculator/ErrorReportButton";
+import ShareButton from "@/components/calculator/ShareButton";
 import type { Variable } from "@/lib/formula-engine";
 
 interface Props {
@@ -589,6 +590,7 @@ export default async function CalculatorPage({ params }: Props) {
                   Para decisões importantes, consulte um profissional especializado.
                 </p>
                 <ErrorReportButton calculatorName={calculator.name} />
+                <ShareButton title={calculator.name} description={calculator.description || undefined} />
               </div>
             </div>
           </div>
