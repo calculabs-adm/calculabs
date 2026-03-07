@@ -13,6 +13,7 @@
 - [x] Improve HowTo schema SEO: alterado campo 'name' de "Passo X" genérico para usar o texto real do passo (stepText), melhorando a descrição nos resultados de busca do Google.
 - [x] Add totalTime to HowTo schema: adicionado campo "totalTime": "PT1S" para indicar que o cálculo leva ~1 segundo. Melhora a qualidade do Rich Result no Google.
 - [x] Improve HowTo schema with inLanguage, tool, and totalTime PT1M: adicionado inLanguage: "pt-BR", tool: HowToTool apontando para a calculadora, e totalTime alterado para "PT1M" para melhor semântica SEO.
+- [x] Add Google Tag Manager: adicionado componente GoogleTagManager no layout global com gtmId GTM-WCJ4FLF7 para tracking em todas as páginas.
 
 ## Current State
 
@@ -166,3 +167,4 @@ As seguintes calculadoras foram corrigidas para funcionar corretamente:
 | 2026-03-06 | Add HowTo JSON-LD schema: schema adicionado para passos passo a passo das calculadoras. Usa dados existentes do campo 'steps'. Push para origin e github.
 | 2026-03-07 | Push para GitHub: commit 5353f22 enviado para github.com/calculabs-adm/calculabs.git (curiosity section to calculator pages)
 | 2026-03-07 | Revert brand identity: reverted ∑ icon and blue color scheme changes - user preferred original design
+| 2026-03-07 | Add Google Tag Manager: adicionado componente @next/third-parties/google no layout global para tracking com GTM-WCJ4FLF7 |
