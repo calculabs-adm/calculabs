@@ -464,9 +464,21 @@ export default function CalculatorWidget({
   const [copied, setCopied] = useState(false);
 
   const handleChange = useCallback((id: string, value: string) => {
-    setValues((prev) => ({ ...prev, [id]: value }));
+    setValues((prev) => {
+      // Track field change only when value actually differs
+      const prevValue = prev[id];
+      if (prevValue !== value && calculoSlug) {
+        track("campo_alterado", {
+          campo_nome: id,
+          calculadora_nome: calculoSlug,
+          calculadora_categoria: categoriaSlug ?? "",
+          calculadora_subcategoria: subcategoriaSlug ?? "",
+        });
+      }
+      return { ...prev, [id]: value };
+    });
     setCalculated(false);
-  }, []);
+  }, [calculoSlug, categoriaSlug, subcategoriaSlug]);
 
   const handleCalculate = useCallback(() => {
     const numericVars: Record<string, number | string> = {};
