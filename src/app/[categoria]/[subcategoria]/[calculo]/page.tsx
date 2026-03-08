@@ -566,6 +566,9 @@ export default async function CalculatorPage({ params }: Props) {
                 formula={calculator.formula}
                 variables={variables}
                 formulaDisplay={calculator.formula_display ?? undefined}
+                calculoSlug={calculo}
+                categoriaSlug={categoriaSlug}
+                subcategoriaSlug={subcategoriaSlug}
               />
 
               {/* Related calculators */}

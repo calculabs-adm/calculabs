@@ -1,12 +1,16 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import type { Variable } from "@/lib/formula-engine";
+import { track } from "@/lib/analytics";
 
 interface CalculatorWidgetProps {
   formula: string;
   variables: Variable[];
   formulaDisplay?: string;
+  calculoSlug?: string;
+  categoriaSlug?: string;
+  subcategoriaSlug?: string;
 }
 
 interface ResultEntry {
@@ -436,6 +440,9 @@ export default function CalculatorWidget({
   formula,
   variables,
   formulaDisplay,
+  calculoSlug,
+  categoriaSlug,
+  subcategoriaSlug,
 }: CalculatorWidgetProps) {
   const [values, setValues] = useState<Record<string, string>>(() => {
     const initial: Record<string, string> = {};
@@ -485,11 +492,20 @@ export default function CalculatorWidget({
       setResults(res);
       setError(null);
       setCalculated(true);
+      
+      // Track calculation event
+      if (calculoSlug) {
+        track("resultado_calculado", {
+          calculadora_nome: calculoSlug,
+          calculadora_categoria: categoriaSlug ?? "",
+          calculadora_subcategoria: subcategoriaSlug ?? "",
+        });
+      }
     } else {
       setError(err ?? "Erro ao calcular");
       setResults(null);
     }
-  }, [formula, variables, values]);
+  }, [formula, variables, values, calculoSlug, categoriaSlug, subcategoriaSlug]);
 
   const handleReset = useCallback(() => {
     const initial: Record<string, string> = {};
