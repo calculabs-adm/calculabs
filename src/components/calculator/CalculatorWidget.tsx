@@ -461,6 +461,7 @@ export default function CalculatorWidget({
   const [results, setResults] = useState<ResultEntry[] | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [calculated, setCalculated] = useState(false);
+  const [copied, setCopied] = useState(false);
 
   const handleChange = useCallback((id: string, value: string) => {
     setValues((prev) => ({ ...prev, [id]: value }));
@@ -521,6 +522,19 @@ export default function CalculatorWidget({
     setError(null);
     setCalculated(false);
   }, [variables]);
+
+  const handleCopyResult = useCallback(async (value: number | string) => {
+    const textToCopy = typeof value === "string" ? value : value.toString();
+    try {
+      await navigator.clipboard.writeText(textToCopy);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+      // Futura integração com analytics:
+      // track("resultado_copiado", { ... });
+    } catch (err) {
+      console.error("Erro ao copiar:", err);
+    }
+  }, []);
 
   return (
     <div className="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
@@ -627,13 +641,28 @@ export default function CalculatorWidget({
                   <span className={`text-sm ${i === 0 ? "font-semibold text-blue-800" : "text-blue-700"}`}>
                     {formatResultLabel(r.key)}
                   </span>
-                  <span
-                    className={`font-bold tabular-nums ${
-                      i === 0 ? "text-2xl text-blue-900" : "text-lg text-blue-800"
-                    }`}
-                  >
-                    {formatResultValue(r.key, r.value)}
-                  </span>
+                  <div className="flex items-center gap-2">
+                    <span
+                      className={`font-bold tabular-nums ${
+                        i === 0 ? "text-2xl text-blue-900" : "text-lg text-blue-800"
+                      }`}
+                    >
+                      {formatResultValue(r.key, r.value)}
+                    </span>
+                    {i === 0 && (
+                      <button
+                        onClick={() => handleCopyResult(r.value)}
+                        className={`px-2 py-1 text-xs font-medium rounded-lg transition-colors ${
+                          copied
+                            ? "bg-green-100 text-green-700"
+                            : "bg-blue-100 text-blue-600 hover:bg-blue-200"
+                        }`}
+                        title="Copiar resultado"
+                      >
+                        {copied ? "Copiado!" : "Copiar"}
+                      </button>
+                    )}
+                  </div>
                 </div>
               ))}
             </div>
