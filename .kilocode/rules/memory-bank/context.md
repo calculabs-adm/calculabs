@@ -17,6 +17,7 @@
 - [x] Add analytics tracking layer: criado módulo src/lib/analytics.ts com função track() para enviar eventos ao dataLayer do GTM
 - [x] Add calculator view tracking: implementado evento "calculadora_visualizada" que envia calculadora_nome, calculadora_categoria e calculadora_subcategoria ao GTM
 - [x] Add calculation execution tracking: implementado evento "resultado_calculado" que dispara quando o usuário executa um cálculo com sucesso. Envia calculadora_nome, calculadora_categoria e calculadora_subcategoria ao GTM para medir uso real das calculadoras no GA4.
+- [x] Add intent tracking (campo_alterado): implementado evento "campo_alterado" que dispara quando o usuário modifica um campo de entrada da calculadora. Envia campo_nome, calculadora_nome, calculadora_categoria e calculadora_subcategoria ao GTM para analisar padrões de uso das calculadoras.
 
 ## Current State
 
