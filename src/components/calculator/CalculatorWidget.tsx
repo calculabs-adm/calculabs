@@ -528,13 +528,20 @@ export default function CalculatorWidget({
     try {
       await navigator.clipboard.writeText(textToCopy);
       setCopied(true);
+      
+      // Dispara evento de analytics após cópia bem-sucedida
+      track("resultado_copiado", {
+        calculadora_nome: calculoSlug,
+        calculadora_categoria: categoriaSlug,
+        calculadora_subcategoria: subcategoriaSlug,
+        valor_resultado: textToCopy
+      });
+      
       setTimeout(() => setCopied(false), 2000);
-      // Futura integração com analytics:
-      // track("resultado_copiado", { ... });
     } catch (err) {
       console.error("Erro ao copiar:", err);
     }
-  }, []);
+  }, [calculoSlug, categoriaSlug, subcategoriaSlug]);
 
   return (
     <div className="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
