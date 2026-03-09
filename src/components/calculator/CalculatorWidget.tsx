@@ -449,6 +449,8 @@ export default function CalculatorWidget({
     for (const v of variables) {
       if (v.type === "select" && v.options?.[0]) {
         initial[v.id] = String(v.options[0].value);
+      } else if (v.default !== undefined && v.default !== null) {
+        initial[v.id] = String(v.default);
       } else if (v.placeholder) {
         initial[v.id] = v.placeholder;
       } else {

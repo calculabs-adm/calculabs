@@ -12,6 +12,7 @@ export interface Variable {
   type: "number" | "text" | "select" | "date";
   unit?: string;
   placeholder?: string;
+  default?: string | number | null;
   min?: number | null;
   max?: number | null;
   options?: { value: string | number; label: string }[];
