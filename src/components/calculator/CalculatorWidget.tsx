@@ -335,7 +335,7 @@ function formatResultValue(key: string, value: number | string): string {
   ];
 
   const percentKeys = [
-    "roi", "roas", "dy", "margem", "markup", "aliquota", "gordura", "imc",
+    "variacao", "roi", "roas", "dy", "margem", "markup", "aliquota", "gordura", "imc",
     "percentual", "taxa", "rendimento_percentual",
   ];
 
