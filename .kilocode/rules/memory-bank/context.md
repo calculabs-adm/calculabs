@@ -2,6 +2,7 @@
 
 ## Recently Completed
 
+- [x] Add curiosity sections to 5 financial calculators: Rendimento CDB, Tesouro Direto, Poupança, Dividend Yield, and Simulação de Aposentadoria. Each with comprehensive HTML content including history, real-world applications, formula explanation, comparison, practical insights, and challenge exercises.
 - [x] Add curiosity section to Juros Simples calculator: Added comprehensive HTML content with history, real-world applications, formula explanation, comparison with compound interest, practical insights, and a challenge exercise. Pushed to GitHub (commit 6356354).
 - [x] Add curiosity sections to 4 calculators: Juros Compostos, Juros Simples, Tabela Price, ROI. Pushed to GitHub (commit 69affc2).
 - [x] Improve Você Sabia section with blue brand colors: altered gradient from amber/orange to blue/cyan, updated h2, h3, and strong colors to match brand blue palette
@@ -177,3 +178,4 @@ As seguintes calculadoras foram corrigidas para funcionar corretamente:
 | 2026-03-07 | Revert brand identity: reverted ∑ icon and blue color scheme changes - user preferred original design
 | 2026-03-07 | Add Google Tag Manager: adicionado componente @next/third-parties/google no layout global para tracking com GTM-WCJ4FLF7 |
 | 2026-03-10 | Add curiosity section to Juros Simples calculator with comprehensive HTML content including history, formula explanation, comparison with compound interest, practical insights, and challenge exercise. Pushed to GitHub (commit 6356354). |
+| 2026-03-10 | Add curiosity sections to 5 financial calculators: Rendimento CDB, Tesouro Direto, Poupança, Dividend Yield, Simulação de Aposentadoria. Committed and pushed to origin.
