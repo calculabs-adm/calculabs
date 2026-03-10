@@ -2,6 +2,8 @@
 
 ## Recently Completed
 
+- [x] Add curiosity section to Juros Simples calculator: Added comprehensive HTML content with history, real-world applications, formula explanation, comparison with compound interest, practical insights, and a challenge exercise. Pushed to GitHub (commit 6356354).
+- [x] Add curiosity sections to 4 calculators: Juros Compostos, Juros Simples, Tabela Price, ROI. Pushed to GitHub (commit 69affc2).
 - [x] Improve Você Sabia section with blue brand colors: altered gradient from amber/orange to blue/cyan, updated h2, h3, and strong colors to match brand blue palette
 - [x] Push para GitHub: commit 5353f22 enviado para github.com/calculabs-adm/calculabs.git (curiosity section to calculator pages)
 - [x] Fix calculadora Idade Exata (/utilitarios/datas/calculo-de-idade-exata): resultado era uma string "34 anos, 9 meses e 18 dias" mas o filtro de resultados usava !isNaN(Number(v)) que retornava false para strings, removendo o resultado. Corrigido o filtro para aceitar strings: `typeof v === 'string' || !isNaN(Number(v))`. Também atualizado formatResultValue para aceitar string | number e adicionado label 'idade'.
@@ -174,3 +176,4 @@ As seguintes calculadoras foram corrigidas para funcionar corretamente:
 | 2026-03-07 | Push para GitHub: commit 5353f22 enviado para github.com/calculabs-adm/calculabs.git (curiosity section to calculator pages)
 | 2026-03-07 | Revert brand identity: reverted ∑ icon and blue color scheme changes - user preferred original design
 | 2026-03-07 | Add Google Tag Manager: adicionado componente @next/third-parties/google no layout global para tracking com GTM-WCJ4FLF7 |
+| 2026-03-10 | Add curiosity section to Juros Simples calculator with comprehensive HTML content including history, formula explanation, comparison with compound interest, practical insights, and challenge exercise. Pushed to GitHub (commit 6356354). |
