@@ -2,6 +2,7 @@
 
 ## Recently Completed
 
+- [x] Add curiosity section to Financiamento Imobiliário calculator: Added comprehensive HTML content with history, real-world applications, formula explanation, comparison, practical insights, and professor explanation. Pushed to GitHub (commit a9f2be8).
 - [x] Add curiosity sections to 5 financial calculators: Rendimento CDB, Tesouro Direto, Poupança, Dividend Yield, and Simulação de Aposentadoria. Each with comprehensive HTML content including history, real-world applications, formula explanation, comparison, practical insights, and challenge exercises.
 - [x] Add curiosity section to Juros Simples calculator: Added comprehensive HTML content with history, real-world applications, formula explanation, comparison with compound interest, practical insights, and a challenge exercise. Pushed to GitHub (commit 6356354).
 - [x] Add curiosity sections to 4 calculators: Juros Compostos, Juros Simples, Tabela Price, ROI. Pushed to GitHub (commit 69affc2).
