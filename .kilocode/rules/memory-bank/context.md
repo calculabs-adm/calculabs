@@ -2,6 +2,7 @@
 
 ## Recently Completed
 
+- [x] Add curiosity sections to Rescisão Trabalhista, INSS, and FGTS calculators: Added comprehensive HTML content with history, real-world applications, formula explanation, practical insights, and professor explanation. Pushed to GitHub (commit 989554d).
 - [x] Add curiosity sections to Markup, Ponto de Equilíbrio, and IRPF calculators: Added comprehensive HTML content with history, real-world applications, formula explanation, practical insights, and professor explanation. Pushed to GitHub (commit e0eafa1).
 - [x] Add curiosity sections to ROI, ROAS, and Margem de Lucro calculators: Added comprehensive HTML content with history, real-world applications, formula explanation, practical insights, and professor explanation. Pushed to GitHub (commit ca53fbf).
 - [x] Add curiosity sections to Tabela SAC and Amortização de Financiamento calculators: Added comprehensive HTML content with history, real-world applications, formula explanation, comparison, practical insights, and professor explanation. Pushed to GitHub (commit b3350d9).
