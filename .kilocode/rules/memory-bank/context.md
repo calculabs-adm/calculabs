@@ -3,6 +3,7 @@
 ## Recently Completed
 
 - [x] Add curiosity sections to 13º Salário, Férias Proporcionais, and Hora Extra calculators: Added comprehensive HTML content with history, real-world applications, formula explanation, practical insights, and professor explanation. Pushed to GitHub (commit c31d3b7).
+- [x] Add curiosity sections to Comissão, Simples Nacional, DAS MEI, and ICMS calculators: Added comprehensive HTML content with history, real-world applications, formula explanation, practical insights, and professor explanation. Pushed to GitHub (commit b7e6325).
 - [x] Add curiosity sections to Rescisão Trabalhista, INSS, and FGTS calculators: Added comprehensive HTML content with history, real-world applications, formula explanation, practical insights, and professor explanation. Pushed to GitHub (commit 989554d).
 - [x] Add curiosity sections to Markup, Ponto de Equilíbrio, and IRPF calculators: Added comprehensive HTML content with history, real-world applications, formula explanation, practical insights, and professor explanation. Pushed to GitHub (commit e0eafa1).
 - [x] Add curiosity sections to ROI, ROAS, and Margem de Lucro calculators: Added comprehensive HTML content with history, real-world applications, formula explanation, practical insights, and professor explanation. Pushed to GitHub (commit ca53fbf).
