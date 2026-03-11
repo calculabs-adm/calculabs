@@ -2,6 +2,7 @@
 
 ## Recently Completed
 
+- [x] Add curiosity sections to Tabela SAC and Amortização de Financiamento calculators: Added comprehensive HTML content with history, real-world applications, formula explanation, comparison, practical insights, and professor explanation. Pushed to GitHub (commit b3350d9).
 - [x] Add curiosity sections to Empréstimo Pessoal and Simulação de Parcelamento calculators: Added comprehensive HTML content with history, real-world applications, formula explanation, comparison, practical insights, and professor explanation. Pushed to GitHub (commit 08aaf67).
 - [x] Add curiosity section to Financiamento Imobiliário calculator: Added comprehensive HTML content with history, real-world applications, formula explanation, comparison, practical insights, and professor explanation. Pushed to GitHub (commit a9f2be8).
 - [x] Add curiosity sections to 5 financial calculators: Rendimento CDB, Tesouro Direto, Poupança, Dividend Yield, and Simulação de Aposentadoria. Each with comprehensive HTML content including history, real-world applications, formula explanation, comparison, practical insights, and challenge exercises.
