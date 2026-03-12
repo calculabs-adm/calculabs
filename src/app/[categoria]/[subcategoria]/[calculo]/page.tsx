@@ -7,6 +7,7 @@ import {
   getCategoryBySlug,
   getSubcategoryBySlug,
 } from "@/lib/data";
+import { generateCalculatorSEO } from "@/lib/seo-generator";
 import CalculatorWidget from "@/components/calculator/CalculatorWidget";
 import CalculatorTracker from "@/components/calculator/CalculatorTracker";
 import ErrorReportButton from "@/components/calculator/ErrorReportButton";
@@ -299,14 +300,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.calculabs.com.br";
   const canonicalUrl = `${siteUrl}/${category?.slug}/${subcategory?.slug}/${calculator.slug}`;
 
+  const seo = generateCalculatorSEO(calculator);
+
   return {
-    title: calculator.meta_title,
-    description: calculator.meta_description,
+    title: seo.title,
+    description: seo.description,
     keywords: calculator.keywords ? JSON.parse(calculator.keywords) : [],
     alternates: { canonical: canonicalUrl },
     openGraph: {
-      title: calculator.meta_title,
-      description: calculator.meta_description,
+      title: seo.title,
+      description: seo.description,
       url: canonicalUrl,
       type: "article",
       modifiedTime: calculator.updated_at ? new Date(calculator.updated_at * 1000).toISOString() : undefined,

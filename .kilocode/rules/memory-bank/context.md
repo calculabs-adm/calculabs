@@ -2,6 +2,7 @@
 
 ## Recently Completed
 
+- [x] Add automatic SEO generator for calculators: Created src/lib/seo-generator.ts with generateCalculatorSEO() function that generates meta_title and meta_description as fallback when not manually defined. Title format: "{calculator.title} Online | CalcuLabs". Description format: "Use nossa {keyword}. Calcule rapidamente com a ferramenta online gratuita do CalcuLabs." Integrated in generateMetadata() of calculator pages.
 - [x] Add curiosity sections to 13º Salário, Férias Proporcionais, and Hora Extra calculators: Added comprehensive HTML content with history, real-world applications, formula explanation, practical insights, and professor explanation. Pushed to GitHub (commit c31d3b7).
 - [x] Add curiosity sections to MDC, Equação 1º Grau, Equação 2º Grau, Área do Círculo, and Área do Triângulo calculators: Added comprehensive HTML content with history, real-world applications, formula explanation, practical insights, and professor explanation. Pushed to GitHub (commit 21d8c69).
 - [x] Add curiosity sections to Porcentagem, Regra de Três, Média Aritmética, MMC, and MDC calculators: Added comprehensive HTML content with history, real-world applications, formula explanation, practical insights, and professor explanation. Pushed to GitHub (commit 1ac7f88).
@@ -190,3 +191,4 @@ As seguintes calculadoras foram corrigidas para funcionar corretamente:
 | 2026-03-07 | Add Google Tag Manager: adicionado componente @next/third-parties/google no layout global para tracking com GTM-WCJ4FLF7 |
 | 2026-03-10 | Add curiosity section to Juros Simples calculator with comprehensive HTML content including history, formula explanation, comparison with compound interest, practical insights, and challenge exercise. Pushed to GitHub (commit 6356354). |
 | 2026-03-10 | Add curiosity sections to 5 financial calculators: Rendimento CDB, Tesouro Direto, Poupança, Dividend Yield, Simulação de Aposentadoria. Committed and pushed to origin.
+| 2026-03-12 | Add automatic SEO generator: created src/lib/seo-generator.ts with generateCalculatorSEO() function for fallback meta tags. Integrated in calculator page generateMetadata().
