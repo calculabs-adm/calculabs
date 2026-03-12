@@ -16,9 +16,20 @@ export function generateCalculatorSEO(calculator: Calculator): SEOMetadata {
     }
   }
 
-  const title = calculator.meta_title 
-    ? calculator.meta_title 
-    : `${calculator.title} Online | CalcuLabs`;
+  let title: string;
+  if (calculator.meta_title) {
+    title = calculator.meta_title;
+    if (title.includes("CalcuLabs")) {
+      const parts = title.split("|");
+      const filteredParts = parts.filter(p => !p.trim().toLowerCase().includes("calculabs"));
+      title = filteredParts.join(" | ").trim();
+    }
+    if (!title.includes("CalcuLabs")) {
+      title = `${title} | CalcuLabs`;
+    }
+  } else {
+    title = `${calculator.title} Online | CalcuLabs`;
+  }
 
   let description: string;
   if (calculator.meta_description) {

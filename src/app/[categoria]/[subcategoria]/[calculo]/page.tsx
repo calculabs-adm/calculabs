@@ -314,6 +314,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "article",
       modifiedTime: calculator.updated_at ? new Date(calculator.updated_at * 1000).toISOString() : undefined,
     },
+    twitter: {
+      card: "summary_large_image",
+      title: seo.title,
+      description: seo.description,
+    },
     other: {
       "article:modified_time": calculator.updated_at ? new Date(calculator.updated_at * 1000).toISOString() : "",
     },
