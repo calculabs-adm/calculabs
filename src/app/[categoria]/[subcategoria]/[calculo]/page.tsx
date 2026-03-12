@@ -377,6 +377,9 @@ export default async function CalculatorPage({ params }: Props) {
       ? "badge-tecnico"
       : "badge-avancado";
 
+  // Test flag for mobile UX experiment - only for equacao-2-grau
+  const isMobileExperiment = calculo === "equacao-2-grau";
+
   return (
     <>
       {/* Analytics tracker - sends event to GTM dataLayer */}
@@ -413,7 +416,356 @@ export default async function CalculatorPage({ params }: Props) {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        {/* Mobile UX Experiment: equacao-2-grau shows calculator first on mobile */}
+        {isMobileExperiment ? (
+          /* Mobile-first layout for experiment: Calculator appears right after title */
+          <div className="space-y-8 lg:hidden">
+            {/* Title */}
+            <div>
+              <div className="flex items-center gap-3 mb-3">
+                <span className={`text-xs font-semibold px-2.5 py-1 rounded-full ${complexityClass}`}>
+                  {complexityLabel}
+                </span>
+                {calculator.updated_at && (
+                  <span className="text-xs text-slate-400">
+                    Atualizado em{" "}
+                    {new Date(calculator.updated_at * 1000).toLocaleDateString("pt-BR")}
+                  </span>
+                )}
+              </div>
+              <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+                {calculator.title}
+              </h1>
+              <p className="text-slate-600 text-lg leading-relaxed">
+                {calculator.introduction}
+              </p>
+            </div>
+
+            {/* Calculator Widget - First on mobile for experiment */}
+            <CalculatorWidget
+              formula={calculator.formula}
+              variables={variables}
+              formulaDisplay={calculator.formula_display ?? undefined}
+              calculoSlug={calculo}
+              categoriaSlug={categoriaSlug}
+              subcategoriaSlug={subcategoriaSlug}
+            />
+
+            {/* Steps */}
+            {steps.length > 0 && (
+              <div>
+                <h2 className="text-xl font-bold text-slate-900 mb-4">
+                  📋 Como Calcular (Passo a Passo)
+                </h2>
+                <ol className="space-y-3">
+                  {steps.map((step, i) => (
+                    <li key={i} className="flex gap-3">
+                      <span className="flex-shrink-0 w-7 h-7 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
+                        {i + 1}
+                      </span>
+                      <span className="text-slate-700 pt-0.5">{step}</span>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            )}
+
+            {/* Example */}
+            {example && (
+              <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6">
+                <h2 className="text-xl font-bold text-slate-900 mb-4">
+                  💡 Exemplo Prático
+                </h2>
+                <h3 className="font-semibold text-slate-800 mb-3">{example.title}</h3>
+                <div className="bg-white border border-slate-200 rounded-xl p-4 mb-3">
+                  <p className="font-mono text-sm text-slate-700">{example.result}</p>
+                </div>
+                <p className="text-slate-600 text-sm leading-relaxed">
+                  {example.explanation}
+                </p>
+              </div>
+            )}
+
+            {/* Applications */}
+            {applications.length > 0 && (
+              <div>
+                <h2 className="text-xl font-bold text-slate-900 mb-4">
+                  🎯 Aplicações Práticas
+                </h2>
+                <ul className="space-y-2">
+                  {applications.map((app, i) => (
+                    <li key={i} className="flex items-start gap-2 text-slate-700">
+                      <span className="text-blue-500 mt-1 flex-shrink-0">✓</span>
+                      <span>{app}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {/* Related calculators */}
+            {related.length > 0 && (
+              <div className="bg-white border border-slate-200 rounded-2xl p-5">
+                <h3 className="font-bold text-slate-900 mb-4 text-sm uppercase tracking-wider">
+                  🔗 Calculadoras Relacionadas
+                </h3>
+                <div className="space-y-2">
+                  {related.map((rel) => (
+                    <Link
+                      key={rel.id}
+                      href={`/${category?.slug}/${subcategory?.slug}/${rel.slug}`}
+                      className="flex items-center gap-2 p-2.5 rounded-lg hover:bg-blue-50 transition-colors group"
+                    >
+                      <span className="w-1.5 h-1.5 bg-blue-400 rounded-full flex-shrink-0"></span>
+                      <span className="text-sm text-slate-700 group-hover:text-blue-600 transition-colors">
+                        {rel.name}
+                      </span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Curiosity Section */}
+            {curiosity && (
+              <div className="bg-[#d5d5d5] rounded-2xl p-6">
+                <div
+                  className="curiosity-content"
+                  dangerouslySetInnerHTML={{ __html: curiosity }}
+                />
+              </div>
+            )}
+
+            {/* FAQ */}
+            {faqs.length > 0 && (
+              <div>
+                <h2 className="text-xl font-bold text-slate-900 mb-4">
+                  ❓ Perguntas Frequentes
+                </h2>
+                <div className="space-y-4">
+                  {faqs.map((faq, i) => (
+                    <details
+                      key={i}
+                      className="group bg-white border border-slate-200 rounded-xl overflow-hidden"
+                    >
+                      <summary className="flex items-center justify-between gap-4 p-4 cursor-pointer hover:bg-slate-50 transition-colors">
+                        <span className="font-semibold text-slate-800 text-sm">
+                          {faq.q}
+                        </span>
+                        <span className="text-slate-400 group-open:rotate-180 transition-transform flex-shrink-0">
+                          ▼
+                        </span>
+                      </summary>
+                      <div className="px-4 pb-4">
+                        <p className="text-slate-600 text-sm leading-relaxed">{faq.a}</p>
+                      </div>
+                    </details>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Disclaimer */}
+            <div className="p-3 bg-amber-50 border border-amber-200 rounded-xl">
+              <p className="text-xs text-amber-700 leading-relaxed">
+                <strong>⚠️ Aviso:</strong> Esta calculadora é para fins informativos.
+                Para decisões importantes, consulte um profissional especializado.
+              </p>
+              <ErrorReportButton calculatorName={calculator.name} />
+              <ShareButton title={calculator.name} description={calculator.description || undefined} />
+            </div>
+          </div>
+        ) : (
+          /* Default layout for all other calculators (mobile) */
+          <div className="space-y-8 lg:hidden">
+            {/* Title */}
+            <div>
+              <div className="flex items-center gap-3 mb-3">
+                <span className={`text-xs font-semibold px-2.5 py-1 rounded-full ${complexityClass}`}>
+                  {complexityLabel}
+                </span>
+                {calculator.updated_at && (
+                  <span className="text-xs text-slate-400">
+                    Atualizado em{" "}
+                    {new Date(calculator.updated_at * 1000).toLocaleDateString("pt-BR")}
+                  </span>
+                )}
+              </div>
+              <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+                {calculator.title}
+              </h1>
+              <p className="text-slate-600 text-lg leading-relaxed">
+                {calculator.introduction}
+              </p>
+            </div>
+
+            {/* Formula */}
+            {calculator.formula_display && (
+              <div>
+                <h2 className="text-xl font-bold text-slate-900 mb-3">
+                  📐 Fórmula
+                </h2>
+                <div className="formula-display">
+                  {calculator.formula_display}
+                </div>
+              </div>
+            )}
+
+            {/* Steps */}
+            {steps.length > 0 && (
+              <div>
+                <h2 className="text-xl font-bold text-slate-900 mb-4">
+                  📋 Como Calcular (Passo a Passo)
+                </h2>
+                <ol className="space-y-3">
+                  {steps.map((step, i) => (
+                    <li key={i} className="flex gap-3">
+                      <span className="flex-shrink-0 w-7 h-7 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
+                        {i + 1}
+                      </span>
+                      <span className="text-slate-700 pt-0.5">{step}</span>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            )}
+
+            {/* Example */}
+            {example && (
+              <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6">
+                <h2 className="text-xl font-bold text-slate-900 mb-4">
+                  💡 Exemplo Prático
+                </h2>
+                <h3 className="font-semibold text-slate-800 mb-3">{example.title}</h3>
+                <div className="bg-white border border-slate-200 rounded-xl p-4 mb-3">
+                  <p className="font-mono text-sm text-slate-700">{example.result}</p>
+                </div>
+                <p className="text-slate-600 text-sm leading-relaxed">
+                  {example.explanation}
+                </p>
+              </div>
+            )}
+
+            {/* Applications */}
+            {applications.length > 0 && (
+              <div>
+                <h2 className="text-xl font-bold text-slate-900 mb-4">
+                  🎯 Aplicações Práticas
+                </h2>
+                <ul className="space-y-2">
+                  {applications.map((app, i) => (
+                    <li key={i} className="flex items-start gap-2 text-slate-700">
+                      <span className="text-blue-500 mt-1 flex-shrink-0">✓</span>
+                      <span>{app}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {/* Curiosity Section */}
+            {curiosity && (
+              <div className="bg-[#d5d5d5] rounded-2xl p-6">
+                <div
+                  className="curiosity-content"
+                  dangerouslySetInnerHTML={{ __html: curiosity }}
+                />
+              </div>
+            )}
+
+            {/* FAQ */}
+            {faqs.length > 0 && (
+              <div>
+                <h2 className="text-xl font-bold text-slate-900 mb-4">
+                  ❓ Perguntas Frequentes
+                </h2>
+                <div className="space-y-4">
+                  {faqs.map((faq, i) => (
+                    <details
+                      key={i}
+                      className="group bg-white border border-slate-200 rounded-xl overflow-hidden"
+                    >
+                      <summary className="flex items-center justify-between gap-4 p-4 cursor-pointer hover:bg-slate-50 transition-colors">
+                        <span className="font-semibold text-slate-800 text-sm">
+                          {faq.q}
+                        </span>
+                        <span className="text-slate-400 group-open:rotate-180 transition-transform flex-shrink-0">
+                          ▼
+                        </span>
+                      </summary>
+                      <div className="px-4 pb-4">
+                        <p className="text-slate-600 text-sm leading-relaxed">{faq.a}</p>
+                      </div>
+                    </details>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Author */}
+            {calculator.author_name && (
+              <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 flex items-start gap-3">
+                <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold flex-shrink-0">
+                  {calculator.author_name.charAt(0)}
+                </div>
+                <div>
+                  <p className="font-semibold text-slate-800 text-sm">
+                    {calculator.author_name}
+                  </p>
+                  {calculator.author_bio && (
+                    <p className="text-slate-500 text-xs mt-0.5">{calculator.author_bio}</p>
+                  )}
+                </div>
+              </div>
+            )}
+
+            {/* Calculator widget - appears after all content on mobile for default layout */}
+            <CalculatorWidget
+              formula={calculator.formula}
+              variables={variables}
+              formulaDisplay={calculator.formula_display ?? undefined}
+              calculoSlug={calculo}
+              categoriaSlug={categoriaSlug}
+              subcategoriaSlug={subcategoriaSlug}
+            />
+
+            {/* Related calculators */}
+            {related.length > 0 && (
+              <div className="bg-white border border-slate-200 rounded-2xl p-5">
+                <h3 className="font-bold text-slate-900 mb-4 text-sm uppercase tracking-wider">
+                  🔗 Calculadoras Relacionadas
+                </h3>
+                <div className="space-y-2">
+                  {related.map((rel) => (
+                    <Link
+                      key={rel.id}
+                      href={`/${category?.slug}/${subcategory?.slug}/${rel.slug}`}
+                      className="flex items-center gap-2 p-2.5 rounded-lg hover:bg-blue-50 transition-colors group"
+                    >
+                      <span className="w-1.5 h-1.5 bg-blue-400 rounded-full flex-shrink-0"></span>
+                      <span className="text-sm text-slate-700 group-hover:text-blue-600 transition-colors">
+                        {rel.name}
+                      </span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Disclaimer */}
+            <div className="p-3 bg-amber-50 border border-amber-200 rounded-xl">
+              <p className="text-xs text-amber-700 leading-relaxed">
+                <strong>⚠️ Aviso:</strong> Esta calculadora é para fins informativos.
+                Para decisões importantes, consulte um profissional especializado.
+              </p>
+              <ErrorReportButton calculatorName={calculator.name} />
+              <ShareButton title={calculator.name} description={calculator.description || undefined} />
+            </div>
+          </div>
+        )}
+
+        {/* Desktop layout (lg+) - unchanged for all calculators */}
+        <div className="hidden lg:grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Main content */}
           <div className="lg:col-span-2 space-y-8">
             {/* Title */}
