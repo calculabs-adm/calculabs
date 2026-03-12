@@ -377,9 +377,6 @@ export default async function CalculatorPage({ params }: Props) {
       ? "badge-tecnico"
       : "badge-avancado";
 
-  // Test flag for mobile UX experiment - only for equacao-2-grau
-  const isMobileExperiment = calculo === "equacao-2-grau";
-
   return (
     <>
       {/* Analytics tracker - sends event to GTM dataLayer */}
@@ -439,8 +436,8 @@ export default async function CalculatorPage({ params }: Props) {
             </p>
           </div>
 
-          {/* Calculator Widget - order-1 for experiment, order-last for others */}
-          <div className={isMobileExperiment ? "order-1" : "order-last"}>
+          {/* Calculator Widget - always first on mobile (order-1) */}
+          <div className="order-1">
             <CalculatorWidget
               formula={calculator.formula}
               variables={variables}
@@ -451,8 +448,8 @@ export default async function CalculatorPage({ params }: Props) {
             />
           </div>
 
-          {/* Formula - hidden for experiment on mobile (shows in widget) */}
-          {!isMobileExperiment && calculator.formula_display && (
+          {/* Formula - always visible on mobile */}
+          {calculator.formula_display && (
             <div>
               <h2 className="text-xl font-bold text-slate-900 mb-3">
                 📐 Fórmula
