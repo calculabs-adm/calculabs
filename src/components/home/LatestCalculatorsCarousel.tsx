@@ -22,7 +22,7 @@ function CalculatorCard({
     <div className="flex-shrink-0 w-full sm:w-1/2 lg:w-1/4 px-2">
       <Link
         href={href}
-        className="block bg-white border border-slate-200 rounded-xl p-4 hover:border-blue-300 hover:shadow-md transition-all duration-200 h-full"
+        className="block bg-[#f8f8f8] border border-slate-200 rounded-xl p-4 hover:border-blue-300 hover:shadow-md transition-all duration-200 h-full"
       >
         <div className="flex items-start justify-between gap-3">
           <div className="flex-1 min-w-0">
