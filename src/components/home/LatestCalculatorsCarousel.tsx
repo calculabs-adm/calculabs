@@ -20,21 +20,25 @@ function CalculatorCard({
 }: CalculatorCardProps) {
   return (
     <div className="flex-shrink-0 w-full sm:w-1/2 lg:w-1/4 px-2">
-      <div className="bg-white border border-slate-200 rounded-xl p-5 hover:border-blue-300 hover:shadow-md transition-all duration-200 h-full flex flex-col">
-        <div className="text-3xl mb-3">{icon}</div>
-        <h3 className="font-semibold text-slate-800 text-base mb-1 line-clamp-2">
-          {name}
-        </h3>
-        <p className="text-xs text-slate-500 mb-4">
-          {categoryName}
-          {subcategoryName && ` • ${subcategoryName}`}
-        </p>
-        <Link
-          href={href}
-          className="mt-auto inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors"
-        >
-          Abrir Calculadora
-        </Link>
+      <div className="bg-white border border-slate-200 rounded-xl p-4 hover:border-blue-300 hover:shadow-md transition-all duration-200 h-full flex flex-col">
+        <div className="flex items-start justify-between gap-3">
+          <div className="flex-1 min-w-0">
+            <div className="text-2xl mb-2">{icon}</div>
+            <h3 className="font-semibold text-slate-800 text-sm mb-1 line-clamp-2">
+              {name}
+            </h3>
+            <p className="text-xs text-slate-500">
+              {categoryName}
+              {subcategoryName && ` • ${subcategoryName}`}
+            </p>
+          </div>
+          <Link
+            href={href}
+            className="inline-flex items-center justify-center px-3 py-1.5 bg-blue-600 text-white text-xs font-medium rounded-lg hover:bg-blue-700 transition-colors whitespace-nowrap"
+          >
+            Abrir
+          </Link>
+        </div>
       </div>
     </div>
   );
