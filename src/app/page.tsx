@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { getCategoriesWithCount } from "@/lib/data";
+import { getCategoriesWithCount, getLatestCalculators } from "@/lib/data";
+import LatestCalculatorsCarousel from "@/components/home/LatestCalculatorsCarousel";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -52,6 +53,7 @@ const featuredCalculators = [
 
 export default async function HomePage() {
   const categories = await getCategoriesWithCount();
+  const latestCalculators = getLatestCalculators(8);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -124,6 +126,11 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Latest calculators carousel */}
+      {latestCalculators.length > 0 && (
+        <LatestCalculatorsCarousel calculators={latestCalculators} />
+      )}
 
       {/* Featured calculators */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

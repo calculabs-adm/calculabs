@@ -157,3 +157,22 @@ export function getCategoriesWithCount() {
     return { ...cat, calculatorCount: calcs.length };
   });
 }
+
+export function getLatestCalculators(limit: number = 8) {
+  const activeCalculators = calculators.filter((c) => c.is_active);
+  const sorted = [...activeCalculators].sort((a, b) => b.id - a.id);
+  return sorted.slice(0, limit).map((calc) => {
+    const category = categories.find((cat) => cat.id === calc.category_id);
+    const subcategory = calc.subcategory_id
+      ? subcategories.find((sub) => sub.id === calc.subcategory_id)
+      : null;
+    return {
+      ...calc,
+      categorySlug: category?.slug ?? "",
+      categoryName: category?.name ?? "",
+      subcategorySlug: subcategory?.slug ?? "",
+      subcategoryName: subcategory?.name ?? "",
+      categoryIcon: category?.icon ?? "📊",
+    };
+  });
+}
