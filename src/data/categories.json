@@ -48,5 +48,15 @@
     "color": "#8b5cf6",
     "order": 5,
     "created_at": 1772505648
+  },
+  {
+    "id": 11,
+    "name": "Física",
+    "slug": "fisica",
+    "description": "Calculadoras de física para estudantes e profissionais",
+    "icon": "⚛️",
+    "color": "#0ea5e9",
+    "order": 6,
+    "created_at": 1772505648
   }
 ]

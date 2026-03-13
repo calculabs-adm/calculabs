@@ -115,5 +115,14 @@
     "description": "Calculadoras de gravidez, idade gestacional, data prevista do parto e período fértil",
     "order": 2,
     "created_at": 1772505648
+  },
+  {
+    "id": 26,
+    "category_id": 11,
+    "name": "Quântica",
+    "slug": "quantica",
+    "description": "Calculadoras de física quântica, energia do fóton e conceitos da mecânica quântica",
+    "order": 1,
+    "created_at": 1772505648
   }
 ]
