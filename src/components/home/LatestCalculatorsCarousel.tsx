@@ -20,7 +20,10 @@ function CalculatorCard({
 }: CalculatorCardProps) {
   return (
     <div className="flex-shrink-0 w-full sm:w-1/2 lg:w-1/4 px-2">
-      <div className="bg-white border border-slate-200 rounded-xl p-4 hover:border-blue-300 hover:shadow-md transition-all duration-200 h-full flex flex-col">
+      <Link
+        href={href}
+        className="block bg-white border border-slate-200 rounded-xl p-4 hover:border-blue-300 hover:shadow-md transition-all duration-200 h-full"
+      >
         <div className="flex items-start justify-between gap-3">
           <div className="flex-1 min-w-0">
             <div className="text-2xl mb-2">{icon}</div>
@@ -32,14 +35,11 @@ function CalculatorCard({
               {subcategoryName && ` • ${subcategoryName}`}
             </p>
           </div>
-          <Link
-            href={href}
-            className="inline-flex items-center justify-center px-3 py-1.5 bg-blue-600 text-white text-xs font-medium rounded-lg hover:bg-blue-700 transition-colors whitespace-nowrap"
-          >
+          <span className="inline-flex items-center justify-center px-3 py-1.5 bg-blue-600 text-white text-xs font-medium rounded-lg whitespace-nowrap">
             Abrir
-          </Link>
+          </span>
         </div>
-      </div>
+      </Link>
     </div>
   );
 }
