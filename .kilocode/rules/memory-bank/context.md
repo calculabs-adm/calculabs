@@ -115,6 +115,9 @@ O projeto foi transformado de um template Next.js em um portal completo de calcu
    - Conversores: Moeda, Celsius/Fahrenheit, Kg/Libras
    - Datas: Diferença entre Datas, Idade Exata
 
+6. **Engenharia e Construção** (1 calculadora)
+   - Materiais de Construção: Quantidade de Cimento
+
 ## URL Structure
 
 ```
@@ -192,3 +195,4 @@ As seguintes calculadoras foram corrigidas para funcionar corretamente:
 | 2026-03-10 | Add curiosity section to Juros Simples calculator with comprehensive HTML content including history, formula explanation, comparison with compound interest, practical insights, and challenge exercise. Pushed to GitHub (commit 6356354). |
 | 2026-03-10 | Add curiosity sections to 5 financial calculators: Rendimento CDB, Tesouro Direto, Poupança, Dividend Yield, Simulação de Aposentadoria. Committed and pushed to origin.
 | 2026-03-12 | Add automatic SEO generator: created src/lib/seo-generator.ts with generateCalculatorSEO() function for fallback meta tags. Integrated in calculator page generateMetadata().
+| 2026-03-15 | Add new category "Engenharia e Construção" (id: 12) with subcategory "Materiais de Construção" (id: 27). Added new calculator "Quantidade de Cimento" (id: 112) to calculators.json.
