@@ -1,0 +1,146 @@
+[
+  {
+    "id": 13,
+    "category_id": 6,
+    "name": "Juros e Investimentos",
+    "slug": "juros-investimentos",
+    "description": "Calculadoras de juros compostos, simples e rendimentos de investimentos",
+    "order": 1,
+    "created_at": 1772505648
+  },
+  {
+    "id": 17,
+    "category_id": 7,
+    "name": "Trabalhista",
+    "slug": "trabalhista",
+    "description": "Calculadoras de rescisão, INSS, FGTS e direitos trabalhistas",
+    "order": 1,
+    "created_at": 1772505648
+  },
+  {
+    "id": 19,
+    "category_id": 8,
+    "name": "Matemática Básica",
+    "slug": "basica",
+    "description": "Porcentagem, regra de três, médias e operações fundamentais",
+    "order": 1,
+    "created_at": 1772505648
+  },
+  {
+    "id": 22,
+    "category_id": 9,
+    "name": "Corpo e Metabolismo",
+    "slug": "corpo-metabolismo",
+    "description": "IMC, taxa metabólica basal e calorias diárias",
+    "order": 1,
+    "created_at": 1772505648
+  },
+  {
+    "id": 23,
+    "category_id": 10,
+    "name": "Conversores",
+    "slug": "conversores",
+    "description": "Conversores de moeda, temperatura e peso",
+    "order": 1,
+    "created_at": 1772505648
+  },
+  {
+    "id": 14,
+    "category_id": 6,
+    "name": "Financiamentos e Empréstimos",
+    "slug": "financiamentos-emprestimos",
+    "description": "Calculadoras de financiamento imobiliário, veículos e empréstimos pessoais",
+    "order": 2,
+    "created_at": 1772505648
+  },
+  {
+    "id": 18,
+    "category_id": 7,
+    "name": "Tributário",
+    "slug": "tributario",
+    "description": "Calculadoras de Simples Nacional, MEI e ICMS",
+    "order": 2,
+    "created_at": 1772505648
+  },
+  {
+    "id": 20,
+    "category_id": 8,
+    "name": "Álgebra",
+    "slug": "algebra",
+    "description": "Equações do 1º e 2º grau",
+    "order": 2,
+    "created_at": 1772505648
+  },
+  {
+    "id": 24,
+    "category_id": 10,
+    "name": "Datas",
+    "slug": "datas",
+    "description": "Calculadoras de diferença entre datas e idade",
+    "order": 2,
+    "created_at": 1772505648
+  },
+  {
+    "id": 15,
+    "category_id": 6,
+    "name": "Gestão Financeira",
+    "slug": "gestao-financeira",
+    "description": "Calculadoras de ROI, margem de lucro e ponto de equilíbrio",
+    "order": 3,
+    "created_at": 1772505648
+  },
+  {
+    "id": 21,
+    "category_id": 8,
+    "name": "Geometria",
+    "slug": "geometria",
+    "description": "Área, volume e perímetro de figuras geométricas",
+    "order": 3,
+    "created_at": 1772505648
+  },
+  {
+    "id": 16,
+    "category_id": 6,
+    "name": "Impostos",
+    "slug": "impostos",
+    "description": "Calculadoras de imposto de renda e tributos pessoais",
+    "order": 4,
+    "created_at": 1772505648
+  },
+  {
+    "id": 25,
+    "category_id": 9,
+    "name": "Gravidez",
+    "slug": "gravidez",
+    "description": "Calculadoras de gravidez, idade gestacional, data prevista do parto e período fértil",
+    "order": 2,
+    "created_at": 1772505648
+  },
+  {
+    "id": 27,
+    "category_id": 12,
+    "name": "Materiais de Construção",
+    "slug": "materiais",
+    "description": "Calculadoras de quantidade de materiais: cimento, areia, brita e outros",
+    "order": 1,
+    "created_at": 1772505648
+  },
+  {
+    "id": 26,
+    "category_id": 11,
+    "name": "Quântica",
+    "slug": "quantica",
+    "description": "Calculadoras de física quântica, energia do fóton e conceitos da mecânica quântica",
+    "order": 1,
+    "created_at": 1772505648
+  },
+  {
+    "id": 28,
+    "category_id": 13,
+    "name": "Sistema Solar",
+    "slug": "sistema-solar",
+    "description": "Calculadoras sobre planetas, luas e corpos celestes do Sistema Solar",
+    "order": 1,
+    "created_at": 1772505648
+  }
+]

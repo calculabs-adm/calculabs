@@ -1,0 +1,72 @@
+[
+  {
+    "id": 6,
+    "name": "Finanças Pessoais",
+    "slug": "financas-pessoais",
+    "description": "Calculadoras para gestão financeira pessoal, investimentos, financiamentos e impostos",
+    "icon": "💰",
+    "color": "#10b981",
+    "order": 1,
+    "created_at": 1772505648
+  },
+  {
+    "id": 7,
+    "name": "Trabalhista e Tributário",
+    "slug": "trabalhista-tributario",
+    "description": "Calculadoras para direitos trabalhistas, impostos e tributos",
+    "icon": "⚖️",
+    "color": "#f59e0b",
+    "order": 2,
+    "created_at": 1772505648
+  },
+  {
+    "id": 8,
+    "name": "Matemática",
+    "slug": "matematica",
+    "description": "Calculadoras matemáticas do básico ao avançado",
+    "icon": "📐",
+    "color": "#6366f1",
+    "order": 3,
+    "created_at": 1772505648
+  },
+  {
+    "id": 9,
+    "name": "Saúde",
+    "slug": "saude",
+    "description": "Calculadoras de saúde, corpo e metabolismo",
+    "icon": "🏥",
+    "color": "#ef4444",
+    "order": 4,
+    "created_at": 1772505648
+  },
+  {
+    "id": 10,
+    "name": "Utilitários",
+    "slug": "utilitarios",
+    "description": "Conversores e calculadoras utilitárias do dia a dia",
+    "icon": "🔧",
+    "color": "#8b5cf6",
+    "order": 5,
+    "created_at": 1772505648
+  },
+  {
+    "id": 12,
+    "name": "Engenharia e Construção",
+    "slug": "engenharia-construcao",
+    "description": "Calculadoras para engenharia civil, construção, materiais e orçamento de obras",
+    "icon": "🏗️",
+    "color": "#f97316",
+    "order": 7,
+    "created_at": 1772505648
+  },
+  {
+    "id": 13,
+    "name": "Astronomia",
+    "slug": "astronomia",
+    "description": "Calculadoras de astronomia, física espacial e exploração do universo",
+    "icon": "🔭",
+    "color": "#0ea5e9",
+    "order": 8,
+    "created_at": 1772505648
+  }
+]
