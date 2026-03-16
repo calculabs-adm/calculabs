@@ -58,5 +58,15 @@
     "color": "#f97316",
     "order": 7,
     "created_at": 1772505648
+  },
+  {
+    "id": 13,
+    "name": "Astronomia",
+    "slug": "astronomia",
+    "description": "Calculadoras de astronomia, física espacial e exploração do universo",
+    "icon": "🔭",
+    "color": "#0ea5e9",
+    "order": 8,
+    "created_at": 1772505648
   }
 ]

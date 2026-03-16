@@ -133,5 +133,14 @@
     "description": "Calculadoras de física quântica, energia do fóton e conceitos da mecânica quântica",
     "order": 1,
     "created_at": 1772505648
+  },
+  {
+    "id": 28,
+    "category_id": 13,
+    "name": "Sistema Solar",
+    "slug": "sistema-solar",
+    "description": "Calculadoras sobre planetas, luas e corpos celestes do Sistema Solar",
+    "order": 1,
+    "created_at": 1772505648
   }
 ]
