@@ -246,6 +246,31 @@ function evaluateClientFormula(
         
         return inss + iss + icms;
       },
+      calcular_peso_planetas: (peso_terra: number) => {
+        const gravidade = {
+          mercurio: 3.7,
+          venus: 8.87,
+          terra: 9.81,
+          lua: 1.62,
+          marte: 3.71,
+          jupiter: 24.79,
+          saturno: 10.44,
+          urano: 8.69,
+          netuno: 11.15
+        };
+        const gravidade_terra = 9.81;
+        return {
+          mercurio: peso_terra * (gravidade.mercurio / gravidade_terra),
+          venus: peso_terra * (gravidade.venus / gravidade_terra),
+          terra: peso_terra,
+          lua: peso_terra * (gravidade.lua / gravidade_terra),
+          marte: peso_terra * (gravidade.marte / gravidade_terra),
+          jupiter: peso_terra * (gravidade.jupiter / gravidade_terra),
+          saturno: peso_terra * (gravidade.saturno / gravidade_terra),
+          urano: peso_terra * (gravidade.urano / gravidade_terra),
+          netuno: peso_terra * (gravidade.netuno / gravidade_terra)
+        };
+      },
     };
 
     const allVars = { ...mathHelpers, ...vars };
@@ -437,6 +462,16 @@ function formatResultLabel(key: string): string {
     mdc: "MDC",
     preco_venda: "Preço de Venda",
     markup: "Markup",
+    mercurio: "Mercúrio",
+    venus: "Vênus",
+    terra: "Terra",
+    lua: "Lua",
+    marte: "Marte",
+    jupiter: "Júpiter",
+    saturno: "Saturno",
+    urano: "Urano",
+    netuno: "Netuno",
+    tinta: "Quantidade de Tinta",
     diferenca_dias: "Diferença em Dias",
     idade: "Idade Exata",
     resultado_percentual: "Resultado",
