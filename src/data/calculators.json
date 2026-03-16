@@ -1928,7 +1928,7 @@
     "title": "Calculadora de Peso em Outros Planetas do Sistema Solar",
     "description": "Descubra quanto você pesaria em outros planetas do Sistema Solar",
     "introduction": "Você já imaginou quanto pesaria se estivesse em outro planeta do Sistema Solar? Embora a massa de uma pessoa permaneça sempre a mesma em qualquer lugar do universo, o peso pode variar dependendo da força gravitacional do planeta onde ela se encontra. Cada planeta possui uma gravidade diferente. Planetas menores, como Marte, possuem gravidade menor que a Terra, enquanto gigantes gasosos como Júpiter possuem gravidade muito maior. Isso significa que uma pessoa pesaria menos em alguns planetas e mais em outros. Esta calculadora permite descobrir rapidamente quanto você pesaria em diferentes planetas do Sistema Solar com base no seu peso na Terra.",
-    "formula": "calcular_peso_planetas(peso)",
+    "formula": "resultado = calcular_peso_planetas(peso)",
     "formula_display": "Peso = Peso_Terra × (g_planeta / g_terra)",
     "variables": "[{\"id\":\"peso\",\"label\":\"Peso na Terra\",\"type\":\"number\",\"unit\":\"kg\",\"placeholder\":\"Digite seu peso na Terra\",\"min\":1,\"max\":500}]",
     "steps": "[\"Informar o peso corporal na Terra em quilogramas.\",\"O sistema identifica a gravidade média de cada planeta do Sistema Solar.\",\"O cálculo ajusta o peso proporcionalmente à gravidade do planeta selecionado.\",\"O resultado mostra quanto a pessoa pesaria em cada planeta ou satélite.\"]",

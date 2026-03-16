@@ -318,6 +318,14 @@ function evaluateClientFormula(
         ${processedFormula}
       } catch(e) {}
       ${returnStatements}
+      // Handle object results from functions
+      try {
+        if (typeof resultado === 'object' && resultado !== null) {
+          for (const [key, value] of Object.entries(resultado)) {
+            _r[key] = value;
+          }
+        }
+      } catch(e) {}
       return _r;
     `;
 
@@ -325,8 +333,8 @@ function evaluateClientFormula(
     const rawResults = fn(...values) as Record<string, number | string>;
 
     const allResults: ResultEntry[] = Object.entries(rawResults)
-      .filter(([, v]) => v !== undefined && v !== null && (typeof v === "string" || !isNaN(Number(v))))
-      .map(([k, v]) => ({ key: k, value: typeof v === "number" ? v : v }));
+      .filter(([k, v]) => k !== 'resultado' && v !== undefined && v !== null && (typeof v === "string" || typeof v === "number"))
+      .map(([k, v]) => ({ key: k, value: v }));
 
     // If there are non-zero results, filter out zeros to avoid showing irrelevant conditional results
     const hasNonZero = allResults.some((r) => (r.value as number) !== 0);
