@@ -142,5 +142,14 @@
     "description": "Calculadoras sobre planetas, luas e corpos celestes do Sistema Solar",
     "order": 1,
     "created_at": 1772505648
+  },
+  {
+    "id": 29,
+    "category_id": 14,
+    "name": "Física",
+    "slug": "fisica",
+    "description": "Calculadoras de física: velocidade, aceleração, força, energia e outros conceitos",
+    "order": 1,
+    "created_at": 1772505648
   }
 ]

@@ -68,5 +68,15 @@
     "color": "#0ea5e9",
     "order": 8,
     "created_at": 1772505648
+  },
+  {
+    "id": 14,
+    "name": "Ciência",
+    "slug": "ciencia",
+    "description": "Calculadoras de ciências exatas, física e química",
+    "icon": "🔬",
+    "color": "#8b5cf6",
+    "order": 9,
+    "created_at": 1772505648
   }
 ]

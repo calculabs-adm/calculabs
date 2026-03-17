@@ -2,6 +2,9 @@
 
 ## Recently Completed
 
+- [x] Add new calculator "Velocidade Média" (id: 117) in new category "Ciência" > "Física": Added calculator with formula v = d/t, variables (distancia, tempo), steps, example, applications, curiosity section, FAQs, and SEO metadata
+- [x] Add new category "Ciência" (id: 14) with icon 🔬 and color #8b5cf6
+- [x] Add new subcategory "Física" (id: 29) under Ciência category
 - [x] Add automatic SEO generator for calculators: Created src/lib/seo-generator.ts with generateCalculatorSEO() function that generates meta_title and meta_description as fallback when not manually defined. Title format: "{calculator.title} Online | CalcuLabs". Description format: "Use nossa {keyword}. Calcule rapidamente com a ferramenta online gratuita do CalcuLabs." Integrated in generateMetadata() of calculator pages.
 - [x] Add curiosity sections to 13º Salário, Férias Proporcionais, and Hora Extra calculators: Added comprehensive HTML content with history, real-world applications, formula explanation, practical insights, and professor explanation. Pushed to GitHub (commit c31d3b7).
 - [x] Add curiosity sections to MDC, Equação 1º Grau, Equação 2º Grau, Área do Círculo, and Área do Triângulo calculators: Added comprehensive HTML content with history, real-world applications, formula explanation, practical insights, and professor explanation. Pushed to GitHub (commit 21d8c69).
