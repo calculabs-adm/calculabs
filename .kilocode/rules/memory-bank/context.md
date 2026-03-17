@@ -196,3 +196,4 @@ As seguintes calculadoras foram corrigidas para funcionar corretamente:
 | 2026-03-10 | Add curiosity sections to 5 financial calculators: Rendimento CDB, Tesouro Direto, Poupança, Dividend Yield, Simulação de Aposentadoria. Committed and pushed to origin.
 | 2026-03-12 | Add automatic SEO generator: created src/lib/seo-generator.ts with generateCalculatorSEO() function for fallback meta tags. Integrated in calculator page generateMetadata().
 | 2026-03-15 | Add new category "Engenharia e Construção" (id: 12) with subcategory "Materiais de Construção" (id: 27). Added new calculator "Quantidade de Cimento" (id: 112) to calculators.json.
+| 2026-03-17 | Add new calculator "Perímetro do Círculo" (id: 116) to Mathematics > Geometry category. Formula: C = 2πr, with variables, steps, example, applications, curiosity section, and FAQs.
