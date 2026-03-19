@@ -150,39 +150,39 @@ For complex needs (add when necessary):
 
 ## Data & Tracking Architecture
 
-The Calculabs system follows a layered architecture for data collection, processing, and future monetization.
+- The Calculabs system follows a layered architecture for data collection, processing, and future monetization.
 
 ### Current Architecture (Phase 1)
 
 #### Layer 1 — Frontend Interaction
 
-User interacts with calculator inputs
+- User interacts with calculator inputs
 
-Events triggered via CalculatorWidget and Tracker components
+- Events triggered via CalculatorWidget and Tracker components
 
 #### Layer 2 — Tracking Layer
 
-Centralized in analytics.ts
+- Centralized in analytics.ts
 
-trackEvent() is the single entry point
+- trackEvent() is the single entry point
 
 #### Layer 3 — Dual Dispatch
 
-Google Tag Manager (dataLayer)
+- Google Tag Manager (dataLayer)
 
-Internal API (/api/tracking)
+- Internal API (/api/tracking)
 
 #### Layer 4 — API Layer
 
-Receives events via POST
+- Receives events via POST
 
-Adds metadata (timestamp, URL, userAgent)
+- Adds metadata (timestamp, URL, userAgent)
 
-Logs data (temporary)
+- Logs data (temporary)
 
 ### Event Flow
 
-User Interaction
+- User Interaction
 → trackEvent()
 → GTM (dataLayer)
 → /api/tracking
@@ -191,56 +191,56 @@ User Interaction
 
 #### Layer 5 — Data Persistence
 
-Supabase will store:
+- Supabase will store:
 
-events
+- events
 
-sessions
+- sessions
 
 #### Layer 6 — Data Processing
 
-Aggregation of:
+- Aggregation of:
 
-page views
+- page views
 
-calculations
+- calculations
 
-engagement
+- engagement
 
 #### Layer 7 — Intelligence Layer
 
-Identify high-performing calculators
+- Identify high-performing calculators
 
-Detect user intent patterns
+- Detect user intent patterns
 
-Optimize monetization
+- Optimize monetization
 
 #### Layer 8 — Dashboard & Admin Panel
 
-Private access (/admin-painel)
+- Private access (/admin-painel)
 
-Metrics visualization:
+- Metrics visualization:
 
-usage
+- usage
 
-engagement
+- engagement
 
-performance
+- performance
 
 ### Key Principles
 
-Single tracking entry point
+- Single tracking entry point
 
-Dual data destination (GTM + internal)
+- Dual data destination (GTM + internal)
 
-Non-blocking architecture
+- Non-blocking architecture
 
-Fully scalable for future database integration
+- Fully scalable for future database integration
 
 ### Constraints
 
-Must not break SSG behavior
+- Must not break SSG behavior
 
-Must not affect performance
+- Must not affect performance
 
-Must remain compatible with existing GTM setup
+- Must remain compatible with existing GTM setup

@@ -42,3 +42,98 @@ Starting a new Next.js project involves boilerplate setup, configuration decisio
 - **Database**: Use add-database recipe for Drizzle + SQLite
 - **Styling**: Tailwind CSS pre-configured
 - **AI Assistance**: Memory bank for context persistence
+
+
+## Data-Driven Product Strategy
+
+- Calculabs is not just a calculator platform. It is a data-driven system designed to acquire traffic, understand user behavior, and maximize monetization.
+
+### Core Objective
+
+- Generate high-volume organic traffic via SEO
+
+- Capture user behavior through tracking
+
+- Optimize pages based on real usage data
+
+- Monetize through ads and affiliate offers
+
+### User Intent Model
+
+- Each calculator represents a different level of user intent:
+
+Informational → user is learning
+
+- Practical → user wants to calculate something
+
+Commercial → user is comparing options
+
+- Transactional → user is ready to decide
+
+### Page Value Hierarchy
+
+- Not all pages have the same value.
+
+- High-value pages:
+
+- Financing calculators
+
+- Investment simulators
+
+- ROI / ROAS
+
+- Retirement simulations
+
+- Low-value pages:
+
+- Basic math (MMC, MDC)
+
+- Simple converters
+
+### Monetization Strategy
+
+- Top Funnel (Informational)
+
+- Focus: traffic
+
+- Monetization: light AdSense
+
+- Middle Funnel (Practical)
+
+- Focus: engagement
+
+- Monetization: optimized AdSense
+
+- Bottom Funnel (Commercial / Transactional)
+
+- Focus: conversion
+
+- Monetization:
+
+- Affiliate links
+
+- Hybrid (ads + affiliate)
+
+- Product Evolution Model
+
+- Each calculator should evolve in 3 stages:
+
+- Calculation (basic tool)
+
+- Simulation (advanced scenarios)
+
+- Recommendation (decision support)
+
+### Data Feedback Loop
+
+- User interaction generates data:
+→ Data is collected via tracking
+→ Data is stored (future: Supabase)
+→ Data is analyzed
+→ Product is optimized
+
+### Strategic Principle
+
+- Every page must evolve from a simple calculator into a decision-making tool.
+
+- The goal is not just usage, but influence over user decisions.
