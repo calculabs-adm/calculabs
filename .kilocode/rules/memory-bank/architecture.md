@@ -145,3 +145,102 @@ For simple needs:
 For complex needs (add when necessary):
 - Zustand for client state
 - React Query for server state
+
+
+
+## Data & Tracking Architecture
+
+The Calculabs system follows a layered architecture for data collection, processing, and future monetization.
+
+### Current Architecture (Phase 1)
+
+#### Layer 1 — Frontend Interaction
+
+User interacts with calculator inputs
+
+Events triggered via CalculatorWidget and Tracker components
+
+#### Layer 2 — Tracking Layer
+
+Centralized in analytics.ts
+
+trackEvent() is the single entry point
+
+#### Layer 3 — Dual Dispatch
+
+Google Tag Manager (dataLayer)
+
+Internal API (/api/tracking)
+
+#### Layer 4 — API Layer
+
+Receives events via POST
+
+Adds metadata (timestamp, URL, userAgent)
+
+Logs data (temporary)
+
+### Event Flow
+
+User Interaction
+→ trackEvent()
+→ GTM (dataLayer)
+→ /api/tracking
+
+### Future Architecture (Phase 2)
+
+#### Layer 5 — Data Persistence
+
+Supabase will store:
+
+events
+
+sessions
+
+#### Layer 6 — Data Processing
+
+Aggregation of:
+
+page views
+
+calculations
+
+engagement
+
+#### Layer 7 — Intelligence Layer
+
+Identify high-performing calculators
+
+Detect user intent patterns
+
+Optimize monetization
+
+#### Layer 8 — Dashboard & Admin Panel
+
+Private access (/admin-painel)
+
+Metrics visualization:
+
+usage
+
+engagement
+
+performance
+
+### Key Principles
+
+Single tracking entry point
+
+Dual data destination (GTM + internal)
+
+Non-blocking architecture
+
+Fully scalable for future database integration
+
+### Constraints
+
+Must not break SSG behavior
+
+Must not affect performance
+
+Must remain compatible with existing GTM setup

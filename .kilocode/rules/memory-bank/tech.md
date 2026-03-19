@@ -141,3 +141,66 @@ bun typecheck      # Run TypeScript type checking
 - None required for base template
 - Add as needed for features
 - Use `.env.local` for local development
+
+## Tracking System (Dual Analytics)
+
+- The system uses a dual tracking architecture to ensure data redundancy and ownership.
+
+### Core Module
+
+- Location:
+- src/lib/analytics.ts
+
+### Functions
+
+- track(event, params)
+- Sends events to Google Tag Manager (dataLayer)
+- MUST NOT be modified
+- trackEvent(event, params)
+- Primary tracking function
+- Calls track() for GTM
+- Sends event to internal API (/api/tracking)
+
+### Event Flow
+
+- trackEvent()
+→ dataLayer (GTM)
+→ POST /api/tracking
+
+### Implemented Events
+
+- calculadora_visualizada
+- campo_alterado (debounced)
+- resultado_calculado
+- resultado_copiado
+
+### Debounce Strategy
+
+- Applied to campo_alterado
+- Delay: 300ms
+- Implemented in CalculatorWidget
+- Prevents excessive event firing
+
+### API Tracking
+
+- Endpoint:
+/api/tracking
+
+- Responsibilities:
+- Receive events
+- Attach metadata (timestamp, url, userAgent)
+- Log events (temporary)
+- Future: persist to database
+
+### Rules
+
+- Always use trackEvent() for new tracking
+- Never call GTM directly outside analytics.ts
+- Never remove or modify track()
+- Fail silently if API fails
+
+### Performance Rules
+
+- Input tracking must use debounce
+- Avoid unnecessary re-renders
+- Do not block UI with async tracking

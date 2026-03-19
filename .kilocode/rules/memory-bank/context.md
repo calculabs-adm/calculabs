@@ -201,3 +201,69 @@ As seguintes calculadoras foram corrigidas para funcionar corretamente:
 | 2026-03-15 | Add new category "Engenharia e Construção" (id: 12) with subcategory "Materiais de Construção" (id: 27). Added new calculator "Quantidade de Cimento" (id: 112) to calculators.json.
 | 2026-03-17 | Add new calculator "Perímetro do Círculo" (id: 116) to Mathematics > Geometry category. Formula: C = 2πr, with variables, steps, example, applications, curiosity section, and FAQs.
 | 2026-03-19 | Add dual tracking system: Created new trackEvent() function in src/lib/analytics.ts that sends events to both GTM (dataLayer) and internal /api/tracking endpoint. Added debounce of 300ms for campo_alterado events in CalculatorWidget to reduce excessive events. Created API route /api/tracking to receive and log tracking events. Updated CalculatorTracker and CalculatorWidget to use trackEvent() for dual tracking.
+
+## Recent System Evolution (Tracking & Data Layer)
+
+- The Calculabs project has evolved from a static calculator platform into a data-driven system.
+
+### Key Changes Implemented
+
+- Introduction of a dual tracking system
+
+- Creation of centralized analytics module (analytics.ts)
+
+- Implementation of trackEvent() as the single tracking entry point
+
+- Integration with internal API (/api/tracking)
+
+- Preservation of GTM (Google Tag Manager) for external analytics
+
+### Technical Decisions
+
+- Tracking must be centralized in analytics.ts
+
+Dual tracking (GTM + internal API) is mandatory
+
+- All user interactions must be captured via trackEvent()
+
+- Input events must use debounce (300ms)
+
+### Current System State
+
+- Tracking system fully implemented
+
+- Events are being captured and sent to API
+
+- No persistence yet (data not stored)
+
+- Supabase will be introduced as the data layer
+
+### Next Steps (Planned)
+
+- Create Supabase project
+
+- Implement event storage (events table)
+
+- Introduce session tracking
+
+- Build admin dashboard (/admin-painel)
+
+### Strategic Direction
+
+- The system is transitioning to:
+
+- Behavior-driven optimization
+
+- Data-based decision making
+
+- Monetization optimization through real usage data
+
+### Important Constraints
+
+- Must not break existing functionality
+
+- Must maintain performance
+
+- Must remain compatible with GTM
+
+- Must evolve incrementally (no big rewrites)
