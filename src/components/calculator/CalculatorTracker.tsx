@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { track } from "@/lib/analytics";
+import { trackEvent } from "@/lib/analytics";
 
 interface CalculatorTrackerProps {
   calculadoraNome: string;
@@ -19,8 +19,8 @@ export default function CalculatorTracker({
   calculadoraSubcategoria,
 }: CalculatorTrackerProps) {
   useEffect(() => {
-    // Track the calculator view event
-    track("calculadora_visualizada", {
+    // Track the calculator view event (dual tracking: GTM + API)
+    trackEvent("calculadora_visualizada", {
       calculadora_nome: calculadoraNome,
       calculadora_categoria: calculadoraCategoria,
       calculadora_subcategoria: calculadoraSubcategoria,

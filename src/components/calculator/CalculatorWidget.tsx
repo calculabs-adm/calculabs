@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useCallback, useEffect } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 import type { Variable } from "@/lib/formula-engine";
-import { track } from "@/lib/analytics";
+import { trackEvent } from "@/lib/analytics";
 
 interface CalculatorWidgetProps {
   formula: string;
@@ -519,21 +519,33 @@ export default function CalculatorWidget({
   const [calculated, setCalculated] = useState(false);
   const [copied, setCopied] = useState(false);
 
+  // Debounce ref for campo_alterado events (300ms)
+  const debounceTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
   const handleChange = useCallback((id: string, value: string) => {
+    // Always update the value immediately
     setValues((prev) => {
-      // Track field change only when value actually differs
-      const prevValue = prev[id];
-      if (prevValue !== value && calculoSlug) {
-        track("campo_alterado", {
+      return { ...prev, [id]: value };
+    });
+    setCalculated(false);
+
+    // Debounce the tracking event (300ms)
+    if (calculoSlug) {
+      // Clear previous timeout
+      if (debounceTimeoutRef.current) {
+        clearTimeout(debounceTimeoutRef.current);
+      }
+      
+      // Set new timeout
+      debounceTimeoutRef.current = setTimeout(() => {
+        trackEvent("campo_alterado", {
           campo_nome: id,
           calculadora_nome: calculoSlug,
           calculadora_categoria: categoriaSlug ?? "",
           calculadora_subcategoria: subcategoriaSlug ?? "",
         });
-      }
-      return { ...prev, [id]: value };
-    });
-    setCalculated(false);
+      }, 300);
+    }
   }, [calculoSlug, categoriaSlug, subcategoriaSlug]);
 
   const handleCalculate = useCallback(() => {
@@ -564,7 +576,7 @@ export default function CalculatorWidget({
       
       // Track calculation event
       if (calculoSlug) {
-        track("resultado_calculado", {
+        trackEvent("resultado_calculado", {
           calculadora_nome: calculoSlug,
           calculadora_categoria: categoriaSlug ?? "",
           calculadora_subcategoria: subcategoriaSlug ?? "",
@@ -598,7 +610,7 @@ export default function CalculatorWidget({
       setCopied(true);
       
       // Dispara evento de analytics após cópia bem-sucedida
-      track("resultado_copiado", {
+      trackEvent("resultado_copiado", {
         calculadora_nome: calculoSlug,
         calculadora_categoria: categoriaSlug,
         calculadora_subcategoria: subcategoriaSlug,
