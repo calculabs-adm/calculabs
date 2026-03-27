@@ -211,3 +211,55 @@ h1, h2, h3, h4, h5, h6 {
 .curiosity-content strong {
   color: #1e3a8a;
 }
+
+/* Calculator content — standard reading style */
+.calc-content {
+  max-width: 720px;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #334155;
+}
+
+.calc-content p {
+  margin-bottom: 16px;
+}
+
+.calc-content h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 32px;
+  margin-bottom: 12px;
+  color: #0f172a;
+}
+
+.calc-content h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 24px;
+  margin-bottom: 10px;
+  color: #1e293b;
+}
+
+.calc-content ul,
+.calc-content ol {
+  margin-bottom: 16px;
+  padding-left: 20px;
+}
+
+.calc-content li {
+  margin-bottom: 8px;
+}
+
+.calc-content .example-box {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 24px 0;
+}
+
+.calc-content a {
+  color: #2563eb;
+  text-decoration: underline;
+}

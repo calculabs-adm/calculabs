@@ -9,6 +9,12 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/).
   - Posição 1 (meio): após CalculatorWidget (mobile + desktop)
   - Posição 2 (final): após todo conteúdo, antes do footer (mobile + desktop)
   - Máximo de 2 anúncios por página
+
+### Changed
+- Refatoração de legibilidade: classe `.calc-content` aplicada ao conteúdo textual das páginas de calculadora
+  - CSS em `globals.css` com padrão fixo (max-width 720px, font-size 16px, line-height 1.75)
+  - Wrapper aplicado em: Fórmula, Steps, Exemplo, Aplicações, Curiosidade, FAQ, Autor
+  - Aplicado em ambos layouts (mobile + desktop)
   - 1 bloco por layout (total 1 por página, renderizado conforme viewport)
 - Componente `AdBlock` (`src/components/ads/AdBlock.tsx`) — base de monetização AdSense V1
   - Slot padrão: 2277544742

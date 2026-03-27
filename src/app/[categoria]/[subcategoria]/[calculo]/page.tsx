@@ -459,6 +459,7 @@ export default async function CalculatorPage({ params }: Props) {
 
           <AdBlock />
 
+          <div className="calc-content">
           {/* Formula - always visible on mobile */}
           {calculator.formula_display && (
             <div>
@@ -578,6 +579,7 @@ export default async function CalculatorPage({ params }: Props) {
               </div>
             </div>
           )}
+          </div>
 
           {/* Related calculators */}
           {related.length > 0 && (
@@ -638,6 +640,7 @@ export default async function CalculatorPage({ params }: Props) {
               </p>
             </div>
 
+            <div className="calc-content">
             {/* Formula */}
             {calculator.formula_display && (
               <div>
@@ -757,6 +760,7 @@ export default async function CalculatorPage({ params }: Props) {
                 </div>
               </div>
             )}
+            </div>
           </div>
 
           {/* Sidebar */}
