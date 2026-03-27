@@ -14,7 +14,7 @@
 | Min-height | 250px |
 | Label | "Publicidade" (discreto, cinza) |
 | Carregamento | Client-side apenas |
-| Inserido em páginas | **SIM** — páginas de calculadora (posição meio) |
+| Inserido em páginas | **SIM** — páginas de calculadora (2 posições: meio e final) |
 
 ### Uso
 

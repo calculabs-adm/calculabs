@@ -809,6 +809,8 @@ export default async function CalculatorPage({ params }: Props) {
             </div>
           </div>
         </div>
+
+        <AdBlock />
       </div>
     </>
   );

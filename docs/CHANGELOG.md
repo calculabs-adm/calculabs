@@ -6,8 +6,9 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/).
 
 ### Added
 - AdBlock inserido nas páginas de calculadora (`src/app/[categoria]/[subcategoria]/[calculo]/page.tsx`)
-  - Mobile: após CalculatorWidget
-  - Desktop: após CalculatorWidget (sidebar) — posição unificada
+  - Posição 1 (meio): após CalculatorWidget (mobile + desktop)
+  - Posição 2 (final): após todo conteúdo, antes do footer (mobile + desktop)
+  - Máximo de 2 anúncios por página
   - 1 bloco por layout (total 1 por página, renderizado conforme viewport)
 - Componente `AdBlock` (`src/components/ads/AdBlock.tsx`) — base de monetização AdSense V1
   - Slot padrão: 2277544742
