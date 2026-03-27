@@ -13,7 +13,6 @@ import CalculatorTracker from "@/components/calculator/CalculatorTracker";
 import ErrorReportButton from "@/components/calculator/ErrorReportButton";
 import ShareButton from "@/components/calculator/ShareButton";
 import AdBlock from "@/components/ads/AdBlock";
-import ReadingBreak from "@/components/ui/ReadingBreak";
 import type { Variable } from "@/lib/formula-engine";
 
 interface Props {
@@ -473,8 +472,6 @@ export default async function CalculatorPage({ params }: Props) {
             </div>
           )}
 
-          <ReadingBreak text="Entender este conceito é essencial para tomar decisões financeiras mais inteligentes." />
-
           {/* Steps */}
           {steps.length > 0 && (
             <div>
@@ -655,8 +652,6 @@ export default async function CalculatorPage({ params }: Props) {
                 </div>
               </div>
             )}
-
-            <ReadingBreak text="Entender este conceito é essencial para tomar decisões financeiras mais inteligentes." />
 
             {/* Steps */}
             {steps.length > 0 && (

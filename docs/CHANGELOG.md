@@ -22,6 +22,9 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/).
   - Inserido após seção Fórmula em ambos layouts (mobile + desktop)
   - Máximo 1 por página
   - Texto padrão: "Entender este conceito é essencial para tomar decisões financeiras mais inteligentes."
+
+### Removed
+- `ReadingBreak` removido das páginas de calculadora — texto financeiro não era adequado para calculadoras não-financeiras (ex: IMC). Componente mantido em `src/components/ui/ReadingBreak.tsx` para uso futuro com texto contextual por categoria.
   - 1 bloco por layout (total 1 por página, renderizado conforme viewport)
 - Componente `AdBlock` (`src/components/ads/AdBlock.tsx`) — base de monetização AdSense V1
   - Slot padrão: 2277544742
