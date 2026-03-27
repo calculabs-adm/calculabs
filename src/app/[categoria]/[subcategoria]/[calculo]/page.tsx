@@ -504,9 +504,7 @@ export default async function CalculatorPage({ params }: Props) {
                 {example.explanation}
               </p>
             </div>
-          )}
-
-          <AdBlock />
+            )}
 
           {/* Applications */}
           {applications.length > 0 && (
@@ -773,6 +771,8 @@ export default async function CalculatorPage({ params }: Props) {
                 categoriaSlug={categoriaSlug}
                 subcategoriaSlug={subcategoriaSlug}
               />
+
+              <AdBlock />
 
               {/* Related calculators */}
               {related.length > 0 && (
