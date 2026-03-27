@@ -13,6 +13,7 @@ Toda alteração no código DEVE atualizar a documentação em `/docs/`.
 | `docs/ARCHITECTURE.md` | Alteração em estrutura, rotas, fluxo |
 | `docs/MONETIZATION.md` | Alteração em anúncios, CTA, receita |
 | `docs/SYSTEM_OVERVIEW.md` | Alteração em stack, dependências, config |
+| `docs/master_inventory-calculators.md` | Criação, alteração ou remoção de calculadora |
 
 ### Regras
 

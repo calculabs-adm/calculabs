@@ -19,6 +19,7 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/).
   - `FEATURES.md` — Funcionalidades ativas
   - `MONETIZATION.md` — Estado da monetização
   - `CHANGELOG.md` — Este arquivo
+  - `master_inventory-calculators.md` — Inventário completo das 66 calculadoras
 
 ## [Pre-rollback] — Histórico (commits removidos)
 
