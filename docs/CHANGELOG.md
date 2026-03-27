@@ -15,6 +15,13 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/).
   - CSS em `globals.css` com padrão fixo (max-width 720px, font-size 16px, line-height 1.75)
   - Wrapper aplicado em: Fórmula, Steps, Exemplo, Aplicações, Curiosidade, FAQ, Autor
   - Aplicado em ambos layouts (mobile + desktop)
+
+### Added
+- Componente `ReadingBreak` (`src/components/ui/ReadingBreak.tsx`) — interrupção visual para retenção
+  - CSS em `globals.css` (`.reading-break`: fundo slate, borda azul esquerda)
+  - Inserido após seção Fórmula em ambos layouts (mobile + desktop)
+  - Máximo 1 por página
+  - Texto padrão: "Entender este conceito é essencial para tomar decisões financeiras mais inteligentes."
   - 1 bloco por layout (total 1 por página, renderizado conforme viewport)
 - Componente `AdBlock` (`src/components/ads/AdBlock.tsx`) — base de monetização AdSense V1
   - Slot padrão: 2277544742

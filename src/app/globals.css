@@ -263,3 +263,18 @@ h1, h2, h3, h4, h5, h6 {
   color: #2563eb;
   text-decoration: underline;
 }
+
+/* Reading break — visual interruption for retention */
+.reading-break {
+  margin: 32px 0;
+  padding: 16px;
+  background: #f1f5f9;
+  border-left: 4px solid #3b82f6;
+  border-radius: 6px;
+}
+
+.reading-break p {
+  margin: 0;
+  font-weight: 500;
+  color: #1e293b;
+}
