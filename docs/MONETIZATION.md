@@ -2,7 +2,28 @@
 
 ## Status Atual
 
-**Nenhuma integração de monetização ativa.** O rollback para commit b3411f0 removeu todas as implementações anteriores de monetização (AdSense, controles de toggle, painel admin).
+**Componente AdSense base criado (V1 controlado).** O componente existe mas NÃO está inserido em nenhuma página.
+
+### Componente: `src/components/ads/AdBlock.tsx`
+
+| Propriedade | Valor |
+|-------------|-------|
+| Client ID | `ca-pub-2809409030893528` |
+| Slot padrão | `2277544742` |
+| Formato | `auto` (configurável: rectangle, horizontal) |
+| Min-height | 250px |
+| Label | "Publicidade" (discreto, cinza) |
+| Carregamento | Client-side apenas |
+| Inserido em páginas | **NÃO** — pronto para uso futuro |
+
+### Uso
+
+```tsx
+import AdBlock from '@/components/ads/AdBlock'
+
+<AdBlock />
+<AdBlock slot="2277544742" format="horizontal" />
+```
 
 ## Estrutura Existe
 

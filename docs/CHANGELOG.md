@@ -4,6 +4,15 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
 
+### Added
+- Componente `AdBlock` (`src/components/ads/AdBlock.tsx`) — base de monetização AdSense V1
+  - Slot padrão: 2277544742
+  - Client: ca-pub-2809409030893528
+  - Responsivo com min-height 250px
+  - Label "Publicidade" discreto
+  - Carregamento client-side com ref para evitar push duplicado
+  - Componente isolado — não inserido em nenhuma página
+
 ## [1.0.0] - 2026-03-26
 
 ### Changed
