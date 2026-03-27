@@ -25,6 +25,13 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/).
 
 ### Removed
 - `ReadingBreak` removido das páginas de calculadora — texto financeiro não era adequado para calculadoras não-financeiras (ex: IMC). Componente mantido em `src/components/ui/ReadingBreak.tsx` para uso futuro com texto contextual por categoria.
+
+### Added
+- ReadingBreak contextual reinserido nas páginas de calculadora
+  - Função `getReadingBreakText()` com texto por categoria (finanças, trabalho, matemática, saúde, engenharia, default)
+  - Inserido após seção "Exemplo Prático" em ambos layouts (mobile + desktop)
+  - Máximo 1 por página
+  - Não inserido dentro de `dangerouslySetInnerHTML`
   - 1 bloco por layout (total 1 por página, renderizado conforme viewport)
 - Componente `AdBlock` (`src/components/ads/AdBlock.tsx`) — base de monetização AdSense V1
   - Slot padrão: 2277544742

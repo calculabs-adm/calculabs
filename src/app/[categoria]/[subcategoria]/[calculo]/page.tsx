@@ -13,6 +13,7 @@ import CalculatorTracker from "@/components/calculator/CalculatorTracker";
 import ErrorReportButton from "@/components/calculator/ErrorReportButton";
 import ShareButton from "@/components/calculator/ShareButton";
 import AdBlock from "@/components/ads/AdBlock";
+import ReadingBreak from "@/components/ui/ReadingBreak";
 import type { Variable } from "@/lib/formula-engine";
 
 interface Props {
@@ -90,6 +91,23 @@ const FINANCIAL_SUBCATEGORIES = [
   "trabalhista",
   "tributario"
 ];
+
+function getReadingBreakText(categorySlug: string): string {
+  switch (categorySlug) {
+    case "financas-pessoais":
+      return "Entender esse cálculo pode evitar decisões financeiras ruins e melhorar seus resultados no longo prazo.";
+    case "trabalhista-tributario":
+      return "Esse tipo de cálculo pode impactar diretamente seus direitos e valores a receber.";
+    case "matematica":
+      return "Dominar esse conceito facilita diversos outros cálculos no dia a dia.";
+    case "saude":
+      return "Esse cálculo ajuda a tomar decisões mais conscientes sobre sua saúde.";
+    case "engenharia-construcao":
+      return "Esse tipo de cálculo evita erros e desperdícios em projetos.";
+    default:
+      return "Compreender esse cálculo pode ajudar em diversas situações práticas.";
+  }
+}
 
 // Check if calculator is financial
 function isFinancialCalculator(
@@ -507,6 +525,8 @@ export default async function CalculatorPage({ params }: Props) {
             </div>
             )}
 
+          <ReadingBreak text={getReadingBreakText(categoriaSlug)} />
+
           {/* Applications */}
           {applications.length > 0 && (
             <div>
@@ -687,6 +707,8 @@ export default async function CalculatorPage({ params }: Props) {
                 </p>
               </div>
             )}
+
+            <ReadingBreak text={getReadingBreakText(categoriaSlug)} />
 
             {/* Applications */}
             {applications.length > 0 && (
