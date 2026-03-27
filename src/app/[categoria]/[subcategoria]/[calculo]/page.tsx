@@ -12,6 +12,7 @@ import CalculatorWidget from "@/components/calculator/CalculatorWidget";
 import CalculatorTracker from "@/components/calculator/CalculatorTracker";
 import ErrorReportButton from "@/components/calculator/ErrorReportButton";
 import ShareButton from "@/components/calculator/ShareButton";
+import AdBlock from "@/components/ads/AdBlock";
 import type { Variable } from "@/lib/formula-engine";
 
 interface Props {
@@ -456,6 +457,8 @@ export default async function CalculatorPage({ params }: Props) {
             />
           </div>
 
+          <AdBlock />
+
           {/* Formula - always visible on mobile */}
           {calculator.formula_display && (
             <div>
@@ -502,6 +505,8 @@ export default async function CalculatorPage({ params }: Props) {
               </p>
             </div>
           )}
+
+          <AdBlock />
 
           {/* Applications */}
           {applications.length > 0 && (
