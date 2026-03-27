@@ -1,0 +1,61 @@
+# System Overview
+
+## O que é
+
+CalcuLabs é um portal brasileiro de calculadoras online gratuitas. Disponibiliza 66 calculadoras organizadas em 8 categorias e 17 subcategorias, cobrindo finanças, matemática, saúde, engenharia, astronomia e ciências.
+
+**URL:** https://www.calculabs.com.br
+
+## Stack
+
+| Camada | Tecnologia |
+|--------|-----------|
+| Framework | Next.js 16 (App Router, Turbopack) |
+| UI | React 19, Tailwind CSS 4 |
+| Linguagem | TypeScript 5.9 |
+| ORM | Drizzle ORM |
+| DB Local | SQLite (better-sqlite3) |
+| DB Produção | Turso (libsql) |
+| Deploy | Vercel |
+| Analytics | Google Tag Manager |
+| Email | nodemailer (SMTP) |
+
+## Dados
+
+O conteúdo das calculadoras está armazenado em arquivos JSON estáticos em `src/data/`:
+
+- `categories.json` — 8 categorias
+- `subcategories.json` — 17 subcategorias
+- `calculators.json` — 66 calculadoras
+
+O banco de dados (SQLite/Turso) existe mas é usado para seeding e features futuras. A leitura em runtime usa os JSONs.
+
+## Cálculos
+
+Todas as fórmulas são avaliadas client-side via `src/lib/formula-engine.ts`. O engine usa `Function` constructor com escopo restrito de 30+ funções auxiliares (matemática, finanças, saúde, gravidez, astronomia, impostos).
+
+## Integrações
+
+- Google Tag Manager (GTM-WCJ4FLF7)
+- SMTP para reporte de erros
+- Turso DB para produção
+- Vercel para deploy
+
+## Variáveis de Ambiente
+
+| Variável | Obrigatória | Descrição |
+|----------|------------|-----------|
+| `SMTP_HOST` | Não | Servidor SMTP |
+| `SMTP_PORT` | Não | Porta SMTP |
+| `SMTP_USER` | Não | Usuário SMTP |
+| `SMTP_PASS` | Não | Senha SMTP |
+| `REPORT_FROM_EMAIL` | Não | Email remetente |
+| `REPORT_TO_EMAIL` | Não | Email destinatário |
+| `TURSO_DATABASE_URL` | Produção | URL do banco Turso |
+| `TURSO_AUTH_TOKEN` | Produção | Token de autenticação Turso |
+| `NEXT_PUBLIC_SITE_URL` | Não | URL do site (default: calculabs.com.br) |
+| `SEED_SECRET_KEY` | Não | Chave do endpoint /api/seed |
+
+## Última Atualização
+
+2026-03-26 — Rollback para commit b3411f0 (remoção completa do Supabase).

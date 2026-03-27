@@ -1,22 +1,44 @@
-## Optional Feature Guides
+# AGENTS.md — Regras do Projeto
 
-When users request features beyond the base template, check for available recipes in `.kilocode/recipes/`.
+## Documentação Viva (OBRIGATÓRIO)
 
-### Available Recipes
+Toda alteração no código DEVE atualizar a documentação em `/docs/`.
 
-| Recipe       | File                                | When to Use                                           |
-| ------------ | ----------------------------------- | ----------------------------------------------------- |
-| Add Database | `.kilocode/recipes/add-database.md` | When user needs data persistence (users, posts, etc.) |
+### Arquivos de Documentação
 
-### How to Use Recipes
+| Arquivo | Quando atualizar |
+|---------|-----------------|
+| `docs/CHANGELOG.md` | Toda alteração |
+| `docs/FEATURES.md` | Alteração em funcionalidades |
+| `docs/ARCHITECTURE.md` | Alteração em estrutura, rotas, fluxo |
+| `docs/MONETIZATION.md` | Alteração em anúncios, CTA, receita |
+| `docs/SYSTEM_OVERVIEW.md` | Alteração em stack, dependências, config |
 
-1. Read the recipe file when the user requests the feature
-2. Follow the step-by-step instructions
-3. Update the memory bank after implementing the feature
+### Regras
 
-## Memory Bank Maintenance
+1. Nenhuma tarefa está concluída sem documentação atualizada
+2. CHANGELOG.md sempre recebe entrada para qualquer commit
+3. Formato técnico, claro, sem redundância
+4. Verificar consistência entre código e docs antes de commit
 
-After completing the user's request, update the relevant memory bank files:
+## Recipes
 
-- `.kilocode/rules/memory-bank/context.md` - Current state and recent changes
-- Other memory bank files as needed when architecture, tech stack, or project goals change
+Quando o usuário solicitar funcionalidades além do template base, verificar recipes em `.kilocode/recipes/`.
+
+| Recipe       | File                                | Quando usar                          |
+| ------------ | ----------------------------------- | ------------------------------------ |
+| Add Database | `.kilocode/recipes/add-database.md` | Persistência de dados                |
+
+### Como usar
+
+1. Ler o arquivo da recipe
+2. Seguir as instruções
+3. Atualizar a documentação em `/docs/`
+4. Atualizar o memory bank em `.kilocode/rules/memory-bank/`
+
+## Memory Bank
+
+Após cada tarefa, atualizar:
+
+- `.kilocode/rules/memory-bank/context.md` — Estado atual e mudanças recentes
+- Outros arquivos do memory bank se arquitetura, stack ou objetivos mudarem

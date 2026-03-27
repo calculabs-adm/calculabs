@@ -1,0 +1,45 @@
+# Changelog
+
+Formato baseado em [Keep a Changelog](https://keepachangelog.com/).
+
+## [Unreleased]
+
+## [1.0.0] - 2026-03-26
+
+### Changed
+- Rollback completo para commit b3411f0
+- Removido Supabase (dependências, código, variáveis de ambiente)
+- Removidos painel admin, sistema de monetização com toggle, e tracking com persistência em banco
+- Projeto restaurado ao estado estável base (JSON static data, SQLite/Turso, GTM, SMTP)
+
+### Added
+- Sistema de documentação viva em `/docs/`
+  - `SYSTEM_OVERVIEW.md` — Visão geral do sistema
+  - `ARCHITECTURE.md` — Arquitetura e estrutura
+  - `FEATURES.md` — Funcionalidades ativas
+  - `MONETIZATION.md` — Estado da monetização
+  - `CHANGELOG.md` — Este arquivo
+
+## [Pre-rollback] — Histórico (commits removidos)
+
+Os commits entre b3411f0 e 29dc94c foram removidos no rollback. Funcionalidades que existiam nesse período:
+
+- Supabase integration (tracking persistence, auth, settings)
+- Admin panel (login, dashboard, monetization toggles, performance metrics)
+- AdBlock component (AdSense rendering)
+- MonetizationBlock / MonetizationContainer (ads positioning)
+- Settings API (Supabase CRUD)
+- Tracking with database persistence
+- Revenue calculation (RPM, EPC)
+- XLSX export for calculator inventory
+
+Essas funcionalidades precisarão ser recriadas do zero sem Supabase, usando Drizzle/Turso.
+
+---
+
+## Regras deste CHANGELOG
+
+- Toda alteração no código DEVE ter entrada aqui
+- Formato: `### Added/Changed/Removed/Fixed` por versão
+- Data no formato YYYY-MM-DD
+- Descrição curta e técnica do que foi alterado e motivo
