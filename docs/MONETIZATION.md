@@ -76,4 +76,4 @@ Para reativar monetização:
 
 ## Última Atualização
 
-2026-03-26 — Documentação criada pós-rollback. Monetização inativa.
+2026-03-28 — PreAdTransition inserido antes do AdBlock final para aumento de CTR.

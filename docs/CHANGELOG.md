@@ -5,6 +5,26 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/).
 ## [Unreleased]
 
 ### Added
+- Renderização de artigos Knowledge Hub (MVP)
+  - Rota: `/conhecimento/[slug]` (SSG)
+  - Whitelist: apenas `quantidade-de-cimento-por-m2` e `quantos-sacos-de-cimento-por-m2`
+  - Artigos fora da whitelist retornam 404
+  - SEO: meta_title, meta_description, canonical, OpenGraph
+  - JSON-LD: Article + FAQPage schemas
+  - Sitemap atualizado com 2 URLs de artigos
+  - Funções em `src/lib/data.ts`: `getArticleBySlug()`, `getPublishedArticleSlugs()`
+- Sistema Knowledge Hub (governança de artigos)
+  - Spec oficial: `docs/CALCULABS_ARTICLE_SPEC.md` — estrutura JSON, regras de validação, regras de inventário
+  - Inventário: `docs/master_inventory-articles.md` — controle de artigos (ID, Slug, Title, Cluster, Tipo, Status, Priority)
+  - Dados: `src/data/articles.json` — 2 artigos iniciais (juros-compostos-guia-completo, juros-simples-vs-compostos)
+  - Validador CLI: `src/lib/validate-article.ts` — `bun run src/lib/validate-article.ts [slug]`
+  - Valida: estrutura completa, mínimos (FAQ 3+, how_to 3+, semantic_keywords 5+, related_calculators 2+, related_articles 1+, internal_links 2+), consistência de slugs, conteúdo HTML com links
+  - Sem frontend, sem rotas, sem componentes — apenas dados e validação
+- Componente `PreAdTransition` (`src/components/ui/PreAdTransition.tsx`) — bloco de transição UX antes do anúncio final
+  - Texto dinâmico por categoria (financas-pessoais, trabalhista-tributario, matematica, saude, default)
+  - CSS em `globals.css` (`.pre-ad-transition`: fundo claro, bordas sutis, centralizado)
+  - Inserido imediatamente antes do AdBlock final na página de calculadora
+  - Máximo 1 por página
 - AdBlock inserido nas páginas de calculadora (`src/app/[categoria]/[subcategoria]/[calculo]/page.tsx`)
   - Posição 1 (meio): após CalculatorWidget (mobile + desktop)
   - Posição 2 (final): após todo conteúdo, antes do footer (mobile + desktop)

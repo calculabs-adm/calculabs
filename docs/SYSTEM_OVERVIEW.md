@@ -27,6 +27,7 @@ O conteúdo das calculadoras está armazenado em arquivos JSON estáticos em `sr
 - `categories.json` — 8 categorias
 - `subcategories.json` — 17 subcategorias
 - `calculators.json` — 66 calculadoras
+- `articles.json` — Artigos do Knowledge Hub
 
 O banco de dados (SQLite/Turso) existe mas é usado para seeding e features futuras. A leitura em runtime usa os JSONs.
 
@@ -55,6 +56,19 @@ Todas as fórmulas são avaliadas client-side via `src/lib/formula-engine.ts`. O
 | `TURSO_AUTH_TOKEN` | Produção | Token de autenticação Turso |
 | `NEXT_PUBLIC_SITE_URL` | Não | URL do site (default: calculabs.com.br) |
 | `SEED_SECRET_KEY` | Não | Chave do endpoint /api/seed |
+
+## Knowledge Hub System
+
+Sistema de governança de artigos com spec rígida (`docs/CALCULABS_ARTICLE_SPEC.md`).
+
+| Componente | Arquivo | Função |
+|-----------|---------|--------|
+| Spec | `docs/CALCULABS_ARTICLE_SPEC.md` | Especificação oficial dos artigos |
+| Inventário | `docs/master_inventory-articles.md` | Controle de artigos (planejado → publicado) |
+| Dados | `src/data/articles.json` | Array de artigos validados |
+| Validador | `src/lib/validate-article.ts` | CLI de validação estrutural |
+
+Execução: `bun run src/lib/validate-article.ts [slug]`
 
 ## Última Atualização
 

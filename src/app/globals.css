@@ -278,3 +278,19 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
   color: #1e293b;
 }
+
+/* Pre-ad transition — UX de conversão */
+.pre-ad-transition {
+  margin: 32px 0 16px 0;
+  padding: 16px;
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+  text-align: center;
+}
+
+.pre-ad-transition p {
+  margin: 0;
+  font-size: 14px;
+  color: #475569;
+}

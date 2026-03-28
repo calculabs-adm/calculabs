@@ -13,6 +13,7 @@ import CalculatorTracker from "@/components/calculator/CalculatorTracker";
 import ErrorReportButton from "@/components/calculator/ErrorReportButton";
 import ShareButton from "@/components/calculator/ShareButton";
 import AdBlock from "@/components/ads/AdBlock";
+import PreAdTransition from "@/components/ui/PreAdTransition";
 import ReadingBreak from "@/components/ui/ReadingBreak";
 import type { Variable } from "@/lib/formula-engine";
 
@@ -836,6 +837,7 @@ export default async function CalculatorPage({ params }: Props) {
           </div>
         </div>
 
+        <PreAdTransition categorySlug={categoriaSlug} />
         <AdBlock />
       </div>
     </>

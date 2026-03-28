@@ -8,7 +8,9 @@ src/
 │   ├── [categoria]/        # Páginas de categoria (dinâmico)
 │   │   ├── page.tsx        # Lista de subcategorias
 │   │   └── [subcategoria]/[calculo]/page.tsx  # Página da calculadora
-│   ├── api/
+│   ├── conhecimento/
+│   └── [slug]/page.tsx      # Página de artigo (Knowledge Hub)
+├── api/
 │   │   ├── tracking/       # Analytics interno
 │   │   ├── report-error/   # Reporte de erros via SMTP
 │   │   └── seed/           # Seed do banco de dados
@@ -23,6 +25,10 @@ src/
 │   ├── home/               # Componentes da homepage
 │   └── layout/             # Header, Footer
 ├── data/                   # Dados estáticos JSON
+│   ├── categories.json     # Categorias
+│   ├── subcategories.json  # Subcategorias
+│   ├── calculators.json    # Calculadoras
+│   └── articles.json       # Artigos (Knowledge Hub)
 ├── db/                     # Camada de banco de dados
 │   ├── schema.ts           # Schema Drizzle ORM
 │   ├── index.ts            # Conexão DB
@@ -35,6 +41,7 @@ src/
     ├── analytics.ts        # Tracking (GTM + API)
     ├── seo-generator.ts    # Geração de metadados SEO
     └── validate-calculator.ts  # Validação CLI
+    └── validate-article.ts     # Validação de artigos CLI
 ```
 
 ## Fluxo de Dados
@@ -47,6 +54,17 @@ JSON (src/data/) → lib/data.ts → Componentes React → Formula Engine (clien
 2. `src/lib/data.ts` fornece funções tipadas para acesso
 3. Componentes React renderizam a UI
 4. `src/lib/formula-engine.ts` avalia fórmulas no browser
+
+## Fluxo de Artigos (Knowledge Hub)
+
+```
+Inventário (docs/master_inventory-articles.md) → articles.json (src/data/) → validate-article.ts → frontend (futuro)
+```
+
+1. `docs/master_inventory-articles.md` é fonte primária de controle
+2. `src/data/articles.json` contém artigos validados pela spec
+3. `src/lib/validate-article.ts` valida estrutura e consistência
+4. Integração com frontend é futura (não implementada)
 
 ## Padrão de URL
 
@@ -80,6 +98,7 @@ Exemplo: `/financas-pessoais/juros-investimentos/juros-compostos`
 | `/busca?q=` | Dynamic | Busca de calculadoras |
 | `/:categoria` | SSG | Lista de subcategorias |
 | `/:categoria/:subcategoria/:calculo` | SSG | Página da calculadora |
+| `/conhecimento/:slug` | SSG | Página de artigo (Knowledge Hub) |
 | `/sitemap.xml` | Dynamic | Sitemap |
 | `/robots.txt` | Dynamic | Robots |
 
@@ -97,4 +116,4 @@ Exemplo: `/financas-pessoais/juros-investimentos/juros-compostos`
 
 ## Última Atualização
 
-2026-03-26 — Documentação criada pós-rollback.
+2026-03-28 — Knowledge Hub: fluxo de artigos adicionado.

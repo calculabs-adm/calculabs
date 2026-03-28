@@ -1,6 +1,34 @@
 import categoriesData from "@/data/categories.json";
 import subcategoriesData from "@/data/subcategories.json";
 import calculatorsData from "@/data/calculators.json";
+import articlesData from "@/data/articles.json";
+
+export type Article = {
+  slug: string;
+  title: string;
+  category: string;
+  meta_title: string;
+  meta_description: string;
+  search_intent: string;
+  summary: string;
+  content: string;
+  faq: Array<{ q: string; a: string }>;
+  how_to: string[];
+  entities: string[];
+  semantic_keywords: string[];
+  examples: string[];
+  comparisons: string[];
+  related_calculators: string[];
+  related_articles: string[];
+  internal_links: string[];
+  featured_snippet_answer: string;
+  priority: string;
+  cluster: {
+    is_pillar: boolean;
+    cluster_name: string;
+    satellites: string[];
+  };
+};
 
 export type Category = {
   id: number;
@@ -175,4 +203,21 @@ export function getLatestCalculators(limit: number = 8) {
       categoryIcon: category?.icon ?? "📊",
     };
   });
+}
+
+// Article whitelist — only these slugs are renderable
+const ARTICLE_WHITELIST = [
+  "quantidade-de-cimento-por-m2",
+  "quantos-sacos-de-cimento-por-m2",
+];
+
+const articles = articlesData as Article[];
+
+export function getArticleBySlug(slug: string): Article | null {
+  if (!ARTICLE_WHITELIST.includes(slug)) return null;
+  return articles.find((a) => a.slug === slug) ?? null;
+}
+
+export function getPublishedArticleSlugs(): string[] {
+  return ARTICLE_WHITELIST;
 }

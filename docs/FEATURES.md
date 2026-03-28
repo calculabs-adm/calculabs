@@ -63,6 +63,22 @@
 - Endpoint `/api/seed?key=...`
 - Popula categorias, subcategorias e calculadoras
 
+### 11. PreAdTransition (UX de Conversão)
+- Bloco de transição antes do anúncio final da página
+- Texto dinâmico por categoria (financas-pessoais, trabalhista-tributario, matematica, saude)
+- Prepara o usuário para interagir com soluções externas
+- Componente: `src/components/ui/PreAdTransition.tsx`
+- Máximo 1 por página, sempre antes do AdBlock final
+
+### 12. Knowledge Hub (em preparação)
+- Sistema de governança de artigos com spec rígida
+- Spec oficial: `docs/CALCULABS_ARTICLE_SPEC.md`
+- Inventário: `docs/master_inventory-articles.md`
+- Dados: `src/data/articles.json`
+- Validador CLI: `bun run src/lib/validate-article.ts [slug]`
+- Estrutura: slug, title, category, meta_title, meta_description, search_intent, summary, content (HTML 1500+ palavras), faq (3+), how_to (3+), entities, semantic_keywords (5+), examples, comparisons, related_calculators (2+), related_articles (1+), internal_links (2+), featured_snippet_answer, priority, cluster
+- Páginas e rotas NÃO implementadas (apenas dados e validação)
+
 ## Categorias Disponíveis
 
 | Categoria | Slug | Calculadoras |

@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { getAllCategories, getSubcategoriesByCategory, getAllCalculators } from "@/lib/data";
+import { getAllCategories, getSubcategoriesByCategory, getAllCalculators, getPublishedArticleSlugs } from "@/lib/data";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.calculabs.com.br";
 
@@ -47,6 +47,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         priority: 0.8,
       });
     }
+  }
+
+  // Articles (Knowledge Hub)
+  const articleSlugs = getPublishedArticleSlugs();
+  for (const slug of articleSlugs) {
+    urls.push({
+      url: `${siteUrl}/conhecimento/${slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    });
   }
 
   return urls;
