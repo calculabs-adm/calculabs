@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getCategoriesWithCount, getLatestCalculators } from "@/lib/data";
+import { getCategoriesWithCount, getLatestCalculators, getPublishedArticleSlugs, getArticleBySlug } from "@/lib/data";
 import LatestCalculatorsCarousel from "@/components/home/LatestCalculatorsCarousel";
 import type { Metadata } from "next";
 
@@ -54,6 +54,15 @@ const featuredCalculators = [
 export default async function HomePage() {
   const categories = await getCategoriesWithCount();
   const latestCalculators = getLatestCalculators(8);
+
+  const allArticles = getPublishedArticleSlugs()
+    .map((slug) => getArticleBySlug(slug))
+    .filter(Boolean);
+  const highPriority = allArticles.filter((a) => a!.priority === "high");
+  const hubArticles = [
+    ...highPriority,
+    ...allArticles.filter((a) => a!.priority !== "high"),
+  ].slice(0, 3);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -271,6 +280,57 @@ export default async function HomePage() {
           </p>
         </div>
       </section>
+
+      {/* Knowledge Hub CTA */}
+      {hubArticles.length > 0 && (
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold text-slate-900 mb-3">
+              Aprenda com nossos guias completos
+            </h2>
+            <p className="text-slate-600 text-lg max-w-2xl mx-auto">
+              Conteúdo prático para ajudar você a tomar decisões melhores no dia a dia.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {hubArticles.map((article) => (
+              <Link
+                key={article!.slug}
+                href={`/conhecimento/${article!.slug}`}
+                className="group bg-white border border-slate-200 rounded-2xl p-6 hover:border-blue-300 hover:shadow-lg transition-all duration-200"
+              >
+                <h3 className="font-bold text-slate-900 text-lg group-hover:text-blue-600 transition-colors mb-3 leading-snug">
+                  {article!.title}
+                </h3>
+                <p className="text-slate-500 text-sm leading-relaxed mb-4">
+                  {article!.summary.length > 120
+                    ? `${article!.summary.slice(0, 120)}...`
+                    : article!.summary}
+                </p>
+                <span className="text-sm font-semibold text-blue-600 group-hover:text-blue-800 transition-colors flex items-center gap-1">
+                  Ler artigo
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </Link>
+            ))}
+          </div>
+
+          <div className="text-center mt-10">
+            <Link
+              href="/conhecimento"
+              className="inline-flex items-center gap-2 px-8 py-3.5 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-colors text-lg"
+            >
+              Ver todos os artigos
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </div>
+        </section>
+      )}
     </>
   );
 }
