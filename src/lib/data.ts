@@ -209,6 +209,7 @@ export function getLatestCalculators(limit: number = 8) {
 const ARTICLE_WHITELIST = [
   "quantidade-de-cimento-por-m2",
   "quantos-sacos-de-cimento-por-m2",
+  "traco-de-concreto-proporcao",
 ];
 
 const articles = articlesData as Article[];

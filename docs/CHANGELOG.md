@@ -5,9 +5,12 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/).
 ## [Unreleased]
 
 ### Added
+- Artigo Knowledge Hub: `traco-de-concreto-proporcao` (Traço de Concreto: Proporção Ideal para Cada Tipo de Obra)
+  - Categoria: engenharia-construcao, Cluster: engenharia-cimento (satellite)
+  - Whitelist atualizada: 3 artigos publicados
 - Renderização de artigos Knowledge Hub (MVP)
   - Rota: `/conhecimento/[slug]` (SSG)
-  - Whitelist: apenas `quantidade-de-cimento-por-m2` e `quantos-sacos-de-cimento-por-m2`
+  - Whitelist: `quantidade-de-cimento-por-m2`, `quantos-sacos-de-cimento-por-m2`, `traco-de-concreto-proporcao`
   - Artigos fora da whitelist retornam 404
   - SEO: meta_title, meta_description, canonical, OpenGraph
   - JSON-LD: Article + FAQPage schemas

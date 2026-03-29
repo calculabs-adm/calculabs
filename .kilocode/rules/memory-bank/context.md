@@ -38,6 +38,7 @@
 - [x] Add Média Ponderada calculator (id: 104): adicionada nova calculadora em Matemática Básica com fórmula de média ponderada, variáveis, steps, example, applications, curiosity, FAQs, keywords, meta title e description
 - [x] Fix Média Ponderada: adicionados valores padrão (default) nas variáveis de entrada (valor1=8, peso1=2, valor2=6, peso2=1) e melhorada seção curiosity com estrutura HTML semântica (h2, h3, ul, listas)
 - [x] Apply new mobile layout to all calculators: removed isMobileExperiment flag, calculator widget now always appears first on mobile (order-1), formula section now always visible on mobile. UX improvement applied to all calculators, not just equacao-2-grau. Pushed to origin (commit 873f813).
+- [x] Publish article "Traço de Concreto: Proporção Ideal para Cada Tipo de Obra" (slug: traco-de-concreto-proporcao): Added to articles.json, registered in ARTICLE_WHITELIST in src/lib/data.ts, status updated to publicado in master_inventory-articles.md. Category: engenharia-construcao, Cluster: engenharia-cimento (satellite). 3 articles now whitelisted.
 
 ## Current State
 
@@ -201,6 +202,7 @@ As seguintes calculadoras foram corrigidas para funcionar corretamente:
 | 2026-03-15 | Add new category "Engenharia e Construção" (id: 12) with subcategory "Materiais de Construção" (id: 27). Added new calculator "Quantidade de Cimento" (id: 112) to calculators.json.
 | 2026-03-17 | Add new calculator "Perímetro do Círculo" (id: 116) to Mathematics > Geometry category. Formula: C = 2πr, with variables, steps, example, applications, curiosity section, and FAQs.
 | 2026-03-19 | Add dual tracking system: Created new trackEvent() function in src/lib/analytics.ts that sends events to both GTM (dataLayer) and internal /api/tracking endpoint. Added debounce of 300ms for campo_alterado events in CalculatorWidget to reduce excessive events. Created API route /api/tracking to receive and log tracking events. Updated CalculatorTracker and CalculatorWidget to use trackEvent() for dual tracking.
+| 2026-03-29 | Publish Knowledge Hub article: traco-de-concreto-proporcao. Added to articles.json, whitelisted in data.ts, inventory updated to publicado. Cluster engenharia-cimento now has 3 published articles (IDs 3, 4, 5).
 
 ## Recent System Evolution (Tracking & Data Layer)
 
