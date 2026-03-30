@@ -9,6 +9,7 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/).
 - Subcategoria `quantica` (id: 26): category_id corrigido de 11 (inexistente) para 14 (Ciência). Subcategoria órfã resolvida.
 
 ### Added
+- Calculadora: `energia-cinetica` (ID 119, Ciência/Física)
 - Calculadora: `forca-lei-de-newton` (ID 118, Ciência/Física)
 - Artigo Knowledge Hub: `consumo-de-cimento-por-tipo-de-obra` (Consumo de Cimento por Tipo de Obra: Guia Completo para Cada Aplicação)
   - Categoria: engenharia-construcao, Cluster: engenharia-cimento (satellite)

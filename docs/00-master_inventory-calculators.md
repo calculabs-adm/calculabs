@@ -2,7 +2,7 @@
 
 Inventário completo de todas as calculadoras disponíveis no CalcuLabs. Este é o arquivo-fonte único — toda criação, alteração ou remoção de calculadora DEVE ser refletida aqui.
 
-**Total: 67 calculadoras**
+**Total: 68 calculadoras**
 
 ---
 
@@ -173,14 +173,15 @@ Inventário completo de todas as calculadoras disponíveis no CalcuLabs. Este é
 
 ---
 
-## Ciência (3)
+## Ciência (4)
 
-### Física (2)
+### Física (3)
 
 | ID | Nome | Slug | Complexidade | Monetização |
 |----|------|------|-------------|-------------|
 | 117 | Velocidade Média | `velocidade-media` | básico | ads |
 | 118 | Calculadora de Força (Lei de Newton) | `forca-lei-de-newton` | básico | ads |
+| 119 | Calculadora de Energia Cinética | `energia-cinetica` | básico | ads |
 
 ### Quântica (1)
 
@@ -194,18 +195,18 @@ Inventário completo de todas as calculadoras disponíveis no CalcuLabs. Este é
 
 | Tipo | Quantidade |
 |------|-----------|
-| ads | 48 |
+| ads | 49 |
 | affiliate | 14 |
 | leads | 5 |
-| **Total** | **67** |
+| **Total** | **68** |
 
 ## Resumo por Complexidade
 
 | Nível | Quantidade |
 |-------|-----------|
-| básico | 51 |
+| básico | 52 |
 | técnico | 16 |
-| **Total** | **67** |
+| **Total** | **68** |
 
 ---
 
@@ -219,4 +220,4 @@ Inventário completo de todas as calculadoras disponíveis no CalcuLabs. Este é
 
 ## Última Atualização
 
-2026-03-29 — Calculadora ID 118 (forca-lei-de-newton) adicionada. Fix energia-do-foton (category_id 11→14). Total: 67 calculadoras. Todas com roteamento válido.
+2026-03-29 — Calculadora ID 119 (energia-cinetica) adicionada. Total: 68 calculadoras. Categoria Ciência/Física: 3 calculadoras.
