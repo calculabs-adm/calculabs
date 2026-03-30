@@ -210,6 +210,7 @@ const ARTICLE_WHITELIST = [
   "quantidade-de-cimento-por-m2",
   "quantos-sacos-de-cimento-por-m2",
   "traco-de-concreto-proporcao",
+  "consumo-de-cimento-por-tipo-de-obra",
 ];
 
 const articles = articlesData as Article[];

@@ -5,9 +5,12 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/).
 ## [Unreleased]
 
 ### Added
+- Artigo Knowledge Hub: `consumo-de-cimento-por-tipo-de-obra` (Consumo de Cimento por Tipo de Obra: Guia Completo para Cada Aplicação)
+  - Categoria: engenharia-construcao, Cluster: engenharia-cimento (satellite)
+  - Whitelist atualizada: 4 artigos publicados
 - Artigo Knowledge Hub: `traco-de-concreto-proporcao` (Traço de Concreto: Proporção Ideal para Cada Tipo de Obra)
   - Categoria: engenharia-construcao, Cluster: engenharia-cimento (satellite)
-  - Whitelist atualizada: 3 artigos publicados
+  - Whitelist atualizada: 4 artigos publicados
 - Renderização de artigos Knowledge Hub (MVP)
   - Rota: `/conhecimento/[slug]` (SSG)
   - Whitelist: `quantidade-de-cimento-por-m2`, `quantos-sacos-de-cimento-por-m2`, `traco-de-concreto-proporcao`
