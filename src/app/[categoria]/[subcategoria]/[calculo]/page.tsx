@@ -6,6 +6,8 @@ import {
   getAllCalculators,
   getCategoryBySlug,
   getSubcategoryBySlug,
+  getPublishedArticleSlugs,
+  getArticleBySlug,
 } from "@/lib/data";
 import { generateCalculatorSEO } from "@/lib/seo-generator";
 import CalculatorWidget from "@/components/calculator/CalculatorWidget";
@@ -379,6 +381,11 @@ export default async function CalculatorPage({ params }: Props) {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.calculabs.com.br";
   const canonicalUrl = `${siteUrl}/${category?.slug}/${subcategory?.slug}/${calculator.slug}`;
 
+  const relatedArticles = getPublishedArticleSlugs()
+    .map((s) => getArticleBySlug(s))
+    .filter((a) => a && a.related_calculators.includes(calculator.slug))
+    .slice(0, 3);
+
   // Generate all JSON-LD schemas using centralized function
   const schemas = generateSchemas(
     calculator,
@@ -625,6 +632,38 @@ export default async function CalculatorPage({ params }: Props) {
             </div>
           )}
 
+          {/* Related articles */}
+          {relatedArticles.length > 0 && (
+            <div className="bg-white border border-slate-200 rounded-2xl p-5">
+              <h3 className="font-bold text-slate-900 mb-4 text-sm uppercase tracking-wider">
+                📚 Aprenda mais sobre este cálculo
+              </h3>
+              <div className="space-y-4">
+                {relatedArticles.map((article) => (
+                  <div key={article!.slug}>
+                    <Link
+                      href={`/conhecimento/${article!.slug}`}
+                      className="font-semibold text-slate-900 hover:text-blue-600 transition-colors text-sm"
+                    >
+                      {article!.title}
+                    </Link>
+                    <p className="text-xs text-slate-500 mt-1 line-clamp-2">
+                      {article!.summary.length > 120
+                        ? `${article!.summary.slice(0, 120)}...`
+                        : article!.summary}
+                    </p>
+                    <Link
+                      href={`/conhecimento/${article!.slug}`}
+                      className="text-xs text-blue-600 font-medium hover:text-blue-800 transition-colors mt-1 inline-block"
+                    >
+                      Ver guia completo
+                    </Link>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* Disclaimer */}
           <div className="p-3 bg-amber-50 border border-amber-200 rounded-xl">
             <p className="text-xs text-amber-700 leading-relaxed">
@@ -819,6 +858,38 @@ export default async function CalculatorPage({ params }: Props) {
                           {rel.name}
                         </span>
                       </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Related articles */}
+              {relatedArticles.length > 0 && (
+                <div className="mt-6 bg-white border border-slate-200 rounded-2xl p-5">
+                  <h3 className="font-bold text-slate-900 mb-4 text-sm uppercase tracking-wider">
+                    📚 Aprenda mais sobre este cálculo
+                  </h3>
+                  <div className="space-y-4">
+                    {relatedArticles.map((article) => (
+                      <div key={article!.slug}>
+                        <Link
+                          href={`/conhecimento/${article!.slug}`}
+                          className="font-semibold text-slate-900 hover:text-blue-600 transition-colors text-sm"
+                        >
+                          {article!.title}
+                        </Link>
+                        <p className="text-xs text-slate-500 mt-1 line-clamp-2">
+                          {article!.summary.length > 120
+                            ? `${article!.summary.slice(0, 120)}...`
+                            : article!.summary}
+                        </p>
+                        <Link
+                          href={`/conhecimento/${article!.slug}`}
+                          className="text-xs text-blue-600 font-medium hover:text-blue-800 transition-colors mt-1 inline-block"
+                        >
+                          Ver guia completo
+                        </Link>
+                      </div>
                     ))}
                   </div>
                 </div>
