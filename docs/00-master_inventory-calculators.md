@@ -2,7 +2,7 @@
 
 Inventário completo de todas as calculadoras disponíveis no CalcuLabs. Este é o arquivo-fonte único — toda criação, alteração ou remoção de calculadora DEVE ser refletida aqui.
 
-**Total: 66 calculadoras**
+**Total: 67 calculadoras**
 
 ---
 
@@ -173,13 +173,14 @@ Inventário completo de todas as calculadoras disponíveis no CalcuLabs. Este é
 
 ---
 
-## Ciência (2)
+## Ciência (3)
 
-### Física (1)
+### Física (2)
 
 | ID | Nome | Slug | Complexidade | Monetização |
 |----|------|------|-------------|-------------|
 | 117 | Velocidade Média | `velocidade-media` | básico | ads |
+| 118 | Calculadora de Força (Lei de Newton) | `forca-lei-de-newton` | básico | ads |
 
 ### Quântica (1)
 
@@ -193,18 +194,18 @@ Inventário completo de todas as calculadoras disponíveis no CalcuLabs. Este é
 
 | Tipo | Quantidade |
 |------|-----------|
-| ads | 47 |
+| ads | 48 |
 | affiliate | 14 |
 | leads | 5 |
-| **Total** | **66** |
+| **Total** | **67** |
 
 ## Resumo por Complexidade
 
 | Nível | Quantidade |
 |-------|-----------|
-| básico | 50 |
+| básico | 51 |
 | técnico | 16 |
-| **Total** | **66** |
+| **Total** | **67** |
 
 ---
 
@@ -218,4 +219,4 @@ Inventário completo de todas as calculadoras disponíveis no CalcuLabs. Este é
 
 ## Última Atualização
 
-2026-03-29 — Inventário sincronizado com `calculators.json` (66 calculadoras). Corrigidos: totais Matemática (18), Matemática Básica (12), Geometria (4), monetização de IDs 104 e 105 para ads, seção Ciência com Quântica.
+2026-03-29 — Calculadora ID 118 (forca-lei-de-newton) adicionada. Total: 67 calculadoras. Categoria Ciência/Física: 2 calculadoras.
