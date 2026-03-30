@@ -116,4 +116,36 @@ Exemplo: `/financas-pessoais/juros-investimentos/juros-compostos`
 
 ## Última Atualização
 
-2026-03-28 — Knowledge Hub: fluxo de artigos adicionado.
+2026-03-30 — Sistema de mapeamento global criado (MASTER_MAP.md, MASTER_MAP_VISUAL.md).
+
+## Mapa do Sistema
+
+O projeto utiliza um sistema de mapeamento centralizado para controlar clusters, artigos, calculadoras e relações.
+
+### Arquivos de Mapeamento
+
+| Arquivo | Função |
+|---------|--------|
+| `docs/MASTER_MAP.md` | Registro completo de clusters, artigos, calculadoras e regras |
+| `docs/MASTER_MAP_VISUAL.md` | Diagramas em texto estruturado (fluxos, crescimento) |
+| `docs/00-master_inventory-calculators.md` | Inventário de calculadoras |
+| `docs/00-master_inventory-articles.md` | Inventário de artigos |
+
+### Regra de Atualização Obrigatória
+
+Toda criação ou alteração DEVE atualizar o mapa:
+
+| Ação | Arquivo a atualizar |
+|------|-------------------|
+| Nova calculadora | `MASTER_MAP.md` + `00-master_inventory-calculators.md` |
+| Novo artigo | `MASTER_MAP.md` + `00-master_inventory-articles.md` |
+| Nova relação artigo↔calculadora | `MASTER_MAP.md` |
+| Novo cluster | `MASTER_MAP.md` + `MASTER_MAP_VISUAL.md` |
+
+### Clusters Ativos
+
+| Cluster | Pillar | Satellites | Calculadoras |
+|---------|--------|-----------|-------------|
+| `engenharia-cimento` | 1 | 3 | 3 |
+| `fisica-basica` | 1 | 0 | 3 |
+| `juros-compostos` | 1 | 1 | 3 |

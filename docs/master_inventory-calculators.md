@@ -2,7 +2,7 @@
 
 Inventário completo de todas as calculadoras disponíveis no CalcuLabs. Este é o arquivo-fonte único — toda criação, alteração ou remoção de calculadora DEVE ser refletida aqui.
 
-**Total: 66 calculadoras**
+**Total: 69 calculadoras**
 
 ---
 
@@ -74,9 +74,9 @@ Inventário completo de todas as calculadoras disponíveis no CalcuLabs. Este é
 
 ---
 
-## Matemática (15)
+## Matemática (18)
 
-### Matemática Básica (10)
+### Matemática Básica (12)
 
 | ID | Nome | Slug | Complexidade | Monetização |
 |----|------|------|-------------|-------------|
@@ -85,8 +85,8 @@ Inventário completo de todas as calculadoras disponíveis no CalcuLabs. Este é
 | 83 | Média Aritmética | `media-aritmetica` | básico | ads |
 | 84 | MMC | `mmc` | básico | ads |
 | 85 | MDC | `mdc` | básico | ads |
-| 104 | Média Ponderada | `media-ponderada` | básico | — |
-| 105 | Variação Percentual | `variacao-percentual` | básico | — |
+| 104 | Média Ponderada | `media-ponderada` | básico | ads |
+| 105 | Variação Percentual | `variacao-percentual` | básico | ads |
 | 106 | Porcentagem de Desconto | `porcentagem-desconto` | básico | ads |
 | 107 | Aumento Percentual | `aumento-percentual` | básico | ads |
 | 108 | Preço Original com Desconto | `preco-original-com-desconto` | básico | ads |
@@ -100,7 +100,7 @@ Inventário completo de todas as calculadoras disponíveis no CalcuLabs. Este é
 | 86 | Equação do 1º Grau | `equacao-1-grau` | básico | ads |
 | 87 | Equação do 2º Grau (Bhaskara) | `equacao-2-grau` | básico | ads |
 
-### Geometria (3)
+### Geometria (4)
 
 | ID | Nome | Slug | Complexidade | Monetização |
 |----|------|------|-------------|-------------|
@@ -173,13 +173,16 @@ Inventário completo de todas as calculadoras disponíveis no CalcuLabs. Este é
 
 ---
 
-## Ciência (2)
+## Ciência (5)
 
-### Física (1)
+### Física (4)
 
 | ID | Nome | Slug | Complexidade | Monetização |
 |----|------|------|-------------|-------------|
 | 117 | Velocidade Média | `velocidade-media` | básico | ads |
+| 118 | Calculadora de Força (Lei de Newton) | `forca-lei-de-newton` | básico | ads |
+| 119 | Calculadora de Energia Cinética | `energia-cinetica` | básico | ads |
+| 120 | Calculadora de Trabalho | `trabalho-forca-distancia` | básico | ads |
 
 ### Quântica (1)
 
@@ -193,19 +196,18 @@ Inventário completo de todas as calculadoras disponíveis no CalcuLabs. Este é
 
 | Tipo | Quantidade |
 |------|-----------|
-| ads | 45 |
+| ads | 50 |
 | affiliate | 14 |
 | leads | 5 |
-| — (sem tipo) | 2 |
-| **Total** | **66** |
+| **Total** | **69** |
 
 ## Resumo por Complexidade
 
 | Nível | Quantidade |
 |-------|-----------|
-| básico | 50 |
+| básico | 53 |
 | técnico | 16 |
-| **Total** | **66** |
+| **Total** | **69** |
 
 ---
 
@@ -219,4 +221,4 @@ Inventário completo de todas as calculadoras disponíveis no CalcuLabs. Este é
 
 ## Última Atualização
 
-2026-03-26 — Inventário criado com 66 calculadoras existentes.
+2026-03-29 — Calculadora ID 120 (trabalho-forca-distancia) adicionada. Total: 69 calculadoras. Categoria Ciência/Física: 4 calculadoras.

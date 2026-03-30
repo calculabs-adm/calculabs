@@ -4,7 +4,20 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
 
+### Fixed
+- Calculadora `energia-do-foton`: category_id corrigido de 11 (inexistente) para 14 (Ciência). URL corrigida de /MISSING/quantica/energia-do-foton para /ciencia/quantica/energia-do-foton.
+- Subcategoria `quantica` (id: 26): category_id corrigido de 11 (inexistente) para 14 (Ciência). Subcategoria órfã resolvida.
+
 ### Added
+- Sistema de mapeamento global: `docs/MASTER_MAP.md` (clusters, artigos, calculadoras, relações)
+- Diagramas visuais: `docs/MASTER_MAP_VISUAL.md` (fluxos, crescimento sugerido)
+- Seção "Mapa do Sistema" adicionada em `docs/00-ARCHITECTURE.md`
+- Artigo Knowledge Hub: `forca-energia-e-trabalho` (Força, Energia e Trabalho: Conceitos da Física)
+  - Categoria: ciencia, Cluster: fisica-basica (pillar)
+  - Whitelist atualizada: 5 artigos publicados
+- Calculadora: `trabalho-forca-distancia` (ID 120, Ciência/Física)
+- Calculadora: `energia-cinetica` (ID 119, Ciência/Física)
+- Calculadora: `forca-lei-de-newton` (ID 118, Ciência/Física)
 - Artigo Knowledge Hub: `consumo-de-cimento-por-tipo-de-obra` (Consumo de Cimento por Tipo de Obra: Guia Completo para Cada Aplicação)
   - Categoria: engenharia-construcao, Cluster: engenharia-cimento (satellite)
   - Whitelist atualizada: 4 artigos publicados
