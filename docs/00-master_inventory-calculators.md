@@ -219,4 +219,4 @@ Inventário completo de todas as calculadoras disponíveis no CalcuLabs. Este é
 
 ## Última Atualização
 
-2026-03-29 — Calculadora ID 118 (forca-lei-de-newton) adicionada. Total: 67 calculadoras. Categoria Ciência/Física: 2 calculadoras.
+2026-03-29 — Calculadora ID 118 (forca-lei-de-newton) adicionada. Fix energia-do-foton (category_id 11→14). Total: 67 calculadoras. Todas com roteamento válido.

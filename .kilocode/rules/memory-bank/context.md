@@ -40,6 +40,8 @@
 - [x] Apply new mobile layout to all calculators: removed isMobileExperiment flag, calculator widget now always appears first on mobile (order-1), formula section now always visible on mobile. UX improvement applied to all calculators, not just equacao-2-grau. Pushed to origin (commit 873f813).
 - [x] Publish article "Traço de Concreto: Proporção Ideal para Cada Tipo de Obra" (slug: traco-de-concreto-proporcao): Added to articles.json, registered in ARTICLE_WHITELIST in src/lib/data.ts, status updated to publicado in master_inventory-articles.md. Category: engenharia-construcao, Cluster: engenharia-cimento (satellite). 4 articles now whitelisted.
 - [x] Publish article "Consumo de Cimento por Tipo de Obra: Guia Completo para Cada Aplicação" (slug: consumo-de-cimento-por-tipo-de-obra): Added to articles.json with expanded content (~1800 words), registered in ARTICLE_WHITELIST, status updated to publicado. Resolves ghost satellite from audit. Cluster engenharia-cimento now complete with 4 satellites (IDs 4, 5, 6) + 1 pillar (ID 3).
+- [x] Add Calculadora de Força (Lei de Newton) (id: 118): slug forca-lei-de-newton, category Ciência (14), subcategory Física (29), formula F = m × a. 67 calculators total.
+- [x] Fix energia-do-foton orphaned calculator: category_id corrected from 11 (non-existent) to 14 (Ciência). Subcategory quantica category_id also corrected from 11 to 14. URL now resolves to /ciencia/quantica/energia-do-foton instead of /MISSING/quantica/energia-do-foton. All 67 calculators now have valid routing.
 
 ## Current State
 
@@ -205,6 +207,7 @@ As seguintes calculadoras foram corrigidas para funcionar corretamente:
 | 2026-03-19 | Add dual tracking system: Created new trackEvent() function in src/lib/analytics.ts that sends events to both GTM (dataLayer) and internal /api/tracking endpoint. Added debounce of 300ms for campo_alterado events in CalculatorWidget to reduce excessive events. Created API route /api/tracking to receive and log tracking events. Updated CalculatorTracker and CalculatorWidget to use trackEvent() for dual tracking.
 | 2026-03-29 | Publish Knowledge Hub article: traco-de-concreto-proporcao. Added to articles.json, whitelisted in data.ts, inventory updated to publicado. Cluster engenharia-cimento now has 3 published articles (IDs 3, 4, 5).
 | 2026-03-29 | Publish Knowledge Hub article: consumo-de-cimento-por-tipo-de-obra. Expanded content to ~1800 words, fixed link (materiais-de-construcao → materiais), whitelisted, inventory updated. Resolves ghost satellite from audit. Cluster engenharia-cimento complete: 1 pillar + 3 satellites. Whitelist now at 4 articles.
+| 2026-03-29 | Add Calculadora de Força (Lei de Newton) ID 118. Fix energia-do-foton orphaned calculator (category_id 11→14). Fix quantica subcategory (category_id 11→14). Total: 67 calculators, all with valid routing.
 
 ## Recent System Evolution (Tracking & Data Layer)
 
