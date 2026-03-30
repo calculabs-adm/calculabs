@@ -2,7 +2,7 @@
 
 Inventário completo de todas as calculadoras disponíveis no CalcuLabs. Este é o arquivo-fonte único — toda criação, alteração ou remoção de calculadora DEVE ser refletida aqui.
 
-**Total: 68 calculadoras**
+**Total: 69 calculadoras**
 
 ---
 
@@ -173,15 +173,16 @@ Inventário completo de todas as calculadoras disponíveis no CalcuLabs. Este é
 
 ---
 
-## Ciência (4)
+## Ciência (5)
 
-### Física (3)
+### Física (4)
 
 | ID | Nome | Slug | Complexidade | Monetização |
 |----|------|------|-------------|-------------|
 | 117 | Velocidade Média | `velocidade-media` | básico | ads |
 | 118 | Calculadora de Força (Lei de Newton) | `forca-lei-de-newton` | básico | ads |
 | 119 | Calculadora de Energia Cinética | `energia-cinetica` | básico | ads |
+| 120 | Calculadora de Trabalho | `trabalho-forca-distancia` | básico | ads |
 
 ### Quântica (1)
 
@@ -195,18 +196,18 @@ Inventário completo de todas as calculadoras disponíveis no CalcuLabs. Este é
 
 | Tipo | Quantidade |
 |------|-----------|
-| ads | 49 |
+| ads | 50 |
 | affiliate | 14 |
 | leads | 5 |
-| **Total** | **68** |
+| **Total** | **69** |
 
 ## Resumo por Complexidade
 
 | Nível | Quantidade |
 |-------|-----------|
-| básico | 52 |
+| básico | 53 |
 | técnico | 16 |
-| **Total** | **68** |
+| **Total** | **69** |
 
 ---
 
@@ -220,4 +221,4 @@ Inventário completo de todas as calculadoras disponíveis no CalcuLabs. Este é
 
 ## Última Atualização
 
-2026-03-29 — Calculadora ID 119 (energia-cinetica) adicionada. Total: 68 calculadoras. Categoria Ciência/Física: 3 calculadoras.
+2026-03-29 — Calculadora ID 120 (trabalho-forca-distancia) adicionada. Total: 69 calculadoras. Categoria Ciência/Física: 4 calculadoras.
