@@ -130,29 +130,37 @@ export default async function ArticlePage({ params }: Props) {
 
           {relatedCalculators.length > 0 && (
             <section className="mt-12 border-t border-slate-200 pt-10">
-              <h2 className="text-2xl font-bold text-slate-900 mb-6">
-                Ferramentas para aplicar esse conhecimento
+              <h2 className="text-2xl font-bold text-slate-900 mb-2">
+                Calcule agora com base neste conteúdo
               </h2>
+              <p className="text-slate-500 mb-6">
+                Use nossas ferramentas para aplicar o que você aprendeu e obter resultados exatos para sua obra.
+              </p>
               <div className="space-y-3">
                 {relatedCalculators.map(({ calc, cat, sub }) => (
                   <Link
                     key={calc.slug}
                     href={`/${cat?.slug ?? "#"}/${sub?.slug ?? "#"}/${calc.slug}`}
-                    className="group flex items-start gap-3 p-4 bg-white border border-slate-200 rounded-xl hover:border-blue-300 hover:shadow-md transition-all"
+                    className="group flex items-center justify-between gap-3 p-4 bg-white border border-slate-200 rounded-xl hover:border-blue-300 hover:shadow-md transition-all"
                   >
-                    <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                      </svg>
+                    <div className="flex items-center gap-3 min-w-0">
+                      <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                        </svg>
+                      </div>
+                      <div className="min-w-0">
+                        <h3 className="font-semibold text-slate-900 group-hover:text-blue-600 transition-colors">
+                          {calc.name}
+                        </h3>
+                        <p className="text-sm text-slate-500 mt-0.5 truncate">
+                          {calc.description || calc.name}
+                        </p>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="font-semibold text-slate-900 group-hover:text-blue-600 transition-colors">
-                        {calc.name}
-                      </h3>
-                      <p className="text-sm text-slate-500 mt-0.5">
-                        {calc.description || calc.name}
-                      </p>
-                    </div>
+                    <span className="flex-shrink-0 text-sm font-semibold text-blue-600 bg-blue-50 px-3 py-1.5 rounded-lg group-hover:bg-blue-100 transition-colors">
+                      Calcular agora
+                    </span>
                   </Link>
                 ))}
               </div>

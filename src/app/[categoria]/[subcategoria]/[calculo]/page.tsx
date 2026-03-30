@@ -635,9 +635,12 @@ export default async function CalculatorPage({ params }: Props) {
           {/* Related articles */}
           {relatedArticles.length > 0 && (
             <div className="bg-white border border-slate-200 rounded-2xl p-5">
-              <h3 className="font-bold text-slate-900 mb-4 text-sm uppercase tracking-wider">
-                📚 Aprenda mais sobre este cálculo
+              <h3 className="font-bold text-slate-900 mb-1 text-sm uppercase tracking-wider">
+                📚 Entenda como esse cálculo funciona
               </h3>
+              <p className="text-xs text-slate-500 mb-4">
+                Veja o guia completo com explicações práticas e exemplos reais.
+              </p>
               <div className="space-y-4">
                 {relatedArticles.map((article) => (
                   <div key={article!.slug}>
@@ -654,7 +657,7 @@ export default async function CalculatorPage({ params }: Props) {
                     </p>
                     <Link
                       href={`/conhecimento/${article!.slug}`}
-                      className="text-xs text-blue-600 font-medium hover:text-blue-800 transition-colors mt-1 inline-block"
+                      className="text-xs font-semibold text-blue-600 bg-blue-50 px-2.5 py-1 rounded-md hover:bg-blue-100 transition-colors mt-2 inline-block"
                     >
                       Ver guia completo
                     </Link>
@@ -866,9 +869,12 @@ export default async function CalculatorPage({ params }: Props) {
               {/* Related articles */}
               {relatedArticles.length > 0 && (
                 <div className="mt-6 bg-white border border-slate-200 rounded-2xl p-5">
-                  <h3 className="font-bold text-slate-900 mb-4 text-sm uppercase tracking-wider">
-                    📚 Aprenda mais sobre este cálculo
+                  <h3 className="font-bold text-slate-900 mb-1 text-sm uppercase tracking-wider">
+                    📚 Entenda como esse cálculo funciona
                   </h3>
+                  <p className="text-xs text-slate-500 mb-4">
+                    Veja o guia completo com explicações práticas e exemplos reais.
+                  </p>
                   <div className="space-y-4">
                     {relatedArticles.map((article) => (
                       <div key={article!.slug}>
@@ -885,7 +891,7 @@ export default async function CalculatorPage({ params }: Props) {
                         </p>
                         <Link
                           href={`/conhecimento/${article!.slug}`}
-                          className="text-xs text-blue-600 font-medium hover:text-blue-800 transition-colors mt-1 inline-block"
+                          className="text-xs font-semibold text-blue-600 bg-blue-50 px-2.5 py-1 rounded-md hover:bg-blue-100 transition-colors mt-2 inline-block"
                         >
                           Ver guia completo
                         </Link>
