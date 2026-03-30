@@ -2085,7 +2085,7 @@
     "introduction": "A calculadora de energia cinética permite descobrir a energia associada ao movimento de um objeto. Basta informar a massa e a velocidade para calcular rapidamente utilizando a fórmula clássica da física.",
     "formula": "ec = 0.5 * massa * (velocidade * velocidade)",
     "formula_display": "Ec = ½ × m × v²",
-    "variables": "[{\"id\":\"massa\",\"label\":\"Massa\",\"type\":\"number\",\"unit\":\"kg\",\"placeholder\":\"Ex: 10\",\"min\":0},{\"id\":\"velocidade\",\"label\":\"Velocidade\",\"type\":\"number\",\"unit\":\"m/s\",\"placeholder\":\"Ex: 5\",\"min\":0}]",
+    "variables": "[{\"id\":\"massa\",\"label\":\"Massa\",\"type\":\"number\",\"unit\":\"kg\",\"placeholder\":\"Ex: 10\",\"min\":0,\"default\":10},{\"id\":\"velocidade\",\"label\":\"Velocidade\",\"type\":\"number\",\"unit\":\"m/s\",\"placeholder\":\"Ex: 5\",\"min\":0,\"default\":5}]",
     "steps": "[\"Informe a massa do objeto em quilogramas (kg)\",\"Informe a velocidade em metros por segundo (m/s)\",\"Clique em calcular para obter a energia cinética em Joules (J)\"]",
     "example": "{\"title\":\"Cálculo de energia cinética\",\"inputs\":{\"massa\":10,\"velocidade\":5},\"result\":\"125 J\",\"explanation\":\"Aplicando a fórmula 1/2 x 10 x 5^2, temos 0,5 x 10 x 25 = 125 Joules.\"}",
     "applications": "[\"Análise de movimento em física\",\"Cálculo de energia em veículos\",\"Estudos escolares e acadêmicos\"]",

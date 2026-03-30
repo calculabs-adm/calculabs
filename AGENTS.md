@@ -57,15 +57,34 @@ bun run src/lib/validate-calculator.ts [slug]
 Antes de considerar a tarefa concluída, verificar:
 
 1. **Validação CLI passou** — `bun run src/lib/validate-calculator.ts [slug]` retorna ✅
-2. **Exemplo prático completo** — campo `example` com:
+2. **Variáveis com default** — cada variável em `variables` DEVE ter campo `default` com valor de exemplo preenchido (o usuário vê os campos já preenchidos ao abrir a calculadora)
+3. **Exemplo prático completo** — campo `example` com:
    - `title` descritivo com valores reais
    - `inputs` preenchidos (não vazios/zero)
    - `result` numérico correto (sem typos)
    - `explanation` com fórmula + valores substituídos (mínimo 30 caracteres)
-3. **Rota acessível** — URL `/categoria/subcategoria/slug` retorna 200
-4. **Inventário atualizado** — `docs/00-master_inventory-calculators.md` com ID, slug, nome, complexidade, monetização
-5. **TypeScript sem erros** — `npx tsc --noEmit`
-6. **CHANGELOG atualizado** — entrada na seção `[Unreleased]`
+4. **Rota acessível** — URL `/categoria/subcategoria/slug` retorna 200
+5. **Inventário atualizado** — `docs/00-master_inventory-calculators.md` com ID, slug, nome, complexidade, monetização
+6. **TypeScript sem erros** — `npx tsc --noEmit`
+7. **CHANGELOG atualizado** — entrada na seção `[Unreleased]`
+
+### Formato das Variáveis
+
+Cada variável no campo `variables` deve seguir:
+
+```json
+{
+  "id": "nome_da_variavel",
+  "label": "Nome de Exibição",
+  "type": "number",
+  "unit": "kg",
+  "placeholder": "Ex: 10",
+  "min": 0,
+  "default": 10
+}
+```
+
+O campo `default` é OBRIGATÓRIO. Ele garante que o usuário veja os campos já preenchidos ao abrir a calculadora, melhorando a UX e demonstrando como a ferramenta funciona.
 
 ### Validação de Artigos
 
