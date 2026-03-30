@@ -19,9 +19,10 @@ Inventário oficial de artigos do Knowledge Hub. Todo artigo DEVE estar registra
 | 4 | quantos-sacos-de-cimento-por-m2 | Quantos Sacos de Cimento por m²? Cálculo Prático | engenharia-cimento | satellite | publicado | high |
 | 5 | traco-de-concreto-proporcao | Traço de Concreto: Proporção Ideal para Cada Tipo de Obra | engenharia-cimento | satellite | publicado | medium |
 | 6 | consumo-de-cimento-por-tipo-de-obra | Consumo de Cimento por Tipo de Obra: Guia Prático | engenharia-cimento | satellite | publicado | medium |
+| 7 | forca-energia-e-trabalho | Força, Energia e Trabalho: Entenda os Conceitos da Física na Prática | ciencia | pillar | publicado | high |
 
 ---
 
 ## Última Atualização
 
-2026-03-29 — Artigo ID 6 (consumo-de-cimento-por-tipo-de-obra) publicado. Total publicado: 6 artigos. Cluster engenharia-cimento completo.
+2026-03-30 — Artigos IDs 1 e 2 (juros-compostos cluster) adicionados à whitelist. Total publicado: 7 artigos. Whitelist: 7 artigos. Referência cruzada em quantidade-de-cimento-por-m2 corrigida.

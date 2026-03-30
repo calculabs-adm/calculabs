@@ -212,6 +212,8 @@ const ARTICLE_WHITELIST = [
   "traco-de-concreto-proporcao",
   "consumo-de-cimento-por-tipo-de-obra",
   "forca-energia-e-trabalho",
+  "juros-compostos-guia-completo",
+  "juros-simples-vs-compostos",
 ];
 
 const articles = articlesData as Article[];
