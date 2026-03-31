@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
+import { hasConsent } from '@/components/consent/CookieConsent'
 
 interface AdBlockProps {
   slot?: string
@@ -17,15 +18,21 @@ export default function AdBlock({
   useEffect(() => {
     if (pushed.current) return
     if (!adRef.current) return
+    if (!hasConsent()) return
 
     pushed.current = true
 
     try {
-      ;(window.adsbygoogle = window.adsbygoogle || []).push({})
+      ;((window as any).adsbygoogle = (window as any).adsbygoogle || []).push({})
     } catch (err) {
       console.error('[AdBlock] AdSense error:', err)
     }
   }, [])
+
+  // Don't render ad markup without consent
+  if (!hasConsent()) {
+    return null
+  }
 
   return (
     <div className="my-8 w-full" style={{ minHeight: 250 }}>

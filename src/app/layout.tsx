@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { GoogleTagManager } from "@next/third-parties/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import CookieConsent from "@/components/consent/CookieConsent";
+import GtmLoader from "@/components/consent/GtmLoader";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -88,7 +89,8 @@ export default function RootLayout({
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
-        <GoogleTagManager gtmId="GTM-WCJ4FLF7" />
+        <GtmLoader />
+        <CookieConsent />
       </body>
     </html>
   );

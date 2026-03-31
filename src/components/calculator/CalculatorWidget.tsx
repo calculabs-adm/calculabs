@@ -613,8 +613,7 @@ export default function CalculatorWidget({
       trackEvent("resultado_copiado", {
         calculadora_nome: calculoSlug,
         calculadora_categoria: categoriaSlug,
-        calculadora_subcategoria: subcategoriaSlug,
-        valor_resultado: textToCopy
+        calculadora_subcategoria: subcategoriaSlug
       });
       
       setTimeout(() => setCopied(false), 2000);

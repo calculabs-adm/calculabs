@@ -5,21 +5,10 @@
  * - Google Tag Manager's dataLayer
  * - Internal /api/tracking endpoint
  * 
- * Usage:
- * import { track, trackEvent } from "@/lib/analytics";
- * 
- * // GTM only (legacy)
- * track("calculadora_visualizada", {
- *   calculadora_nome: "simulacao-aposentadoria",
- *   calculadora_categoria: "financas-pessoais"
- * });
- * 
- * // Dual tracking - GTM + API (recommended)
- * trackEvent("calculadora_visualizada", {
- *   calculadora_nome: "simulacao-aposentadoria",
- *   calculadora_categoria: "financas-pessoais"
- * });
+ * All tracking functions check for user consent before sending data.
  */
+
+import { hasConsent } from "@/components/consent/CookieConsent";
 
 /**
  * Send an event to Google Tag Manager's dataLayer
@@ -30,6 +19,9 @@
 export function track(event: string, parameters: Record<string, any> = {}): void {
   // Skip execution during SSR (Server-Side Rendering)
   if (typeof window === "undefined") return;
+
+  // Block tracking without consent
+  if (!hasConsent()) return;
 
   // Get or initialize dataLayer
   const dataLayer = (window as any).dataLayer || [];
@@ -51,6 +43,8 @@ export function track(event: string, parameters: Record<string, any> = {}): void
  * 1. Sends to GTM dataLayer (for Google Analytics/Tag Manager)
  * 2. Sends to /api/tracking endpoint (for internal analytics)
  * 
+ * Both are blocked if user has not consented to cookies.
+ * 
  * @param event - The event name to track
  * @param params - Additional parameters to include with the event
  */
@@ -58,10 +52,13 @@ export function trackEvent(event: string, params: Record<string, any> = {}): voi
   // Skip execution during SSR
   if (typeof window === "undefined") return;
 
-  // 1. Always send to GTM (existing behavior)
+  // Block all tracking without consent
+  if (!hasConsent()) return;
+
+  // 1. Send to GTM
   track(event, params);
 
-  // 2. Also send to internal API endpoint (non-blocking)
+  // 2. Send to internal API endpoint (non-blocking)
   sendToInternalAPI(event, params);
 }
 
