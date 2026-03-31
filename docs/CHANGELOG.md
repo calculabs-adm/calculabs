@@ -4,6 +4,19 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
 
+### Added
+- Páginas institucionais: `/sobre`, `/contato`, `/privacidade`, `/termos`
+  - Sobre a CalcuLabs: missão, valores, funcionalidades
+  - Contato: e-mail, reportar erros, solicitar calculadoras
+  - Política de Privacidade: LGPD, cookies, Google AdSense, direitos do usuário
+  - Termos de Uso: uso permitido, precisão dos cálculos, limitação de responsabilidade
+  - Sitemap atualizado com as 4 páginas institucionais (prioridade 0.3-0.5)
+- Artigo Knowledge Hub: `cimento-para-laje` (Cimento para Laje: Quantidade Ideal, Traço Correto e Como Calcular)
+  - Categoria: engenharia-construcao, Cluster: engenharia-cimento (satellite)
+  - Whitelist atualizada: 8 artigos publicados
+  - Relacionamentos: calculadoras quantidade-cimento, quantidade-tijolos, consumo-tinta-m2
+  - Links internos: quantidade-de-cimento-por-m2, traco-de-concreto-proporcao
+
 ### Fixed
 - Calculadora `energia-do-foton`: category_id corrigido de 11 (inexistente) para 14 (Ciência). URL corrigida de /MISSING/quantica/energia-do-foton para /ciencia/quantica/energia-do-foton.
 - Subcategoria `quantica` (id: 26): category_id corrigido de 11 (inexistente) para 14 (Ciência). Subcategoria órfã resolvida.

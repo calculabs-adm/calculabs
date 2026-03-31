@@ -60,5 +60,21 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     });
   }
 
+  // Institutional pages
+  const institutionalPages = [
+    { slug: "sobre", priority: 0.5 },
+    { slug: "contato", priority: 0.5 },
+    { slug: "privacidade", priority: 0.3 },
+    { slug: "termos", priority: 0.3 },
+  ];
+  for (const page of institutionalPages) {
+    urls.push({
+      url: `${siteUrl}/${page.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "yearly",
+      priority: page.priority,
+    });
+  }
+
   return urls;
 }

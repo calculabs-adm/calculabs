@@ -214,6 +214,7 @@ const ARTICLE_WHITELIST = [
   "forca-energia-e-trabalho",
   "juros-compostos-guia-completo",
   "juros-simples-vs-compostos",
+  "cimento-para-laje",
 ];
 
 const articles = articlesData as Article[];

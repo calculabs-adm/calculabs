@@ -20,9 +20,10 @@ Inventário oficial de artigos do Knowledge Hub. Todo artigo DEVE estar registra
 | 5 | traco-de-concreto-proporcao | Traço de Concreto: Proporção Ideal para Cada Tipo de Obra | engenharia-cimento | satellite | publicado | medium |
 | 6 | consumo-de-cimento-por-tipo-de-obra | Consumo de Cimento por Tipo de Obra: Guia Prático | engenharia-cimento | satellite | publicado | medium |
 | 7 | forca-energia-e-trabalho | Força, Energia e Trabalho: Entenda os Conceitos da Física na Prática | ciencia | pillar | publicado | high |
+| 8 | cimento-para-laje | Cimento para Laje: Quantidade Ideal, Traço Correto e Como Calcular | engenharia-cimento | satellite | publicado | high |
 
 ---
 
 ## Última Atualização
 
-2026-03-30 — Artigos IDs 1 e 2 (juros-compostos cluster) adicionados à whitelist. Total publicado: 7 artigos. Whitelist: 7 artigos. Referência cruzada em quantidade-de-cimento-por-m2 corrigida.
+2026-03-30 — Artigo ID 8 (cimento-para-laje) adicionado ao cluster engenharia-cimento. Total publicado: 8 artigos. Whitelist: 8 artigos.

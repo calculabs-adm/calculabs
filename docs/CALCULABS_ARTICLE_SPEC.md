@@ -94,7 +94,7 @@ Todos os campos listados na estrutura acima são obrigatórios. Nenhum pode ser 
 ### Content
 
 - String HTML
-- Mínimo de 1500 palavras (contagem por split em espaços)
+- Mínimo de 2500 palavras (contagem por split em espaços)
 - Deve conter pelo menos 2 links internos reais (atributo `href` presente no HTML)
 - Proibido conteúdo genérico (placeholder, lorem ipsum, texto vazio)
 - Proibido conteúdo curto (abaixo de 1500 palavras)

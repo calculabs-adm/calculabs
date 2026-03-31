@@ -2,6 +2,8 @@
 
 ## Recently Completed
 
+- [x] Create institutional pages: /sobre, /contato, /privacidade, /termos. Pages already linked in Footer but had no routes. Created with Server Components, SEO metadata, and consistent styling. Sitemap updated with 4 new entries (priority 0.3-0.5, yearly frequency).
+- [x] Publish Knowledge Hub article: cimento-para-laje (Cimento para Laje: Quantidade Ideal, Traço Correto e Como Calcular). Added to articles.json with expanded content (~1800 words), registered in ARTICLE_WHITELIST in src/lib/data.ts. Category: engenharia-construcao, Cluster: engenharia-cimento (satellite). Related calculators: quantidade-cimento, quantidade-tijolos, consumo-tinta-m2. Internal links: quantidade-de-cimento-por-m2, traco-de-concreto-proporcao. Validator passed. Whitelist now at 8 articles.
 - [x] Add new calculator "Velocidade Média" (id: 117) in new category "Ciência" > "Física": Added calculator with formula v = d/t, variables (distancia, tempo), steps, example, applications, curiosity section, FAQs, and SEO metadata
 - [x] Add new category "Ciência" (id: 14) with icon 🔬 and color #8b5cf6
 - [x] Add new subcategory "Física" (id: 29) under Ciência category
@@ -208,6 +210,8 @@ As seguintes calculadoras foram corrigidas para funcionar corretamente:
 | 2026-03-29 | Publish Knowledge Hub article: traco-de-concreto-proporcao. Added to articles.json, whitelisted in data.ts, inventory updated to publicado. Cluster engenharia-cimento now has 3 published articles (IDs 3, 4, 5).
 | 2026-03-29 | Publish Knowledge Hub article: consumo-de-cimento-por-tipo-de-obra. Expanded content to ~1800 words, fixed link (materiais-de-construcao → materiais), whitelisted, inventory updated. Resolves ghost satellite from audit. Cluster engenharia-cimento complete: 1 pillar + 3 satellites. Whitelist now at 4 articles.
 | 2026-03-29 | Add Calculadora de Força (Lei de Newton) ID 118. Fix energia-do-foton orphaned calculator (category_id 11→14). Fix quantica subcategory (category_id 11→14). Total: 67 calculators, all with valid routing.
+| 2026-03-30 | Publish Knowledge Hub article: cimento-para-laje. Expanded content (~1800 words), whitelisted in data.ts, inventory updated to publicado. Cluster engenharia-cimento: 1 pillar + 4 satellites. Whitelist now at 8 articles.
+| 2026-03-30 | Create institutional pages: /sobre, /contato, /privacidade, /termos. All 4 pages already linked in Footer but had no routes. Created with full content, SEO metadata, and sitemap entries.
 
 ## Recent System Evolution (Tracking & Data Layer)
 
