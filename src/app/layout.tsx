@@ -5,6 +5,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import CookieConsent from "@/components/consent/CookieConsent";
 import GtmLoader from "@/components/consent/GtmLoader";
+import AdsenseLoader from "@/components/ads/AdsenseLoader";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -90,6 +91,7 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <Footer />
         <GtmLoader />
+        <AdsenseLoader />
         <CookieConsent />
       </body>
     </html>

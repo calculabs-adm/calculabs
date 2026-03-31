@@ -483,8 +483,6 @@ export default async function CalculatorPage({ params }: Props) {
             />
           </div>
 
-          <AdBlock />
-
           <div className="calc-content">
           {/* Formula - always visible on mobile */}
           {calculator.formula_display && (
