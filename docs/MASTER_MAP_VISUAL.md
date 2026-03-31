@@ -9,22 +9,26 @@ Diagramas em texto estruturado representando clusters e relações.
 ```
 CALCULABS KNOWLEDGE HUB
 │
-├── [C] engenharia-cimento ✅ COMPLETO
+├── [C] engenharia-cimento ✅ COMPLETO (1P + 6S)
 │   ├── [P] quantidade-de-cimento-por-m2
 │   ├── [S] quantos-sacos-de-cimento-por-m2
 │   ├── [S] traco-de-concreto-proporcao
 │   ├── [S] consumo-de-cimento-por-tipo-de-obra
+│   ├── [S] cimento-para-laje
+│   ├── [S] cimento-para-piso
+│   ├── [S] cimento-para-fundacao ←NOVO
 │   ├── [⚡] quantidade-cimento
 │   ├── [⚡] quantidade-tijolos
 │   └── [⚡] consumo-tinta-m2
 │
-├── [C] fisica-basica ⚠️ INICIAL
+├── [C] fisica-basica ⚠️ INICIAL (1P + 0S)
 │   ├── [P] forca-energia-e-trabalho
 │   ├── [⚡] forca-lei-de-newton
 │   ├── [⚡] energia-cinetica
-│   └── [⚡] trabalho-forca-distancia
+│   ├── [⚡] trabalho-forca-distancia
+│   └── [⚡] velocidade-media
 │
-├── [C] juros-compostos ⚠️ INICIAL
+├── [C] juros-compostos ⚠️ INICIAL (1P + 1S)
 │   ├── [P] juros-compostos-guia-completo
 │   ├── [S] juros-simples-vs-compostos
 │   ├── [⚡] juros-compostos
@@ -47,6 +51,7 @@ CALCULABS KNOWLEDGE HUB
 - `[⚡]` = Calculadora
 - `✅` = Cluster completo
 - `⚠️` = Cluster com oportunidade de expansão
+- `NOVO` = Criado na última atualização
 
 ---
 
@@ -73,6 +78,18 @@ CALCULABS KNOWLEDGE HUB
   ├─→ [⚡] quantidade-cimento
   ├─→ [⚡] quantidade-tijolos
   └─→ [ARTIGO] quantidade-de-cimento-por-m2
+
+[ARTIGO] cimento-para-laje (satellite) ←NOVO
+  ├─→ [⚡] quantidade-cimento
+  └─→ [ARTIGO] quantidade-de-cimento-por-m2
+
+[ARTIGO] cimento-para-piso (satellite)
+  ├─→ [⚡] quantidade-cimento
+  └─→ [ARTIGO] quantidade-de-cimento-por-m2
+
+[ARTIGO] cimento-para-fundacao (satellite) ←NOVO
+  ├─→ [⚡] quantidade-cimento
+  └─→ [ARTIGO] quantidade-de-cimento-por-m2
 ```
 
 ### Cluster fisica-basica
@@ -81,7 +98,8 @@ CALCULABS KNOWLEDGE HUB
 [ARTIGO] forca-energia-e-trabalho (pillar)
   ├─→ [⚡] forca-lei-de-newton
   ├─→ [⚡] energia-cinetica
-  └─→ [⚡] trabalho-forca-distancia
+  ├─→ [⚡] trabalho-forca-distancia
+  └─→ [⚡] velocidade-media
 ```
 
 ### Cluster juros-compostos
@@ -103,12 +121,13 @@ CALCULABS KNOWLEDGE HUB
 ## Fluxo Calculadora → Artigo (relação reversa)
 
 ```
-[⚡] quantidade-cimento ← [4 artigos]
-[⚡] quantidade-tijolos ← [2 artigos]
-[⚡] consumo-tinta-m2   ← [1 artigo]
+[⚡] quantidade-cimento ← [7 artigos]
+[⚡] quantidade-tijolos ← [3 artigos]
+[⚡] consumo-tinta-m2   ← [2 artigos]
 [⚡] forca-lei-newton   ← [1 artigo]
 [⚡] energia-cinetica   ← [1 artigo]
 [⚡] trabalho-f-d       ← [1 artigo]
+[⚡] velocidade-media   ← [0 artigos]
 [⚡] juros-compostos    ← [2 artigos]
 [⚡] juros-simples      ← [1 artigo]
 [⚡] rendimento-cdb     ← [1 artigo]
@@ -119,10 +138,10 @@ CALCULABS KNOWLEDGE HUB
 ## Mapa de Crescimento Sugerido
 
 ```
-PRIORIDADE ALTA (engenharia-cimento)
-  ├── [S] cimento-para-laje ← criar
-  ├── [S] cimento-para-piso ← criar
-  └── [S] cimento-para-fundacao ← criar
+PRIORIDADE ALTA (engenharia-cimento) ✅ CONCLUÍDO
+  ├── [S] cimento-para-laje ← ✅ CRIADO
+  ├── [S] cimento-para-piso ← ✅ CRIADO
+  └── [S] cimento-para-fundacao ← ✅ CRIADO
 
 PRIORIDADE MÉDIA (fisica-basica)
   ├── [S] velocidade-e-aceleracao ← criar

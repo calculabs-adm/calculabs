@@ -3,7 +3,7 @@
 ## Funcionalidades Ativas
 
 ### 1. Calculadoras Interativas
-- 66 calculadoras em 8 categorias
+- 69 calculadoras em 8 categorias
 - Avaliação client-side de fórmulas com resultado instantâneo
 - Suporte a inputs: number, text, select, date
 - Formatação automática: moeda (R$), porcentagem, número
@@ -65,32 +65,47 @@
 
 ### 11. PreAdTransition (UX de Conversão)
 - Bloco de transição antes do anúncio final da página
-- Texto dinâmico por categoria (financas-pessoais, trabalhista-tributario, matematica, saude)
+- Texto dinâmico por categoria (financas-pessoais, trabalhista-tributario, matematica, saude, default)
 - Prepara o usuário para interagir com soluções externas
 - Componente: `src/components/ui/PreAdTransition.tsx`
 - Máximo 1 por página, sempre antes do AdBlock final
 
-### 12. Knowledge Hub (em preparação)
+### 12. Knowledge Hub (IMPLEMENTADO)
 - Sistema de governança de artigos com spec rígida
+- 9 artigos publicados em 3 clusters
 - Spec oficial: `docs/CALCULABS_ARTICLE_SPEC.md`
 - Inventário: `docs/master_inventory-articles.md`
 - Dados: `src/data/articles.json`
 - Validador CLI: `bun run src/lib/validate-article.ts [slug]`
+- Rota implementada: `/conhecimento/[slug]` (SSG)
 - Estrutura: slug, title, category, meta_title, meta_description, search_intent, summary, content (HTML 1500+ palavras), faq (3+), how_to (3+), entities, semantic_keywords (5+), examples, comparisons, related_calculators (2+), related_articles (1+), internal_links (2+), featured_snippet_answer, priority, cluster
-- Páginas e rotas NÃO implementadas (apenas dados e validação)
+
+### 13. Páginas Institucionais
+- `/sobre` - Sobre a CalcuLabs
+- `/contato` - Contato e reporte de erros
+- `/privacidade` - Política de Privacidade (LGPD)
+- `/termos` - Termos de Uso
 
 ## Categorias Disponíveis
 
 | Categoria | Slug | Calculadoras |
 |-----------|------|-------------|
-| Finanças Pessoais | `financas-pessoais` | ~20 |
-| Trabalhista e Tributário | `trabalhista-tributario` | ~10 |
-| Matemática | `matematica` | ~15 |
-| Saúde | `saude` | ~8 |
-| Utilitários | `utilitarios` | ~4 |
-| Engenharia e Construção | `engenharia-construcao` | ~3 |
+| Finanças Pessoais | `financas-pessoais` | 20 |
+| Trabalhista e Tributário | `trabalhista-tributario` | 10 |
+| Matemática | `matematica` | 18 |
+| Saúde | `saude` | 8 |
+| Utilitários | `utilitarios` | 4 |
+| Engenharia e Construção | `engenharia-construcao` | 3 |
 | Astronomia | `astronomia` | 1 |
-| Ciência | `ciencia` | 2 |
+| Ciência | `ciencia` | 5 |
+
+## Clusters de Artigos
+
+| Cluster | Pilar | Satélites | Status |
+|---------|-------|-----------|--------|
+| engenharia-cimento | 1 | 4 | Completo |
+| fisica-basica | 1 | 0 | Em expansão |
+| juros-compostos | 1 | 1 | Em expansão |
 
 ## Funções do Formula Engine
 
@@ -117,4 +132,4 @@
 
 ## Última Atualização
 
-2026-03-26 — Documentação criada pós-rollback.
+2026-03-31 — Atualização: 69 calculadoras, 9 artigos publicados, Knowledge Hub implementado.

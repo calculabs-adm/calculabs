@@ -116,7 +116,7 @@ Exemplo: `/financas-pessoais/juros-investimentos/juros-compostos`
 
 ## Última Atualização
 
-2026-03-30 — Sistema de mapeamento global criado (MASTER_MAP.md, MASTER_MAP_VISUAL.md).
+2026-03-31 — Clusters atualizados: engenharia-cimento (5 satellites), fisica-basica (4 calculadoras).
 
 ## Mapa do Sistema
 
@@ -146,6 +146,6 @@ Toda criação ou alteração DEVE atualizar o mapa:
 
 | Cluster | Pillar | Satellites | Calculadoras |
 |---------|--------|-----------|-------------|
-| `engenharia-cimento` | 1 | 3 | 3 |
-| `fisica-basica` | 1 | 0 | 3 |
+| `engenharia-cimento` | 1 | 5 | 3 |
+| `fisica-basica` | 1 | 0 | 4 |
 | `juros-compostos` | 1 | 1 | 3 |

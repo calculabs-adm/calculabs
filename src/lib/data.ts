@@ -216,6 +216,7 @@ const ARTICLE_WHITELIST = [
   "juros-simples-vs-compostos",
   "cimento-para-laje",
   "cimento-para-piso",
+  "cimento-para-fundacao",
 ];
 
 const articles = articlesData as Article[];

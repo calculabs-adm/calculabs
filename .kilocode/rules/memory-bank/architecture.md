@@ -1,246 +1,113 @@
-# System Patterns: Next.js Starter Template
+# System Patterns: CalcuLabs
 
 ## Architecture Overview
 
 ```
 src/
 ├── app/                    # Next.js App Router
-│   ├── layout.tsx          # Root layout + metadata
-│   ├── page.tsx            # Home page
-│   ├── globals.css         # Tailwind imports + global styles
-│   ├── favicon.ico         # Site icon
-│   └── api/                # API routes
-│       └── seed/
-│           └── route.ts    # Database seed endpoint
-└── (expand as needed)
-    ├── components/         # React components (add when needed)
-    ├── lib/                # Utilities and helpers (add when needed)
-    └── db/                 # Database files (add via recipe)
+│   ├── [categoria]/        # Páginas de categoria (dinâmico)
+│   │   ├── page.tsx        # Lista de subcategorias
+│   │   └── [subcategoria]/[calculo]/page.tsx  # Página da calculadora
+│   ├── conhecimento/        # Knowledge Hub
+│   │   └── [slug]/page.tsx  # Página de artigo
+│   ├── api/                # API routes
+│   │   ├── tracking/       # Analytics interno
+│   │   ├── report-error/   # Reporte de erros via SMTP
+│   │   └── seed/           # Seed do banco de dados
+│   ├── layout.tsx          # Layout raiz (Header, Footer, GTM)
+│   ├── page.tsx            # Homepage
+│   └── sitemap.ts          # Sitemap dinâmico
+├── components/
+│   ├── calculator/         # Componentes de calculadora
+│   ├── home/               # Componentes da homepage
+│   ├── layout/             # Header, Footer
+│   └── ads/                # Componentes de monetização
+├── data/                   # Dados estáticos JSON
+│   ├── categories.json     # 8 categorias
+│   ├── subcategories.json  # 17 subcategorias
+│   ├── calculators.json    # 69 calculadoras
+│   └── articles.json       # 9 artigos (Knowledge Hub)
+├── db/                     # Camada de banco de dados
+│   ├── schema.ts           # Schema Drizzle ORM
+│   ├── index.ts            # Conexão DB
+│   └── migrations/         # SQL migrations
+└── lib/                    # Bibliotecas utilitárias
+    ├── data.ts             # Acesso aos dados (JSON)
+    ├── formula-engine.ts   # Engine de fórmulas
+    ├── analytics.ts        # Tracking (GTM + API)
+    ├── seo-generator.ts    # Geração de metadados SEO
+    ├── validate-calculator.ts  # Validação CLI
+    └── validate-article.ts     # Validação de artigos CLI
 ```
+
+## Data Flow
+
+```
+JSON (src/data/) → lib/data.ts → Componentes React → Formula Engine (client-side)
+```
+
+## Tracking Architecture
+
+```
+trackEvent() → GTM (dataLayer) + /api/tracking
+```
+
+### Event Flow
+
+1. Usuário interage com calculadora
+2. CalculatorWidget → analytics.trackEvent()
+3. Dual dispatch: GTM + API
+4. API adiciona metadata e loga
 
 ## Key Design Patterns
 
 ### 1. App Router Pattern
 
-Uses Next.js App Router with file-based routing:
 ```
 src/app/
-├── page.tsx           # Route: /
-├── about/page.tsx     # Route: /about
-├── blog/
-│   ├── page.tsx       # Route: /blog
-│   └── [slug]/page.tsx # Route: /blog/:slug
+├── page.tsx                        # Route: /
+├── [categoria]/page.tsx            # Route: /:categoria
+├── [categoria]/[subcategoria]/
+│   └── [calculo]/page.tsx          # Route: /:categoria/:subcategoria/:calculo
+├── conhecimento/[slug]/page.tsx    # Route: /conhecimento/:slug
 └── api/
-    └── route.ts       # API Route: /api
+    └── route.ts                    # API Route: /api
 ```
 
-### 2. Component Organization Pattern (When Expanding)
+### 2. Server Components by Default
 
-```
-src/components/
-├── ui/                # Reusable UI components (Button, Card, etc.)
-├── layout/            # Layout components (Header, Footer)
-├── sections/          # Page sections (Hero, Features, etc.)
-└── forms/             # Form components
-```
-
-### 3. Server Components by Default
-
-All components are Server Components unless marked with `"use client"`:
 ```tsx
-// Server Component (default) - can fetch data, access DB
-export default function Page() {
-  return <div>Server rendered</div>;
+// Server Component (default) - fetching, DB access
+export default async function Page() {
+  const data = await getData();
+  return <div>{data}</div>;
 }
 
-// Client Component - for interactivity
+// Client Component - interactivity
 "use client";
-export default function Counter() {
-  const [count, setCount] = useState(0);
-  return <button onClick={() => setCount(c => c + 1)}>{count}</button>;
+export default function CalculatorWidget() {
+  const [result, setResult] = useState(null);
+  return <button onClick={() => setResult(calculate())}>{result}</button>;
 }
 ```
 
-### 4. Layout Pattern
+### 3. Formula Engine Pattern
 
-Layouts wrap pages and can be nested:
 ```tsx
-// src/app/layout.tsx - Root layout
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
-  );
-}
-
-// src/app/dashboard/layout.tsx - Nested layout
-export default function DashboardLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="flex">
-      <Sidebar />
-      <main>{children}</main>
-    </div>
-  );
-}
-```
-
-### 5. API Routes with Authentication Pattern
-
-API routes with secret key protection for admin operations:
-```tsx
-// src/app/api/seed/route.ts
-export async function POST(request: NextRequest) {
-  const authHeader = request.headers.get("x-seed-key");
-  const { searchParams } = new URL(request.url);
-  const queryKey = searchParams.get("key");
-  const secretKey = process.env.SEED_SECRET_KEY || "default-key";
-
-  if (authHeader !== secretKey && queryKey !== secretKey) {
-    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-  }
-
-  // Execute protected operation
-  // ...
-}
-```
-
-Usage:
-- `POST /api/seed?key=calculabs-seed-2024`
-- Or with header: `x-seed-key: calculabs-seed-2024`
-
-## Styling Conventions
-
-### Tailwind CSS Usage
-- Utility classes directly on elements
-- Component composition for repeated patterns
-- Responsive: `sm:`, `md:`, `lg:`, `xl:`
-
-### Common Patterns
-```tsx
-// Container
-<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-// Responsive grid
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-// Flexbox centering
-<div className="flex items-center justify-center">
+// Client-side formula evaluation
+const result = evaluateFormula(formula, variables);
 ```
 
 ## File Naming Conventions
 
-- Components: PascalCase (`Button.tsx`, `Header.tsx`)
-- Utilities: camelCase (`utils.ts`, `helpers.ts`)
-- Pages/Routes: lowercase (`page.tsx`, `layout.tsx`)
-- Directories: kebab-case (`api-routes/`) or lowercase (`components/`)
+- Components: PascalCase (`CalculatorWidget.tsx`)
+- Utilities: camelCase (`formula-engine.ts`)
+- Pages: lowercase (`page.tsx`, `layout.tsx`)
+- Directories: lowercase (`components/`, `lib/`)
 
 ## State Management
 
-For simple needs:
-- `useState` for local component state
-- `useContext` for shared state
-- Server Components for data fetching
-
-For complex needs (add when necessary):
-- Zustand for client state
-- React Query for server state
-
-
-
-## Data & Tracking Architecture
-
-- The Calculabs system follows a layered architecture for data collection, processing, and future monetization.
-
-### Current Architecture (Phase 1)
-
-#### Layer 1 — Frontend Interaction
-
-- User interacts with calculator inputs
-
-- Events triggered via CalculatorWidget and Tracker components
-
-#### Layer 2 — Tracking Layer
-
-- Centralized in analytics.ts
-
-- trackEvent() is the single entry point
-
-#### Layer 3 — Dual Dispatch
-
-- Google Tag Manager (dataLayer)
-
-- Internal API (/api/tracking)
-
-#### Layer 4 — API Layer
-
-- Receives events via POST
-
-- Adds metadata (timestamp, URL, userAgent)
-
-- Logs data (temporary)
-
-### Event Flow
-
-- User Interaction
-→ trackEvent()
-→ GTM (dataLayer)
-→ /api/tracking
-
-### Future Architecture (Phase 2)
-
-#### Layer 5 — Data Persistence
-
-- Supabase will store:
-
-- events
-
-- sessions
-
-#### Layer 6 — Data Processing
-
-- Aggregation of:
-
-- page views
-
-- calculations
-
-- engagement
-
-#### Layer 7 — Intelligence Layer
-
-- Identify high-performing calculators
-
-- Detect user intent patterns
-
-- Optimize monetization
-
-#### Layer 8 — Dashboard & Admin Panel
-
-- Private access (/admin-painel)
-
-- Metrics visualization:
-
-- usage
-
-- engagement
-
-- performance
-
-### Key Principles
-
-- Single tracking entry point
-
-- Dual data destination (GTM + internal)
-
-- Non-blocking architecture
-
-- Fully scalable for future database integration
-
-### Constraints
-
-- Must not break SSG behavior
-
-- Must not affect performance
-
-- Must remain compatible with existing GTM setup
+- `useState` para estado local de componentes
+- `useContext` para estado compartilhado (se necessário)
+- Server Components para fetching de dados
+- JSON files para dados estáticos (calculadoras, artigos)

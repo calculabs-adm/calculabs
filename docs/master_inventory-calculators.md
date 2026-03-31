@@ -221,4 +221,4 @@ Inventário completo de todas as calculadoras disponíveis no CalcuLabs. Este é
 
 ## Última Atualização
 
-2026-03-29 — Calculadora ID 120 (trabalho-forca-distancia) adicionada. Total: 69 calculadoras. Categoria Ciência/Física: 4 calculadoras.
+2026-03-31 — Documentação atualizada. Total: 69 calculadoras.

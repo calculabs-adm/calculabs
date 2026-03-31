@@ -2,7 +2,7 @@
 
 ## O que é
 
-CalcuLabs é um portal brasileiro de calculadoras online gratuitas. Disponibiliza 66 calculadoras organizadas em 8 categorias e 17 subcategorias, cobrindo finanças, matemática, saúde, engenharia, astronomia e ciências.
+CalcuLabs é um portal brasileiro de calculadoras online gratuitas. Disponibiliza 69 calculadoras organizadas em 8 categorias e 17 subcategorias, cobrindo finanças, matemática, saúde, engenharia, astronomia e ciências. Inclui Knowledge Hub com 9 artigos em 3 clusters.
 
 **URL:** https://www.calculabs.com.br
 
@@ -26,8 +26,8 @@ O conteúdo das calculadoras está armazenado em arquivos JSON estáticos em `sr
 
 - `categories.json` — 8 categorias
 - `subcategories.json` — 17 subcategorias
-- `calculators.json` — 66 calculadoras
-- `articles.json` — Artigos do Knowledge Hub
+- `calculators.json` — 69 calculadoras
+- `articles.json` — 9 artigos do Knowledge Hub
 
 O banco de dados (SQLite/Turso) existe mas é usado para seeding e features futuras. A leitura em runtime usa os JSONs.
 
@@ -70,6 +70,13 @@ Sistema de governança de artigos com spec rígida (`docs/CALCULABS_ARTICLE_SPEC
 
 Execução: `bun run src/lib/validate-article.ts [slug]`
 
+## Páginas Institucionais
+
+- `/sobre` — Sobre a CalcuLabs (missão, valores, funcionalidades)
+- `/contato` — Contato e reporte de erros
+- `/privacidade` — Política de Privacidade (LGPD)
+- `/termos` — Termos de Uso
+
 ## Última Atualização
 
-2026-03-26 — Rollback para commit b3411f0 (remoção completa do Supabase).
+2026-03-31 — Atualização: 69 calculadoras, 9 artigos, Knowledge Hub implementado, páginas institucionais.

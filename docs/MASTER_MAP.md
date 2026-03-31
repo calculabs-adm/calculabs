@@ -2,8 +2,8 @@
 
 Mapa central do projeto CalcuLabs contendo clusters, artigos, calculadoras e relações.
 
-**Atualizado em:** 2026-03-30
-**Total:** 3 clusters, 7 artigos, 69 calculadoras
+**Atualizado em:** 2026-03-31
+**Total:** 3 clusters, 10 artigos, 69 calculadoras
 
 ---
 
@@ -17,6 +17,9 @@ Mapa central do projeto CalcuLabs contendo clusters, artigos, calculadoras e rel
 | Satellite | `quantos-sacos-de-cimento-por-m2` | Quantos Sacos de Cimento por m²? Cálculo Prático |
 | Satellite | `traco-de-concreto-proporcao` | Traço de Concreto: Proporção Ideal para Cada Tipo de Obra |
 | Satellite | `consumo-de-cimento-por-tipo-de-obra` | Consumo de Cimento por Tipo de Obra: Guia Completo |
+| Satellite | `cimento-para-laje` | Cimento para Laje: Quantidade Ideal, Traço Correto e Como Calcular |
+| Satellite | `cimento-para-piso` | Cimento para Piso: Quantidade Ideal, Traço Correto e Como Calcular |
+| Satellite | `cimento-para-fundacao` | Cimento para Fundação: Quantidade Ideal, Traço Correto e Como Calcular |
 
 **Calculadoras relacionadas:**
 
@@ -26,7 +29,7 @@ Mapa central do projeto CalcuLabs contendo clusters, artigos, calculadoras e rel
 | `quantidade-tijolos` | Quantidade de Tijolos |
 | `consumo-tinta-m2` | Consumo de Tinta por m² |
 
-**Status:** Cluster completo (1 pillar + 3 satellites)
+**Status:** Cluster completo (1 pillar + 6 satellites)
 
 ---
 
@@ -44,6 +47,7 @@ Mapa central do projeto CalcuLabs contendo clusters, artigos, calculadoras e rel
 | `forca-lei-de-newton` | Calculadora de Força (Lei de Newton) |
 | `energia-cinetica` | Calculadora de Energia Cinética |
 | `trabalho-forca-distancia` | Calculadora de Trabalho |
+| `velocidade-media` | Velocidade Média |
 
 **Status:** Cluster inicial (1 pillar + 0 satellites). Oportunidade de expansão em aceleração, gravidade, pressão.
 
@@ -82,9 +86,9 @@ Mapa central do projeto CalcuLabs contendo clusters, artigos, calculadoras e rel
 
 | Slug | Nome | Artigo relacionado? |
 |------|------|---------------------|
-| `quantidade-cimento` | Quantidade de Cimento | ✅ 4 artigos |
+| `quantidade-cimento` | Quantidade de Cimento | ✅ 6 artigos |
 | `quantidade-tijolos` | Quantidade de Tijolos | ✅ 2 artigos |
-| `consumo-tinta-m2` | Consumo de Tinta por m² | ✅ 1 artigo |
+| `consumo-tinta-m2` | Consumo de Tinta por m² | ✅ 2 artigos |
 
 **Ciência / Física (4):**
 
