@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Contato",
@@ -53,45 +52,6 @@ export default function ContatoPage() {
           </p>
         </div>
       </div>
-
-      <section className="mb-10">
-        <h2 className="text-2xl font-semibold text-slate-900 mb-4">
-          Antes de Entrar em Contato
-        </h2>
-        <p className="text-slate-700 leading-relaxed mb-4">
-          Muitas dúvidas podem ser resolvidas rapidamente consultando nossos
-          recursos disponíveis:
-        </p>
-        <ul className="space-y-2 text-slate-700">
-          <li className="flex items-start gap-2">
-            <span className="text-blue-600">•</span>
-            <span>
-              <strong>Artigos:</strong> Consulte nossa seção de{" "}
-              <Link
-                href="/conhecimento/juros-compostos-guia-completo"
-                className="text-blue-600 hover:text-blue-700 transition-colors"
-              >
-                artigos e guias
-              </Link>{" "}
-              para explicações detalhadas sobre diversos temas.
-            </span>
-          </li>
-          <li className="flex items-start gap-2">
-            <span className="text-blue-600">•</span>
-            <span>
-              <strong>FAQ:</strong> Cada calculadora possui uma seção de perguntas
-              frequentes que pode esclarecer sua dúvida.
-            </span>
-          </li>
-          <li className="flex items-start gap-2">
-            <span className="text-blue-600">•</span>
-            <span>
-              <strong>Busca:</strong> Use a barra de pesquisa no topo do site para
-              encontrar a calculadora ou artigo que você precisa.
-            </span>
-          </li>
-        </ul>
-      </section>
 
       <section className="mb-10">
         <h2 className="text-2xl font-semibold text-slate-900 mb-4">
