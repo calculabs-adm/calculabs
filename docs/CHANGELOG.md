@@ -16,6 +16,11 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/).
   - Whitelist atualizada: 8 artigos publicados
   - Relacionamentos: calculadoras quantidade-cimento, quantidade-tijolos, consumo-tinta-m2
   - Links internos: quantidade-de-cimento-por-m2, traco-de-concreto-proporcao
+- Artigo Knowledge Hub: `cimento-para-piso` (Cimento para Piso: Quantidade Ideal, Traço Correto e Como Calcular)
+  - Categoria: engenharia-construcao, Cluster: engenharia-cimento (satellite)
+  - Whitelist atualizada: 9 artigos publicados
+  - Relacionamentos: calculadoras quantidade-cimento, quantidade-tijolos, consumo-tinta-m2
+  - Links internos: quantidade-de-cimento-por-m2, traco-de-concreto-proporcao
 
 ### Fixed
 - Calculadora `energia-do-foton`: category_id corrigido de 11 (inexistente) para 14 (Ciência). URL corrigida de /MISSING/quantica/energia-do-foton para /ciencia/quantica/energia-do-foton.

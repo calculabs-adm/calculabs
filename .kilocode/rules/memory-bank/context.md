@@ -2,6 +2,7 @@
 
 ## Recently Completed
 
+- [x] Publish Knowledge Hub article: cimento-para-piso (Cimento para Piso: Quantidade Ideal, Traço Correto e Como Calcular). Added to articles.json with expanded content (~1518 words), registered in ARTICLE_WHITELIST in src/lib/data.ts. Category: engenharia-construcao, Cluster: engenharia-cimento (satellite). Related calculators: quantidade-cimento, quantidade-tijolos, consumo-tinta-m2. Internal links: quantidade-de-cimento-por-m2, traco-de-concreto-proporcao. Validator passed. Whitelist now at 9 articles.
 - [x] Create institutional pages: /sobre, /contato, /privacidade, /termos. Pages already linked in Footer but had no routes. Created with Server Components, SEO metadata, and consistent styling. Sitemap updated with 4 new entries (priority 0.3-0.5, yearly frequency).
 - [x] Publish Knowledge Hub article: cimento-para-laje (Cimento para Laje: Quantidade Ideal, Traço Correto e Como Calcular). Added to articles.json with expanded content (~1800 words), registered in ARTICLE_WHITELIST in src/lib/data.ts. Category: engenharia-construcao, Cluster: engenharia-cimento (satellite). Related calculators: quantidade-cimento, quantidade-tijolos, consumo-tinta-m2. Internal links: quantidade-de-cimento-por-m2, traco-de-concreto-proporcao. Validator passed. Whitelist now at 8 articles.
 - [x] Add new calculator "Velocidade Média" (id: 117) in new category "Ciência" > "Física": Added calculator with formula v = d/t, variables (distancia, tempo), steps, example, applications, curiosity section, FAQs, and SEO metadata

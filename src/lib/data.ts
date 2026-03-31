@@ -215,6 +215,7 @@ const ARTICLE_WHITELIST = [
   "juros-compostos-guia-completo",
   "juros-simples-vs-compostos",
   "cimento-para-laje",
+  "cimento-para-piso",
 ];
 
 const articles = articlesData as Article[];
