@@ -377,10 +377,10 @@ function formatResultValue(key: string, value: number | string): string {
     return value.toExponential(2).replace('.', ',');
   }
 
-  // Currency-related keys
+  // Currency-related keys (only specific financial terms, NOT "resultado")
   const currencyKeys = [
     "M", "montante", "parcela", "juros", "total", "valor", "saldo", "rendimento",
-    "resultado", "lucro", "custo", "receita", "das", "inss", "ir", "fgts", "multa",
+    "lucro", "custo", "receita", "das", "inss", "ir", "fgts", "multa",
     "aviso", "ferias", "decimo", "comissao", "renda", "salario", "patrimonio",
     "aporte", "deposito", "amortizacao", "preco", "markup_valor",
   ];
@@ -408,6 +408,7 @@ function formatResultValue(key: string, value: number | string): string {
 
 function formatResultLabel(key: string): string {
   const labels: Record<string, string> = {
+    resultado: "Resultado",
     M: "Montante Final",
     J: "Juros",
     juros: "Juros",
