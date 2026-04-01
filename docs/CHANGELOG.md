@@ -4,7 +4,8 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
 
-- Enhanced carousel navigation buttons with blue background, shadows, and hover effects for better visibility
+- Added CALCULABS_CREATION_SYSTEM.md with strict guidelines for calculator creation and validation
+- Enhanced carousel navigation buttons with blue styling and shadows for better visibility
 - Added articles carousel on home page displaying latest published articles with auto-scroll and navigation controls
 - Fixed ARTICLE_WHITELIST to include slugs for 4 new articles: fluxo-de-caixa, despesas-fixas-e-variaveis, capital-de-giro, roi
 
