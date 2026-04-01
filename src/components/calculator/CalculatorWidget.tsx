@@ -333,7 +333,7 @@ function evaluateClientFormula(
     const rawResults = fn(...values) as Record<string, number | string>;
 
     const allResults: ResultEntry[] = Object.entries(rawResults)
-      .filter(([k, v]) => k !== 'resultado' && v !== undefined && v !== null && (typeof v === "string" || typeof v === "number"))
+      .filter(([k, v]) => v !== undefined && v !== null && (typeof v === "string" || typeof v === "number"))
       .map(([k, v]) => ({ key: k, value: v }));
 
     // If there are non-zero results, filter out zeros to avoid showing irrelevant conditional results
