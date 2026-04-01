@@ -5,6 +5,10 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/).
 ## [Unreleased]
 
 ### Added
+- Artigo Knowledge Hub: `margem-de-lucro` (Margem de Lucro: O Que É, Como Calcular e Aumentar a Rentabilidade do Seu Negócio)
+  - Categoria: financas-pessoais, Cluster: gestao-financeira-pessoal (satellite)
+  - Whitelist: 12 artigos publicados
+  - Expansão do cluster gestão financeira pessoal
 - Artigo Knowledge Hub: `gestao-financeira-pessoal` (Gestão Financeira Pessoal: Guia Completo para Organizar, Economizar e Fazer Seu Dinheiro Crescer)
   - Categoria: financas-pessoais, Cluster: gestao-financeira-pessoal (pillar)
   - Whitelist: 11 artigos publicados

@@ -35,8 +35,9 @@ CALCULABS KNOWLEDGE HUB
 │   ├── [⚡] juros-simples
 │   └── [⚡] rendimento-cdb
 │
-├── [C] gestao-financeira-pessoal ⚠️ INICIAL (1P + 0S) ←NOVO
+├── [C] gestao-financeira-pessoal ⚠️ CRESCENDO (1P + 1S) ←EXPANDINDO
 │   ├── [P] gestao-financeira-pessoal
+│   ├── [S] margem-de-lucro ←NOVO
 │   ├── [⚡] margem-de-lucro
 │   ├── [⚡] markup
 │   ├── [⚡] ponto-de-equilibrio
@@ -123,7 +124,7 @@ CALCULABS KNOWLEDGE HUB
   └─→ [ARTIGO] juros-compostos-guia-completo
 ```
 
-### Cluster gestao-financeira-pessoal ←NOVO
+### Cluster gestao-financeira-pessoal ←EXPANDINDO
 
 ```
 [ARTIGO] gestao-financeira-pessoal (pillar) ←NOVO
@@ -133,6 +134,13 @@ CALCULABS KNOWLEDGE HUB
   ├─→ [⚡] roi
   ├─→ [⚡] roas
   └─→ [ARTIGO] juros-compostos-guia-completo
+
+[ARTIGO] margem-de-lucro (satellite) ←NOVO
+  ├─→ [⚡] margem-de-lucro
+  ├─→ [⚡] markup
+  ├─→ [⚡] ponto-de-equilibrio
+  ├─→ [⚡] roi
+  └─→ [ARTIGO] gestao-financeira-pessoal
 ```
 
 ---
@@ -150,7 +158,7 @@ CALCULABS KNOWLEDGE HUB
 [⚡] juros-compostos    ← [2 artigos]
 [⚡] juros-simples      ← [1 artigo]
 [⚡] rendimento-cdb     ← [1 artigo]
-[⚡] margem-lucro       ← [1 artigo]
+[⚡] margem-lucro       ← [2 artigos]
 [⚡] markup             ← [1 artigo]
 [⚡] ponto-equilibrio   ← [1 artigo]
 [⚡] roi                ← [1 artigo]
@@ -167,7 +175,8 @@ PRIORIDADE ALTA (engenharia-cimento) ✅ CONCLUÍDO
   ├── [S] cimento-para-piso ← ✅ CRIADO
   └── [S] cimento-para-fundacao ← ✅ CRIADO
 
-PRIORIDADE ALTA (gestao-financeira-pessoal) ←NOVO
+PRIORIDADE ALTA (gestao-financeira-pessoal) ←EXPANDINDO
+  ├── [S] margem-de-lucro ← ✅ CRIADO
   ├── [S] investimentos-basicos ← criar
   ├── [S] reserva-de-emergencia ← criar
   └── [S] quitacao-dividas ← criar
