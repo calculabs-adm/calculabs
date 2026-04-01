@@ -377,7 +377,166 @@ Este recipe é atualizado baseado em:
 
 ---
 
-**Recipe Version**: 1.1 (Otimizado)
+## 🎯 Search Intent Execution (Obrigatório)
+
+O conteúdo **DEVE** seguir a intenção de busca definida no campo `search_intent`:
+
+### Informacional:
+- **Foco**: Explicação clara e educativa
+- **Introdução**: Forte e atrativa, respondendo "o que é"
+- **Estrutura**: Conceitual → Exemplos simples → Aplicações
+- **Tom**: Didático e acessível
+
+### Prático:
+- **Foco**: Aplicação e cálculo direto
+- **Conteúdo**: Passo a passo detalhado
+- **Ferramentas**: Uso direto de calculadoras
+- **Resultado**: Usuário consegue aplicar imediatamente
+
+### Decisório:
+- **Foco**: Comparação e análise de cenários
+- **Conteúdo**: Cenários múltiplos, prós/contras
+- **Suporte**: Dados para tomada de decisão
+- **Tom**: Analítico e objetivo
+
+**O artigo deve refletir claramente essa intenção ao longo de todo o conteúdo.**
+
+## 🧠 Profundidade Semântica (Obrigatório)
+
+O artigo deve ir além da superfície e:
+
+### Responder Perguntas Implícitas
+- **O que é?** Definição completa e contextualizada
+- **Por que importa?** Benefícios práticos e aplicações
+- **Como usar?** Aplicação prática passo a passo
+- **Quais erros evitar?** Armadilhas comuns
+- **O que escolher?** Comparações relevantes
+
+### Cobertura Completa do Tema
+- **Evitar superficialidade**: Profundidade em cada aspecto
+- **Contextualização**: Relacionar com outros conceitos
+- **Evolução histórica**: Quando relevante
+- **Tendências atuais**: Cenário atual do tema
+
+### Elementos Obrigatórios
+- **✅ Definição clara**: Primeira seção dedicada
+- **✅ Aplicação prática**: Exemplos reais aplicáveis
+- **✅ Erros comuns**: Seção específica com soluções
+- **✅ Comparações**: Pelo menos 2-3 comparações relevantes
+- **✅ Exemplos reais**: Cenários práticos com números
+
+**Rejeitar conteúdo genérico, repetitivo ou superficial.**
+
+## 🚀 Unique Value (Obrigatório)
+
+Cada artigo deve conter pelo menos **um diferencial claro** que o torne único:
+
+### Exemplos de Diferenciais
+- **📊 Exemplo numérico real**: Cálculo completo com valores brasileiros atuais
+- **🏢 Cenário prático aplicado**: Caso real de empresa brasileira
+- **⚖️ Comparação relevante**: Análise específica do mercado brasileiro
+- **🚨 Explicação de erro comum**: Armadilha específica da realidade local
+
+### Requisitos Mínimos
+- **Conteúdo não teórico**: Deve resolver problema real
+- **Dados contextualizados**: Referências brasileiras quando aplicável
+- **Aplicabilidade imediata**: Usuário consegue usar na prática
+- **Valor mensurável**: Benefício claro e quantificável
+
+**Todo artigo deve demonstrar valor único e prático.**
+
+## 🔄 Estratégia de CTA (Obrigatório)
+
+Inserir CTAs de forma **natural e contextual** em 3 momentos estratégicos:
+
+### Momento 1: Após Explicação Conceitual
+```
+Quer calcular isso na prática? Use nossa calculadora gratuita.
+```
+- **Localização**: Final da seção teórica
+- **Direcionamento**: Calculadora principal
+- **Tom**: Natural e educativo
+
+### Momento 2: Após Exemplo Prático
+```
+Para fazer esse cálculo automaticamente, acesse nossa ferramenta online.
+```
+- **Localização**: Após exemplo numérico
+- **Direcionamento**: Calculadora específica
+- **Tom**: Prático e acionável
+
+### Momento 3: Próximo da Conclusão
+```
+Explore mais conteúdos relacionados no nosso Knowledge Hub.
+```
+- **Localização**: Antes da conclusão final
+- **Direcionamento**: Artigos do mesmo cluster
+- **Tom**: Sugestão de aprofundamento
+
+### Direcionamentos Permitidos
+- ✅ **Calculadoras relacionadas**: Ferramentas principais do artigo
+- ✅ **Artigos do cluster**: Pillar ou satellites relacionados
+- ❌ **Produtos externos**: Manter foco no conteúdo educativo
+- ❌ **Linguagem agressiva**: Evitar "compre agora", "imperdível"
+
+**CTAs devem enriquecer a experiência, não interrompê-la.**
+
+## 🏆 Nível de Dominância SEO
+
+Classificação de conteúdo baseada em profundidade e autoridade:
+
+### Mínimo (Bloqueante)
+- **1500 palavras** (obrigatório para validação)
+- **Cobertura básica** do tema
+- **Estrutura essencial** (H1, meta tags, FAQ)
+- **Para tópicos simples**
+
+### Recomendado
+- **2000+ palavras**
+- **Cobertura completa** com exemplos
+- **Comparações e cenários** múltiplos
+- **Para maioria dos artigos**
+
+### Dominante
+- **2500+ palavras**
+- **Análise aprofundada** com dados
+- **Cenários complexos** e edge cases
+- **Para temas concorridos**
+
+### Pillar (Máxima Autoridade)
+- **3000+ palavras**
+- **Cobertura definitiva** do tema
+- **Múltiplas perspectivas** e aplicações
+- **Para tópicos estratégicos** do cluster
+
+**Sempre priorizar profundidade sobre velocidade de produção.**
+
+---
+
+## ✅ VALIDAÇÃO FINAL
+
+Após aplicação das diretrizes acima:
+
+### ✅ Verificações Estruturais
+- [ ] **Nenhuma seção original alterada**: Conteúdo existente preservado
+- [ ] **Apenas adições no final**: Novas seções adicionadas ao final
+- [ ] **Formatação mantida**: Padrão markdown consistente
+
+### ✅ Verificações de Conteúdo
+- [ ] **Search Intent aplicado**: Conteúdo reflete intenção definida
+- [ ] **Profundidade semântica**: Perguntas implícitas respondidas
+- [ ] **Unique Value presente**: Diferencial claro identificado
+- [ ] **CTAs estratégicos**: 3 momentos com direcionamentos corretos
+- [ ] **Nível SEO adequado**: Profundidade compatível com estratégia
+
+### ✅ Verificações Técnicas
+- [ ] **Arquivo válido**: Sintaxe markdown correta
+- [ ] **Links funcionais**: Referências para documentos existentes
+- [ ] **Consistência**: Alinhamento com padrões do projeto
+
+---
+
+**Recipe Version**: 1.2 (Completo)
 **Last Updated**: 2026-03-31
 **Compatible With**: CalcuLabs Knowledge Hub v1.0+
 **Maintainer**: Sistema de Qualidade SEO CalcuLabs
