@@ -16,7 +16,7 @@ CALCULABS KNOWLEDGE HUB
 │   ├── [S] consumo-de-cimento-por-tipo-de-obra
 │   ├── [S] cimento-para-laje
 │   ├── [S] cimento-para-piso
-│   ├── [S] cimento-para-fundacao ←NOVO
+│   ├── [S] cimento-para-fundacao
 │   ├── [⚡] quantidade-cimento
 │   ├── [⚡] quantidade-tijolos
 │   └── [⚡] consumo-tinta-m2
@@ -35,13 +35,20 @@ CALCULABS KNOWLEDGE HUB
 │   ├── [⚡] juros-simples
 │   └── [⚡] rendimento-cdb
 │
-└── [SEM CLUSTER] 60 calculadoras sem artigo
-    ├── Finanças Pessoais: 20
+├── [C] gestao-financeira-pessoal ⚠️ INICIAL (1P + 0S) ←NOVO
+│   ├── [P] gestao-financeira-pessoal
+│   ├── [⚡] margem-de-lucro
+│   ├── [⚡] markup
+│   ├── [⚡] ponto-de-equilibrio
+│   ├── [⚡] roi
+│   └── [⚡] roas
+│
+└── [SEM CLUSTER] 55 calculadoras sem artigo
+    ├── Finanças Pessoais: 15
     ├── Trabalhista/Tributário: 10
     ├── Matemática: 18
     ├── Saúde: 8
-    ├── Utilitários: 4
-    └── (outras: 0)
+    └── Utilitários: 4
 ```
 
 **Legenda:**
@@ -116,6 +123,18 @@ CALCULABS KNOWLEDGE HUB
   └─→ [ARTIGO] juros-compostos-guia-completo
 ```
 
+### Cluster gestao-financeira-pessoal ←NOVO
+
+```
+[ARTIGO] gestao-financeira-pessoal (pillar) ←NOVO
+  ├─→ [⚡] margem-de-lucro
+  ├─→ [⚡] markup
+  ├─→ [⚡] ponto-de-equilibrio
+  ├─→ [⚡] roi
+  ├─→ [⚡] roas
+  └─→ [ARTIGO] juros-compostos-guia-completo
+```
+
 ---
 
 ## Fluxo Calculadora → Artigo (relação reversa)
@@ -131,6 +150,11 @@ CALCULABS KNOWLEDGE HUB
 [⚡] juros-compostos    ← [2 artigos]
 [⚡] juros-simples      ← [1 artigo]
 [⚡] rendimento-cdb     ← [1 artigo]
+[⚡] margem-lucro       ← [1 artigo]
+[⚡] markup             ← [1 artigo]
+[⚡] ponto-equilibrio   ← [1 artigo]
+[⚡] roi                ← [1 artigo]
+[⚡] roas               ← [1 artigo]
 ```
 
 ---
@@ -142,6 +166,11 @@ PRIORIDADE ALTA (engenharia-cimento) ✅ CONCLUÍDO
   ├── [S] cimento-para-laje ← ✅ CRIADO
   ├── [S] cimento-para-piso ← ✅ CRIADO
   └── [S] cimento-para-fundacao ← ✅ CRIADO
+
+PRIORIDADE ALTA (gestao-financeira-pessoal) ←NOVO
+  ├── [S] investimentos-basicos ← criar
+  ├── [S] reserva-de-emergencia ← criar
+  └── [S] quitacao-dividas ← criar
 
 PRIORIDADE MÉDIA (fisica-basica)
   ├── [S] velocidade-e-aceleracao ← criar

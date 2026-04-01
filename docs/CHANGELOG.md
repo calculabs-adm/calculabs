@@ -5,9 +5,10 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/).
 ## [Unreleased]
 
 ### Added
-- Artigo Knowledge Hub: `cimento-para-fundacao` (Cimento para Fundação: Quantidade Ideal, Traço Correto e Como Calcular)
-  - Categoria: engenharia-construcao, Cluster: engenharia-cimento (satellite)
-  - Whitelist: 10 artigos publicados
+- Artigo Knowledge Hub: `gestao-financeira-pessoal` (Gestão Financeira Pessoal: Guia Completo para Organizar, Economizar e Fazer Seu Dinheiro Crescer)
+  - Categoria: financas-pessoais, Cluster: gestao-financeira-pessoal (pillar)
+  - Whitelist: 11 artigos publicados
+  - Novo cluster de gestão financeira com 5 calculadoras relacionadas
 
 ### Fixed
 

@@ -23,9 +23,10 @@ Inventário oficial de artigos do Knowledge Hub. Todo artigo DEVE estar registra
 | 8 | cimento-para-laje | Cimento para Laje: Quantidade Ideal, Traço Correto e Como Calcular | engenharia-cimento | satellite | publicado | high |
 | 9 | cimento-para-piso | Cimento para Piso: Quantidade Ideal, Traço Correto e Como Calcular | engenharia-cimento | satellite | publicado | high |
 | 10 | cimento-para-fundacao | Cimento para Fundação: Quantidade Ideal, Traço Correto e Como Calcular | engenharia-cimento | satellite | publicado | high |
+| 11 | gestao-financeira-pessoal | Gestão Financeira Pessoal: Guia Completo | gestao-financeira-pessoal | pillar | publicado | high |
 
 ---
 
 ## Última Atualização
 
-2026-03-31 — Artigo ID 10 (cimento-para-fundacao) adicionado ao cluster engenharia-cimento. Total: 10 artigos publicados.
+2026-03-31 — Artigo ID 11 (gestao-financeira-pessoal) adicionado como novo cluster. Total: 11 artigos publicados. Clusters: engenharia-cimento (7), fisica-basica (1), juros-compostos (2), gestao-financeira-pessoal (1).

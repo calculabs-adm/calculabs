@@ -217,6 +217,7 @@ const ARTICLE_WHITELIST = [
   "cimento-para-laje",
   "cimento-para-piso",
   "cimento-para-fundacao",
+  "gestao-financeira-pessoal",
 ];
 
 const articles = articlesData as Article[];

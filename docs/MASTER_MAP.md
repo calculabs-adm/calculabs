@@ -3,7 +3,7 @@
 Mapa central do projeto CalcuLabs contendo clusters, artigos, calculadoras e relações.
 
 **Atualizado em:** 2026-03-31
-**Total:** 3 clusters, 10 artigos, 69 calculadoras
+**Total:** 4 clusters, 11 artigos, 69 calculadoras
 
 ---
 
@@ -72,6 +72,26 @@ Mapa central do projeto CalcuLabs contendo clusters, artigos, calculadoras e rel
 
 ---
 
+### 4. gestao-financeira-pessoal
+
+| Tipo | Slug | Título |
+|------|------|--------|
+| **Pillar** | `gestao-financeira-pessoal` | Gestão Financeira Pessoal: Guia Completo |
+
+**Calculadoras relacionadas:**
+
+| Slug | Nome |
+|------|------|
+| `margem-de-lucro` | Margem de Lucro |
+| `markup` | Markup |
+| `ponto-de-equilibrio` | Ponto de Equilíbrio |
+| `roi` | ROI |
+| `roas` | ROAS |
+
+**Status:** Cluster inicial (1 pillar + 0 satellites). Oportunidade de expansão em investimentos, aposentadoria, dívidas.
+
+---
+
 ## Artigos sem cluster (standalone)
 
 | Slug | Título | Categoria |
@@ -111,11 +131,11 @@ Mapa central do projeto CalcuLabs contendo clusters, artigos, calculadoras e rel
 |------|------|---------------------|
 | `peso-outros-planetas` | Peso em Outros Planetas | ❌ Sem artigo |
 
-**Demais categorias (60):**
+**Demais categorias (55):**
 
 | Categoria | Calculadoras | Com artigo? |
 |-----------|-------------|-------------|
-| Finanças Pessoais | 20 | ❌ Nenhuma |
+| Finanças Pessoais | 15 | ✅ 1 artigo |
 | Trabalhista e Tributário | 10 | ❌ Nenhuma |
 | Matemática | 18 | ❌ Nenhuma |
 | Saúde | 8 | ❌ Nenhuma |
