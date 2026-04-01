@@ -58,11 +58,11 @@ export default async function HomePage() {
 
   const allArticles = getPublishedArticleSlugs()
     .map((slug) => getArticleBySlug(slug))
-    .filter(Boolean);
-  const highPriority = allArticles.filter((a) => a!.priority === "high");
+    .filter((a): a is NonNullable<Article> => a !== null);
+  const highPriority = allArticles.filter((a) => a.priority === "high");
   const latestArticles = [
     ...highPriority,
-    ...allArticles.filter((a) => a!.priority !== "high"),
+    ...allArticles.filter((a) => a.priority !== "high"),
   ].slice(0, 9);
 
   const jsonLd = {
