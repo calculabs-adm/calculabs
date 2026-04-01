@@ -2114,7 +2114,7 @@
     "title": "Conversor de Velocidade km/h para m/s e Vice-Versa",
     "description": "Converta velocidade entre km/h e m/s rapidamente",
     "introduction": "O conversor de velocidade permite converter unidades de velocidade entre quilômetros por hora (km/h) e metros por segundo (m/s) de forma rápida e precisa. Essas conversões são fundamentais em física, engenharia e no dia a dia, especialmente quando se trabalha com diferentes sistemas de unidades. A conversão é simples: para transformar km/h em m/s, divide-se por 3.6; para o inverso, multiplica-se por 3.6.",
-    "formula": "if(conversao == 0, velocidade / 3.6, velocidade * 3.6)",
+    "formula": "resultado = if(conversao == 0, velocidade / 3.6, velocidade * 3.6)",
     "formula_display": "v (m/s) = v (km/h) ÷ 3.6 | v (km/h) = v (m/s) × 3.6",
     "variables": "[{\"id\":\"velocidade\",\"label\":\"Velocidade\",\"type\":\"number\",\"unit\":\"\",\"placeholder\":\"Digite a velocidade\",\"min\":0,\"default\":60},{\"id\":\"conversao\",\"label\":\"Conversão\",\"type\":\"select\",\"options\":[{\"value\":0,\"label\":\"km/h para m/s\"},{\"value\":1,\"label\":\"m/s para km/h\"}]}]",
     "steps": "[\"Selecione o tipo de conversão desejada\",\"Digite o valor da velocidade\",\"O resultado será exibido automaticamente na unidade convertida\"]",
