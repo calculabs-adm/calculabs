@@ -2,7 +2,7 @@
 
 Inventário completo de todas as calculadoras disponíveis no CalcuLabs. Este é o arquivo-fonte único — toda criação, alteração ou remoção de calculadora DEVE ser refletida aqui.
 
-**Total: 69 calculadoras**
+**Total: 70 calculadoras**
 
 ---
 
@@ -173,9 +173,9 @@ Inventário completo de todas as calculadoras disponíveis no CalcuLabs. Este é
 
 ---
 
-## Ciência (5)
+## Ciência (6)
 
-### Física (4)
+### Física (5)
 
 | ID | Nome | Slug | Complexidade | Monetização |
 |----|------|------|-------------|-------------|
@@ -183,6 +183,7 @@ Inventário completo de todas as calculadoras disponíveis no CalcuLabs. Este é
 | 118 | Calculadora de Força (Lei de Newton) | `forca-lei-de-newton` | básico | ads |
 | 119 | Calculadora de Energia Cinética | `energia-cinetica` | básico | ads |
 | 120 | Calculadora de Trabalho | `trabalho-forca-distancia` | básico | ads |
+| 121 | Conversor de Velocidade (km/h ↔ m/s) | `conversor-velocidade-kmh-ms` | básico | ads |
 
 ### Quântica (1)
 

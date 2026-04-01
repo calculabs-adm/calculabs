@@ -2,8 +2,8 @@
 
 Mapa central do projeto CalcuLabs contendo clusters, artigos, calculadoras e relações.
 
-**Atualizado em:** 2026-03-31
-**Total:** 4 clusters, 13 artigos, 69 calculadoras
+**Atualizado em:** 2026-04-01
+**Total:** 4 clusters, 13 artigos, 70 calculadoras
 
 ---
 
@@ -48,6 +48,7 @@ Mapa central do projeto CalcuLabs contendo clusters, artigos, calculadoras e rel
 | `energia-cinetica` | Calculadora de Energia Cinética |
 | `trabalho-forca-distancia` | Calculadora de Trabalho |
 | `velocidade-media` | Velocidade Média |
+| `conversor-velocidade-kmh-ms` | Conversor de Velocidade (km/h ↔ m/s) |
 
 **Status:** Cluster inicial (1 pillar + 0 satellites). Oportunidade de expansão em aceleração, gravidade, pressão.
 
