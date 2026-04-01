@@ -3,7 +3,7 @@
 Mapa central do projeto CalcuLabs contendo clusters, artigos, calculadoras e relações.
 
 **Atualizado em:** 2026-04-01
-**Total:** 4 clusters, 13 artigos, 70 calculadoras
+**Total:** 4 clusters, 13 artigos, 71 calculadoras
 
 ---
 
@@ -49,6 +49,7 @@ Mapa central do projeto CalcuLabs contendo clusters, artigos, calculadoras e rel
 | `trabalho-forca-distancia` | Calculadora de Trabalho |
 | `velocidade-media` | Velocidade Média |
 | `conversor-velocidade-kmh-ms` | Conversor de Velocidade (km/h ↔ m/s) |
+| `lei-gravitacao-universal` | Lei da Gravitação Universal de Newton |
 
 **Status:** Cluster inicial (1 pillar + 0 satellites). Oportunidade de expansão em aceleração, gravidade, pressão.
 

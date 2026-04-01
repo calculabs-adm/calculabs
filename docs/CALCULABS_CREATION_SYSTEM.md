@@ -179,6 +179,7 @@ Regras obrigatórias:
 - incluir obrigatoriamente "Explicação do Professor" como último bloco
 - linguagem simples e educativa
 - conteúdo diretamente relacionado à calculadora
+- evitar a utilização de emoji
 
 Estrutura obrigatória:
 
@@ -213,6 +214,8 @@ Blocos Temáticos Sugeridos (flexível)
 - Curiosidade Surpreendente
 - Aplicação no Mundo Real
 - Insight ou Regra Prática
+- Onde podemos aplicar este calculo
+- Onde podemos aplicar esta calculadora
 - A Fórmula Explicada
 - Comparação Visual
 - Desafio Rápido
