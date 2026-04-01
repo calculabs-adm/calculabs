@@ -1,15 +1,8 @@
 import Link from "next/link";
-import { getCategoriesWithCount, getLatestCalculators, getPublishedArticleSlugs, getArticleBySlug } from "@/lib/data";
+import { getCategoriesWithCount, getLatestCalculators, getPublishedArticleSlugs, getArticleBySlug, type Article } from "@/lib/data";
 import LatestCalculatorsCarousel from "@/components/home/LatestCalculatorsCarousel";
 import LatestArticlesCarousel from "@/components/home/LatestArticlesCarousel";
 import type { Metadata } from "next";
-
-interface Article {
-  slug: string;
-  title: string;
-  summary: string;
-  priority?: string;
-}
 
 export const metadata: Metadata = {
   title: "CalcuLabs | Calculadoras Online Gratuitas",

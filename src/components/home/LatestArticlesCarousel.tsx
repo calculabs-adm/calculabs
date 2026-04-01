@@ -2,12 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
-
-interface Article {
-  slug: string;
-  title: string;
-  summary: string;
-}
+import type { Article } from "@/lib/data";
 
 interface ArticleCardProps {
   article: Article;
