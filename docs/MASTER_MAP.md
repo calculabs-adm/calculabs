@@ -3,7 +3,7 @@
 Mapa central do projeto CalcuLabs contendo clusters, artigos, calculadoras e relações.
 
 **Atualizado em:** 2026-03-31
-**Total:** 4 clusters, 12 artigos, 69 calculadoras
+**Total:** 4 clusters, 13 artigos, 69 calculadoras
 
 ---
 
@@ -78,6 +78,7 @@ Mapa central do projeto CalcuLabs contendo clusters, artigos, calculadoras e rel
 |------|------|--------|
 | **Pillar** | `gestao-financeira-pessoal` | Gestão Financeira Pessoal: Guia Completo |
 | Satellite | `margem-de-lucro` | Margem de Lucro: Como Calcular e Aumentar Rentabilidade |
+| Satellite | `markup` | Markup: O Que É, Como Calcular e Definir o Preço de Venda |
 
 **Calculadoras relacionadas:**
 
@@ -89,7 +90,7 @@ Mapa central do projeto CalcuLabs contendo clusters, artigos, calculadoras e rel
 | `roi` | ROI |
 | `roas` | ROAS |
 
-**Status:** Cluster crescendo (1 pillar + 1 satellite). Próximos satellites sugeridos: investimentos, aposentadoria, controle de dívidas.
+**Status:** Cluster em crescimento (1 pillar + 2 satellites). Próximos satellites sugeridos: investimentos, aposentadoria, controle de dívidas.
 
 ---
 

@@ -5,6 +5,10 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/).
 ## [Unreleased]
 
 ### Added
+- Artigo Knowledge Hub: `markup` (Markup: O Que É, Como Calcular e Definir o Preço de Venda Correto)
+  - Categoria: financas-pessoais, Cluster: gestao-financeira-pessoal (satellite)
+  - Whitelist: 13 artigos publicados
+  - Cluster gestao-financeira-pessoal com 3 satellites
 - Artigo Knowledge Hub: `margem-de-lucro` (Margem de Lucro: O Que É, Como Calcular e Aumentar a Rentabilidade do Seu Negócio)
   - Categoria: financas-pessoais, Cluster: gestao-financeira-pessoal (satellite)
   - Whitelist: 12 artigos publicados

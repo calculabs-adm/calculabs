@@ -219,6 +219,7 @@ const ARTICLE_WHITELIST = [
   "cimento-para-fundacao",
   "gestao-financeira-pessoal",
   "margem-de-lucro",
+  "markup",
 ];
 
 const articles = articlesData as Article[];

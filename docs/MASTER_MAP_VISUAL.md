@@ -35,9 +35,10 @@ CALCULABS KNOWLEDGE HUB
 │   ├── [⚡] juros-simples
 │   └── [⚡] rendimento-cdb
 │
-├── [C] gestao-financeira-pessoal ⚠️ CRESCENDO (1P + 1S) ←EXPANDINDO
+├── [C] gestao-financeira-pessoal ⚠️ CRESCENDO (1P + 2S) ←EXPANDINDO
 │   ├── [P] gestao-financeira-pessoal
-│   ├── [S] margem-de-lucro ←NOVO
+│   ├── [S] margem-de-lucro
+│   ├── [S] markup ←NOVO
 │   ├── [⚡] margem-de-lucro
 │   ├── [⚡] markup
 │   ├── [⚡] ponto-de-equilibrio
@@ -135,12 +136,17 @@ CALCULABS KNOWLEDGE HUB
   ├─→ [⚡] roas
   └─→ [ARTIGO] juros-compostos-guia-completo
 
-[ARTIGO] margem-de-lucro (satellite) ←NOVO
+[ARTIGO] margem-de-lucro (satellite)
   ├─→ [⚡] margem-de-lucro
   ├─→ [⚡] markup
   ├─→ [⚡] ponto-de-equilibrio
   ├─→ [⚡] roi
   └─→ [ARTIGO] gestao-financeira-pessoal
+
+[ARTIGO] markup (satellite) ←NOVO
+  ├─→ [⚡] markup
+  ├─→ [⚡] margem-de-lucro
+  └─→ [ARTIGO] margem-de-lucro
 ```
 
 ---
@@ -177,6 +183,7 @@ PRIORIDADE ALTA (engenharia-cimento) ✅ CONCLUÍDO
 
 PRIORIDADE ALTA (gestao-financeira-pessoal) ←EXPANDINDO
   ├── [S] margem-de-lucro ← ✅ CRIADO
+  ├── [S] markup ← ✅ CRIADO
   ├── [S] investimentos-basicos ← criar
   ├── [S] reserva-de-emergencia ← criar
   └── [S] quitacao-dividas ← criar
