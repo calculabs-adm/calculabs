@@ -2,6 +2,10 @@
 
 ## Recently Completed
 
+- [x] Fixed ARTICLE_WHITELIST by adding 4 new article slugs (fluxo-de-caixa, despesas-fixas-e-variaveis, capital-de-giro, roi)
+- [x] Validated build generates static HTML pages for new article routes
+- [x] Verified production URLs return 404 (deploy pending to make routes accessible)
+
 - [x] Atualizar documentação: CHANGELOG.md, FEATURES.md, SYSTEM_OVERVIEW.md, MASTER_MAP.md, MASTER_MAP_VISUAL.md
 - [x] Publish Knowledge Hub article: cimento-para-piso (Cimento para Piso: Quantidade Ideal, Traço Correto e Como Calcular). Added to articles.json with expanded content (~1518 words), registered in ARTICLE_WHITELIST in src/lib/data.ts. Category: engenharia-construcao, Cluster: engenharia-cimento (satellite). Related calculators: quantidade-cimento, quantidade-tijolos, consumo-tinta-m2. Internal links: quantidade-de-cimento-por-m2, traco-de-concreto-proporcao. Validator passed. Whitelist now at 9 articles.
 - [x] Create institutional pages: /sobre, /contato, /privacidade, /termos. Pages already linked in Footer but had no routes. Created with Server Components, SEO metadata, and consistent styling. Sitemap updated with 4 new entries (priority 0.3-0.5, yearly frequency).
@@ -13,6 +17,8 @@
 - [x] Knowledge Hub implementado: rota /conhecimento/[slug], validador CLI, inventário
 
 ## Current State
+
+Article routing corrections completed locally. Build generates static pages successfully. Production deploy required to make the 4 new article routes accessible at https://www.calculabs.com.br/conhecimento/[slug].
 
 **Project Status**: 🚀 CalcuLabs - Versão 1.1.0
 

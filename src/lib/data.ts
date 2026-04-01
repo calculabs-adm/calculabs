@@ -221,6 +221,10 @@ const ARTICLE_WHITELIST = [
   "margem-de-lucro",
   "markup",
   "ponto-de-equilibrio",
+  "fluxo-de-caixa",
+  "despesas-fixas-e-variaveis",
+  "capital-de-giro",
+  "roi",
 ];
 
 const articles = articlesData as Article[];

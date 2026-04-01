@@ -1,0 +1,50 @@
+
+> nextjs-template@0.1.0 build
+> next build
+
+▲ Next.js 16.2.1 (Turbopack)
+- Environments: .env.local
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 2.8s
+  Running TypeScript ...
+  Finished TypeScript in 4.9s ...
+  Collecting page data using 7 workers ...
+  Generating static pages using 7 workers (0/41) ...
+  Generating static pages using 7 workers (10/41) 
+  Generating static pages using 7 workers (20/41) 
+  Generating static pages using 7 workers (30/41) 
+✓ Generating static pages using 7 workers (41/41) in 684ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ● /[categoria]
+│ ├ /financas-pessoais
+│ ├ /trabalhista-tributario
+│ ├ /matematica
+│ └ [+5 more paths]
+├ ● /[categoria]/[subcategoria]/[calculo]
+├ ƒ /api/report-error
+├ ƒ /api/seed
+├ ƒ /api/tracking
+├ ƒ /busca
+├ ƒ /conhecimento
+├ ● /conhecimento/[slug]
+│ ├ /conhecimento/quantidade-de-cimento-por-m2
+│ ├ /conhecimento/quantos-sacos-de-cimento-por-m2
+│ ├ /conhecimento/traco-de-concreto-proporcao
+│ └ [+15 more paths]
+├ ○ /contato
+├ ○ /privacidade
+├ ○ /robots.txt
+├ ○ /sitemap.xml
+├ ○ /sobre
+└ ○ /termos
+
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ƒ  (Dynamic)  server-rendered on demand
+

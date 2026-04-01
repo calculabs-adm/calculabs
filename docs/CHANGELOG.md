@@ -4,6 +4,8 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
 
+- Fixed ARTICLE_WHITELIST to include slugs for 4 new articles: fluxo-de-caixa, despesas-fixas-e-variaveis, capital-de-giro, roi
+
 ### Added
 - Artigo Knowledge Hub: `markup` (Markup: O Que É, Como Calcular e Definir o Preço de Venda Correto)
   - Categoria: financas-pessoais, Cluster: gestao-financeira-pessoal (satellite)
