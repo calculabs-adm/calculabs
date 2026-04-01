@@ -4,6 +4,7 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
 
+- Added articles carousel on home page displaying latest published articles with auto-scroll and navigation controls
 - Fixed ARTICLE_WHITELIST to include slugs for 4 new articles: fluxo-de-caixa, despesas-fixas-e-variaveis, capital-de-giro, roi
 
 ### Added

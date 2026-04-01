@@ -86,6 +86,11 @@
 - `/privacidade` - Política de Privacidade (LGPD)
 - `/termos` - Termos de Uso
 
+### 14. Carousel de Artigos na Home Page
+- Exibe os últimos artigos publicados em formato carousel
+- Navegação automática (5s) e controles manuais
+- Design responsivo: 1 item no mobile, 2 no tablet, 3 no desktop
+
 ## Categorias Disponíveis
 
 | Categoria | Slug | Calculadoras |
