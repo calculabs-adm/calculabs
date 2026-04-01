@@ -4,6 +4,7 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
 
+- Fixed Lei da Gravitação Universal de Newton calculator - added scientific notation for very large results (>= 1e15)
 - Added Lei da Gravitação Universal de Newton calculator (id 122) in Ciência > Física
 - Added CALCULABS_CREATION_SYSTEM.md with strict guidelines for calculator creation and validation
 - Enhanced carousel navigation buttons with blue styling and shadows for better visibility

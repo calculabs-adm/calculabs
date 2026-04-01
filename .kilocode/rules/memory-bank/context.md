@@ -2,6 +2,7 @@
 
 ## Recently Completed
 
+- [x] Fixed Lei da Gravitação Universal de Newton calculator - added scientific notation formatting for very large results (>= 1e15)
 - [x] Fixed ARTICLE_WHITELIST by adding 4 new article slugs (fluxo-de-caixa, despesas-fixas-e-variaveis, capital-de-giro, roi)
 - [x] Validated build generates static HTML pages for new article routes
 - [x] Verified production URLs return 404 (deploy pending to make routes accessible)

@@ -393,7 +393,12 @@ function formatResultValue(key: string, value: number | string): string {
       '0': '⁰', '1': '¹', '2': '²', '3': '³', '4': '⁴', '5': '⁵', '6': '⁶', '7': '⁷', '8': '⁸', '9': '⁹', '-': '⁻'
     };
     const expNum = exponent.replace(/[0-9]/g, d => superscriptMap[d]).replace('-', superscriptMap['-']);
-    return `${base} × 10${expNum} J`;
+    return `${base} × 10${expNum}`;
+  }
+
+  // Scientific notation for very large values
+  if (Math.abs(value) >= 1e15 && value !== 0) {
+    return value.toExponential(2).replace('.', ',');
   }
 
   // Default: format with 2 decimal places
