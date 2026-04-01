@@ -107,7 +107,7 @@ export default function LatestArticlesCarousel({
           <button
             onClick={goToPrevious}
             disabled={currentIndex === 0}
-            className="w-12 h-12 flex items-center justify-center rounded-full bg-blue-600 text-white shadow-lg hover:bg-blue-700 hover:shadow-xl disabled:bg-slate-300 disabled:shadow-none disabled:cursor-not-allowed transition-all duration-200"
+            className="w-12 h-12 flex items-center justify-center rounded-full bg-blue-600 text-white shadow-lg ring-2 ring-blue-300 hover:bg-blue-700 hover:shadow-xl hover:ring-blue-400 disabled:bg-slate-300 disabled:shadow-none disabled:ring-0 disabled:cursor-not-allowed transition-all duration-200"
             aria-label="Artigo anterior"
           >
             ←
@@ -115,7 +115,7 @@ export default function LatestArticlesCarousel({
           <button
             onClick={goToNext}
             disabled={currentIndex >= maxIndex}
-            className="w-12 h-12 flex items-center justify-center rounded-full bg-blue-600 text-white shadow-lg hover:bg-blue-700 hover:shadow-xl disabled:bg-slate-300 disabled:shadow-none disabled:cursor-not-allowed transition-all duration-200"
+            className="w-12 h-12 flex items-center justify-center rounded-full bg-blue-600 text-white shadow-lg ring-2 ring-blue-300 hover:bg-blue-700 hover:shadow-xl hover:ring-blue-400 disabled:bg-slate-300 disabled:shadow-none disabled:ring-0 disabled:cursor-not-allowed transition-all duration-200"
             aria-label="Próximo artigo"
           >
             →
