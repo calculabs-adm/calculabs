@@ -3,12 +3,12 @@
 ## Visão Geral
 
 Este documento é o **padrão oficial** para criação de artigos no Knowledge Hub CalcuLabs.
-Complementa os documentos `docs/CALCULABS_ARTICLE_SPEC.md` e `docs/article-creation.md`.
+Complementa os documentos `docs/CALCULABS_ARTICLE_SPEC.md` e `docs/SEO_QUALITY_STANDARD.md`.
 
 **Referências importantes:**
 - 📋 [CALCULABS_ARTICLE_SPEC.md](../docs/CALCULABS_ARTICLE_SPEC.md) - Especificação técnica
 - 🎯 [SEO_QUALITY_STANDARD.md](../docs/SEO_QUALITY_STANDARD.md) - Padrões de qualidade
-- 📖 [ARTICLE_CREATION_SYSTEM.md](../docs/ARTICLE_CREATION_SYSTEM.md) - Sistema completo
+- 📖 Sistema integrado de criação (consulte docs/ para visão geral)
 
 ## Validação Automática
 
@@ -343,7 +343,7 @@ Todos os artigos passam por **validação obrigatória** usando:
 ### Documentos Relacionados
 - 📋 **[CALCULABS_ARTICLE_SPEC.md](../docs/CALCULABS_ARTICLE_SPEC.md)** - Especificação técnica completa
 - 🎯 **[SEO_QUALITY_STANDARD.md](../docs/SEO_QUALITY_STANDARD.md)** - Padrões de qualidade detalhados
-- 📖 **[ARTICLE_CREATION_SYSTEM.md](../docs/ARTICLE_CREATION_SYSTEM.md)** - Sistema automatizado completo
+- 📖 **Sistema integrado** - Consulte docs/ para documentação completa
 - 🗺️ **[MASTER_MAP.md](../docs/MASTER_MAP.md)** - Mapa de clusters e relacionamentos
 
 ### Ferramentas de Apoio

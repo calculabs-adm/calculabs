@@ -2,8 +2,8 @@
 
 ## Visão Geral
 
-Este documento é complementar ao CALCULABS_ARTICLE_SPEC.md e article-creation.md.
-Todos os artigos devem seguir ambos os padrões.
+Este documento é complementar ao CALCULABS_ARTICLE_SPEC.md e .kilocode/recipes/article-generator.md.
+Todos os artigos devem seguir estes padrões de qualidade.
 
 ## Validação Automática
 
