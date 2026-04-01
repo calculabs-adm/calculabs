@@ -359,6 +359,24 @@ function evaluateClientFormula(
 function formatResultValue(key: string, value: number | string): string {
   // If value is already a string (like age result), return it directly
   if (typeof value === "string") return value;
+
+  const lowerKey = key.toLowerCase();
+
+  // Check for scientific notation BEFORE currency formatting (for very small or large values)
+  if (Math.abs(value) < 1e-10 && value !== 0) {
+    const exp = value.toExponential(3);
+    const [base, exponent] = exp.split('e');
+    const superscriptMap: Record<string, string> = {
+      '0': '⁰', '1': '¹', '2': '²', '3': '³', '4': '⁴', '5': '⁵', '6': '⁶', '7': '⁷', '8': '⁸', '9': '⁹', '-': '⁻'
+    };
+    const expNum = exponent.replace(/[0-9]/g, d => superscriptMap[d]).replace('-', superscriptMap['-']);
+    return `${base} × 10${expNum}`;
+  }
+
+  if (Math.abs(value) >= 1e15 && value !== 0) {
+    return value.toExponential(2).replace('.', ',');
+  }
+
   // Currency-related keys
   const currencyKeys = [
     "M", "montante", "parcela", "juros", "total", "valor", "saldo", "rendimento",
@@ -372,8 +390,6 @@ function formatResultValue(key: string, value: number | string): string {
     "percentual", "taxa", "rendimento_percentual",
   ];
 
-  const lowerKey = key.toLowerCase();
-
   if (percentKeys.some((k) => lowerKey.includes(k))) {
     return `${value.toFixed(2).replace(".", ",")}%`;
   }
@@ -383,22 +399,6 @@ function formatResultValue(key: string, value: number | string): string {
       style: "currency",
       currency: "BRL",
     }).format(value);
-  }
-
-  // Scientific notation for very small values
-  if (Math.abs(value) < 1e-10 && value !== 0) {
-    const exp = value.toExponential(3);
-    const [base, exponent] = exp.split('e');
-    const superscriptMap: Record<string, string> = {
-      '0': '⁰', '1': '¹', '2': '²', '3': '³', '4': '⁴', '5': '⁵', '6': '⁶', '7': '⁷', '8': '⁸', '9': '⁹', '-': '⁻'
-    };
-    const expNum = exponent.replace(/[0-9]/g, d => superscriptMap[d]).replace('-', superscriptMap['-']);
-    return `${base} × 10${expNum}`;
-  }
-
-  // Scientific notation for very large values
-  if (Math.abs(value) >= 1e15 && value !== 0) {
-    return value.toExponential(2).replace('.', ',');
   }
 
   // Default: format with 2 decimal places
