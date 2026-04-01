@@ -363,7 +363,7 @@ function formatResultValue(key: string, value: number | string): string {
   const lowerKey = key.toLowerCase();
 
   // Check for scientific notation BEFORE currency formatting (for very small or large values)
-  if (Math.abs(value) < 1e-10 && value !== 0) {
+  if (Math.abs(value) < 1e-6 && value !== 0) {
     const exp = value.toExponential(3);
     const [base, exponent] = exp.split('e');
     const superscriptMap: Record<string, string> = {
