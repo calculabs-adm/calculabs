@@ -220,6 +220,7 @@ const ARTICLE_WHITELIST = [
   "gestao-financeira-pessoal",
   "margem-de-lucro",
   "markup",
+  "ponto-de-equilibrio",
 ];
 
 const articles = articlesData as Article[];
