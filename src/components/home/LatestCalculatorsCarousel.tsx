@@ -118,7 +118,7 @@ export default function LatestCalculatorsCarousel({
           <button
             onClick={goToPrevious}
             disabled={currentIndex === 0}
-            className="w-10 h-10 flex items-center justify-center rounded-full border border-slate-200 bg-white text-slate-600 hover:bg-slate-50 hover:border-blue-300 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+            className="w-12 h-12 flex items-center justify-center rounded-full bg-blue-600 text-white shadow-lg hover:bg-blue-700 hover:shadow-xl disabled:bg-slate-300 disabled:shadow-none disabled:cursor-not-allowed transition-all duration-200"
             aria-label="Calculadora anterior"
           >
             ←
@@ -126,7 +126,7 @@ export default function LatestCalculatorsCarousel({
           <button
             onClick={goToNext}
             disabled={currentIndex >= maxIndex}
-            className="w-10 h-10 flex items-center justify-center rounded-full border border-slate-200 bg-white text-slate-600 hover:bg-slate-50 hover:border-blue-300 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+            className="w-12 h-12 flex items-center justify-center rounded-full bg-blue-600 text-white shadow-lg hover:bg-blue-700 hover:shadow-xl disabled:bg-slate-300 disabled:shadow-none disabled:cursor-not-allowed transition-all duration-200"
             aria-label="Próxima calculadora"
           >
             →
