@@ -2,7 +2,8 @@
 
 ## Visão Geral
 
-Este documento define os padrões de qualidade SEO que todos os artigos do CalcuLabs devem seguir para garantir máxima visibilidade no Google e experiência otimizada para usuários.
+Este documento é complementar ao CALCULABS_ARTICLE_SPEC.md e article-creation.md.
+Todos os artigos devem seguir ambos os padrões.
 
 ## Validação Automática
 
@@ -29,7 +30,7 @@ Todos os novos artigos passam por validação automática usando o script `scrip
 - **Exemplo**: `Aprenda como calcular margem de lucro corretamente, entender sua rentabilidade e melhorar os resultados do seu negócio. Guia completo com fórmulas e exemplos.`
 
 ### ✅ Conteúdo (1500+ palavras)
-- **Regra**: Mínimo 1500 palavras de conteúdo útil
+- **Regra**: Mínimo: 1500 palavras, Recomendado: 2000+, Pillar: 3000+
 - **Qualidade**: Informações originais, práticas e acionáveis
 - **Estrutura**: Introdução + seções detalhadas + conclusão
 
@@ -61,6 +62,13 @@ Todos os novos artigos passam por validação automática usando o script `scrip
 - **Exemplos**: "margem de lucro", "ROI", "ponto de equilíbrio"
 
 ### 🔗 Internal Links (1+)
+- Internal Links:
+- Mínimo: 3
+- Ideal: 5+
+- Deve incluir:
+  - 1 pillar
+  - 1 calculadora
+  - 1 artigo relacionado
 - **Relevância**: Links para artigos relacionados
 - **Contexto**: Links naturais dentro do conteúdo
 - **Benefício**: Navegação e autoridade interna
@@ -125,6 +133,31 @@ Todos os novos artigos passam por validação automática usando o script `scrip
 - **Engajamento**: Tempo médio na página > 3 minutos
 - **Conversão**: Cliques para calculadoras relacionadas
 - **Indexação**: Aparecer nos resultados do Google em 24h
+
+## 🧩 Cluster SEO
+
+- Todo artigo deve pertencer a um cluster
+- Classificação obrigatória:
+  - pillar
+  - satellite
+- Satellite deve linkar para o pillar
+- Pillar deve linkar para satellites
+
+## 🧩 Cluster SEO
+
+- Todo artigo deve pertencer a um cluster
+- Classificação obrigatória:
+  - pillar
+  - satellite
+- Satellite deve linkar para o pillar
+- Pillar deve linkar para satellites
+
+## 🔄 Conversão (Soft CTA)
+
+- Inserir links naturais para:
+  - calculadoras
+  - artigos relacionados
+- Evitar CTA agressivo
 
 ---
 
