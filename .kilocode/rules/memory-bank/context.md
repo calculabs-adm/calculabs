@@ -41,7 +41,7 @@ Portal brasileiro de calculadoras online gratuitas com 69 calculadoras em 8 cate
 | Cluster | Pilar | Satélites | Status |
 |---------|-------|-----------|--------|
 | engenharia-cimento | 1 | 5 | Completo |
-| fisica-basica | 1 | 0 | Em expansão |
+| fisica-basica | 1 | 1 | Em expansão |
 | juros-compostos | 1 | 1 | Em expansão |
 
 ## Session History

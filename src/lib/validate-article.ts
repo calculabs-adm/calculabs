@@ -160,8 +160,8 @@ function validateArticle(
     errors.push({ field: 'content', message: 'Content não pode ser vazio' });
   } else {
     const wordCount = countWords(article.content);
-    if (wordCount < 1500) {
-      errors.push({ field: 'content', message: `Content deve ter no mínimo 1500 palavras. Atual: ${wordCount}` });
+    if (wordCount < 2500) {
+      errors.push({ field: 'content', message: `Content deve ter no mínimo 2500 palavras. Atual: ${wordCount}` });
     }
     if (!hasInternalLinks(article.content)) {
       errors.push({ field: 'content', message: 'Content deve conter pelo menos 2 links internos (atributo href)' });
