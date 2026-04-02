@@ -21,15 +21,17 @@ CALCULABS KNOWLEDGE HUB
 │   ├── [⚡] quantidade-tijolos
 │   └── [⚡] consumo-tinta-m2
 │
-├── [C] fisica-basica ⚠️ EM EXPANSÃO (1P + 1S)
+├── [C] fisica-basica ⚠️ EM EXPANSÃO (1P + 2S)
 │   ├── [P] forca-energia-e-trabalho
-│   ├── [S] velocidade-e-aceleracao ←NOVO
+│   ├── [S] velocidade-e-aceleracao
+│   ├── [S] gravidade-e-peso ←NOVO
 │   ├── [⚡] forca-lei-de-newton
 │   ├── [⚡] energia-cinetica
 │   ├── [⚡] trabalho-forca-distancia
 │   ├── [⚡] velocidade-media
 │   ├── [⚡] conversor-velocidade-kmh-ms
-│   └── [⚡] lei-gravitacao-universal
+│   ├── [⚡] lei-gravitacao-universal
+│   └── [⚡] peso-outros-planetas
 │
 ├── [C] juros-compostos ⚠️ INICIAL (1P + 1S)
 │   ├── [P] juros-compostos-guia-completo
@@ -119,10 +121,16 @@ CALCULABS KNOWLEDGE HUB
   ├─→ [⚡] velocidade-media
   └─→ [ARTIGO] velocidade-e-aceleracao
 
-[ARTIGO] velocidade-e-aceleracao (satellite) ←NOVO
+[ARTIGO] velocidade-e-aceleracao (satellite)
   ├─→ [⚡] velocidade-media
   ├─→ [⚡] energia-cinetica
   ├─→ [⚡] forca-lei-de-newton
+  └─→ [ARTIGO] forca-energia-e-trabalho
+
+[ARTIGO] gravidade-e-peso (satellite) ←NOVO
+  ├─→ [⚡] peso-outros-planetas
+  ├─→ [⚡] lei-gravitacao-universal
+  ├─→ [⚡] energia-cinetica
   └─→ [ARTIGO] forca-energia-e-trabalho
 ```
 
@@ -198,6 +206,7 @@ CALCULABS KNOWLEDGE HUB
 [⚡] energia-cinetica   ← [2 artigos]
 [⚡] trabalho-f-d       ← [2 artigos]
 [⚡] velocidade-media   ← [1 artigo]
+[⚡] peso-outros-planetas ← [1 artigo]
 [⚡] juros-compostos    ← [2 artigos]
 [⚡] juros-simples      ← [1 artigo]
 [⚡] rendimento-cdb     ← [1 artigo]

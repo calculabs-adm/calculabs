@@ -32,9 +32,10 @@ Inventário oficial de artigos do Knowledge Hub. Todo artigo DEVE estar registra
 | 17 | capital-de-giro | Capital de Giro: O Que É e Como Calcular para Seu Negócio | gestao-financeira-pessoal | satellite | publicado | medium |
 | 18 | roi | ROI: Retorno sobre Investimento - Como Calcular e Interpretar | gestao-financeira-pessoal | satellite | publicado | medium |
 | 19 | ponto-de-equilibrio | Ponto de Equilíbrio: Como Calcular Quando Seu Negócio Dá Lucro | gestao-financeira-pessoal | satellite | publicado | medium |
+| 20 | gravidade-e-peso | Gravidade e Peso: Diferenças, Conceitos e Aplicações na Física | fisica-basica | satellite | publicado | high |
 
 ---
 
 ## Última Atualização
 
-2026-04-01 — Inventário sincronizado com todos os 19 artigos publicados. Clusters: engenharia-cimento (7), fisica-basica (2), juros-compostos (2), gestao-financeira-pessoal (8).
+2026-04-01 — Inventário sincronizado com todos os 20 artigos publicados. Clusters: engenharia-cimento (7), fisica-basica (3), juros-compostos (2), gestao-financeira-pessoal (8).

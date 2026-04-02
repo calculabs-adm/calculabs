@@ -27,7 +27,7 @@ O conteúdo das calculadoras está armazenado em arquivos JSON estáticos em `sr
 - `categories.json` — 8 categorias
 - `subcategories.json` — 17 subcategorias
 - `calculators.json` — 71 calculadoras
-- `articles.json` — 19 artigos do Knowledge Hub
+- `articles.json` — 20 artigos do Knowledge Hub
 
 O banco de dados (SQLite/Turso) existe mas é usado para seeding e features futuras. A leitura em runtime usa os JSONs.
 
@@ -79,4 +79,4 @@ Execução: `bun run src/lib/validate-article.ts [slug]`
 
 ## Última Atualização
 
-2026-04-01 — Atualização: 71 calculadoras, 19 artigos, Knowledge Hub completo, sistema de validação implementado.
+2026-04-01 — Atualização: 71 calculadoras, 20 artigos, Knowledge Hub expandido, artigo "gravidade-e-peso" adicionado.

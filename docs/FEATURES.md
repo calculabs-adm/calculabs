@@ -72,7 +72,7 @@
 
 ### 12. Knowledge Hub (IMPLEMENTADO)
 - Sistema de governança de artigos com spec rígida
-- 19 artigos publicados em 4 clusters
+- 20 artigos publicados em 4 clusters
 - Spec oficial: `docs/CALCULABS_ARTICLE_SPEC.md`
 - Inventário: `docs/master_inventory-articles.md`
 - Dados: `src/data/articles.json`
@@ -138,4 +138,4 @@
 
 ## Última Atualização
 
-2026-04-01 — Atualização: 71 calculadoras, 19 artigos publicados, Knowledge Hub completo.
+2026-04-01 — Atualização: 71 calculadoras, 20 artigos publicados, Knowledge Hub expandido.
