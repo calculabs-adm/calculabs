@@ -38,10 +38,15 @@ CALCULABS KNOWLEDGE HUB
 │   ├── [⚡] juros-simples
 │   └── [⚡] rendimento-cdb
 │
-├── [C] gestao-financeira-pessoal ⚠️ CRESCENDO (1P + 2S) ←EXPANDINDO
+├── [C] gestao-financeira-pessoal ✅ MADURO (1P + 7S)
 │   ├── [P] gestao-financeira-pessoal
 │   ├── [S] margem-de-lucro
-│   ├── [S] markup ←NOVO
+│   ├── [S] markup
+│   ├── [S] ponto-de-equilibrio
+│   ├── [S] fluxo-de-caixa
+│   ├── [S] despesas-fixas-e-variaveis
+│   ├── [S] capital-de-giro
+│   ├── [S] roi
 │   ├── [⚡] margem-de-lucro
 │   ├── [⚡] markup
 │   ├── [⚡] ponto-de-equilibrio
@@ -153,10 +158,32 @@ CALCULABS KNOWLEDGE HUB
   ├─→ [⚡] roi
   └─→ [ARTIGO] gestao-financeira-pessoal
 
-[ARTIGO] markup (satellite) ←NOVO
+[ARTIGO] markup (satellite)
   ├─→ [⚡] markup
   ├─→ [⚡] margem-de-lucro
   └─→ [ARTIGO] margem-de-lucro
+
+[ARTIGO] ponto-de-equilibrio (satellite)
+  ├─→ [⚡] ponto-de-equilibrio
+  ├─→ [⚡] margem-de-lucro
+  └─→ [ARTIGO] gestao-financeira-pessoal
+
+[ARTIGO] fluxo-de-caixa (satellite)
+  ├─→ [⚡] margem-de-lucro
+  └─→ [ARTIGO] gestao-financeira-pessoal
+
+[ARTIGO] despesas-fixas-e-variaveis (satellite)
+  ├─→ [⚡] margem-de-lucro
+  └─→ [ARTIGO] gestao-financeira-pessoal
+
+[ARTIGO] capital-de-giro (satellite)
+  ├─→ [⚡] margem-de-lucro
+  └─→ [ARTIGO] gestao-financeira-pessoal
+
+[ARTIGO] roi (satellite)
+  ├─→ [⚡] roi
+  ├─→ [⚡] margem-de-lucro
+  └─→ [ARTIGO] gestao-financeira-pessoal
 ```
 
 ---
@@ -174,10 +201,10 @@ CALCULABS KNOWLEDGE HUB
 [⚡] juros-compostos    ← [2 artigos]
 [⚡] juros-simples      ← [1 artigo]
 [⚡] rendimento-cdb     ← [1 artigo]
-[⚡] margem-lucro       ← [2 artigos]
+[⚡] margem-lucro       ← [7 artigos]
 [⚡] markup             ← [1 artigo]
-[⚡] ponto-equilibrio   ← [1 artigo]
-[⚡] roi                ← [1 artigo]
+[⚡] ponto-equilibrio   ← [2 artigos]
+[⚡] roi                ← [2 artigos]
 [⚡] roas               ← [1 artigo]
 ```
 

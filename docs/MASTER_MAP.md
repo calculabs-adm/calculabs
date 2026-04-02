@@ -3,7 +3,7 @@
 Mapa central do projeto CalcuLabs contendo clusters, artigos, calculadoras e relações.
 
 **Atualizado em:** 2026-04-01
-**Total:** 3 clusters, 14 artigos, 71 calculadoras
+**Total:** 4 clusters, 19 artigos, 71 calculadoras
 
 ---
 
@@ -81,6 +81,11 @@ Mapa central do projeto CalcuLabs contendo clusters, artigos, calculadoras e rel
 | **Pillar** | `gestao-financeira-pessoal` | Gestão Financeira Pessoal: Guia Completo |
 | Satellite | `margem-de-lucro` | Margem de Lucro: Como Calcular e Aumentar Rentabilidade |
 | Satellite | `markup` | Markup: O Que É, Como Calcular e Definir o Preço de Venda |
+| Satellite | `ponto-de-equilibrio` | Ponto de Equilíbrio: Como Calcular Quando Seu Negócio Dá Lucro |
+| Satellite | `fluxo-de-caixa` | Fluxo de Caixa: Como Controlar Entradas e Saídas Financeiras |
+| Satellite | `despesas-fixas-e-variaveis` | Despesas Fixas e Variáveis: Como Identificar e Controlar |
+| Satellite | `capital-de-giro` | Capital de Giro: O Que É e Como Calcular para Seu Negócio |
+| Satellite | `roi` | ROI: Retorno sobre Investimento - Como Calcular e Interpretar |
 
 **Calculadoras relacionadas:**
 
@@ -92,7 +97,7 @@ Mapa central do projeto CalcuLabs contendo clusters, artigos, calculadoras e rel
 | `roi` | ROI |
 | `roas` | ROAS |
 
-**Status:** Cluster em crescimento (1 pillar + 2 satellites). Próximos satellites sugeridos: investimentos, aposentadoria, controle de dívidas.
+**Status:** Cluster maduro (1 pillar + 7 satellites). Excelente cobertura de gestão financeira empresarial.
 
 ---
 

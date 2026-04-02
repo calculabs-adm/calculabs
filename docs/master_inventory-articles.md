@@ -27,9 +27,14 @@ Inventário oficial de artigos do Knowledge Hub. Todo artigo DEVE estar registra
 | 12 | margem-de-lucro | Margem de Lucro: Como Calcular e Aumentar Rentabilidade | gestao-financeira-pessoal | satellite | publicado | high |
 | 13 | markup | Markup: O Que É, Como Calcular e Definir o Preço de Venda | gestao-financeira-pessoal | satellite | publicado | high |
 | 14 | velocidade-e-aceleracao | Velocidade e Aceleração: Conceitos Fundamentais da Física do Movimento | fisica-basica | satellite | publicado | high |
+| 15 | fluxo-de-caixa | Fluxo de Caixa: Como Controlar Entradas e Saídas Financeiras | gestao-financeira-pessoal | satellite | publicado | medium |
+| 16 | despesas-fixas-e-variaveis | Despesas Fixas e Variáveis: Como Identificar e Controlar | gestao-financeira-pessoal | satellite | publicado | medium |
+| 17 | capital-de-giro | Capital de Giro: O Que É e Como Calcular para Seu Negócio | gestao-financeira-pessoal | satellite | publicado | medium |
+| 18 | roi | ROI: Retorno sobre Investimento - Como Calcular e Interpretar | gestao-financeira-pessoal | satellite | publicado | medium |
+| 19 | ponto-de-equilibrio | Ponto de Equilíbrio: Como Calcular Quando Seu Negócio Dá Lucro | gestao-financeira-pessoal | satellite | publicado | medium |
 
 ---
 
 ## Última Atualização
 
-2026-04-01 — Artigo ID 14 (velocidade-e-aceleracao) adicionado como satellite do cluster fisica-basica. Total: 14 artigos publicados. Clusters: engenharia-cimento (6), fisica-basica (2), juros-compostos (2), gestao-financeira-pessoal (3), gestao-financeira-pessoal (1).
+2026-04-01 — Inventário sincronizado com todos os 19 artigos publicados. Clusters: engenharia-cimento (7), fisica-basica (2), juros-compostos (2), gestao-financeira-pessoal (8).

@@ -3,7 +3,7 @@
 ## Funcionalidades Ativas
 
 ### 1. Calculadoras Interativas
-- 69 calculadoras em 8 categorias
+- 71 calculadoras em 8 categorias
 - Avaliação client-side de fórmulas com resultado instantâneo
 - Suporte a inputs: number, text, select, date
 - Formatação automática: moeda (R$), porcentagem, número
@@ -72,7 +72,7 @@
 
 ### 12. Knowledge Hub (IMPLEMENTADO)
 - Sistema de governança de artigos com spec rígida
-- 10 artigos publicados em 3 clusters
+- 19 artigos publicados em 4 clusters
 - Spec oficial: `docs/CALCULABS_ARTICLE_SPEC.md`
 - Inventário: `docs/master_inventory-articles.md`
 - Dados: `src/data/articles.json`
@@ -95,7 +95,7 @@
 
 | Categoria | Slug | Calculadoras |
 |-----------|------|-------------|
-| Finanças Pessoais | `financas-pessoais` | 20 |
+| Finanças Pessoais | `financas-pessoais` | 15 |
 | Trabalhista e Tributário | `trabalhista-tributario` | 10 |
 | Matemática | `matematica` | 18 |
 | Saúde | `saude` | 8 |
@@ -111,7 +111,7 @@
 | engenharia-cimento | 1 | 6 | Completo |
 | fisica-basica | 1 | 1 | Em expansão |
 | juros-compostos | 1 | 1 | Em expansão |
-| gestao-financeira-pessoal | 1 | 2 | Em crescimento |
+| gestao-financeira-pessoal | 1 | 7 | Maduro |
 
 ## Funções do Formula Engine
 
@@ -138,4 +138,4 @@
 
 ## Última Atualização
 
-2026-04-01 — Atualização: 71 calculadoras, 10 artigos publicados, Knowledge Hub expandido.
+2026-04-01 — Atualização: 71 calculadoras, 19 artigos publicados, Knowledge Hub completo.
