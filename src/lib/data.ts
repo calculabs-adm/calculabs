@@ -225,6 +225,7 @@ const ARTICLE_WHITELIST = [
   "despesas-fixas-e-variaveis",
   "capital-de-giro",
   "roi",
+  "velocidade-e-aceleracao",
 ];
 
 const articles = articlesData as Article[];
