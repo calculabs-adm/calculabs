@@ -21,10 +21,11 @@ CALCULABS KNOWLEDGE HUB
 │   ├── [⚡] quantidade-tijolos
 │   └── [⚡] consumo-tinta-m2
 │
-├── [C] fisica-basica ⚠️ EM EXPANSÃO (1P + 2S)
+├── [C] fisica-basica ✅ MADURO (1P + 3S)
 │   ├── [P] forca-energia-e-trabalho
+│   ├── [S] leis-de-newton-explicadas ←NOVO
 │   ├── [S] velocidade-e-aceleracao
-│   ├── [S] gravidade-e-peso ←NOVO
+│   ├── [S] gravidade-e-peso
 │   ├── [⚡] forca-lei-de-newton
 │   ├── [⚡] energia-cinetica
 │   ├── [⚡] trabalho-forca-distancia
@@ -127,12 +128,18 @@ CALCULABS KNOWLEDGE HUB
   ├─→ [⚡] forca-lei-de-newton
   └─→ [ARTIGO] forca-energia-e-trabalho
 
-[ARTIGO] gravidade-e-peso (satellite) ←NOVO
+[ARTIGO] leis-de-newton-explicadas (satellite) ←NOVO
+  ├─→ [⚡] forca-lei-de-newton
+  ├─→ [⚡] energia-cinetica
+  ├─→ [⚡] trabalho-forca-distancia
+  └─→ [ARTIGO] forca-energia-e-trabalho
+
+[ARTIGO] gravidade-e-peso (satellite)
   ├─→ [⚡] peso-outros-planetas
   ├─→ [⚡] lei-gravitacao-universal
   ├─→ [⚡] energia-cinetica
   └─→ [ARTIGO] forca-energia-e-trabalho
-```
+```</xai:function_call" filePath="/dev/null">C:\Users\fabio\OneDrive\Documentos\Calculabs\Calculabs-Dev\calculabs\docs\MASTER_MAP_VISUAL.md
 
 ### Cluster juros-compostos
 
@@ -202,7 +209,7 @@ CALCULABS KNOWLEDGE HUB
 [⚡] quantidade-cimento ← [7 artigos]
 [⚡] quantidade-tijolos ← [3 artigos]
 [⚡] consumo-tinta-m2   ← [2 artigos]
-[⚡] forca-lei-newton   ← [2 artigos]
+[⚡] forca-lei-newton   ← [3 artigos]
 [⚡] energia-cinetica   ← [2 artigos]
 [⚡] trabalho-f-d       ← [2 artigos]
 [⚡] velocidade-media   ← [1 artigo]

@@ -225,6 +225,7 @@ const ARTICLE_WHITELIST = [
   "despesas-fixas-e-variaveis",
   "capital-de-giro",
   "roi",
+  "leis-de-newton-explicadas",
   "gravidade-e-peso",
   "velocidade-e-aceleracao",
 ];
