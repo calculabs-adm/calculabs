@@ -21,12 +21,15 @@ CALCULABS KNOWLEDGE HUB
 │   ├── [⚡] quantidade-tijolos
 │   └── [⚡] consumo-tinta-m2
 │
-├── [C] fisica-basica ⚠️ INICIAL (1P + 0S)
+├── [C] fisica-basica ⚠️ EM EXPANSÃO (1P + 1S)
 │   ├── [P] forca-energia-e-trabalho
+│   ├── [S] velocidade-e-aceleracao ←NOVO
 │   ├── [⚡] forca-lei-de-newton
 │   ├── [⚡] energia-cinetica
 │   ├── [⚡] trabalho-forca-distancia
-│   └── [⚡] velocidade-media
+│   ├── [⚡] velocidade-media
+│   ├── [⚡] conversor-velocidade-kmh-ms
+│   └── [⚡] lei-gravitacao-universal
 │
 ├── [C] juros-compostos ⚠️ INICIAL (1P + 1S)
 │   ├── [P] juros-compostos-guia-completo
@@ -108,7 +111,14 @@ CALCULABS KNOWLEDGE HUB
   ├─→ [⚡] forca-lei-de-newton
   ├─→ [⚡] energia-cinetica
   ├─→ [⚡] trabalho-forca-distancia
-  └─→ [⚡] velocidade-media
+  ├─→ [⚡] velocidade-media
+  └─→ [ARTIGO] velocidade-e-aceleracao
+
+[ARTIGO] velocidade-e-aceleracao (satellite) ←NOVO
+  ├─→ [⚡] velocidade-media
+  ├─→ [⚡] energia-cinetica
+  ├─→ [⚡] forca-lei-de-newton
+  └─→ [ARTIGO] forca-energia-e-trabalho
 ```
 
 ### Cluster juros-compostos
@@ -157,10 +167,10 @@ CALCULABS KNOWLEDGE HUB
 [⚡] quantidade-cimento ← [7 artigos]
 [⚡] quantidade-tijolos ← [3 artigos]
 [⚡] consumo-tinta-m2   ← [2 artigos]
-[⚡] forca-lei-newton   ← [1 artigo]
-[⚡] energia-cinetica   ← [1 artigo]
-[⚡] trabalho-f-d       ← [1 artigo]
-[⚡] velocidade-media   ← [0 artigos]
+[⚡] forca-lei-newton   ← [2 artigos]
+[⚡] energia-cinetica   ← [2 artigos]
+[⚡] trabalho-f-d       ← [2 artigos]
+[⚡] velocidade-media   ← [1 artigo]
 [⚡] juros-compostos    ← [2 artigos]
 [⚡] juros-simples      ← [1 artigo]
 [⚡] rendimento-cdb     ← [1 artigo]
@@ -189,7 +199,7 @@ PRIORIDADE ALTA (gestao-financeira-pessoal) ←EXPANDINDO
   └── [S] quitacao-dividas ← criar
 
 PRIORIDADE MÉDIA (fisica-basica)
-  ├── [S] velocidade-e-aceleracao ← criar
+  ├── [S] velocidade-e-aceleracao ← ✅ CRIADO
   ├── [S] gravidade-e-peso ← criar
   └── [S] pressao-na-fisica ← criar
 

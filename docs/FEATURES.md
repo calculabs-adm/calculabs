@@ -72,7 +72,7 @@
 
 ### 12. Knowledge Hub (IMPLEMENTADO)
 - Sistema de governança de artigos com spec rígida
-- 9 artigos publicados em 3 clusters
+- 10 artigos publicados em 3 clusters
 - Spec oficial: `docs/CALCULABS_ARTICLE_SPEC.md`
 - Inventário: `docs/master_inventory-articles.md`
 - Dados: `src/data/articles.json`
@@ -108,9 +108,10 @@
 
 | Cluster | Pilar | Satélites | Status |
 |---------|-------|-----------|--------|
-| engenharia-cimento | 1 | 4 | Completo |
-| fisica-basica | 1 | 0 | Em expansão |
+| engenharia-cimento | 1 | 6 | Completo |
+| fisica-basica | 1 | 1 | Em expansão |
 | juros-compostos | 1 | 1 | Em expansão |
+| gestao-financeira-pessoal | 1 | 2 | Em crescimento |
 
 ## Funções do Formula Engine
 
@@ -137,4 +138,4 @@
 
 ## Última Atualização
 
-2026-03-31 — Atualização: 69 calculadoras, 9 artigos publicados, Knowledge Hub implementado.
+2026-04-01 — Atualização: 71 calculadoras, 10 artigos publicados, Knowledge Hub expandido.

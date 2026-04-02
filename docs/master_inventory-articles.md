@@ -26,9 +26,10 @@ Inventário oficial de artigos do Knowledge Hub. Todo artigo DEVE estar registra
 | 11 | gestao-financeira-pessoal | Gestão Financeira Pessoal: Guia Completo | gestao-financeira-pessoal | pillar | publicado | high |
 | 12 | margem-de-lucro | Margem de Lucro: Como Calcular e Aumentar Rentabilidade | gestao-financeira-pessoal | satellite | publicado | high |
 | 13 | markup | Markup: O Que É, Como Calcular e Definir o Preço de Venda | gestao-financeira-pessoal | satellite | publicado | high |
+| 14 | velocidade-e-aceleracao | Velocidade e Aceleração: Conceitos Fundamentais da Física do Movimento | fisica-basica | satellite | publicado | high |
 
 ---
 
 ## Última Atualização
 
-2026-03-31 — Artigo ID 13 (markup) adicionado como satellite do cluster gestao-financeira-pessoal. Total: 13 artigos publicados. Clusters: engenharia-cimento (7), fisica-basica (1), juros-compostos (2), gestao-financeira-pessoal (3).
+2026-04-01 — Artigo ID 14 (velocidade-e-aceleracao) adicionado como satellite do cluster fisica-basica. Total: 14 artigos publicados. Clusters: engenharia-cimento (6), fisica-basica (2), juros-compostos (2), gestao-financeira-pessoal (3), gestao-financeira-pessoal (1).

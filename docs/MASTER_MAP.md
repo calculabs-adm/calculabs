@@ -3,7 +3,7 @@
 Mapa central do projeto CalcuLabs contendo clusters, artigos, calculadoras e relações.
 
 **Atualizado em:** 2026-04-01
-**Total:** 4 clusters, 13 artigos, 71 calculadoras
+**Total:** 3 clusters, 14 artigos, 71 calculadoras
 
 ---
 
@@ -38,7 +38,7 @@ Mapa central do projeto CalcuLabs contendo clusters, artigos, calculadoras e rel
 | Tipo | Slug | Título |
 |------|------|--------|
 | **Pillar** | `forca-energia-e-trabalho` | Força, Energia e Trabalho: Entenda os Conceitos da Física |
-| Satellite | — | *(nenhum ainda)* |
+| Satellite | `velocidade-e-aceleracao` | Velocidade e Aceleração: Conceitos Fundamentais da Física do Movimento |
 
 **Calculadoras relacionadas:**
 
@@ -51,7 +51,7 @@ Mapa central do projeto CalcuLabs contendo clusters, artigos, calculadoras e rel
 | `conversor-velocidade-kmh-ms` | Conversor de Velocidade (km/h ↔ m/s) |
 | `lei-gravitacao-universal` | Lei da Gravitação Universal de Newton |
 
-**Status:** Cluster inicial (1 pillar + 0 satellites). Oportunidade de expansão em aceleração, gravidade, pressão.
+**Status:** Cluster em expansão (1 pillar + 1 satellite). Próximas oportunidades: gravidade e peso, pressão na física.
 
 ---
 
@@ -118,10 +118,10 @@ Mapa central do projeto CalcuLabs contendo clusters, artigos, calculadoras e rel
 
 | Slug | Nome | Artigo relacionado? |
 |------|------|---------------------|
-| `forca-lei-de-newton` | Calculadora de Força | ✅ 1 artigo |
-| `energia-cinetica` | Calculadora de Energia Cinética | ✅ 1 artigo |
-| `trabalho-forca-distancia` | Calculadora de Trabalho | ✅ 1 artigo |
-| `velocidade-media` | Velocidade Média | ❌ Sem artigo |
+| `forca-lei-de-newton` | Calculadora de Força | ✅ 2 artigos |
+| `energia-cinetica` | Calculadora de Energia Cinética | ✅ 2 artigos |
+| `trabalho-forca-distancia` | Calculadora de Trabalho | ✅ 2 artigos |
+| `velocidade-media` | Velocidade Média | ✅ 1 artigo |
 
 **Ciência / Quântica (1):**
 
