@@ -4,6 +4,11 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
 
+- **Auditoria Completa do Projeto**: Concluída verificação abrangente de código e funcionalidades
+  - ✅ Correções críticas: Resolvidos erros de linting (setState em useEffect), links HTML incorretos, configurações Turbopack
+  - ✅ Funcionalidades validadas: Todas as rotas críticas (71 calculadoras, 22 artigos, páginas institucionais) respondendo corretamente
+  - ✅ Segurança: Vulnerabilidades reduzidas de 7 para 4 (restantes são dev-only)
+  - ✅ Build e TypeScript: Sem erros em produção e desenvolvimento
 - Fixed 500 errors on calculator routes: Updated hardcoded URLs and fallbacks from www.calculabs.com.br to calculabs.com.br after domain change
 - Fixed 500 error in calculator pages: Added null check for related_calculators property before calling includes() in relatedArticles filter
 - Published "Pressão na Física" article (pressao-na-fisica) in Ciência > Física - comprehensive guide covering pressure definition, formula P=F/A, hydrostatics, practical applications (2847 words)
