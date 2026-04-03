@@ -1,13 +1,38 @@
 import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
+import logger from "@/lib/logger";
+import { sanitizeString, rateLimiter } from "@/lib/sanitization";
 
 export async function POST(request: NextRequest) {
-  try {
-    const { calculatorName, errorDescription } = await request.json();
+  let sanitizedCalculatorName = '';
+  let clientIP = '';
 
-    if (!calculatorName || !errorDescription) {
+  try {
+    // Rate limiting
+    clientIP = request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip') || 'unknown';
+    if (!rateLimiter.isAllowed(clientIP, 5, 60000)) { // 5 requests per minute
+      logger.warn('Rate limit exceeded for error reporting', { ip: clientIP });
       return NextResponse.json(
-        { error: "Dados incompletos" },
+        { error: "Muitas tentativas. Tente novamente em alguns minutos." },
+        { status: 429 }
+      );
+    }
+
+    const body = await request.json();
+    const { calculatorName, errorDescription } = body;
+
+    // Sanitize inputs
+    sanitizedCalculatorName = sanitizeString(calculatorName || '');
+    const sanitizedErrorDescription = sanitizeString(errorDescription || '');
+
+    if (!sanitizedCalculatorName || !sanitizedErrorDescription) {
+      logger.warn('Invalid input in error report', {
+        calculatorName: !!calculatorName,
+        errorDescription: !!errorDescription,
+        ip: clientIP
+      });
+      return NextResponse.json(
+        { error: "Dados inválidos" },
         { status: 400 }
       );
     }
@@ -22,12 +47,13 @@ export async function POST(request: NextRequest) {
 
     // If SMTP is not configured, log the error report (for development)
     if (!smtpHost || !smtpUser || !smtpPass) {
-      console.log("=== RELATÓRIO DE ERRO (SMTP não configurado) ===");
-      console.log(`Calculadora: ${calculatorName}`);
-      console.log(`Descrição: ${errorDescription}`);
-      console.log(`Data: ${new Date().toISOString()}`);
-      console.log("==============================================");
-      
+      logger.info('Error report received (SMTP not configured)', {
+        calculatorName: sanitizedCalculatorName,
+        errorDescription: sanitizedErrorDescription,
+        ip: clientIP,
+        timestamp: new Date().toISOString()
+      });
+
       // In development, return success anyway
       return NextResponse.json({ success: true });
     }
@@ -69,11 +95,22 @@ export async function POST(request: NextRequest) {
       `,
     });
 
+    logger.info('Error report sent successfully', {
+      calculatorName: sanitizedCalculatorName,
+      to: toEmail,
+      ip: clientIP
+    });
+
     return NextResponse.json({ success: true });
   } catch (error) {
-    console.error("Erro ao enviar relatório:", error);
+    logger.error('Failed to send error report', {
+      error: error instanceof Error ? error.message : 'Unknown error',
+      calculatorName: sanitizedCalculatorName,
+      ip: clientIP
+    });
+
     return NextResponse.json(
-      { error: "Erro ao enviar relatório" },
+      { error: "Erro interno do servidor" },
       { status: 500 }
     );
   }
