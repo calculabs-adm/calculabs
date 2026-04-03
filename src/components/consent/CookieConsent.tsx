@@ -17,17 +17,34 @@ export function hasConsent(): boolean {
 }
 
 export default function CookieConsent() {
-  const [visible, setVisible] = useState(() => !getConsent())
+  const [visible, setVisible] = useState(false)
+
+  useEffect(() => {
+    // Verificar consentimento apenas no cliente
+    if (typeof window !== 'undefined') {
+      const consent = getConsent()
+      setVisible(!consent)
+    }
+  }, [])
 
   const handleAccept = () => {
-    localStorage.setItem(CONSENT_KEY, 'accepted')
-    setVisible(false)
-    window.location.reload()
+    try {
+      localStorage.setItem(CONSENT_KEY, 'accepted')
+      setVisible(false)
+      // Recarregar para ativar funcionalidades dependentes do consentimento
+      setTimeout(() => window.location.reload(), 200)
+    } catch (error) {
+      console.error('Erro ao salvar consentimento:', error)
+    }
   }
 
   const handleReject = () => {
-    localStorage.setItem(CONSENT_KEY, 'rejected')
-    setVisible(false)
+    try {
+      localStorage.setItem(CONSENT_KEY, 'rejected')
+      setVisible(false)
+    } catch (error) {
+      console.error('Erro ao salvar consentimento:', error)
+    }
   }
 
   if (!visible) return null
