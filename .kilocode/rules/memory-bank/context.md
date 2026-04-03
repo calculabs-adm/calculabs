@@ -2,6 +2,7 @@
 
 ## Recently Completed
 
+- [x] Published Knowledge Hub article: pressao-na-fisica (Pressão na Física: O Que É, Fórmula, Como Calcular e Aplicações Práticas). Added to articles.json with comprehensive content (~2847 words), category: ciencia, cluster: fisica-basica (satellite). Related calculators: forca-lei-de-newton, energia-cinetica, trabalho-forca-distancia. Internal links: forca-energia-e-trabalho, leis-de-newton-explicadas, energia-cinetica. Validator passed.
 - [x] Fixed Lei da Gravitação Universal de Newton calculator - added scientific notation formatting for very large results (>= 1e15)
 - [x] Fixed ARTICLE_WHITELIST by adding 4 new article slugs (fluxo-de-caixa, despesas-fixas-e-variaveis, capital-de-giro, roi)
 - [x] Validated build generates static HTML pages for new article routes
@@ -32,7 +33,7 @@ Portal brasileiro de calculadoras online gratuitas com 69 calculadoras em 8 cate
 | Calculadoras | 69 |
 | Categorias | 8 |
 | Subcategorias | 17 |
-| Artigos publicados | 10 |
+| Artigos publicados | 11 |
 | Clusters | 3 |
 | Páginas institucionais | 4 (/sobre, /contato, /privacidade, /termos) |
 
@@ -48,6 +49,7 @@ Portal brasileiro de calculadoras online gratuitas com 69 calculadoras em 8 cate
 
 | Date | Changes |
 |------|---------|
+| 2026-04-02 | Artigo pressao-na-fisica publicado no cluster fisica-basica |
 | 2026-03-03 | Portal do Cálculo criado com 50 calculadoras |
 | 2026-03-26 | v1.0.0 - Rollback para estado estável (sem Supabase) |
 | 2026-03-29 | Sistema de tracking dual (GTM + API), cluster engenharia-cimento concluído |

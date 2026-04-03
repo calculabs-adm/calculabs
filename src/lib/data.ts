@@ -228,6 +228,7 @@ const ARTICLE_WHITELIST = [
   "leis-de-newton-explicadas",
   "gravidade-e-peso",
   "velocidade-e-aceleracao",
+  "pressao-na-fisica",
 ];
 
 const articles = articlesData as Article[];

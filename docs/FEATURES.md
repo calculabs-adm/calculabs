@@ -72,7 +72,7 @@
 
 ### 12. Knowledge Hub (IMPLEMENTADO)
 - Sistema de governança de artigos com spec rígida
-- 21 artigos publicados em 4 clusters
+- 22 artigos publicados em 4 clusters
 - Spec oficial: `docs/CALCULABS_ARTICLE_SPEC.md`
 - Inventário: `docs/master_inventory-articles.md`
 - Dados: `src/data/articles.json`
@@ -109,7 +109,7 @@
 | Cluster | Pilar | Satélites | Status |
 |---------|-------|-----------|--------|
 | engenharia-cimento | 1 | 6 | Completo |
-| fisica-basica | 1 | 1 | Em expansão |
+| fisica-basica | 1 | 4 | Em expansão |
 | juros-compostos | 1 | 1 | Em expansão |
 | gestao-financeira-pessoal | 1 | 7 | Maduro |
 
@@ -138,4 +138,4 @@
 
 ## Última Atualização
 
-2026-04-01 — Atualização: 71 calculadoras, 21 artigos publicados, Knowledge Hub expandido.
+2026-04-02 — Atualização: 71 calculadoras, 22 artigos publicados, Knowledge Hub expandido.

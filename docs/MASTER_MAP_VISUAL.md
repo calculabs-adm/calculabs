@@ -21,7 +21,7 @@ CALCULABS KNOWLEDGE HUB
 │   ├── [⚡] quantidade-tijolos
 │   └── [⚡] consumo-tinta-m2
 │
-├── [C] fisica-basica ✅ MADURO (1P + 3S)
+├── [C] fisica-basica ✅ MADURO (1P + 4S)
 │   ├── [P] forca-energia-e-trabalho
 │   ├── [S] leis-de-newton-explicadas ←NOVO
 │   ├── [S] velocidade-e-aceleracao
@@ -139,6 +139,12 @@ CALCULABS KNOWLEDGE HUB
   ├─→ [⚡] lei-gravitacao-universal
   ├─→ [⚡] energia-cinetica
   └─→ [ARTIGO] forca-energia-e-trabalho
+
+[ARTIGO] pressao-na-fisica (satellite)
+  ├─→ [⚡] forca-lei-de-newton
+  ├─→ [⚡] energia-cinetica
+  ├─→ [⚡] trabalho-forca-distancia
+  └─→ [ARTIGO] forca-energia-e-trabalho
 ```</xai:function_call" filePath="/dev/null">C:\Users\fabio\OneDrive\Documentos\Calculabs\Calculabs-Dev\calculabs\docs\MASTER_MAP_VISUAL.md
 
 ### Cluster juros-compostos
@@ -243,8 +249,8 @@ PRIORIDADE ALTA (gestao-financeira-pessoal) ←EXPANDINDO
 
 PRIORIDADE MÉDIA (fisica-basica)
   ├── [S] velocidade-e-aceleracao ← ✅ CRIADO
-  ├── [S] gravidade-e-peso ← criar
-  └── [S] pressao-na-fisica ← criar
+  ├── [S] gravidade-e-peso ← ✅ CRIADO
+  └── [S] pressao-na-fisica ← ✅ CRIADO
 
 PRIORIDADE BAIXA (juros-compostos)
   ├── [S] rendimento-tesouro-direto ← criar

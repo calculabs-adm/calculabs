@@ -34,9 +34,10 @@ Inventário oficial de artigos do Knowledge Hub. Todo artigo DEVE estar registra
 | 19 | ponto-de-equilibrio | Ponto de Equilíbrio: Como Calcular Quando Seu Negócio Dá Lucro | gestao-financeira-pessoal | satellite | publicado | medium |
 | 20 | leis-de-newton-explicadas | Leis de Newton Explicadas: As 3 Leis do Movimento com Exemplos | fisica-basica | satellite | publicado | high |
 | 21 | gravidade-e-peso | Gravidade e Peso: Diferenças, Conceitos e Aplicações na Física | fisica-basica | satellite | publicado | high |
+| 22 | pressao-na-fisica | Pressão na Física: O Que É, Fórmula, Como Calcular e Aplicações Práticas | fisica-basica | satellite | publicado | high |
 
 ---
 
 ## Última Atualização
 
-2026-04-01 — Inventário sincronizado com todos os 21 artigos publicados. Clusters: engenharia-cimento (7), fisica-basica (4), juros-compostos (2), gestao-financeira-pessoal (8).
+2026-04-02 — Inventário sincronizado com todos os 22 artigos publicados. Clusters: engenharia-cimento (7), fisica-basica (5), juros-compostos (2), gestao-financeira-pessoal (8).

@@ -4,6 +4,7 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
 
+- Published "Pressão na Física" article (pressao-na-fisica) in Ciência > Física - comprehensive guide covering pressure definition, formula P=F/A, hydrostatics, practical applications (2847 words)
 - Published "Velocidade e Aceleração" article (velocidade-e-aceleracao) in Ciência > Física - comprehensive guide covering MRU, MRUV, calculations, and practical applications (2522 words)
 - Fixed Lei da Gravitação Universal de Newton calculator - added scientific notation for very large results (>= 1e15)
 - Added Lei da Gravitação Universal de Newton calculator (id 122) in Ciência > Física
