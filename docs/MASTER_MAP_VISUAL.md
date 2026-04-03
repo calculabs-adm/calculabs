@@ -21,11 +21,13 @@ CALCULABS KNOWLEDGE HUB
 │   ├── [⚡] quantidade-tijolos
 │   └── [⚡] consumo-tinta-m2
 │
-├── [C] fisica-basica ✅ MADURO (1P + 4S)
+├── [C] fisica-basica ✅ MADURO (1P + 5S)
 │   ├── [P] forca-energia-e-trabalho
 │   ├── [S] leis-de-newton-explicadas ←NOVO
 │   ├── [S] velocidade-e-aceleracao
 │   ├── [S] gravidade-e-peso
+│   ├── [S] pressao-na-fisica
+│   └── [S] potencia-na-fisica ←NOVO
 │   ├── [⚡] forca-lei-de-newton
 │   ├── [⚡] energia-cinetica
 │   ├── [⚡] trabalho-forca-distancia

@@ -2,6 +2,7 @@
 
 ## Recently Completed
 
+- [x] Updated Knowledge Hub article: potencia-na-fisica with comprehensive content (~2800 words), category: ciencia, cluster: fisica-basica. Related calculators: trabalho-forca-distancia, energia-cinetica, forca-lei-de-newton. Internal links: forca-energia-e-trabalho, pressao-na-fisica, trabalho-forca-distancia, energia-cinetica, forca-lei-de-newton. Validator passed.
 - [x] Fixed 500 errors on calculator routes: Updated hardcoded URLs and fallbacks from www.calculabs.com.br to calculabs.com.br after domain change. Identified and fixed null pointer error in relatedArticles filter. Build successful, deployed to production.
 - [x] Published Knowledge Hub article: pressao-na-fisica (Pressão na Física: O Que É, Fórmula, Como Calcular e Aplicações Práticas). Added to articles.json with comprehensive content (~2847 words), category: ciencia, cluster: fisica-basica (satellite). Related calculators: forca-lei-de-newton, energia-cinetica, trabalho-forca-distancia. Internal links: forca-energia-e-trabalho, leis-de-newton-explicadas, energia-cinetica. Validator passed.
 - [x] Fixed Lei da Gravitação Universal de Newton calculator - added scientific notation formatting for very large results (>= 1e15)
@@ -43,13 +44,14 @@ Portal brasileiro de calculadoras online gratuitas com 69 calculadoras em 8 cate
 | Cluster | Pilar | Satélites | Status |
 |---------|-------|-----------|--------|
 | engenharia-cimento | 1 | 5 | Completo |
-| fisica-basica | 1 | 1 | Em expansão |
+| fisica-basica | 1 | 2 | Em expansão |
 | juros-compostos | 1 | 1 | Em expansão |
 
 ## Session History
 
 | Date | Changes |
 |------|---------|
+| 2026-04-03 | Artigo potencia-na-fisica atualizado no cluster fisica-basica |
 | 2026-04-03 | Segurança enterprise implementada - Jest testing, CSP/HSTS headers, Winston logging, input sanitization, API hardening |
 | 2026-04-03 | Auditoria completa do projeto concluída - correções de linting, configuração dev server, validação de todas as rotas |
 | 2026-04-03 | Correção de erro 500 nas páginas de calculadoras (null pointer em related_calculators) |

@@ -4,6 +4,7 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
 
+- Published Knowledge Hub article: potencia-na-fisica (Potência na Física: O Que É, Fórmula, Como Calcular e Aplicações Práticas)
 - **Segurança e Testes Avançados**: Implementação completa de framework de testes e hardening de segurança
   - ✅ **Jest Testing Framework**: Configurado com React Testing Library, testes unitários para funções críticas
   - ✅ **Headers de Segurança**: CSP, HSTS, X-Frame-Options, Content-Type-Options implementados

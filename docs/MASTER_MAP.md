@@ -2,8 +2,8 @@
 
 Mapa central do projeto CalcuLabs contendo clusters, artigos, calculadoras e relações.
 
-**Atualizado em:** 2026-04-02
-**Total:** 4 clusters, 22 artigos, 71 calculadoras
+**Atualizado em:** 2026-04-03
+**Total:** 4 clusters, 23 artigos, 71 calculadoras
 
 ---
 
@@ -42,6 +42,7 @@ Mapa central do projeto CalcuLabs contendo clusters, artigos, calculadoras e rel
 | Satellite | `velocidade-e-aceleracao` | Velocidade e Aceleração: Conceitos Fundamentais da Física do Movimento |
 | Satellite | `gravidade-e-peso` | Gravidade e Peso: Diferenças, Conceitos e Aplicações na Física |
 | Satellite | `pressao-na-fisica` | Pressão na Física: O Que É, Fórmula, Como Calcular e Aplicações Práticas |
+| Satellite | `potencia-na-fisica` | Potência na Física: O Que É, Fórmula, Como Calcular e Aplicações Práticas |
 
 **Calculadoras relacionadas:**
 
@@ -54,7 +55,7 @@ Mapa central do projeto CalcuLabs contendo clusters, artigos, calculadoras e rel
 | `conversor-velocidade-kmh-ms` | Conversor de Velocidade (km/h ↔ m/s) |
 | `lei-gravitacao-universal` | Lei da Gravitação Universal de Newton |
 
-**Status:** Cluster maduro (1 pillar + 4 satellites). Excelente cobertura dos fundamentos da física.
+**Status:** Cluster maduro (1 pillar + 5 satellites). Excelente cobertura dos fundamentos da física.
 
 ---
 
