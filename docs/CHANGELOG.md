@@ -4,6 +4,7 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
 
+- Published Knowledge Hub article: pressao-atmosferica (Pressão Atmosférica: O Que É, Como Funciona e Exemplos no Dia a Dia) - category: ciencia, cluster: fisica-basica (satellite)
 - Published Knowledge Hub article: potencia-na-fisica (Potência na Física: O Que É, Fórmula, Como Calcular e Aplicações Práticas)
 - **Segurança e Testes Avançados**: Implementação completa de framework de testes e hardening de segurança
   - ✅ **Jest Testing Framework**: Configurado com React Testing Library, testes unitários para funções críticas

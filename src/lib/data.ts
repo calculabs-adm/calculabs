@@ -231,6 +231,7 @@ const ARTICLE_WHITELIST = [
   "velocidade-e-aceleracao",
   "pressao-na-fisica",
   "potencia-na-fisica",
+  "pressao-atmosferica",
 ];
 
 const articles = articlesData as Article[];
