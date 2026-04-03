@@ -25,6 +25,14 @@ Todos os artigos passam por **validação obrigatória** usando:
 - **Conteúdo**: Título completo do artigo
 - **Exemplo**: `<h1>Margem de Lucro: Conceito e Cálculo</h1>`
 
+### ✅ Data de Publicação Automática
+- **Regra**: OBRIGATÓRIA em todos os artigos
+- **Localização**: IMEDIATAMENTE após a tag `<h1>`
+- **Formato**: `<p class="publish-date">Publicado em DD de Mês de AAAA - Equipe Calculabs</p>`
+- **Automação**: Usar data atual no momento da criação do artigo
+- **Exemplo**: `<p class="publish-date">Publicado em 02 de Abril de 2026 - Equipe Calculabs</p>`
+
+
 ### ✅ Meta Title (30-60 caracteres)
 - **Regra**: Entre 30-60 caracteres (validador automático)
 - **Estrutura**: `[Título Principal] | CalcuLabs`
@@ -521,6 +529,8 @@ Após aplicação das diretrizes acima:
 - [ ] **Nenhuma seção original alterada**: Conteúdo existente preservado
 - [ ] **Apenas adições no final**: Novas seções adicionadas ao final
 - [ ] **Formatação mantida**: Padrão markdown consistente
+- [ ] **Data de publicação adicionada**: `<p class=\"publish-date\">Publicado em DD de Mês de AAAA - Equipe Calculabs</p>` imediatamente após o `<h1>`
+- [ ] **Data é atual**: Usar a data atual do momento da criação do artigo
 
 ### ✅ Verificações de Conteúdo
 - [ ] **Search Intent aplicado**: Conteúdo reflete intenção definida
