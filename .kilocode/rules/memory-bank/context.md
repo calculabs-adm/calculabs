@@ -2,7 +2,7 @@
 
 ## Recently Completed
 
-- [x] Fixed 500 errors on calculator routes: Updated hardcoded URLs and fallbacks from www.calculabs.com.br to calculabs.com.br after domain change. Added debugging logs. Build successful, deployed to production.
+- [x] Fixed 500 errors on calculator routes: Updated hardcoded URLs and fallbacks from www.calculabs.com.br to calculabs.com.br after domain change. Identified and fixed null pointer error in relatedArticles filter. Build successful, deployed to production.
 - [x] Published Knowledge Hub article: pressao-na-fisica (Pressão na Física: O Que É, Fórmula, Como Calcular e Aplicações Práticas). Added to articles.json with comprehensive content (~2847 words), category: ciencia, cluster: fisica-basica (satellite). Related calculators: forca-lei-de-newton, energia-cinetica, trabalho-forca-distancia. Internal links: forca-energia-e-trabalho, leis-de-newton-explicadas, energia-cinetica. Validator passed.
 - [x] Fixed Lei da Gravitação Universal de Newton calculator - added scientific notation formatting for very large results (>= 1e15)
 - [x] Fixed ARTICLE_WHITELIST by adding 4 new article slugs (fluxo-de-caixa, despesas-fixas-e-variaveis, capital-de-giro, roi)
@@ -21,7 +21,7 @@
 
 ## Current State
 
-Article routing corrections completed locally. Build generates static pages successfully. Production deploy required to make the 4 new article routes accessible at https://calculabs.com.br/conhecimento/[slug].
+Calculator 500 errors resolved. All calculator routes now working properly after fixing null pointer exception in relatedArticles filter. Domain URLs updated to calculabs.com.br.
 
 **Project Status**: 🚀 CalcuLabs - Versão 1.1.0
 
@@ -50,6 +50,7 @@ Portal brasileiro de calculadoras online gratuitas com 69 calculadoras em 8 cate
 
 | Date | Changes |
 |------|---------|
+| 2026-04-03 | Correção de erro 500 nas páginas de calculadoras (null pointer em related_calculators) |
 | 2026-04-02 | Artigo pressao-na-fisica publicado no cluster fisica-basica |
 | 2026-03-03 | Portal do Cálculo criado com 50 calculadoras |
 | 2026-03-26 | v1.0.0 - Rollback para estado estável (sem Supabase) |
