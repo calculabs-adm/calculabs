@@ -2,6 +2,7 @@
 
 ## Recently Completed
 
+- [x] Fixed 500 errors on calculator routes: Updated hardcoded URLs and fallbacks from www.calculabs.com.br to calculabs.com.br after domain change. Added debugging logs. Build successful, deployed to production.
 - [x] Published Knowledge Hub article: pressao-na-fisica (Pressão na Física: O Que É, Fórmula, Como Calcular e Aplicações Práticas). Added to articles.json with comprehensive content (~2847 words), category: ciencia, cluster: fisica-basica (satellite). Related calculators: forca-lei-de-newton, energia-cinetica, trabalho-forca-distancia. Internal links: forca-energia-e-trabalho, leis-de-newton-explicadas, energia-cinetica. Validator passed.
 - [x] Fixed Lei da Gravitação Universal de Newton calculator - added scientific notation formatting for very large results (>= 1e15)
 - [x] Fixed ARTICLE_WHITELIST by adding 4 new article slugs (fluxo-de-caixa, despesas-fixas-e-variaveis, capital-de-giro, roi)
