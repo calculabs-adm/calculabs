@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
 
 const CONSENT_KEY = 'cookie_consent'
 
@@ -16,13 +17,7 @@ export function hasConsent(): boolean {
 }
 
 export default function CookieConsent() {
-  const [visible, setVisible] = useState(false)
-
-  useEffect(() => {
-    if (!getConsent()) {
-      setVisible(true)
-    }
-  }, [])
+  const [visible, setVisible] = useState(() => !getConsent())
 
   const handleAccept = () => {
     localStorage.setItem(CONSENT_KEY, 'accepted')
@@ -46,9 +41,9 @@ export default function CookieConsent() {
               Utilizamos cookies e tecnologias similares para melhorar sua experiência,
               analisar o uso do site e exibir anúncios personalizados. Ao clicar em
               &quot;Aceitar&quot;, você concorda com o uso de todos os cookies conforme nossa{' '}
-              <a href="/privacidade" className="text-blue-600 hover:text-blue-700 underline">
+              <Link href="/privacidade" className="text-blue-600 hover:text-blue-700 underline">
                 Política de Privacidade
-              </a>.
+              </Link>.
             </p>
           </div>
           <div className="flex gap-3 flex-shrink-0">

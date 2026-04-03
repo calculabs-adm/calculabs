@@ -1,20 +1,19 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef } from 'react'
 import { hasConsent } from '@/components/consent/CookieConsent'
 
 const AD_CLIENT = 'ca-pub-2809409030893528'
 
 export default function AdsenseLoader() {
-  const [loaded, setLoaded] = useState(false)
+  const hasLoadedRef = useRef(false)
 
   useEffect(() => {
-    if (loaded) return
-    if (!hasConsent()) return
+    if (hasLoadedRef.current || !hasConsent()) return
 
     // Check if script already exists
     if (document.querySelector(`script[data-ad-client="${AD_CLIENT}"]`)) {
-      setLoaded(true)
+      hasLoadedRef.current = true
       return
     }
 
@@ -25,8 +24,8 @@ export default function AdsenseLoader() {
     script.setAttribute('data-ad-client', AD_CLIENT)
     document.head.appendChild(script)
 
-    setLoaded(true)
-  }, [loaded])
+    hasLoadedRef.current = true
+  }, [])
 
   return null
 }

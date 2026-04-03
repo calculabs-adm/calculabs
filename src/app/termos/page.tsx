@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Termos de Uso",
@@ -173,12 +174,12 @@ export default function TermosPage() {
           visitas ao nosso site e a outros sites para oferecer anúncios relevantes.
           A CalcuLabs não controla as práticas de coleta de dados desses
           anunciantes. Consulte nossa{" "}
-          <a
+          <Link
             href="/privacidade"
             className="text-blue-600 hover:text-blue-700 transition-colors"
           >
             Política de Privacidade
-          </a>{" "}
+          </Link>{" "}
           para mais informações.
         </p>
       </section>
