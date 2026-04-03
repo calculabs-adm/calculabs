@@ -4,7 +4,7 @@
 
 CalcuLabs é um portal brasileiro de calculadoras online gratuitas. Disponibiliza 71 calculadoras organizadas em 8 categorias e 17 subcategorias, cobrindo finanças, matemática, saúde, engenharia, astronomia e ciências. Inclui Knowledge Hub com 10 artigos em 3 clusters.
 
-**URL:** https://www.calculabs.com.br
+**URL:** https://calculabs.com.br
 
 ## Stack
 

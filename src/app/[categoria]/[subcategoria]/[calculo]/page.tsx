@@ -315,11 +315,15 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { calculo } = await params;
+  console.log(`[DEBUG] generateMetadata called for calculo: ${calculo}`);
   const data = await getCalculatorWithContext(calculo);
-  if (!data) return { title: "Calculadora não encontrada" };
+  if (!data) {
+    console.log(`[DEBUG] Calculator not found for slug: ${calculo}`);
+    return { title: "Calculadora não encontrada" };
+  }
 
   const { calculator, category, subcategory } = data;
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.calculabs.com.br";
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://calculabs.com.br";
   const canonicalUrl = `${siteUrl}/${category?.slug}/${subcategory?.slug}/${calculator.slug}`;
 
   const seo = generateCalculatorSEO(calculator);
@@ -349,9 +353,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function CalculatorPage({ params }: Props) {
   const { calculo, categoria: categoriaSlug, subcategoria: subcategoriaSlug } = await params;
+  console.log(`[DEBUG] CalculatorPage called for calculo: ${calculo}, categoria: ${categoriaSlug}, subcategoria: ${subcategoriaSlug}`);
   const data = await getCalculatorWithContext(calculo);
 
-  if (!data) notFound();
+  if (!data) {
+    console.log(`[DEBUG] Data not found for calculo: ${calculo}`);
+    notFound();
+  }
 
   const { calculator, category, subcategory, related } = data;
 
@@ -378,7 +386,7 @@ export default async function CalculatorPage({ params }: Props) {
     ? JSON.parse(calculator.faqs)
     : [];
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.calculabs.com.br";
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://calculabs.com.br";
   const canonicalUrl = `${siteUrl}/${category?.slug}/${subcategory?.slug}/${calculator.slug}`;
 
   const relatedArticles = getPublishedArticleSlugs()

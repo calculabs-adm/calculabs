@@ -20,7 +20,7 @@
 
 ## Current State
 
-Article routing corrections completed locally. Build generates static pages successfully. Production deploy required to make the 4 new article routes accessible at https://www.calculabs.com.br/conhecimento/[slug].
+Article routing corrections completed locally. Build generates static pages successfully. Production deploy required to make the 4 new article routes accessible at https://calculabs.com.br/conhecimento/[slug].
 
 **Project Status**: 🚀 CalcuLabs - Versão 1.1.0
 

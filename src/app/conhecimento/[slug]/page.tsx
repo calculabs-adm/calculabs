@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const article = getArticleBySlug(slug);
   if (!article) return {};
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.calculabs.com.br";
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://calculabs.com.br";
 
   return {
     title: article.meta_title,
@@ -49,7 +49,7 @@ export default async function ArticlePage({ params }: Props) {
     })
     .filter(Boolean) as Array<{ calc: { slug: string; name: string; description: string | null }; cat: { slug: string } | null; sub: { slug: string } | null }>;
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.calculabs.com.br";
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://calculabs.com.br";
 
   const faqSchema = article.faq.length > 0
     ? {

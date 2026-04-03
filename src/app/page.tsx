@@ -69,11 +69,11 @@ export default async function HomePage() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "CalcuLabs",
-    url: "https://www.calculabs.com.br",
+    url: "https://calculabs.com.br",
     description: "CalcuLabs com mais de 5.000 calculadoras online gratuitas",
     potentialAction: {
       "@type": "SearchAction",
-      target: "https://www.calculabs.com.br/busca?q={search_term_string}",
+      target: "https://calculabs.com.br/busca?q={search_term_string}",
       "query-input": "required name=search_term_string",
     },
   };

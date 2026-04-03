@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getAllCategories, getSubcategoriesByCategory, getAllCalculators, getPublishedArticleSlugs } from "@/lib/data";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.calculabs.com.br";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://calculabs.com.br";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const urls: MetadataRoute.Sitemap = [];
