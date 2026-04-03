@@ -97,6 +97,11 @@ export default async function ArticlePage({ params }: Props) {
             <h1 className="text-3xl font-bold text-slate-900 mb-4">
               {article.title}
             </h1>
+            {article.publishedAt && (
+              <p className="text-sm text-slate-500 mb-4">
+                Publicado em {new Date(article.publishedAt + "T00:00:00").toLocaleDateString("pt-BR", { day: "2-digit", month: "long", year: "numeric" })} - Equipe Calculabs
+              </p>
+            )}
             <p className="text-lg text-slate-600 leading-relaxed">
               {article.summary}
             </p>
