@@ -37,9 +37,10 @@ Inventário oficial de artigos do Knowledge Hub. Todo artigo DEVE estar registra
 | 22 | pressao-na-fisica | Pressão na Física: O Que É, Fórmula, Como Calcular e Aplicações Práticas | fisica-basica | satellite | publicado | high |
 | 23 | potencia-na-fisica | Potência na Física: O Que É, Fórmula, Como Calcular e Aplicações Práticas | fisica-basica | satellite | publicado | high |
 | 24 | pressao-atmosferica | Pressão Atmosférica: O Que É, Como Funciona e Exemplos no Dia a Dia | fisica-basica | satellite | publicado | high |
+| 25 | impulso-e-quantidade-de-movimento | Impulso e Quantidade de Movimento: O Que É, Fórmulas e Aplicações na Física | fisica-basica | satellite | publicado | high |
 
 ---
 
 ## Última Atualização
 
-2026-04-03 — Inventário sincronizado com todos os 24 artigos publicados. Clusters: engenharia-cimento (7), fisica-basica (7), juros-compostos (2), gestao-financeira-pessoal (8).
+2026-04-03 — Inventário sincronizado com todos os 25 artigos publicados. Clusters: engenharia-cimento (7), fisica-basica (8), juros-compostos (2), gestao-financeira-pessoal (8).

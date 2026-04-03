@@ -2,6 +2,7 @@
 
 ## Recently Completed
 
+- [x] Published Knowledge Hub article: impulso-e-quantidade-de-movimento with comprehensive content (~1980 words), category: ciencia, cluster: fisica-basica (satellite). Related calculators: forca-lei-de-newton, velocidade-media. Internal links: leis-de-newton-explicadas, forca-energia-e-trabalho. Validator passed. 5 FAQs, 5 examples, 3 comparisons.
 - [x] Published Knowledge Hub article: pressao-atmosferica with comprehensive content (~2200 words), category: ciencia, cluster: fisica-basica (satellite). Related calculators: forca-lei-de-newton, energia-cinetica. Internal links: pressao-na-fisica, gravidade-e-peso, forca-energia-e-trabalho. Validator passed. 5 FAQs, 5 examples, 3 comparisons.
 - [x] Updated Knowledge Hub article: potencia-na-fisica with comprehensive content (~2800 words), category: ciencia, cluster: fisica-basica. Related calculators: trabalho-forca-distancia, energia-cinetica, forca-lei-de-newton. Internal links: forca-energia-e-trabalho, pressao-na-fisica, trabalho-forca-distancia, energia-cinetica, forca-lei-de-newton. Validator passed.
 - [x] Fixed 500 errors on calculator routes: Updated hardcoded URLs and fallbacks from www.calculabs.com.br to calculabs.com.br after domain change. Identified and fixed null pointer error in relatedArticles filter. Build successful, deployed to production.
@@ -27,7 +28,7 @@
 
 **Project Status**: 🚀 CalcuLabs - Versão 1.1.0
 
-Portal brasileiro de calculadoras online gratuitas com 69 calculadoras em 8 categorias e 12 artigos do Knowledge Hub.
+Portal brasileiro de calculadoras online gratuitas com 69 calculadoras em 8 categorias e 13 artigos do Knowledge Hub.
 
 ## Current Structure
 
@@ -36,7 +37,7 @@ Portal brasileiro de calculadoras online gratuitas com 69 calculadoras em 8 cate
 | Calculadoras | 69 |
 | Categorias | 8 |
 | Subcategorias | 17 |
-| Artigos publicados | 12 |
+| Artigos publicados | 13 |
 | Clusters | 3 |
 | Páginas institucionais | 4 (/sobre, /contato, /privacidade, /termos) |
 
@@ -45,13 +46,14 @@ Portal brasileiro de calculadoras online gratuitas com 69 calculadoras em 8 cate
 | Cluster | Pilar | Satélites | Status |
 |---------|-------|-----------|--------|
 | engenharia-cimento | 1 | 5 | Completo |
-| fisica-basica | 1 | 3 | Em expansão |
+| fisica-basica | 1 | 4 | Em expansão |
 | juros-compostos | 1 | 1 | Em expansão |
 
 ## Session History
 
 | Date | Changes |
 |------|---------|
+| 2026-04-03 | Artigo impulso-e-quantidade-de-movimento publicado no cluster fisica-basica |
 | 2026-04-03 | Artigo pressao-atmosferica publicado no cluster fisica-basica |
 | 2026-04-03 | Artigo potencia-na-fisica atualizado no cluster fisica-basica |
 | 2026-04-03 | Segurança enterprise implementada - Jest testing, CSP/HSTS headers, Winston logging, input sanitization, API hardening |
