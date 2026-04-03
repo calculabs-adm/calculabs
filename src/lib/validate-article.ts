@@ -23,6 +23,7 @@ interface Article {
   search_intent: string;
   summary: string;
   content: string;
+  publishedAt?: string;
   faq: FAQ[];
   how_to: string[];
   entities: string[];

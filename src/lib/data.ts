@@ -12,6 +12,7 @@ export type Article = {
   search_intent: string;
   summary: string;
   content: string;
+  publishedAt?: string;
   faq: Array<{ q: string; a: string }>;
   how_to: string[];
   entities: string[];
