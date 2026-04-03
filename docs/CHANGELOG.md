@@ -4,6 +4,7 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
 
+- Added Calculadora de Potência (id: 123) in Ciência > Física with formula P = T / t
 - Published Knowledge Hub article: impulso-e-quantidade-de-movimento (Impulso e Quantidade de Movimento: O Que É, Fórmulas e Aplicações na Física) - category: ciencia, cluster: fisica-basica (satellite)
 - Published Knowledge Hub article: pressao-atmosferica (Pressão Atmosférica: O Que É, Como Funciona e Exemplos no Dia a Dia) - category: ciencia, cluster: fisica-basica (satellite)
 - Published Knowledge Hub article: potencia-na-fisica (Potência na Física: O Que É, Fórmula, Como Calcular e Aplicações Práticas)
