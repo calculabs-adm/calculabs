@@ -4,6 +4,13 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
 
+- **Segurança e Testes Avançados**: Implementação completa de framework de testes e hardening de segurança
+  - ✅ **Jest Testing Framework**: Configurado com React Testing Library, testes unitários para funções críticas
+  - ✅ **Headers de Segurança**: CSP, HSTS, X-Frame-Options, Content-Type-Options implementados
+  - ✅ **Logging Estruturado**: Winston logger com rotação de logs para produção
+  - ✅ **Sanitização de Inputs**: Utilitários avançados para XSS prevention, validação de email, rate limiting
+  - ✅ **Hardening de APIs**: Rate limiting, sanitização, logging estruturado nas APIs de tracking e error reporting
+  - ✅ **Configuração de Produção**: Headers de segurança aplicados globalmente via next.config.ts
 - **Auditoria Completa do Projeto**: Concluída verificação abrangente de código e funcionalidades
   - ✅ Correções críticas: Resolvidos erros de linting (setState em useEffect), links HTML incorretos, configurações Turbopack
   - ✅ Funcionalidades validadas: Todas as rotas críticas (71 calculadoras, 22 artigos, páginas institucionais) respondendo corretamente
