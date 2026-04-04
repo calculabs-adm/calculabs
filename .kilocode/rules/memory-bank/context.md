@@ -29,13 +29,13 @@
 
 **Project Status**: 🚀 CalcuLabs - Versão 1.1.0
 
-Portal brasileiro de calculadoras online gratuitas com 72 calculadoras em 8 categorias e 13 artigos do Knowledge Hub.
+Portal brasileiro de calculadoras online gratuitas com 73 calculadoras em 8 categorias e 13 artigos do Knowledge Hub.
 
 ## Current Structure
 
 | Component | Status |
 |-----------|--------|
-| Calculadoras | 72 |
+| Calculadoras | 73 |
 | Categorias | 8 |
 | Subcategorias | 17 |
 | Artigos publicados | 13 |
