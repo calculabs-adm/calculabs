@@ -2,7 +2,7 @@
 
 Inventário completo de todas as calculadoras disponíveis no CalcuLabs. Este é o arquivo-fonte único — toda criação, alteração ou remoção de calculadora DEVE ser refletida aqui.
 
-**Total: 74 calculadoras**
+**Total: 75 calculadoras**
 
 ---
 
@@ -173,9 +173,9 @@ Inventário completo de todas as calculadoras disponíveis no CalcuLabs. Este é
 
 ---
 
-## Ciência (8)
+## Ciência (9)
 
-### Física (7)
+### Física (8)
 
 | ID | Nome | Slug | Complexidade | Monetização |
 |----|------|------|-------------|-------------|
@@ -188,6 +188,7 @@ Inventário completo de todas as calculadoras disponíveis no CalcuLabs. Este é
 | 123 | Calculadora de Potência | `calculadora-potencia` | básico | ads |
 | 124 | Calculadora de Pressão | `calculadora-pressao` | básico | ads |
 | 125 | Calculadora de Densidade | `calculadora-densidade` | básico | ads |
+| 126 | Calculadora de Energia Potencial | `calculadora-energia-potencial` | básico | ads |
 
 ### Quântica (1)
 
@@ -201,18 +202,18 @@ Inventário completo de todas as calculadoras disponíveis no CalcuLabs. Este é
 
 | Tipo | Quantidade |
 |------|-----------|
-| ads | 54 |
+| ads | 55 |
 | affiliate | 14 |
 | leads | 5 |
-| **Total** | **73** |
+| **Total** | **74** |
 
 ## Resumo por Complexidade
 
 | Nível | Quantidade |
 |-------|-----------|
-| básico | 57 |
+| básico | 58 |
 | técnico | 16 |
-| **Total** | **73** |
+| **Total** | **74** |
 
 ---
 
@@ -226,4 +227,4 @@ Inventário completo de todas as calculadoras disponíveis no CalcuLabs. Este é
 
 ## Última Atualização
 
-2026-04-03 — Documentação atualizada. Total: 74 calculadoras.
+2026-04-03 — Documentação atualizada. Total: 75 calculadoras.
