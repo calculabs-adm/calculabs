@@ -4,6 +4,7 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
 
+- Added Calculadora de Densidade (id: 125) in Ciência > Física with formula ρ = m / V
 - Added Calculadora de Pressão (id: 124) in Ciência > Física with formula P = F / A
 - Added Calculadora de Potência (id: 123) in Ciência > Física with formula P = T / t
 - Fixed Calculadora de Pressão availability issue

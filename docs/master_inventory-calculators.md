@@ -2,7 +2,7 @@
 
 Inventário completo de todas as calculadoras disponíveis no CalcuLabs. Este é o arquivo-fonte único — toda criação, alteração ou remoção de calculadora DEVE ser refletida aqui.
 
-**Total: 73 calculadoras**
+**Total: 74 calculadoras**
 
 ---
 
@@ -173,9 +173,9 @@ Inventário completo de todas as calculadoras disponíveis no CalcuLabs. Este é
 
 ---
 
-## Ciência (7)
+## Ciência (8)
 
-### Física (6)
+### Física (7)
 
 | ID | Nome | Slug | Complexidade | Monetização |
 |----|------|------|-------------|-------------|
@@ -186,6 +186,8 @@ Inventário completo de todas as calculadoras disponíveis no CalcuLabs. Este é
 | 121 | Conversor de Velocidade (km/h ↔ m/s) | `conversor-velocidade-kmh-ms` | básico | ads |
 | 122 | Lei da Gravitação Universal de Newton | `lei-gravitacao-universal` | técnico | affiliate |
 | 123 | Calculadora de Potência | `calculadora-potencia` | básico | ads |
+| 124 | Calculadora de Pressão | `calculadora-pressao` | básico | ads |
+| 125 | Calculadora de Densidade | `calculadora-densidade` | básico | ads |
 
 ### Quântica (1)
 
@@ -199,18 +201,18 @@ Inventário completo de todas as calculadoras disponíveis no CalcuLabs. Este é
 
 | Tipo | Quantidade |
 |------|-----------|
-| ads | 53 |
+| ads | 54 |
 | affiliate | 14 |
 | leads | 5 |
-| **Total** | **72** |
+| **Total** | **73** |
 
 ## Resumo por Complexidade
 
 | Nível | Quantidade |
 |-------|-----------|
-| básico | 56 |
+| básico | 57 |
 | técnico | 16 |
-| **Total** | **72** |
+| **Total** | **73** |
 
 ---
 
@@ -224,4 +226,4 @@ Inventário completo de todas as calculadoras disponíveis no CalcuLabs. Este é
 
 ## Última Atualização
 
-2026-04-03 — Documentação atualizada. Total: 73 calculadoras.
+2026-04-03 — Documentação atualizada. Total: 74 calculadoras.
