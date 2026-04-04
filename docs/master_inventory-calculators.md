@@ -2,7 +2,7 @@
 
 Inventário completo de todas as calculadoras disponíveis no CalcuLabs. Este é o arquivo-fonte único — toda criação, alteração ou remoção de calculadora DEVE ser refletida aqui.
 
-**Total: 72 calculadoras**
+**Total: 73 calculadoras**
 
 ---
 
@@ -199,18 +199,18 @@ Inventário completo de todas as calculadoras disponíveis no CalcuLabs. Este é
 
 | Tipo | Quantidade |
 |------|-----------|
-| ads | 52 |
+| ads | 53 |
 | affiliate | 14 |
 | leads | 5 |
-| **Total** | **71** |
+| **Total** | **72** |
 
 ## Resumo por Complexidade
 
 | Nível | Quantidade |
 |-------|-----------|
-| básico | 55 |
+| básico | 56 |
 | técnico | 16 |
-| **Total** | **71** |
+| **Total** | **72** |
 
 ---
 
@@ -224,4 +224,4 @@ Inventário completo de todas as calculadoras disponíveis no CalcuLabs. Este é
 
 ## Última Atualização
 
-2026-04-03 — Documentação atualizada. Total: 72 calculadoras.
+2026-04-03 — Documentação atualizada. Total: 73 calculadoras.

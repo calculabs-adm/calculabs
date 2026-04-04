@@ -3,7 +3,7 @@
 ## Funcionalidades Ativas
 
 ### 1. Calculadoras Interativas
-- 72 calculadoras em 8 categorias
+- 73 calculadoras em 8 categorias
 - Avaliação client-side de fórmulas com resultado instantâneo
 - Suporte a inputs: number, text, select, date
 - Formatação automática: moeda (R$), porcentagem, número
