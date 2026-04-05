@@ -2230,5 +2230,86 @@
       "satellites": []
     },
     "publishedAt": "2026-04-03"
+  },
+  {
+    "slug": "energia-na-fisica",
+    "title": "Energia na Física: Guia Completo com Fórmulas, Tipos e Aplicações Práticas",
+    "category": "ciencia",
+    "meta_title": "Energia na Física: Guia Completo com Fórmulas e Exemplos | CalcuLabs",
+    "meta_description": "Aprenda tudo sobre energia na física com exemplos práticos, fórmulas e aplicações no dia a dia. Guia completo e didático.",
+    "search_intent": "informacional",
+    "summary": "A energia é um dos conceitos mais importantes da física e está presente em praticamente todos os fenômenos naturais. Neste guia completo, você vai entender o que é energia, quais são seus principais tipos, como calcular e como esse conceito se aplica no mundo real.",
+    "content": "<h1>Energia na Física: Guia Completo com Fórmulas, Tipos e Aplicações Práticas</h1>\n\n<p>A energia é um dos conceitos mais importantes da física e está presente em praticamente todos os fenômenos naturais. Desde o movimento de um carro até a geração de eletricidade em uma usina, tudo envolve algum tipo de energia. Neste guia completo, você vai entender o que é energia, quais são seus principais tipos, como calcular e como esse conceito se aplica no mundo real.</p>\n\n<h2>O que é energia na física</h2>\n<p>Na física, energia é definida como a capacidade de realizar trabalho ou provocar transformações. Isso significa que sempre que algo se move, aquece, ilumina ou sofre qualquer mudança, existe energia envolvida nesse processo. Esse conceito é fundamental porque permite entender como os sistemas físicos funcionam e como diferentes formas de energia se transformam ao longo do tempo.</p>\n\n<h2>Principais tipos de energia</h2>\n<p>A energia pode se apresentar de diversas formas, mas algumas são mais comuns no estudo da física básica: energia cinética, energia potencial, energia mecânica e energia térmica. Cada uma dessas formas representa uma maneira diferente de armazenar ou transferir energia.</p>\n\n<h2>Energia cinética</h2>\n<p>A energia cinética está relacionada ao movimento. Todo corpo que está em movimento possui energia cinética. A fórmula da energia cinética é Ec = 1/2 · m · v², onde m é a massa do objeto e v é a velocidade. Se quiser calcular esse valor de forma prática, utilize nossa <a href=\"/ciencia/fisica/energia-cinetica\">calculadora de energia cinética</a>. Quanto maior a velocidade ou a massa, maior será a energia cinética do objeto.</p>\n\n<h2>Energia potencial</h2>\n<p>A energia potencial está associada à posição de um objeto, principalmente em relação à altura. A fórmula é Ep = m · g · h, onde m é a massa, g é a gravidade e h é a altura. Você pode calcular facilmente utilizando nossa <a href=\"/ciencia/fisica/calculadora-energia-potencial\">calculadora de energia potencial</a>. Esse tipo de energia é muito comum em situações como quedas livres e sistemas de armazenamento de energia.</p>\n\n<h2>Energia mecânica</h2>\n<p>A energia mecânica é a soma da energia cinética e da energia potencial. Em = Ec + Ep. Esse conceito é essencial para entender a conservação da energia.</p>\n\n<h2>Princípio da conservação da energia</h2>\n<p>Um dos princípios mais importantes da física é o da conservação da energia. Ele afirma que a energia não pode ser criada nem destruída, apenas transformada. Isso significa que, em um sistema fechado, a quantidade total de energia permanece constante, mesmo que ela mude de forma.</p>\n\n<h2>Relação entre energia, trabalho e potência</h2>\n<p>A energia está diretamente ligada ao trabalho e à potência. O trabalho representa a transferência de energia, enquanto a potência indica a velocidade com que essa transferência ocorre. Para cálculos rápidos, utilize a <a href=\"/ciencia/fisica/calculadora-potencia\">calculadora de potência</a>.</p>\n\n<h2>Aplicações da energia no dia a dia</h2>\n<p>A energia está presente em diversas situações do cotidiano: funcionamento de veículos, geração de energia elétrica, equipamentos domésticos e movimento de objetos. Entender energia ajuda a compreender como esses sistemas funcionam.</p>\n\n<h2>Erros comuns ao estudar energia</h2>\n<ul><li>Confundir energia com força</li><li>Ignorar a conservação da energia</li><li>Não considerar corretamente as unidades</li></ul>\n\n<h2>Conclusão</h2>\n<p>A energia é um conceito central na física e está presente em praticamente todos os fenômenos naturais. Compreender suas formas e aplicações é essencial para entender o funcionamento do mundo ao nosso redor.</p>",
+    "faq": [
+      {
+        "q": "O que é energia na física?",
+        "a": "É a capacidade de realizar trabalho ou provocar transformações."
+      },
+      {
+        "q": "Quais são os principais tipos de energia?",
+        "a": "Energia cinética, potencial, mecânica e térmica."
+      },
+      {
+        "q": "Qual a fórmula da energia potencial?",
+        "a": "Ep = m · g · h."
+      }
+    ],
+    "how_to": [
+      "Entenda que energia é capacidade de trabalho",
+      "Identifique o tipo de energia envolvido",
+      "Aplique a fórmula correta para cada tipo",
+      "Considere a conservação da energia",
+      "Use calculadoras para verificação"
+    ],
+    "entities": [
+      "energia",
+      "energia cinética",
+      "energia potencial",
+      "trabalho",
+      "potência",
+      "conservação da energia"
+    ],
+    "semantic_keywords": [
+      "energia na física",
+      "tipos de energia",
+      "energia cinética fórmula",
+      "energia potencial fórmula",
+      "conservação da energia",
+      "energia trabalho potência"
+    ],
+    "examples": [
+      "Carro em movimento: energia cinética",
+      "Objeto elevado: energia potencial",
+      "Pêndulo: conversão entre energia cinética e potencial",
+      "Usina hidrelétrica: energia potencial convertida em elétrica"
+    ],
+    "comparisons": [
+      "Energia cinética vs potencial: movimento vs posição",
+      "Trabalho vs energia: transferência vs capacidade",
+      "Potência vs energia: taxa vs quantidade"
+    ],
+    "related_calculators": [
+      "energia-cinetica",
+      "calculadora-energia-potencial",
+      "calculadora-potencia"
+    ],
+    "related_articles": [
+      "forca-energia-e-trabalho",
+      "potencia-na-fisica",
+      "gravidade-e-peso"
+    ],
+    "internal_links": [
+      "energia-cinetica",
+      "calculadora-energia-potencial",
+      "calculadora-potencia"
+    ],
+    "featured_snippet_answer": "Energia na física é a capacidade de realizar trabalho ou provocar transformações, sendo essencial para entender fenômenos naturais.",
+    "priority": "high",
+    "cluster": {
+      "is_pillar": false,
+      "cluster_name": "fisica-basica",
+      "satellites": []
+    },
+    "publishedAt": "2026-04-05"
   }
 ]

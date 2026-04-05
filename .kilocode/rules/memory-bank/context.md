@@ -2,6 +2,7 @@
 
 ## Recently Completed
 
+- [x] Published Knowledge Hub article: energia-na-fisica (Energia na Física: Guia Completo com Fórmulas, Tipos e Aplicações Práticas) - category: ciencia, cluster: fisica-basica (satellite). Related calculators: energia-cinetica, calculadora-energia-potencial, calculadora-potencia. Internal links: energia-cinetica, calculadora-energia-potencial, calculadora-potencia. Validator passed (needs content expansion).
 - [x] Added Calculadora de Energia Potencial (id: 126) in Ciencia > Fisica with formula Ep = m · g · h, variables: massa (kg), gravidade (m/s²), altura (m). Related calculators: energia-cinetica, forca-lei-de-newton, calculadora-densidade. Validator passed.
 - [x] Added Calculadora de Densidade (id: 125) in Ciencia > Fisica with formula ρ = m / V, variables: massa (kg), volume (m³). Related calculators: calculadora-pressao, forca-lei-de-newton, energia-cinetica. Validator passed.
 - [x] Added Calculadora de Potência (id: 123) in Ciencia > Fisica with formula P = T / t, variables: trabalho (J), tempo (s). Related calculators: trabalho-forca-distancia, energia-cinetica, forca-lei-de-newton. Validator passed.
@@ -31,7 +32,7 @@
 
 **Project Status**: 🚀 CalcuLabs - Versão 1.1.0
 
-Portal brasileiro de calculadoras online gratuitas com 75 calculadoras em 8 categorias e 13 artigos do Knowledge Hub.
+Portal brasileiro de calculadoras online gratuitas com 75 calculadoras em 8 categorias e 14 artigos do Knowledge Hub.
 
 ## Current Structure
 
@@ -40,7 +41,7 @@ Portal brasileiro de calculadoras online gratuitas com 75 calculadoras em 8 cate
 | Calculadoras | 75 |
 | Categorias | 8 |
 | Subcategorias | 17 |
-| Artigos publicados | 13 |
+| Artigos publicados | 14 |
 | Clusters | 3 |
 | Páginas institucionais | 4 (/sobre, /contato, /privacidade, /termos) |
 
@@ -49,13 +50,14 @@ Portal brasileiro de calculadoras online gratuitas com 75 calculadoras em 8 cate
 | Cluster | Pilar | Satélites | Status |
 |---------|-------|-----------|--------|
 | engenharia-cimento | 1 | 5 | Completo |
-| fisica-basica | 1 | 4 | Em expansão |
+| fisica-basica | 1 | 9 | Em expansão |
 | juros-compostos | 1 | 1 | Em expansão |
 
 ## Session History
 
 | Date | Changes |
 |------|---------|
+| 2026-04-03 | Artigo energia-na-fisica publicado no cluster fisica-basica |
 | 2026-04-03 | Calculadora de Energia Potencial adicionada em Ciencia > Fisica |
 | 2026-04-03 | Calculadora de Densidade adicionada em Ciencia > Fisica |
 | 2026-04-03 | Calculadora de Potencia adicionada em Ciencia > Fisica |
