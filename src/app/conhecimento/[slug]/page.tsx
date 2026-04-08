@@ -71,11 +71,20 @@ export default async function ArticlePage({ params }: Props) {
     "@type": "Article",
     headline: article.title,
     description: article.summary,
+    author: {
+      "@type": "Organization",
+      name: "CalcuLabs"
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "CalcuLabs"
+    },
     url: `${siteUrl}/conhecimento/${article.slug}`,
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": `${siteUrl}/conhecimento/${article.slug}`,
     },
+    license: "https://creativecommons.org/licenses/by/4.0/"
   };
 
   return (

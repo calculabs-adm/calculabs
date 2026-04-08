@@ -156,6 +156,7 @@ function generateSchemas(
       name: "CalcuLabs",
       url: siteUrl,
     },
+    license: "https://creativecommons.org/licenses/by/4.0/"
   });
 
   // 2. BreadcrumbList schema
