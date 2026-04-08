@@ -205,6 +205,7 @@ function generateSchemas(
       name: "CalcuLabs",
       url: siteUrl,
     },
+    license: "https://creativecommons.org/licenses/by/4.0/"
   });
 
   // 4. FinancialProduct schema (only for financial calculators)
@@ -221,6 +222,7 @@ function generateSchemas(
         url: siteUrl,
       },
       termsOfService: `${siteUrl}/termos-de-uso`,
+      license: "https://creativecommons.org/licenses/by/4.0/"
     });
   }
 
