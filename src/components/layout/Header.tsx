@@ -3,24 +3,39 @@
 import Link from "next/link";
 import { useState, useEffect, useRef, useMemo } from "react";
 import { useRouter } from "next/navigation";
-import { getAllCalculators, getCategoryByCategoryId, getSubcategoryById, type Calculator } from "@/lib/data";
+import { getAllCalculators, getCategoryByCategoryId, getSubcategoryById, getPublishedArticleSlugs, getArticleBySlug, type Calculator } from "@/lib/data";
 
-// Transform calculator data for search - need category and subcategory slugs
-function useCalculatorSearchData() {
+// Transform calculator and article data for search
+function useSearchData() {
   return useMemo(() => {
     const calcs = getAllCalculators();
-    return calcs.map((calc: Calculator) => {
+    const calculatorData = calcs.map((calc: Calculator) => {
       const category = getCategoryByCategoryId(calc.category_id);
-      const subcategory = calc.subcategory_id 
-        ? getSubcategoryById(calc.subcategory_id) 
+      const subcategory = calc.subcategory_id
+        ? getSubcategoryById(calc.subcategory_id)
         : null;
       return {
         name: calc.name,
         slug: calc.slug,
         category: category?.slug || "",
         subcategory: subcategory?.slug || "",
+        type: "calculator" as const,
       };
     });
+
+    // Get articles from the data functions
+    const articles = getPublishedArticleSlugs()
+      .map(slug => getArticleBySlug(slug))
+      .filter((a): a is NonNullable<ReturnType<typeof getArticleBySlug>> => a !== null)
+      .map(article => ({
+        name: article.title,
+        slug: article.slug,
+        category: article.category,
+        subcategory: "",
+        type: "article" as const,
+      }));
+
+    return [...calculatorData, ...articles];
   }, []);
 }
 
@@ -31,12 +46,12 @@ export default function Header() {
   const searchRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
 
-  const calculators = useCalculatorSearchData();
+  const searchData = useSearchData();
 
-  // Filtrar calculadoras baseado na busca
-  const searchResults = searchQuery.length >= 2 
-    ? calculators.filter(calc =>
-        calc.name.toLowerCase().includes(searchQuery.toLowerCase())
+  // Filtrar calculadoras e artigos baseado na busca
+  const searchResults = searchQuery.length >= 2
+    ? searchData.filter(item =>
+        item.name.toLowerCase().includes(searchQuery.toLowerCase())
       ).slice(0, 6)
     : [];
 
@@ -51,8 +66,12 @@ export default function Header() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const handleSelectCalc = (calc: { name: string; slug: string; category: string; subcategory: string }) => {
-    router.push(`/${calc.category}/${calc.subcategory}/${calc.slug}`);
+  const handleSelectItem = (item: { name: string; slug: string; category: string; subcategory: string; type: "calculator" | "article" }) => {
+    if (item.type === "calculator") {
+      router.push(`/${item.category}/${item.subcategory}/${item.slug}`);
+    } else {
+      router.push(`/conhecimento/${item.slug}`);
+    }
     setSearchOpen(false);
     setSearchQuery("");
     setMenuOpen(false);
@@ -87,7 +106,7 @@ export default function Header() {
               </div>
               <input
                 type="text"
-                placeholder="Buscar calculadora..."
+                placeholder="Buscar calculadoras e artigos..."
                 value={searchQuery}
                 onChange={(e) => {
                   setSearchQuery(e.target.value);
@@ -113,20 +132,39 @@ export default function Header() {
             {/* Dropdown de Resultados */}
             {searchOpen && searchResults.length > 0 && (
               <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-xl shadow-xl border border-slate-200 overflow-hidden z-50">
-                {searchResults.map((calc) => (
+                {searchResults.map((item) => (
                   <button
-                    key={calc.slug}
-                    onClick={() => handleSelectCalc(calc)}
+                    key={`${item.type}-${item.slug}`}
+                    onClick={() => handleSelectItem(item)}
                     className="w-full px-4 py-3 text-left hover:bg-blue-50 flex items-center gap-3 transition-colors border-b border-slate-100 last:border-0"
                   >
-                    <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600">
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                      </svg>
+                    <div className={`w-8 h-8 rounded-lg flex items-center justify-center ${
+                      item.type === 'calculator'
+                        ? 'bg-blue-100 text-blue-600'
+                        : 'bg-green-100 text-green-600'
+                    }`}>
+                      {item.type === 'calculator' ? (
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                        </svg>
+                      ) : (
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                      )}
                     </div>
                     <div>
-                      <p className="font-medium text-slate-800">{calc.name}</p>
-                      <p className="text-xs text-slate-500 capitalize">{calc.category.replace('-', ' ')}</p>
+                      <div className="flex items-center gap-2">
+                        <span className={`text-xs font-medium px-2 py-0.5 rounded ${
+                          item.type === 'calculator'
+                            ? 'bg-blue-100 text-blue-700'
+                            : 'bg-green-100 text-green-700'
+                        }`}>
+                          {item.type === 'calculator' ? 'Calculadora' : 'Artigo'}
+                        </span>
+                      </div>
+                      <p className="font-medium text-slate-800">{item.name}</p>
+                      <p className="text-xs text-slate-500 capitalize">{item.category.replace('-', ' ')}</p>
                     </div>
                   </button>
                 ))}
@@ -136,7 +174,8 @@ export default function Header() {
             {/* Sem resultados */}
             {searchOpen && searchQuery.length >= 2 && searchResults.length === 0 && (
               <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-xl shadow-xl border border-slate-200 p-4 z-50">
-                <p className="text-slate-500 text-center">Nenhuma calculadora encontrada para &quot;{searchQuery}&quot;</p>
+                <p className="text-slate-500 text-center">Nenhum resultado encontrado para &quot;{searchQuery}&quot;</p>
+                <p className="text-xs text-slate-400 mt-1">Busque por calculadoras ou artigos</p>
               </div>
             )}
           </div>
