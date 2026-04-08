@@ -5,6 +5,7 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/).
 ## [Unreleased]
 
 - **Published Knowledge Hub article: `porcentagem`** (Porcentagem: O Que É, Como Calcular e Aplicações Práticas no Dia a Dia) - category: matematica, cluster: matematica-basica (pillar). Related calculators: juros-simples, juros-compostos. Related articles: juros-simples-vs-compostos, gestao-financeira-pessoal. 2462 words, validator passed.
+- **Published Knowledge Hub article: `regra-de-tres`** (Regra de Três: Como Calcular, Tipos e Aplicações Práticas) - category: matematica, cluster: matematica-basica (satellite). Related calculators: juros-simples, juros-compostos. Related articles: porcentagem, variacao-percentual. 2150+ words, validator passed.
 - Expanded energia-na-fisica article with "Exemplo prático completo de energia na física" section - detailed calculation with car scenario for better user retention
 - Expanded energia-na-fisica article with new section "Principais erros ao entender energia na física" for better SEO depth and AdSense approval
 - Added Calculadora de Energia Potencial (id: 126) in Ciência > Física with formula Ep = m · g · h

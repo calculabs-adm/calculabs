@@ -40,6 +40,7 @@ Inventário oficial de artigos do Knowledge Hub. Todo artigo DEVE estar registra
 | 25 | impulso-e-quantidade-de-movimento | Impulso e Quantidade de Movimento: O Que É, Fórmulas e Aplicações na Física | fisica-basica | satellite | publicado | high |
 | 26 | energia-na-fisica | Energia na Física: Guia Completo com Fórmulas, Tipos e Aplicações Práticas | fisica-basica | satellite | publicado | high |
 | 27 | porcentagem | Porcentagem: O Que É, Como Calcular e Aplicações Práticas no Dia a Dia | matematica-basica | pillar | publicado | high |
+| 28 | regra-de-tres | Regra de Três: Como Calcular, Tipos e Aplicações Práticas | matematica-basica | satellite | publicado | high |
 
 ---
 

@@ -2,8 +2,8 @@
 
 Mapa central do projeto CalcuLabs contendo clusters, artigos, calculadoras e relações.
 
-**Atualizado em:** 2026-04-07
-**Total:** 5 clusters, 27 artigos, 75 calculadoras
+**Atualizado em:** 2026-04-08
+**Total:** 5 clusters, 28 artigos, 75 calculadoras
 
 ---
 
@@ -113,6 +113,7 @@ Mapa central do projeto CalcuLabs contendo clusters, artigos, calculadoras e rel
 | Tipo | Slug | Título |
 |------|------|--------|
 | **Pillar** | `porcentagem` | Porcentagem: O Que É, Como Calcular e Aplicações Práticas no Dia a Dia |
+| Satellite | `regra-de-tres` | Regra de Três: Como Calcular, Tipos e Aplicações Práticas |
 
 **Calculadoras relacionadas:**
 
@@ -120,8 +121,10 @@ Mapa central do projeto CalcuLabs contendo clusters, artigos, calculadoras e rel
 |------|------|
 | `porcentagem` | Calculadora de Porcentagem |
 | `variacao-percentual` | Variação Percentual |
+| `juros-simples` | Calculadora de Juros Simples |
+| `juros-compostos` | Calculadora de Juros Compostos |
 
-**Status:** Cluster iniciado (1 pillar). Oportunidade de expansão em regra de três, frações, equações básicas.
+**Status:** Cluster em crescimento (1 pillar + 1 satellite). Fundamentos sólidos estabelecidos, expansão contínua em conceitos matemáticos básicos.
 
 ---
 

@@ -235,6 +235,7 @@ const ARTICLE_WHITELIST = [
   "impulso-e-quantidade-de-movimento",
   "energia-na-fisica",
   "porcentagem",
+  "regra-de-tres",
 ];
 
 const articles = articlesData as Article[];
