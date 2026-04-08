@@ -4,6 +4,7 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
 
+- Expanded energia-na-fisica article with "Exemplo prático completo de energia na física" section - detailed calculation with car scenario for better user retention
 - Expanded energia-na-fisica article with new section "Principais erros ao entender energia na física" for better SEO depth and AdSense approval
 - Added Calculadora de Energia Potencial (id: 126) in Ciência > Física with formula Ep = m · g · h
 - Added Calculadora de Densidade (id: 125) in Ciência > Física with formula ρ = m / V
