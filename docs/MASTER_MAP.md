@@ -2,8 +2,8 @@
 
 Mapa central do projeto CalcuLabs contendo clusters, artigos, calculadoras e relações.
 
-**Atualizado em:** 2026-04-03
-**Total:** 4 clusters, 26 artigos, 75 calculadoras
+**Atualizado em:** 2026-04-07
+**Total:** 5 clusters, 27 artigos, 75 calculadoras
 
 ---
 
@@ -105,6 +105,23 @@ Mapa central do projeto CalcuLabs contendo clusters, artigos, calculadoras e rel
 | `roas` | ROAS |
 
 **Status:** Cluster maduro (1 pillar + 7 satellites). Excelente cobertura de gestão financeira empresarial.
+
+---
+
+### 5. matematica-basica
+
+| Tipo | Slug | Título |
+|------|------|--------|
+| **Pillar** | `porcentagem` | Porcentagem: O Que É, Como Calcular e Aplicações Práticas no Dia a Dia |
+
+**Calculadoras relacionadas:**
+
+| Slug | Nome |
+|------|------|
+| `porcentagem` | Calculadora de Porcentagem |
+| `variacao-percentual` | Variação Percentual |
+
+**Status:** Cluster iniciado (1 pillar). Oportunidade de expansão em regra de três, frações, equações básicas.
 
 ---
 

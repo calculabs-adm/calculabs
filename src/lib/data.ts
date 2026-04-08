@@ -234,6 +234,7 @@ const ARTICLE_WHITELIST = [
   "pressao-atmosferica",
   "impulso-e-quantidade-de-movimento",
   "energia-na-fisica",
+  "porcentagem",
 ];
 
 const articles = articlesData as Article[];

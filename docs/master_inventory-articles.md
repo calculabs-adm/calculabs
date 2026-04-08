@@ -39,9 +39,10 @@ Inventário oficial de artigos do Knowledge Hub. Todo artigo DEVE estar registra
 | 24 | pressao-atmosferica | Pressão Atmosférica: O Que É, Como Funciona e Exemplos no Dia a Dia | fisica-basica | satellite | publicado | high |
 | 25 | impulso-e-quantidade-de-movimento | Impulso e Quantidade de Movimento: O Que É, Fórmulas e Aplicações na Física | fisica-basica | satellite | publicado | high |
 | 26 | energia-na-fisica | Energia na Física: Guia Completo com Fórmulas, Tipos e Aplicações Práticas | fisica-basica | satellite | publicado | high |
+| 27 | porcentagem | Porcentagem: O Que É, Como Calcular e Aplicações Práticas no Dia a Dia | matematica-basica | pillar | publicado | high |
 
 ---
 
 ## Última Atualização
 
-2026-04-03 — Inventário sincronizado com todos os 26 artigos publicados. Clusters: engenharia-cimento (7), fisica-basica (9), juros-compostos (2), gestao-financeira-pessoal (8).
+2026-04-07 — Inventário sincronizado com 27 artigos publicados. Clusters: engenharia-cimento (7), fisica-basica (9), juros-compostos (2), gestao-financeira-pessoal (8), matematica-basica (1).

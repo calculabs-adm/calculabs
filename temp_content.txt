@@ -1,0 +1,119 @@
+<h1>Energia na Física: Guia Completo com Fórmulas, Tipos e Aplicações Práticas</h1>
+
+<p class="publish-date">Publicado em 05 de Abril de 2026 - Equipe CalcuLabs</p>
+
+<p>A energia é um dos conceitos mais importantes e fundamentais da física moderna. Ela permeia praticamente todos os fenômenos naturais que observamos no nosso dia a dia, desde o simples movimento de uma bola rolando até os complexos processos que ocorrem no interior das estrelas. Neste guia completo e detalhado, vamos explorar o fascinante mundo da energia, suas diferentes formas, leis que a governam e aplicações práticas que impactam diretamente nossa vida cotidiana.</p>
+
+<p>Quando falamos em energia na física, estamos nos referindo à capacidade de um sistema realizar trabalho ou provocar mudanças. Esse conceito, aparentemente simples, é na verdade uma das ideias mais profundas e revolucionárias da ciência, permitindo-nos entender como o universo funciona em seus níveis mais fundamentais.</p>
+
+<p>A energia existe em diferentes formas e manifestações, cada uma adequada para descrever diferentes aspectos dos fenômenos físicos. Compreender essas diferentes formas de energia é essencial para qualquer estudante ou profissional da área.</p>
+
+<h2>O que é energia na física</h2>
+
+<p>Na física, energia é definida como a capacidade de realizar trabalho ou provocar transformações em um sistema. Isso significa que sempre que observamos movimento, calor, luz, som ou qualquer outra manifestação física, existe energia envolvida nesse processo.</p>
+
+<p>O conceito de energia é tão fundamental que muitos físicos consideram que entender energia é entender o próprio funcionamento do universo. Ela não pode ser criada nem destruída (princípio da conservação), apenas transformada de uma forma para outra. Essa propriedade faz da energia uma grandeza escalar e uma das mais importantes ferramentas conceituais da física.</p>
+
+<p>A energia existe em diferentes formas e manifestações, cada uma adequada para descrever diferentes aspectos dos fenômenos físicos. Compreender essas diferentes formas de energia é essencial para qualquer estudante ou profissional da área.</p>
+
+<h2>História do conceito de energia</h2>
+
+<p>O conceito de energia evoluiu ao longo dos séculos. Os gregos antigos já tinham noções rudimentares de energia quando falavam sobre "energia" como força vital. No entanto, o conceito científico moderno de energia começou a se desenvolver no século XVII com o trabalho de Galileu Galilei e Isaac Newton.</p>
+
+<p>Foi Thomas Young, no século XIX, quem introduziu o termo "energia" no vocabulário científico. A formulação matemática moderna veio com os trabalhos de James Prescott Joule e Hermann von Helmholtz, que estabeleceram o princípio da conservação da energia no século XIX.</p>
+
+<p>A teoria da relatividade de Einstein, no início do século XX, revolucionou nossa compreensão de energia, estabelecendo a equivalência entre massa e energia através da famosa equação E = mc².</p>
+
+<h2>Principais tipos de energia</h2>
+
+<p>A energia pode se manifestar de diversas formas, cada uma com suas características próprias e aplicações específicas. Vamos explorar as principais formas de energia estudadas na física básica:</p>
+
+<ul>
+<li><strong>Energia cinética</strong>: energia do movimento</li>
+<li><strong>Energia potencial</strong>: energia armazenada na posição</li>
+<li><strong>Energia mecânica</strong>: soma das energias cinética e potencial</li>
+<li><strong>Energia térmica</strong>: energia associada ao calor</li>
+<li><strong>Energia elétrica</strong>: energia dos elétrons em movimento</li>
+<li><strong>Energia química</strong>: energia armazenada nas ligações moleculares</li>
+<li><strong>Energia nuclear</strong>: energia liberada nas reações nucleares</li>
+</ul>
+
+<p>Cada uma dessas formas representa uma maneira diferente de armazenar ou transferir energia, e todas podem se transformar uma na outra através de processos físicos.</p>
+
+<h2>Energia cinética detalhada</h2>
+
+<p>A energia cinética está associada ao movimento de corpos e é uma das formas mais intuitivas de energia. Todo objeto que está em movimento possui energia cinética, que depende tanto da massa quanto da velocidade do objeto.</p>
+
+<p>A fórmula da energia cinética é:</p>
+
+<p><strong>Ec = ½ × m × v²</strong></p>
+
+<p>Onde:</p>
+<ul>
+<li><strong>Ec</strong> = energia cinética (em joules - J)</li>
+<li><strong>m</strong> = massa do objeto (em quilogramas - kg)</li>
+<li><strong>v</strong> = velocidade do objeto (em metros por segundo - m/s)</li>
+</ul>
+
+<p>O aspecto mais interessante dessa fórmula é que a velocidade aparece elevada ao quadrado. Isso significa que dobrar a velocidade de um objeto não dobra sua energia cinética — ela quadruplica! Esse comportamento explica por que acidentes em alta velocidade são tão mais perigosos.</p>
+
+<p>Por exemplo, um carro de 1000 kg viajando a 20 m/s possui energia cinética de:</p>
+<p>Ec = ½ × 1000 × (20)² = ½ × 1000 × 400 = 200.000 J</p>
+
+<p>Se o carro viajar a 40 m/s (dobro da velocidade), a energia cinética será:</p>
+<p>Ec = ½ × 1000 × (40)² = ½ × 1000 × 1600 = 800.000 J</p>
+
+<p>Quatro vezes maior! Esse cálculo mostra claramente o perigo das altas velocidades.</p>
+
+<p>Se quiser calcular a energia cinética de forma prática, utilize nossa <a href="/ciencia/fisica/energia-cinetica">calculadora de energia cinética</a>, que aplica automaticamente a fórmula com valores precisos.</p>
+
+<p>Quanto maior a velocidade ou a massa, maior será a energia cinética do objeto.</p>
+
+<h2>Energia potencial explicada</h2>
+
+<p>A energia potencial é a energia armazenada em um corpo devido à sua posição ou configuração. Ela representa a capacidade de realizar trabalho que um sistema possui em virtude de sua posição relativa a outros corpos ou campos de força.</p>
+
+<p>A forma mais comum de energia potencial é a gravitacional, que depende da altura do objeto em relação a um referencial. A fórmula da energia potencial gravitacional é:</p>
+
+<p><strong>Ep = m × g × h</strong></p>
+
+<p>Onde:</p>
+<ul>
+<li><strong>Ep</strong> = energia potencial (em joules - J)</li>
+<li><strong>m</strong> = massa do objeto (em quilogramas - kg)</li>
+<li><strong>g</strong> = aceleração da gravidade (9,81 m/s² na Terra)</li>
+<li><strong>h</strong> = altura em relação ao referencial (em metros - m)</li>
+</ul>
+
+<p>Por exemplo, um objeto de 2 kg elevado a 10 metros possui energia potencial de:</p>
+<p>Ep = 2 × 9,81 × 10 = 196,2 J</p>
+
+<p>Quando esse objeto cai, sua energia potencial se transforma em energia cinética. No momento em que atinge o solo, toda a energia potencial foi convertida em energia cinética.</p>
+
+<p>Você pode calcular facilmente a energia potencial utilizando nossa <a href="/ciencia/fisica/calculadora-energia-potencial">calculadora de energia potencial</a>, que permite inserir diferentes valores de massa, gravidade e altura.</p>
+
+<p>Além da energia potencial gravitacional, existem outros tipos como:</p>
+<ul>
+<li><strong>Energia potencial elástica</strong>: armazenada em molas comprimidas ou esticadas</li>
+<li><strong>Energia potencial elétrica</strong>: armazenada em campos elétricos</li>
+<li><strong>Energia potencial química</strong>: armazenada nas ligações moleculares</li>
+</ul>
+
+<p>Esse tipo de energia é muito comum em situações como quedas livres e sistemas de armazenamento de energia.</p>
+
+<h2>Energia mecânica e sua importância</h2>
+
+<p>A energia mecânica é a soma da energia cinética e da energia potencial de um sistema. Ela representa a energia total associada ao movimento e à posição dos corpos.</p>
+
+<p><strong>Em = Ec + Ep</strong></p>
+
+<p>Onde:</p>
+<ul>
+<li><strong>Em</strong> = energia mecânica total</li>
+<li><strong>Ec</strong> = energia cinética</li>
+<li><strong>Ep</strong> = energia potencial</li>
+</ul>
+
+<p>Em sistemas conservativos (onde não há dissipação de energia por atrito ou outras forças não conservativas), a energia mecânica permanece constante. Esse é um conceito fundamental para entender muitos fenômenos físicos, desde pêndulos até satélites orbitais.</p>
+
+<p>Por exemplo, em um pêndulo simples, a energia mecânica total (soma da energia potencial gravitacional e cinética) permanece constante
