@@ -58,7 +58,12 @@ export default async function HomePage() {
 
   const allArticles = getPublishedArticleSlugs()
     .map((slug) => getArticleBySlug(slug))
-    .filter((a): a is NonNullable<Article> => a !== null);
+    .filter((a): a is NonNullable<Article> => a !== null)
+    .sort((a, b) => {
+      const dateA = a.publishedAt ? new Date(a.publishedAt).getTime() : 0;
+      const dateB = b.publishedAt ? new Date(b.publishedAt).getTime() : 0;
+      return dateB - dateA; // Sort by publishedAt descending (newest first)
+    });
   const highPriority = allArticles.filter((a) => a.priority === "high");
   const latestArticles = [
     ...highPriority,
