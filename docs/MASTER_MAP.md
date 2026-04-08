@@ -2,8 +2,8 @@
 
 Mapa central do projeto CalcuLabs contendo clusters, artigos, calculadoras e relações.
 
-**Atualizado em:** 2026-04-10
-**Total:** 6 clusters, 30 artigos, 75 calculadoras
+**Atualizado em:** 2026-04-11
+**Total:** 6 clusters, 31 artigos, 75 calculadoras
 
 ---
 
@@ -135,14 +135,16 @@ Mapa central do projeto CalcuLabs contendo clusters, artigos, calculadoras e rel
 | Tipo | Slug | Título |
 |------|------|--------|
 | **Pillar** | `imc` | IMC: O Que É, Como Calcular e Entender Seu Índice de Massa Corporal |
+| Satellite | `peso-ideal` | Peso Ideal: Como Calcular e Entender o Peso Saudável para Sua Altura |
 
 **Calculadoras relacionadas:**
 
 | Slug | Nome |
 |------|------|
 | `imc` | Calculadora de IMC |
+| `peso-ideal` | Calculadora de Peso Ideal |
 
-**Status:** Cluster iniciado (1 pillar). Oportunidade de expansão em saúde e bem-estar: percentual de gordura, metabolismo basal, circunferência abdominal, etc.
+**Status:** Cluster em crescimento (1 pillar + 1 satellite). Base sólida estabelecida em avaliação corporal, pronto para expansão em nutrição e atividade física.
 
 ---
 

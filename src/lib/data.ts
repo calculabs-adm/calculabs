@@ -238,6 +238,7 @@ const ARTICLE_WHITELIST = [
   "regra-de-tres",
   "variacao-percentual",
   "imc",
+  "peso-ideal",
 ];
 
 const articles = articlesData as Article[];

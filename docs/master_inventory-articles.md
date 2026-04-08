@@ -43,9 +43,10 @@ Inventário oficial de artigos do Knowledge Hub. Todo artigo DEVE estar registra
 | 28 | regra-de-tres | Regra de Três: Como Calcular, Tipos e Aplicações Práticas | matematica-basica | satellite | publicado | high |
 | 29 | variacao-percentual | Variação Percentual: Como Calcular Aumento e Queda Percentual na Prática | matematica-basica | satellite | publicado | high |
 | 30 | imc | IMC: O Que É, Como Calcular e Entender Seu Índice de Massa Corporal | saude-imc | pillar | publicado | high |
+| 31 | peso-ideal | Peso Ideal: Como Calcular e Entender o Peso Saudável para Sua Altura | saude-imc | satellite | publicado | high |
 
 ---
 
 ## Última Atualização
 
-2026-04-10 — Inventário sincronizado com 30 artigos publicados. Clusters: engenharia-cimento (7), fisica-basica (9), juros-compostos (2), gestao-financeira-pessoal (8), matematica-basica (3), saude-imc (1).
+2026-04-11 — Inventário sincronizado com 31 artigos publicados. Clusters: engenharia-cimento (7), fisica-basica (9), juros-compostos (2), gestao-financeira-pessoal (8), matematica-basica (3), saude-imc (2).
