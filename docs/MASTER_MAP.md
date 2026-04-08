@@ -2,8 +2,8 @@
 
 Mapa central do projeto CalcuLabs contendo clusters, artigos, calculadoras e relações.
 
-**Atualizado em:** 2026-04-09
-**Total:** 5 clusters, 29 artigos, 75 calculadoras
+**Atualizado em:** 2026-04-10
+**Total:** 6 clusters, 30 artigos, 75 calculadoras
 
 ---
 
@@ -127,6 +127,22 @@ Mapa central do projeto CalcuLabs contendo clusters, artigos, calculadoras e rel
 | `juros-compostos` | Calculadora de Juros Compostos |
 
 **Status:** Cluster completo (1 pillar + 2 satellites). Base sólida estabelecida com conceitos fundamentais da matemática básica, pronto para expansão em geometria e álgebra.
+
+---
+
+### 6. saude-imc
+
+| Tipo | Slug | Título |
+|------|------|--------|
+| **Pillar** | `imc` | IMC: O Que É, Como Calcular e Entender Seu Índice de Massa Corporal |
+
+**Calculadoras relacionadas:**
+
+| Slug | Nome |
+|------|------|
+| `imc` | Calculadora de IMC |
+
+**Status:** Cluster iniciado (1 pillar). Oportunidade de expansão em saúde e bem-estar: percentual de gordura, metabolismo basal, circunferência abdominal, etc.
 
 ---
 

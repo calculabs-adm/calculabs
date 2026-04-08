@@ -237,6 +237,7 @@ const ARTICLE_WHITELIST = [
   "porcentagem",
   "regra-de-tres",
   "variacao-percentual",
+  "imc",
 ];
 
 const articles = articlesData as Article[];
