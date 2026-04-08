@@ -41,9 +41,10 @@ Inventário oficial de artigos do Knowledge Hub. Todo artigo DEVE estar registra
 | 26 | energia-na-fisica | Energia na Física: Guia Completo com Fórmulas, Tipos e Aplicações Práticas | fisica-basica | satellite | publicado | high |
 | 27 | porcentagem | Porcentagem: O Que É, Como Calcular e Aplicações Práticas no Dia a Dia | matematica-basica | pillar | publicado | high |
 | 28 | regra-de-tres | Regra de Três: Como Calcular, Tipos e Aplicações Práticas | matematica-basica | satellite | publicado | high |
+| 29 | variacao-percentual | Variação Percentual: Como Calcular Aumento e Queda Percentual na Prática | matematica-basica | satellite | publicado | high |
 
 ---
 
 ## Última Atualização
 
-2026-04-07 — Inventário sincronizado com 27 artigos publicados. Clusters: engenharia-cimento (7), fisica-basica (9), juros-compostos (2), gestao-financeira-pessoal (8), matematica-basica (1).
+2026-04-09 — Inventário sincronizado com 29 artigos publicados. Clusters: engenharia-cimento (7), fisica-basica (9), juros-compostos (2), gestao-financeira-pessoal (8), matematica-basica (3).

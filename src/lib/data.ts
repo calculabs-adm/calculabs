@@ -236,6 +236,7 @@ const ARTICLE_WHITELIST = [
   "energia-na-fisica",
   "porcentagem",
   "regra-de-tres",
+  "variacao-percentual",
 ];
 
 const articles = articlesData as Article[];
