@@ -50,6 +50,7 @@ Inventário oficial de artigos do Knowledge Hub. Todo artigo DEVE estar registra
 | 35 | rescisao-trabalhista | Rescisão Trabalhista: Como Calcular, Tipos de Demissão e Seus Direitos | trabalhista | pillar | publicado | high |
 | 36 | fgts | FGTS: O Que É, Como Funciona, Como Calcular e Quando Você Pode Sacar | trabalhista | satellite | publicado | high |
 | 37 | decimo-terceiro | Décimo Terceiro Salário: Como Calcular, Quem Tem Direito e Quando Receber | trabalhista | satellite | publicado | high |
+| 38 | ferias-proporcionais | Férias Proporcionais: Como Calcular, Quem Tem Direito e Quanto Você Deve Receber | trabalhista | satellite | publicado | high |
 | 36 | financiamento-imobiliario | Financiamento Imobiliário: Como Funciona, Como Calcular e Como Escolher o Melhor | gestao-financeira-pessoal | satellite | publicado | high |
 
 ---

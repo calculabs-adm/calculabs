@@ -246,6 +246,7 @@ const ARTICLE_WHITELIST = [
   "financiamento-imobiliario",
   "fgts",
   "decimo-terceiro",
+  "ferias-proporcionais",
 ];
 
 const articles = articlesData as Article[];

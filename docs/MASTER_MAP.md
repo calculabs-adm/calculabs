@@ -161,6 +161,7 @@ Mapa central do projeto CalcuLabs contendo clusters, artigos, calculadoras e rel
 | **Pillar** | `rescisao-trabalhista` | Rescisão Trabalhista: Como Calcular, Tipos de Demissão e Seus Direitos |
 | Satellite | `fgts` | FGTS: O Que É, Como Funciona, Como Calcular e Quando Você Pode Sacar |
 | Satellite | `decimo-terceiro` | Décimo Terceiro Salário: Como Calcular, Quem Tem Direito e Quando Receber |
+| Satellite | `ferias-proporcionais` | Férias Proporcionais: Como Calcular, Quem Tem Direito e Quanto Você Deve Receber |
 
 **Calculadoras relacionadas:**
 
