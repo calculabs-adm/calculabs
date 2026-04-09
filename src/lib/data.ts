@@ -244,6 +244,7 @@ const ARTICLE_WHITELIST = [
   "guia-gestao-financeira",
   "rescisao-trabalhista",
   "financiamento-imobiliario",
+  "fgts",
 ];
 
 const articles = articlesData as Article[];

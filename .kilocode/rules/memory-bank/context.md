@@ -3,6 +3,7 @@
 ## Recently Completed
 
 - [x] Published Knowledge Hub article: `financiamento-imobiliario` (Financiamento Imobiliário: Como Funciona, Como Calcular e Como Escolher o Melhor) - category: financas-pessoais, cluster: gestao-financeira-pessoal (satellite). Related calculators: financiamento-imobiliario. Objetivo: completar cluster gestão financeira com conteúdo de alto valor sobre maior investimento da vida. 2800+ words, validator passed.
+- [x] Published Knowledge Hub article: `fgts` (FGTS: O Que É, Como Funciona, Como Calcular e Quando Você Pode Sacar) - category: trabalhista-tributario, cluster: trabalhista (satellite). Related calculators: fgts, rescisao-trabalhista, decimo-terceiro, ferias-proporcionais. Objetivo: expandir cluster trabalhista, explicar direito fundamental e conectar com cálculos práticos. 2800+ words, validator passed.
 - [x] Published Knowledge Hub article: `rescisao-trabalhista` (Rescisão Trabalhista: Como Calcular, Tipos de Demissão e Seus Direitos) - category: trabalhista-tributario, cluster: trabalhista (pillar). Related calculators: rescisao-trabalhista, fgts, decimo-terceiro, ferias-proporcionais. Objetivo: criar base do cluster trabalhista, aumentar valor percebido e chances de aprovação AdSense. 2800+ words, validator passed.
 - [x] Published Knowledge Hub article: `taxa-metabolica-basal` (Taxa Metabólica Basal: O Que É, Como Calcular e Quantas Calorias Seu Corpo Gasta em Repouso) - category: saude, cluster: saude-imc (satellite). Related calculators: taxa-metabolica-basal, calorias-diarias, imc, peso-ideal. Related articles: imc, peso-ideal, calorias-diarias. Objetivo: conectar IMC → Peso Ideal → TMB → Calorias Diárias para fortalecer cluster saúde. 2800+ words, validator passed.
 - [x] Published Knowledge Hub article: `guia-gestao-financeira` (Guia Completo de Gestão Financeira) - category: financas-pessoais, cluster: gestao-financeira-pessoal (pillar). Related calculators: roi, margem-de-lucro, ponto-de-equilibrio, markup. Internal links: gestao-financeira-pessoal, fluxo-de-caixa, roi, margem-de-lucro. Página atribuída a /financas-pessoais/gestao-financeira.
@@ -46,7 +47,7 @@ Portal brasileiro de calculadoras online gratuitas com 75 calculadoras em 8 cate
 | Calculadoras | 75 |
 | Categorias | 8 |
 | Subcategorias | 17 |
-| Artigos publicados | 19 |
+| Artigos publicados | 20 |
 | Clusters | 3 |
 | Páginas institucionais | 4 (/sobre, /contato, /privacidade, /termos) |
 
@@ -59,13 +60,14 @@ Portal brasileiro de calculadoras online gratuitas com 75 calculadoras em 8 cate
 | juros-compostos | 1 | 1 | Em expansão |
 | saude-imc | 1 | 3 | Completo (imc, peso-ideal, calorias-diarias, taxa-metabolica-basal) |
 | gestao-financeira-pessoal | 2 | 8 | Completo (gestao-financeira-pessoal, guia-gestao-financeira, margem-de-lucro, ponto-de-equilibrio, markup, fluxo-de-caixa, despesas-fixas-e-variaveis, capital-de-giro, roi, financiamento-imobiliario) |
-| trabalhista | 1 | 0 | Iniciado (rescisao-trabalhista) |
+| trabalhista | 1 | 1 | Crescimento (rescisao-trabalhista + fgts) |
 
 ## Session History
 
 | Date | Changes |
 |------|---------|
 | 2026-04-09 | Artigo financiamento-imobiliario publicado como satellite do cluster gestao-financeira-pessoal |
+| 2026-04-09 | Artigo fgts publicado como satellite do cluster trabalhista |
 | 2026-04-09 | Artigo rescisao-trabalhista publicado como pilar do cluster trabalhista |
 | 2026-04-03 | Artigo energia-na-fisica publicado no cluster fisica-basica |
 | 2026-04-03 | Calculadora de Energia Potencial adicionada em Ciencia > Fisica |

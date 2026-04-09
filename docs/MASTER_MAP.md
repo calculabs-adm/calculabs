@@ -159,6 +159,7 @@ Mapa central do projeto CalcuLabs contendo clusters, artigos, calculadoras e rel
 | Tipo | Slug | Título |
 |------|------|--------|
 | **Pillar** | `rescisao-trabalhista` | Rescisão Trabalhista: Como Calcular, Tipos de Demissão e Seus Direitos |
+| Satellite | `fgts` | FGTS: O Que É, Como Funciona, Como Calcular e Quando Você Pode Sacar |
 
 **Calculadoras relacionadas:**
 
@@ -169,7 +170,7 @@ Mapa central do projeto CalcuLabs contendo clusters, artigos, calculadoras e rel
 | `decimo-terceiro` | Calculadora de 13º Salário |
 | `ferias-proporcionais` | Calculadora de Férias Proporcionais |
 
-**Status:** Cluster iniciado (1 pillar). Base sólida estabelecida em rescisão trabalhista, pronto para expansão em outros temas trabalhistas.
+**Status:** Cluster em crescimento (1 pillar + 1 satellite). Base sólida estabelecida em direitos trabalhistas fundamentais.
 
 ---
 
