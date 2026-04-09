@@ -75,6 +75,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: siteUrl,
   },
+  icons: {
+    icon: "/media/images/fivecon.jpeg",
+  },
 };
 
 export default function RootLayout({
