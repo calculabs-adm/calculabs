@@ -72,7 +72,7 @@
 
 ### 12. Knowledge Hub (IMPLEMENTADO)
 - Sistema de governança de artigos com spec rígida
-- 34 artigos publicados em 5 clusters
+- 35 artigos publicados em 6 clusters
 - Spec oficial: `docs/CALCULABS_ARTICLE_SPEC.md`
 - Inventário: `docs/master_inventory-articles.md`
 - Dados: `src/data/articles.json`
@@ -112,7 +112,8 @@
 | fisica-basica | 1 | 4 | Em expansão |
 | juros-compostos | 1 | 1 | Em expansão |
 | gestao-financeira-pessoal | 1 | 7 | Completo |
-| saude-imc | 1 | 2 | Completo |
+| saude-imc | 1 | 3 | Completo |
+| trabalhista | 1 | 0 | Iniciado |
 
 ## Funções do Formula Engine
 

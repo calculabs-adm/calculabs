@@ -242,6 +242,7 @@ const ARTICLE_WHITELIST = [
   "calorias-diarias",
   "taxa-metabolica-basal",
   "guia-gestao-financeira",
+  "rescisao-trabalhista",
 ];
 
 const articles = articlesData as Article[];

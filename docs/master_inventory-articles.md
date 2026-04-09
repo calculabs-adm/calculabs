@@ -47,6 +47,7 @@ Inventário oficial de artigos do Knowledge Hub. Todo artigo DEVE estar registra
 | 32 | calorias-diarias | Calorias Diárias: Quantas Calorias Você Deve Consumir por Dia | saude-imc | satellite | publicado | high |
 | 33 | taxa-metabolica-basal | Taxa Metabólica Basal: O Que É, Como Calcular e Quantas Calorias Seu Corpo Gasta em Repouso | saude-imc | satellite | publicado | high |
 | 34 | guia-gestao-financeira | Guia Completo de Gestão Financeira: Organize Seu Dinheiro e Construa Patrimônio | gestao-financeira-pessoal | pillar | publicado | high |
+| 35 | rescisao-trabalhista | Rescisão Trabalhista: Como Calcular, Tipos de Demissão e Seus Direitos | trabalhista | pillar | publicado | high |
 
 ---
 
