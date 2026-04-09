@@ -138,6 +138,7 @@ Mapa central do projeto CalcuLabs contendo clusters, artigos, calculadoras e rel
 | **Pillar** | `imc` | IMC: O Que É, Como Calcular e Entender Seu Índice de Massa Corporal |
 | Satellite | `peso-ideal` | Peso Ideal: Como Calcular e Entender o Peso Saudável para Sua Altura |
 | Satellite | `calorias-diarias` | Calorias Diárias: Quantas Calorias Você Deve Consumir por Dia |
+| Satellite | `taxa-metabolica-basal` | Taxa Metabólica Basal: O Que É, Como Calcular e Quantas Calorias Seu Corpo Gasta em Repouso |
 
 **Calculadoras relacionadas:**
 
@@ -146,8 +147,9 @@ Mapa central do projeto CalcuLabs contendo clusters, artigos, calculadoras e rel
 | `imc` | Calculadora de IMC |
 | `peso-ideal` | Calculadora de Peso Ideal |
 | `calorias-diarias` | Calculadora de Calorias Diárias |
+| `taxa-metabolica-basal` | Calculadora de Taxa Metabólica Basal |
 
-**Status:** Cluster completo (1 pillar + 2 satellites). Base sólida estabelecida em avaliação corporal e metabolismo.
+**Status:** Cluster completo (1 pillar + 3 satellites). Base sólida estabelecida em avaliação corporal, metabolismo e necessidades calóricas.
 
 ---
 

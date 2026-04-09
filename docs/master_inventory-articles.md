@@ -45,7 +45,8 @@ Inventário oficial de artigos do Knowledge Hub. Todo artigo DEVE estar registra
 | 30 | imc | IMC: O Que É, Como Calcular e Entender Seu Índice de Massa Corporal | saude-imc | pillar | publicado | high |
 | 31 | peso-ideal | Peso Ideal: Como Calcular e Entender o Peso Saudável para Sua Altura | saude-imc | satellite | publicado | high |
 | 32 | calorias-diarias | Calorias Diárias: Quantas Calorias Você Deve Consumir por Dia | saude-imc | satellite | publicado | high |
-| 33 | guia-gestao-financeira | Guia Completo de Gestão Financeira: Organize Seu Dinheiro e Construa Patrimônio | gestao-financeira-pessoal | pillar | publicado | high |
+| 33 | taxa-metabolica-basal | Taxa Metabólica Basal: O Que É, Como Calcular e Quantas Calorias Seu Corpo Gasta em Repouso | saude-imc | satellite | publicado | high |
+| 34 | guia-gestao-financeira | Guia Completo de Gestão Financeira: Organize Seu Dinheiro e Construa Patrimônio | gestao-financeira-pessoal | pillar | publicado | high |
 
 ---
 

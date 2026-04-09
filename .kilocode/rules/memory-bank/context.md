@@ -2,6 +2,7 @@
 
 ## Recently Completed
 
+- [x] Published Knowledge Hub article: `taxa-metabolica-basal` (Taxa Metabólica Basal: O Que É, Como Calcular e Quantas Calorias Seu Corpo Gasta em Repouso) - category: saude, cluster: saude-imc (satellite). Related calculators: taxa-metabolica-basal, calorias-diarias, imc, peso-ideal. Related articles: imc, peso-ideal, calorias-diarias. Objetivo: conectar IMC → Peso Ideal → TMB → Calorias Diárias para fortalecer cluster saúde. 2800+ words, validator passed.
 - [x] Published Knowledge Hub article: `guia-gestao-financeira` (Guia Completo de Gestão Financeira) - category: financas-pessoais, cluster: gestao-financeira-pessoal (pillar). Related calculators: roi, margem-de-lucro, ponto-de-equilibrio, markup. Internal links: gestao-financeira-pessoal, fluxo-de-caixa, roi, margem-de-lucro. Página atribuída a /financas-pessoais/gestao-financeira.
 - [x] Published Knowledge Hub article: `calorias-diarias` (Calorias Diárias: Quantas Calorias Você Deve Consumir por Dia) - category: saude, cluster: saude-imc (satellite). Related calculators: calorias-diarias, taxa-metabolica-basal. Related articles: imc, peso-ideal. Objetivo: completar base metabólica do cluster saúde para aumentar autoridade e aprovação AdSense. 2600+ words, validator passed.
 - [x] Published Knowledge Hub article: energia-na-fisica (Energia na Física: Guia Completo com Fórmulas, Tipos e Aplicações Práticas) - category: ciencia, cluster: fisica-basica (satellite). Related calculators: energia-cinetica, calculadora-energia-potencial, calculadora-potencia. Internal links: energia-cinetica, calculadora-energia-potencial, calculadora-potencia. Validator passed (needs content expansion).
@@ -43,7 +44,7 @@ Portal brasileiro de calculadoras online gratuitas com 75 calculadoras em 8 cate
 | Calculadoras | 75 |
 | Categorias | 8 |
 | Subcategorias | 17 |
-| Artigos publicados | 16 |
+| Artigos publicados | 17 |
 | Clusters | 3 |
 | Páginas institucionais | 4 (/sobre, /contato, /privacidade, /termos) |
 
@@ -62,6 +63,7 @@ Portal brasileiro de calculadoras online gratuitas com 75 calculadoras em 8 cate
 | Date | Changes |
 |------|---------|
 | 2026-04-08 | Artigo guia-gestao-financeira publicado como pilar do cluster gestao-financeira-pessoal. Página /financas-pessoais/gestao-financeira atribuída. |
+| 2026-04-08 | Artigo taxa-metabolica-basal publicado no cluster saude-imc (satellite) |
 | 2026-04-08 | Artigo calorias-diarias publicado no cluster saude-imc (satellite) |
 | 2026-04-03 | Artigo energia-na-fisica publicado no cluster fisica-basica |
 | 2026-04-03 | Calculadora de Energia Potencial adicionada em Ciencia > Fisica |

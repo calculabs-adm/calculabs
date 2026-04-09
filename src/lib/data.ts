@@ -240,6 +240,7 @@ const ARTICLE_WHITELIST = [
   "imc",
   "peso-ideal",
   "calorias-diarias",
+  "taxa-metabolica-basal",
   "guia-gestao-financeira",
 ];
 
