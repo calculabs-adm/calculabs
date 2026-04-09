@@ -25,7 +25,7 @@ export default function PrivacidadePage() {
         </h2>
         <p className="text-slate-700 leading-relaxed mb-4">
           A CalcuLabs (&quot;nós&quot;, &quot;nosso&quot;) opera o site{" "}
-          <strong>www.calculabs.com.br</strong>. Esta Política de Privacidade
+          <strong>calculabs.com.br</strong>. Esta Política de Privacidade
           descreve como coletamos, usamos e protegemos suas informações ao utilizar
           nosso site e nossas calculadoras online.
         </p>

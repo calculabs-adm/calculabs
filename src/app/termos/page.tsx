@@ -23,7 +23,7 @@ export default function TermosPage() {
           1. Aceitação dos Termos
         </h2>
         <p className="text-slate-700 leading-relaxed mb-4">
-          Ao acessar e utilizar o site <strong>www.calculabs.com.br</strong> e suas
+          Ao acessar e utilizar o site <strong>calculabs.com.br</strong> e suas
           calculadoras online, você concorda com estes Termos de Uso. Se você não
           concordar com algum destes termos, não utilize o site.
         </p>

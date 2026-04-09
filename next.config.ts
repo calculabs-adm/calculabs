@@ -2,6 +2,21 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   serverExternalPackages: ["@libsql/client", "nodemailer"],
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'www.calculabs.com.br',
+          },
+        ],
+        destination: 'https://calculabs.com.br/:path*',
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {
