@@ -44,9 +44,15 @@ Inventário oficial de artigos do Knowledge Hub. Todo artigo DEVE estar registra
 | 29 | variacao-percentual | Variação Percentual: Como Calcular Aumento e Queda Percentual na Prática | matematica-basica | satellite | publicado | high |
 | 30 | imc | IMC: O Que É, Como Calcular e Entender Seu Índice de Massa Corporal | saude-imc | pillar | publicado | high |
 | 31 | peso-ideal | Peso Ideal: Como Calcular e Entender o Peso Saudável para Sua Altura | saude-imc | satellite | publicado | high |
+| 32 | calorias-diarias | Calorias Diárias: Quantas Calorias Você Deve Consumir por Dia | saude-imc | satellite | publicado | high |
+| 33 | guia-gestao-financeira | Guia Completo de Gestão Financeira: Organize Seu Dinheiro e Construa Patrimônio | gestao-financeira-pessoal | pillar | publicado | high |
 
 ---
 
 ## Última Atualização
 
 2026-04-11 — Inventário sincronizado com 31 artigos publicados. Clusters: engenharia-cimento (7), fisica-basica (9), juros-compostos (2), gestao-financeira-pessoal (8), matematica-basica (3), saude-imc (2).
+
+2026-04-08 — Artigo "calorias-diarias" adicionado ao cluster saude-imc. Cluster agora com 3 artigos (1 pillar, 2 satellites).
+
+2026-04-08 — Artigo "guia-gestao-financeira" adicionado como pilar do cluster gestao-financeira-pessoal. Cluster agora completo com 8 satélites.

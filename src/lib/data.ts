@@ -239,6 +239,8 @@ const ARTICLE_WHITELIST = [
   "variacao-percentual",
   "imc",
   "peso-ideal",
+  "calorias-diarias",
+  "guia-gestao-financeira",
 ];
 
 const articles = articlesData as Article[];

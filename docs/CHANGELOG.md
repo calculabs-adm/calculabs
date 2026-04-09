@@ -4,6 +4,8 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
 
+- **Published Knowledge Hub article: `calorias-diarias`** (Calorias Diárias: Quantas Calorias Você Deve Consumir por Dia) - category: saude, cluster: saude-imc (satellite). Related calculators: calorias-diarias, taxa-metabolica-basal. Related articles: imc, peso-ideal. Objetivo: completar base metabólica do cluster saúde para aumentar autoridade e aprovação AdSense.
+- **Published Knowledge Hub article: `guia-gestao-financeira`** (Guia Completo de Gestão Financeira: Organize Seu Dinheiro e Construa Patrimônio) - category: financas-pessoais, cluster: gestao-financeira-pessoal (pillar). Related calculators: roi, margem-de-lucro, ponto-de-equilibrio, markup. Internal links: gestao-financeira-pessoal, fluxo-de-caixa, roi, margem-de-lucro. Página atribuída a /financas-pessoais/gestao-financeira.
 - **Published Knowledge Hub article: `porcentagem`** (Porcentagem: O Que É, Como Calcular e Aplicações Práticas no Dia a Dia) - category: matematica, cluster: matematica-basica (pillar). Related calculators: juros-simples, juros-compostos. Related articles: juros-simples-vs-compostos, gestao-financeira-pessoal. 2462 words, validator passed.
 - **Published Knowledge Hub article: `regra-de-tres`** (Regra de Três: Como Calcular, Tipos e Aplicações Práticas) - category: matematica, cluster: matematica-basica (satellite). Related calculators: juros-simples, juros-compostos. Related articles: porcentagem, variacao-percentual. 2150+ words, validator passed.
 - Expanded energia-na-fisica article with "Exemplo prático completo de energia na física" section - detailed calculation with car scenario for better user retention

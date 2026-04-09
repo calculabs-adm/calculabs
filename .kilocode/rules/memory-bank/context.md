@@ -2,6 +2,8 @@
 
 ## Recently Completed
 
+- [x] Published Knowledge Hub article: `guia-gestao-financeira` (Guia Completo de Gestão Financeira) - category: financas-pessoais, cluster: gestao-financeira-pessoal (pillar). Related calculators: roi, margem-de-lucro, ponto-de-equilibrio, markup. Internal links: gestao-financeira-pessoal, fluxo-de-caixa, roi, margem-de-lucro. Página atribuída a /financas-pessoais/gestao-financeira.
+- [x] Published Knowledge Hub article: `calorias-diarias` (Calorias Diárias: Quantas Calorias Você Deve Consumir por Dia) - category: saude, cluster: saude-imc (satellite). Related calculators: calorias-diarias, taxa-metabolica-basal. Related articles: imc, peso-ideal. Objetivo: completar base metabólica do cluster saúde para aumentar autoridade e aprovação AdSense. 2600+ words, validator passed.
 - [x] Published Knowledge Hub article: energia-na-fisica (Energia na Física: Guia Completo com Fórmulas, Tipos e Aplicações Práticas) - category: ciencia, cluster: fisica-basica (satellite). Related calculators: energia-cinetica, calculadora-energia-potencial, calculadora-potencia. Internal links: energia-cinetica, calculadora-energia-potencial, calculadora-potencia. Validator passed (needs content expansion).
 - [x] Added Calculadora de Energia Potencial (id: 126) in Ciencia > Fisica with formula Ep = m · g · h, variables: massa (kg), gravidade (m/s²), altura (m). Related calculators: energia-cinetica, forca-lei-de-newton, calculadora-densidade. Validator passed.
 - [x] Added Calculadora de Densidade (id: 125) in Ciencia > Fisica with formula ρ = m / V, variables: massa (kg), volume (m³). Related calculators: calculadora-pressao, forca-lei-de-newton, energia-cinetica. Validator passed.
@@ -41,7 +43,7 @@ Portal brasileiro de calculadoras online gratuitas com 75 calculadoras em 8 cate
 | Calculadoras | 75 |
 | Categorias | 8 |
 | Subcategorias | 17 |
-| Artigos publicados | 14 |
+| Artigos publicados | 16 |
 | Clusters | 3 |
 | Páginas institucionais | 4 (/sobre, /contato, /privacidade, /termos) |
 
@@ -52,11 +54,15 @@ Portal brasileiro de calculadoras online gratuitas com 75 calculadoras em 8 cate
 | engenharia-cimento | 1 | 5 | Completo |
 | fisica-basica | 1 | 9 | Em expansão |
 | juros-compostos | 1 | 1 | Em expansão |
+| saude-imc | 1 | 2 | Completo (imc, peso-ideal, calorias-diarias) |
+| gestao-financeira-pessoal | 1 | 7 | Completo (gestao-financeira-pessoal, margem-de-lucro, ponto-de-equilibrio, markup, fluxo-de-caixa, despesas-fixas-e-variaveis, capital-de-giro, roi) |
 
 ## Session History
 
 | Date | Changes |
 |------|---------|
+| 2026-04-08 | Artigo guia-gestao-financeira publicado como pilar do cluster gestao-financeira-pessoal. Página /financas-pessoais/gestao-financeira atribuída. |
+| 2026-04-08 | Artigo calorias-diarias publicado no cluster saude-imc (satellite) |
 | 2026-04-03 | Artigo energia-na-fisica publicado no cluster fisica-basica |
 | 2026-04-03 | Calculadora de Energia Potencial adicionada em Ciencia > Fisica |
 | 2026-04-03 | Calculadora de Densidade adicionada em Ciencia > Fisica |

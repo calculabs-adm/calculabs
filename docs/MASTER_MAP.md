@@ -86,6 +86,7 @@ Mapa central do projeto CalcuLabs contendo clusters, artigos, calculadoras e rel
 | Tipo | Slug | Título |
 |------|------|--------|
 | **Pillar** | `gestao-financeira-pessoal` | Gestão Financeira Pessoal: Guia Completo |
+| **Pillar** | `guia-gestao-financeira` | Guia Completo de Gestão Financeira: Organize Seu Dinheiro e Construa Patrimônio |
 | Satellite | `margem-de-lucro` | Margem de Lucro: Como Calcular e Aumentar Rentabilidade |
 | Satellite | `markup` | Markup: O Que É, Como Calcular e Definir o Preço de Venda |
 | Satellite | `ponto-de-equilibrio` | Ponto de Equilíbrio: Como Calcular Quando Seu Negócio Dá Lucro |
@@ -104,7 +105,7 @@ Mapa central do projeto CalcuLabs contendo clusters, artigos, calculadoras e rel
 | `roi` | ROI |
 | `roas` | ROAS |
 
-**Status:** Cluster maduro (1 pillar + 7 satellites). Excelente cobertura de gestão financeira empresarial.
+**Status:** Cluster completo (2 pillars + 7 satellites). Excelente cobertura de gestão financeira pessoal e empresarial.
 
 ---
 
@@ -136,6 +137,7 @@ Mapa central do projeto CalcuLabs contendo clusters, artigos, calculadoras e rel
 |------|------|--------|
 | **Pillar** | `imc` | IMC: O Que É, Como Calcular e Entender Seu Índice de Massa Corporal |
 | Satellite | `peso-ideal` | Peso Ideal: Como Calcular e Entender o Peso Saudável para Sua Altura |
+| Satellite | `calorias-diarias` | Calorias Diárias: Quantas Calorias Você Deve Consumir por Dia |
 
 **Calculadoras relacionadas:**
 
@@ -143,8 +145,9 @@ Mapa central do projeto CalcuLabs contendo clusters, artigos, calculadoras e rel
 |------|------|
 | `imc` | Calculadora de IMC |
 | `peso-ideal` | Calculadora de Peso Ideal |
+| `calorias-diarias` | Calculadora de Calorias Diárias |
 
-**Status:** Cluster em crescimento (1 pillar + 1 satellite). Base sólida estabelecida em avaliação corporal, pronto para expansão em nutrição e atividade física.
+**Status:** Cluster completo (1 pillar + 2 satellites). Base sólida estabelecida em avaliação corporal e metabolismo.
 
 ---
 
