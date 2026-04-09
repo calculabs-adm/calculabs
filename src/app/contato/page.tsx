@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     "Entre em contato com a CalcuLabs. Envie sugestões, reporte erros ou tire suas dúvidas sobre nossas calculadoras online.",
   alternates: {
-    canonical: "/contato",
+    canonical: "https://calculabs.com.br/contato",
   },
 };
 

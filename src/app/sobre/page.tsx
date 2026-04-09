@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Conheça a CalcuLabs, o maior portal de calculadoras online gratuitas do Brasil. Nossa missão é democratizar o acesso a ferramentas de cálculo para todos.",
   alternates: {
-    canonical: "/sobre",
+    canonical: "https://calculabs.com.br/sobre",
   },
 };
 

@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     "Política de Privacidade da CalcuLabs. Saiba como coletamos, usamos e protegemos suas informações ao utilizar nossas calculadoras online.",
   alternates: {
-    canonical: "/privacidade",
+    canonical: "https://calculabs.com.br/privacidade",
   },
 };
 

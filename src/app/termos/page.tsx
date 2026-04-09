@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Termos de Uso da CalcuLabs. Conheça as regras e condições para utilização das nossas calculadoras online gratuitas.",
   alternates: {
-    canonical: "/termos",
+    canonical: "https://calculabs.com.br/termos",
   },
 };
 

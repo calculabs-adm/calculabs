@@ -22,14 +22,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     0
   );
 
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://calculabs.com.br";
+  const canonicalUrl = `${siteUrl}/${data.slug}`;
+
   return {
     title: `Calculadoras de ${data.name} | CalcuLabs`,
     description: `${totalCalcs} calculadoras de ${data.name} online e gratuitas. ${data.description}`,
-    alternates: { canonical: `/${data.slug}` },
+    alternates: { canonical: canonicalUrl },
     openGraph: {
       title: `Calculadoras de ${data.name}`,
       description: data.description ?? "",
-      url: `/${data.slug}`,
+      url: canonicalUrl,
     },
   };
 }
