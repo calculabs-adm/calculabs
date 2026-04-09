@@ -243,6 +243,7 @@ const ARTICLE_WHITELIST = [
   "taxa-metabolica-basal",
   "guia-gestao-financeira",
   "rescisao-trabalhista",
+  "financiamento-imobiliario",
 ];
 
 const articles = articlesData as Article[];

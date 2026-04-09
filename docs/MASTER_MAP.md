@@ -94,6 +94,7 @@ Mapa central do projeto CalcuLabs contendo clusters, artigos, calculadoras e rel
 | Satellite | `despesas-fixas-e-variaveis` | Despesas Fixas e Variáveis: Como Identificar e Controlar |
 | Satellite | `capital-de-giro` | Capital de Giro: O Que É e Como Calcular para Seu Negócio |
 | Satellite | `roi` | ROI: Retorno sobre Investimento - Como Calcular e Interpretar |
+| Satellite | `financiamento-imobiliario` | Financiamento Imobiliário: Como Funciona, Como Calcular e Como Escolher o Melhor |
 
 **Calculadoras relacionadas:**
 
