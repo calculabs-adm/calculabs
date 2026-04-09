@@ -54,6 +54,8 @@ Inventário oficial de artigos do Knowledge Hub. Todo artigo DEVE estar registra
 
 2026-04-11 — Inventário sincronizado com 31 artigos publicados. Clusters: engenharia-cimento (7), fisica-basica (9), juros-compostos (2), gestao-financeira-pessoal (8), matematica-basica (3), saude-imc (2).
 
+2026-04-08 — Artigo "taxa-metabolica-basal" adicionado ao cluster saude-imc. Cluster agora com 4 artigos (1 pillar, 3 satellites).
+
 2026-04-08 — Artigo "calorias-diarias" adicionado ao cluster saude-imc. Cluster agora com 3 artigos (1 pillar, 2 satellites).
 
 2026-04-08 — Artigo "guia-gestao-financeira" adicionado como pilar do cluster gestao-financeira-pessoal. Cluster agora completo com 8 satélites.
