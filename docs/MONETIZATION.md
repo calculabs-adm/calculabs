@@ -76,4 +76,5 @@ Para reativar monetização:
 
 ## Última Atualização
 
+2026-04-10 — Reservado espaço estável (`minHeight`) em `AdBlock` para reduzir CLS em carregamento de anúncios e manter previsibilidade de layout.
 2026-03-28 — PreAdTransition inserido antes do AdBlock final para aumento de CTR.

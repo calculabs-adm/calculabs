@@ -2,10 +2,16 @@
 
 ## Recently Completed
 
+- [x] Advanced Core Web Vitals optimization pass (real/perceived LCP): Header migrated from client typeahead to Server Component with GET search form, reducing global hydration and initial JS/TBT while preserving `/busca` flow.
+- [x] Rendering-priority tuning: `next/font` updated with `display: swap`; Microsoft Clarity script switched from `afterInteractive` to `lazyOnload` and DNS prefetch added to minimize above-the-fold competition.
+- [x] CLS hardening maintained for monetization blocks via reserved ad space (`minHeight`) and no change to GTM/tracking behavior.
+
 - [x] Published Knowledge Hub article: `media-ponderada` (Média Ponderada: O Que É, Como Calcular e Quando Usar) - category: matematica, cluster: matematica-basica (satellite). Related calculators: media-ponderada, media-aritmetica, nota-minima-para-passar. Related articles: porcentagem. Objetivo: expandir cluster matematica-basica, fortalecer relação com media-aritmetica e aumentar autoridade matemática.
 - [x] Published Knowledge Hub article: `media-aritmetica` (Média Aritmética: O Que É, Como Calcular e Exemplos Práticos) - category: matematica, cluster: matematica-basica (satellite). Related calculators: media-aritmetica, media-ponderada, nota-minima-para-passar. Related articles: porcentagem, regra-de-tres. Objetivo: expandir cluster matematica-basica, aumentar cobertura de matemática básica e gerar tráfego orgânico massivo. 2500+ words, validator passed.
 - [x] Added E-E-A-T authority block to all 39 Knowledge Hub articles before FAQ section to improve trust signals and AdSense approval chances.
 - [x] Published Knowledge Hub article: `financiamento-imobiliario` (Financiamento Imobiliário: Como Funciona, Como Calcular e Como Escolher o Melhor) - category: financas-pessoais, cluster: gestao-financeira-pessoal (satellite). Related calculators: financiamento-imobiliario. Objetivo: completar cluster gestão financeira com conteúdo de alto valor sobre maior investimento da vida. 2800+ words, validator passed.
+- [x] Performance optimization implemented: TypeScript ES2020 target, modern browserslist, preconnect for Clarity script, reducing polyfills and improving LCP
+- [x] Published Knowledge Hub article: `mediana` (Mediana: O Que É, Como Calcular e Exemplos Práticos) - category: matematica, cluster: matematica-basica (satellite). Related calculators: media-aritmetica, media-ponderada, nota-minima-para-passar. Related articles: media-aritmetica, media-ponderada. Objetivo: expandir cluster matematica-basica, fortalecer relação com média aritmética e ponderada, aumentar autoridade educacional. 2500+ words, validator passed.
 - [x] Published Knowledge Hub article: `ferias-proporcionais` (Férias Proporcionais: Como Calcular, Quem Tem Direito e Quanto Você Deve Receber) - category: trabalhista-tributario, cluster: trabalhista (satellite). Related calculators: ferias-proporcionais, rescisao-trabalhista, decimo-terceiro, fgts. Objetivo: fechar cluster trabalhista, cobrir todas verbas principais e aumentar autoridade temática. 2800+ words, validator passed.
 - [x] Published Knowledge Hub article: `decimo-terceiro` (Décimo Terceiro Salário: Como Calcular, Quem Tem Direito e Quando Receber) - category: trabalhista-tributario, cluster: trabalhista (satellite). Related calculators: decimo-terceiro, rescisao-trabalhista, fgts, ferias-proporcionais. Objetivo: expandir cluster trabalhista, explicar direito mais esperado do ano e conectar com cálculos práticos. 2800+ words, validator passed.
 - [x] Published Knowledge Hub article: `fgts` (FGTS: O Que É, Como Funciona, Como Calcular e Quando Você Pode Sacar) - category: trabalhista-tributario, cluster: trabalhista (satellite). Related calculators: fgts, rescisao-trabalhista, decimo-terceiro, ferias-proporcionais. Objetivo: expandir cluster trabalhista, explicar direito fundamental e conectar com cálculos práticos. 2800+ words, validator passed.
@@ -43,7 +49,7 @@
 
 **Project Status**: 🚀 CalcuLabs - Versão 1.1.0
 
-Portal brasileiro de calculadoras online gratuitas com 75 calculadoras em 8 categorias e 14 artigos do Knowledge Hub.
+Portal brasileiro de calculadoras online gratuitas com 75 calculadoras em 8 categorias e 42 artigos do Knowledge Hub.
 
 ## Current Structure
 
@@ -52,7 +58,7 @@ Portal brasileiro de calculadoras online gratuitas com 75 calculadoras em 8 cate
 | Calculadoras | 75 |
 | Categorias | 8 |
 | Subcategorias | 17 |
-| Artigos publicados | 41 |
+| Artigos publicados | 42 |
 | Clusters | 3 |
 | Páginas institucionais | 4 (/sobre, /contato, /privacidade, /termos) |
 
@@ -63,6 +69,7 @@ Portal brasileiro de calculadoras online gratuitas com 75 calculadoras em 8 cate
 | engenharia-cimento | 1 | 5 | Completo |
 | fisica-basica | 1 | 9 | Em expansão |
 | juros-compostos | 1 | 1 | Em expansão |
+| matematica-basica | 1 | 6 | Em expansão (porcentagem, regra-de-tres, variacao-percentual, media-aritmetica, media-ponderada, mediana) |
 | saude-imc | 1 | 3 | Completo (imc, peso-ideal, calorias-diarias, taxa-metabolica-basal) |
 | gestao-financeira-pessoal | 2 | 8 | Completo (gestao-financeira-pessoal, guia-gestao-financeira, margem-de-lucro, ponto-de-equilibrio, markup, fluxo-de-caixa, despesas-fixas-e-variaveis, capital-de-giro, roi, financiamento-imobiliario) |
 | trabalhista | 1 | 3 | Completo (rescisao-trabalhista + fgts + decimo-terceiro + ferias-proporcionais) |
@@ -71,11 +78,14 @@ Portal brasileiro de calculadoras online gratuitas com 75 calculadoras em 8 cate
 
 | Date | Changes |
 |------|---------|
+| 2026-04-10 | Advanced CWV/LCP optimization: Header moved to Server Component, next/font swap display, Clarity lazyOnload + dns-prefetch |
 | 2026-04-08 | Added E-E-A-T authority block to all Knowledge Hub articles |
 | 2026-04-09 | Artigo financiamento-imobiliario publicado como satellite do cluster gestao-financeira-pessoal |
 | 2026-04-09 | Artigo ferias-proporcionais publicado como satellite do cluster trabalhista |
 | 2026-04-09 | Artigo media-aritmetica publicado como satellite do cluster matematica-basica |
 | 2026-04-09 | Artigo media-ponderada publicado como satellite do cluster matematica-basica |
+| 2026-04-09 | Performance optimization: ES2020 target, modern browserslist, preconnect for Clarity |
+| 2026-04-09 | Artigo mediana publicado como satellite do cluster matematica-basica |
 | 2026-04-09 | Artigo decimo-terceiro publicado como satellite do cluster trabalhista |
 | 2026-04-09 | Artigo fgts publicado como satellite do cluster trabalhista |
 | 2026-04-09 | Artigo rescisao-trabalhista publicado como pilar do cluster trabalhista |

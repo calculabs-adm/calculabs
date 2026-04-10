@@ -119,6 +119,7 @@ Mapa central do projeto CalcuLabs contendo clusters, artigos, calculadoras e rel
 | Satellite | `variacao-percentual` | Variação Percentual: Como Calcular Aumento e Queda Percentual na Prática |
 | Satellite | `media-aritmetica` | Média Aritmética: O Que É, Como Calcular e Exemplos Práticos |
 | Satellite | `media-ponderada` | Média Ponderada: O Que É, Como Calcular e Quando Usar |
+| Satellite | `mediana` | Mediana: O Que É, Como Calcular e Exemplos Práticos |
 
 **Calculadoras relacionadas:**
 
@@ -130,7 +131,7 @@ Mapa central do projeto CalcuLabs contendo clusters, artigos, calculadoras e rel
 | `juros-simples` | Calculadora de Juros Simples |
 | `juros-compostos` | Calculadora de Juros Compostos |
 
-**Status:** Cluster completo (1 pillar + 4 satellites). Base sólida estabelecida com conceitos fundamentais da matemática básica, pronto para expansão em geometria e álgebra.
+**Status:** Cluster em expansão (1 pillar + 5 satellites). Base sólida estabelecida com conceitos fundamentais da matemática básica, incluindo média aritmética, média ponderada e mediana.
 
 ---
 

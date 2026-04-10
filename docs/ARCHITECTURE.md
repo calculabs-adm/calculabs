@@ -110,7 +110,7 @@ Exemplo: `/financas-pessoais/juros-investimentos/juros-compostos`
 | `CalculatorTracker` | Evento de visualização (GTM + API) |
 | `ErrorReportButton` | Modal de reporte de erro → SMTP |
 | `ShareButton` | Compartilhamento (Web Share API / clipboard) |
-| `Header` | Header sticky com busca typeahead |
+| `Header` | Header sticky Server Component com busca GET (`/busca`) |
 | `Footer` | Footer com links de categorias e páginas |
 | `LatestCalculatorsCarousel` | Carrossel de calculadoras recentes |
 

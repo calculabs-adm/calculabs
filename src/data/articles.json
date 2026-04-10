@@ -3746,5 +3746,98 @@
       "cluster_name": "matematica-basica",
       "satellites": []
     }
+  },
+  {
+    "slug": "mediana",
+    "title": "Mediana: O Que É, Como Calcular e Exemplos Práticos",
+    "category": "matematica",
+    "meta_title": "Mediana: Como Calcular, Fórmula e Exemplos Práticos",
+    "meta_description": "Aprenda tudo sobre mediana: conceito, cálculo passo a passo, diferenças da média aritmética, aplicações em estatística, educação e dados reais.",
+    "search_intent": "informacional",
+    "summary": "A mediana é uma medida estatística fundamental que representa o valor central de um conjunto de dados ordenados. Neste guia completo, você vai aprender o conceito, como calcular com números pares e ímpares, aplicações práticas em salários, notas escolares e estatísticas, diferenças com média aritmética e dicas para usar corretamente no dia a dia.",
+    "content": "<h1>Mediana: O Que É, Como Calcular e Exemplos Práticos</h1>\n\n<p>A mediana é uma das três medidas de tendência central mais importantes da estatística, junto com a média aritmética e a moda. Ela representa o valor que divide um conjunto de dados ordenados exatamente ao meio, sendo menos afetada por valores extremos (outliers) que a média aritmética. Neste guia completo, vamos explorar tudo sobre mediana: conceito, cálculo, aplicações práticas e quando usar essa medida estatística de forma inteligente.</p>\n\n<p>Se você já se deparou com análises de dados, salários, notas escolares ou estatísticas e ouviu falar em mediana, este artigo vai esclarecer todas as suas dúvidas. Vamos explicar de forma simples, com exemplos reais e calculadoras online gratuitas para facilitar seus cálculos.</p>\n\n<h2>O que é mediana</h2>\n\n<p>A mediana é uma medida estatística que representa o valor central de um conjunto de dados quando estes estão ordenados em ordem crescente ou decrescente. Ela divide o conjunto em duas partes iguais: 50% dos valores ficam abaixo da mediana e 50% acima dela. Esse conceito é fundamental porque não sofre influência de valores extremos, diferentemente da média aritmética.</p>\n\n<p>Por exemplo, considere os salários de uma equipe: R$ 2.000, R$ 3.000, R$ 5.000 e R$ 100.000. A média aritmética seria distorcida pelo valor muito alto (R$ 27.750), mas a mediana seria R$ 4.000, representando melhor a realidade da maioria dos funcionários.</p>\n\n<p>O termo \"mediana\" vem do latim \"medianus\", que significa \"do meio\". Ela é especialmente útil em estatística descritiva porque fornece uma visão mais robusta da distribuição dos dados, especialmente quando há valores atípicos que podem distorcer outras medidas.</p>\n\n<p>A mediana é uma medida não paramétrica, ou seja, não depende de suposições sobre a distribuição dos dados. Ela simplesmente identifica o ponto médio da amostra ordenada, sendo uma ferramenta essencial para análise exploratória de dados.</p>\n\n<h2>Para que serve a mediana</h2>\n\n<p>A mediana serve para representar o valor central de um conjunto de dados de forma robusta, especialmente quando há valores extremos que podem distorcer outras medidas. Ela é amplamente utilizada em estatística, economia, educação e ciências sociais por várias razões importantes.</p>\n\n<p>Primeiro, a mediana é resistente a outliers. Em conjuntos de dados com valores muito altos ou muito baixos, como salários em uma empresa onde há um CEO com remuneração milionária, a mediana oferece uma representação mais fiel da realidade da maioria das pessoas.</p>\n\n<p>Segundo, a mediana é útil para dados ordinais ou quando a média não faz sentido. Por exemplo, em rankings, classificações ou escalas de satisfação, a mediana pode ser mais apropriada que a média aritmética.</p>\n\n<p>Terceiro, em distribuições assimétricas, a mediana fornece uma medida de centro mais adequada. Em uma distribuição com cauda longa, como renda pessoal, a mediana divide melhor a população em grupos iguais.</p>\n\n<p>A mediana é fundamental em pesquisas de opinião, estudos demográficos, análises salariais e qualquer situação onde se queira representar o \"típico\" sem ser influenciado por extremos.</p>\n\n<h2>Diferença entre média e mediana</h2>\n\n<p>A principal diferença entre média aritmética e mediana está na forma como elas lidam com valores extremos e na metodologia de cálculo. Enquanto a média soma todos os valores e divide pelo número total, a mediana ordena os dados e encontra o valor central.</p>\n\n<p>A <a href=\"/matematica/basica/media-aritmetica\">média aritmética</a> é sensível a outliers. Um único valor muito alto ou muito baixo pode distorcer completamente o resultado. Já a mediana é robusta e não sofre influência de valores extremos.</p>\n\n<p>Por exemplo, considere os números: 1, 2, 3, 4, 100. A média é 22, mas a mediana é 3. Nesse caso, a mediana representa melhor a tendência central dos dados, pois 3 é realmente o valor do meio quando os dados estão ordenados.</p>\n\n<p>A média trabalha com todos os valores simultaneamente, enquanto a mediana foca apenas na posição central. Em distribuições simétricas, média e mediana são próximas, mas em distribuições assimétricas, elas podem ser bem diferentes.</p>\n\n<p>A escolha entre média e mediana depende do contexto. Use média quando quiser considerar todos os valores igualmente e não houver outliers. Use mediana quando houver valores extremos ou quando quiser uma medida mais robusta.</p>\n\n<h2>Como calcular mediana (passo a passo)</h2>\n\n<p>Calcular a mediana é um processo simples que envolve três passos básicos: ordenar os dados, identificar a posição central e extrair o valor correspondente. O método exato depende de o número de elementos ser par ou ímpar.</p>\n\n<p>Primeiro, ordene os dados em ordem crescente. Esta é uma etapa crucial porque a mediana só faz sentido em dados ordenados. Sem ordenação, não é possível identificar corretamente o valor central.</p>\n\n<p>Segundo, determine se o número de elementos é par ou ímpar. Para conjuntos ímpares, a mediana é o valor na posição central. Para conjuntos pares, é a média aritmética dos dois valores centrais.</p>\n\n<p>Terceiro, aplique a fórmula específica conforme o caso. A posição da mediana pode ser calculada como (n+1)/2 para conjuntos ímpares, onde n é o número total de elementos.</p>\n\n<p>O cálculo manual é simples, mas para grandes conjuntos de dados, é recomendável usar ferramentas automatizadas ou calculadoras especializadas para evitar erros.</p>\n\n<h2>Como calcular mediana com números pares e ímpares</h2>\n\n<p>O cálculo da mediana varia ligeiramente dependendo se o conjunto tem um número par ou ímpar de elementos. Vamos ver cada caso detalhadamente.</p>\n\n<p><strong>Para números ímpares:</strong> Quando há um número ímpar de valores, a mediana é simplesmente o valor que ocupa a posição central quando os dados estão ordenados. Por exemplo, em 1, 3, 5, 7, 9, a mediana é 5 (terceiro valor).</p>\n\n<p><strong>Para números pares:</strong> Quando há um número par de valores, não há um único valor central. Nesse caso, a mediana é a média aritmética dos dois valores centrais. Por exemplo, em 1, 3, 5, 7, a mediana é (3+5)/2 = 4.</p>\n\n<p>A diferença entre os dois casos garante que a mediana sempre exista e seja única, independente do tamanho do conjunto. Esta propriedade torna a mediana uma medida muito confiável.</p>\n\n<p>Em ambos os casos, o primeiro passo é sempre ordenar os dados. Sem ordenação, o cálculo não faz sentido e pode levar a resultados incorretos.</p>\n\n<h2>Exemplos práticos completos</h2>\n\n<p>Vamos ver três exemplos práticos completos de cálculo de mediana em situações reais do dia a dia.</p>\n\n<p><strong>Exemplo 1: Notas escolares</strong><br>Um aluno teve as seguintes notas em matemática: 6.5, 7.0, 8.5, 9.0, 5.5. Ordenando: 5.5, 6.5, 7.0, 8.5, 9.0. Como são 5 valores (ímpar), a mediana é o terceiro valor: 7.0.</p>\n\n<p><strong>Exemplo 2: Salários de uma equipe</strong><br>Os salários mensais são: R$ 2.500, R$ 3.200, R$ 4.100, R$ 6.800. Ordenando: 2.500, 3.200, 4.100, 6.800. São 4 valores (par), então mediana = (3.200 + 4.100) / 2 = R$ 3.650.</p>\n\n<p><strong>Exemplo 3: Tempo de resposta de um sistema</strong><br>Tempos registrados: 0.5s, 1.2s, 2.1s, 3.0s, 4.5s, 8.0s. Ordenando: 0.5, 1.2, 2.1, 3.0, 4.5, 8.0. São 6 valores (par), mediana = (2.1 + 3.0) / 2 = 2.55s.</p>\n\n<p>Esses exemplos mostram como a mediana pode ser aplicada em diferentes contextos, sempre fornecendo uma medida robusta do valor central.</p>\n\n<h2>Erros comuns ao calcular mediana</h2>\n\n<p>Muitos erros ocorrem no cálculo da mediana por falta de atenção aos detalhes. O erro mais comum é não ordenar os dados antes do cálculo. Sem ordenação, qualquer tentativa de encontrar o valor central será incorreta.</p>\n\n<p>Outro erro frequente é confundir média e mediana. Algumas pessoas calculam a média aritmética quando deveriam usar a mediana, especialmente em dados com outliers.</p>\n\n<p>Para números pares, muitos esquecem de calcular a média dos dois valores centrais, simplesmente escolhendo um deles arbitrariamente. Isso leva a resultados inconsistentes.</p>\n\n<p>Em dados não numéricos ou categóricos, alguns tentam calcular mediana quando ela não se aplica. A mediana só faz sentido para dados ordenáveis quantitativamente.</p>\n\n<p>Finalmente, em conjuntos vazios ou com valores inválidos, a mediana pode não existir, mas muitos ignoram essas validações básicas.</p>\n\n<h2>Dicas práticas para usar no dia a dia</h2>\n\n<p>Use a mediana sempre que houver valores extremos que possam distorcer a média. Em salários, por exemplo, a mediana mostra melhor a remuneração típica.</p>\n\n<p>Em educação, a mediana de notas pode ser mais justa que a média, especialmente se houve uma avaliação muito difícil ou muito fácil.</p>\n\n<p>Para análise de tempo de resposta de sistemas, a mediana é preferível porque ignora picos temporários que podem falsear a percepção de performance.</p>\n\n<p>Em estatísticas populacionais, como renda per capita, a mediana divide melhor a população em grupos de renda similar.</p>\n\n<p>Lembre-se: a mediana é sempre um valor real do conjunto, ao contrário da média que pode ser um valor intermediário.</p>\n\n<h2>Conclusão</h2>\n\n<p>A mediana é uma ferramenta estatística poderosa e essencial para análise de dados. Sua robustez contra outliers e simplicidade de cálculo a tornam ideal para muitas aplicações práticas. Use nossa <a href=\"/matematica/basica/media-aritmetica\">calculadora de média aritmética</a> e <a href=\"/matematica/basica/media-ponderada\">calculadora de média ponderada</a> para complementar suas análises estatísticas.</p>",
+    "faq": [
+      {
+        "q": "O que é mediana?",
+        "a": "A mediana é o valor que divide um conjunto de dados ordenados em duas partes iguais, com 50% dos valores abaixo e 50% acima dela."
+      },
+      {
+        "q": "Como calcular mediana?",
+        "a": "Ordene os dados e encontre o valor central. Para ímpar: valor do meio. Para par: média dos dois valores centrais."
+      },
+      {
+        "q": "Diferença entre média e mediana?",
+        "a": "Média é influenciada por valores extremos, mediana não. Média usa todos os valores, mediana foca no centro ordenado."
+      },
+      {
+        "q": "Mediana com números pares?",
+        "a": "É a média aritmética dos dois valores centrais quando os dados estão ordenados."
+      },
+      {
+        "q": "Mediana com números ímpares?",
+        "a": "É o valor que ocupa a posição central quando os dados estão ordenados."
+      },
+      {
+        "q": "Quando usar mediana?",
+        "a": "Quando há outliers, dados assimétricos ou quando se quer uma medida robusta da tendência central."
+      }
+    ],
+    "how_to": [
+      "Ordene os dados em ordem crescente",
+      "Conte o número total de valores (n)",
+      "Para n ímpar: mediana = valor na posição (n+1)/2",
+      "Para n par: mediana = média dos valores nas posições n/2 e (n/2)+1",
+      "Verifique se o resultado faz sentido no contexto dos dados"
+    ],
+    "entities": [
+      "mediana estatística",
+      "medida de tendência central",
+      "análise de dados",
+      "estatística descritiva",
+      "valor central",
+      "dados ordenados",
+      "distribuição de frequência"
+    ],
+    "semantic_keywords": [
+      "como calcular mediana",
+      "mediana fórmula",
+      "mediana vs média",
+      "exemplos mediana",
+      "mediana estatística",
+      "mediana prática",
+      "mediana números pares",
+      "mediana números ímpares",
+      "quando usar mediana"
+    ],
+    "examples": [
+      "Notas escolares: conjunto ímpar de avaliações",
+      "Salários empresariais: dados com valores extremos",
+      "Tempos de resposta: métricas de performance com outliers"
+    ],
+    "comparisons": [
+      "Mediana vs média aritmética: mediana resistente a outliers",
+      "Mediana vs moda: mediana divide em metades, moda mostra valor mais frequente"
+    ],
+    "related_calculators": [
+      "media-aritmetica",
+      "media-ponderada",
+      "nota-minima-para-passar"
+    ],
+    "related_articles": [
+      "media-aritmetica",
+      "media-ponderada"
+    ],
+    "internal_links": [
+      "media-aritmetica",
+      "media-ponderada",
+      "porcentagem"
+    ],
+    "featured_snippet_answer": "Mediana: valor central de dados ordenados. Para ímpar: valor do meio. Para par: média dos dois centrais. Exemplo: 1,3,5,7,9 → mediana=5. Mais robusta que média contra outliers.",
+    "priority": "high",
+    "cluster": {
+      "is_pillar": false,
+      "cluster_name": "matematica-basica",
+      "satellites": []
+    }
   }
 ]

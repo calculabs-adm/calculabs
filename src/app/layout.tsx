@@ -11,11 +11,13 @@ import AdsenseLoader from "@/components/ads/AdsenseLoader";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://calculabs.com.br";
@@ -88,6 +90,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
+      <head>
+        <link rel="preconnect" href="https://www.clarity.ms" />
+        <link rel="dns-prefetch" href="https://www.clarity.ms" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
@@ -97,7 +103,7 @@ export default function RootLayout({
         <GtmLoader />
         <AdsenseLoader />
         <CookieConsent />
-        <Script id="microsoft-clarity" strategy="afterInteractive">
+        <Script id="microsoft-clarity" strategy="lazyOnload">
           {`
 (function(c,l,a,r,i,t,y){
     c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};

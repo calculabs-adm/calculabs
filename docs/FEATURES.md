@@ -15,7 +15,7 @@
 - URLs amigáveis: `/{categoria}/{subcategoria}/{calculadora}`
 
 ### 3. Busca
-- Busca typeahead no header (filtro client-side)
+- Busca no header via formulário GET server-first (sem hidratação client-side global)
 - Página de busca dedicada (`/busca`)
 - Filtro por nome, descrição e keywords
 
@@ -72,7 +72,7 @@
 
 ### 12. Knowledge Hub (IMPLEMENTADO)
 - Sistema de governança de artigos com spec rígida
-- 41 artigos publicados em 7 clusters
+- 42 artigos publicados em 7 clusters
 - Spec oficial: `docs/CALCULABS_ARTICLE_SPEC.md`
 - Inventário: `docs/master_inventory-articles.md`
 - Dados: `src/data/articles.json`

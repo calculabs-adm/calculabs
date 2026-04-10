@@ -54,13 +54,14 @@ Inventário oficial de artigos do Knowledge Hub. Todo artigo DEVE estar registra
 | 39 | media-aritmetica | Média Aritmética: O Que É, Como Calcular e Exemplos Práticos | matematica-basica | satellite | publicado | high |
 | 40 | media-ponderada | Média Ponderada: O Que É, Como Calcular e Quando Usar | matematica-basica | satellite | publicado | high |
 | 41 | financiamento-imobiliario | Financiamento Imobiliário: Como Funciona, Como Calcular e Como Escolher o Melhor | gestao-financeira-pessoal | satellite | publicado | high |
+| 42 | mediana | Mediana: O Que É, Como Calcular e Exemplos Práticos | matematica-basica | satellite | publicado | high |
 
 
 ---
 
 ## Última Atualização
 
-2026-04-11 — Inventário sincronizado com 41 artigos publicados. Clusters: engenharia-cimento (7), fisica-basica (9), juros-compostos (2), gestao-financeira-pessoal (9), matematica-basica (5), saude-imc (3), trabalhista (4). Todos os artigos restaurados e validados.
+2026-04-11 — Inventário sincronizado com 42 artigos publicados. Clusters: engenharia-cimento (7), fisica-basica (9), juros-compostos (2), gestao-financeira-pessoal (9), matematica-basica (6), saude-imc (4), trabalhista (4). Todos os artigos restaurados e validados.
 
 2026-04-08 — Artigo "taxa-metabolica-basal" adicionado ao cluster saude-imc. Cluster agora com 4 artigos (1 pillar, 3 satellites).
 
