@@ -51,13 +51,14 @@ Inventário oficial de artigos do Knowledge Hub. Todo artigo DEVE estar registra
 | 36 | fgts | FGTS: O Que É, Como Funciona, Como Calcular e Quando Você Pode Sacar | trabalhista | satellite | publicado | high |
 | 37 | decimo-terceiro | Décimo Terceiro Salário: Como Calcular, Quem Tem Direito e Quando Receber | trabalhista | satellite | publicado | high |
 | 38 | ferias-proporcionais | Férias Proporcionais: Como Calcular, Quem Tem Direito e Quanto Você Deve Receber | trabalhista | satellite | publicado | high |
-| 36 | financiamento-imobiliario | Financiamento Imobiliário: Como Funciona, Como Calcular e Como Escolher o Melhor | gestao-financeira-pessoal | satellite | publicado | high |
+| 39 | media-aritmetica | Média Aritmética: O Que É, Como Calcular e Exemplos Práticos | matematica-basica | satellite | publicado | high |
+| 40 | financiamento-imobiliario | Financiamento Imobiliário: Como Funciona, Como Calcular e Como Escolher o Melhor | gestao-financeira-pessoal | satellite | publicado | high |
 
 ---
 
 ## Última Atualização
 
-2026-04-11 — Inventário sincronizado com 31 artigos publicados. Clusters: engenharia-cimento (7), fisica-basica (9), juros-compostos (2), gestao-financeira-pessoal (8), matematica-basica (3), saude-imc (2).
+2026-04-11 — Inventário sincronizado com 40 artigos publicados. Clusters: engenharia-cimento (7), fisica-basica (9), juros-compostos (2), gestao-financeira-pessoal (8), matematica-basica (4), saude-imc (3), trabalhista (4).
 
 2026-04-08 — Artigo "taxa-metabolica-basal" adicionado ao cluster saude-imc. Cluster agora com 4 artigos (1 pillar, 3 satellites).
 

@@ -2,6 +2,7 @@
 
 ## Recently Completed
 
+- [x] Published Knowledge Hub article: `media-aritmetica` (Média Aritmética: O Que É, Como Calcular e Exemplos Práticos) - category: matematica, cluster: matematica-basica (satellite). Related calculators: media-aritmetica, media-ponderada, nota-minima-para-passar. Related articles: porcentagem, regra-de-tres. Objetivo: expandir cluster matematica-basica, aumentar cobertura de matemática básica e gerar tráfego orgânico massivo. 2500+ words, validator passed.
 - [x] Added E-E-A-T authority block to all 39 Knowledge Hub articles before FAQ section to improve trust signals and AdSense approval chances.
 - [x] Published Knowledge Hub article: `financiamento-imobiliario` (Financiamento Imobiliário: Como Funciona, Como Calcular e Como Escolher o Melhor) - category: financas-pessoais, cluster: gestao-financeira-pessoal (satellite). Related calculators: financiamento-imobiliario. Objetivo: completar cluster gestão financeira com conteúdo de alto valor sobre maior investimento da vida. 2800+ words, validator passed.
 - [x] Published Knowledge Hub article: `ferias-proporcionais` (Férias Proporcionais: Como Calcular, Quem Tem Direito e Quanto Você Deve Receber) - category: trabalhista-tributario, cluster: trabalhista (satellite). Related calculators: ferias-proporcionais, rescisao-trabalhista, decimo-terceiro, fgts. Objetivo: fechar cluster trabalhista, cobrir todas verbas principais e aumentar autoridade temática. 2800+ words, validator passed.
@@ -50,7 +51,7 @@ Portal brasileiro de calculadoras online gratuitas com 75 calculadoras em 8 cate
 | Calculadoras | 75 |
 | Categorias | 8 |
 | Subcategorias | 17 |
-| Artigos publicados | 39 |
+| Artigos publicados | 40 |
 | Clusters | 3 |
 | Páginas institucionais | 4 (/sobre, /contato, /privacidade, /termos) |
 
@@ -72,6 +73,7 @@ Portal brasileiro de calculadoras online gratuitas com 75 calculadoras em 8 cate
 | 2026-04-08 | Added E-E-A-T authority block to all Knowledge Hub articles |
 | 2026-04-09 | Artigo financiamento-imobiliario publicado como satellite do cluster gestao-financeira-pessoal |
 | 2026-04-09 | Artigo ferias-proporcionais publicado como satellite do cluster trabalhista |
+| 2026-04-09 | Artigo media-aritmetica publicado como satellite do cluster matematica-basica |
 | 2026-04-09 | Artigo decimo-terceiro publicado como satellite do cluster trabalhista |
 | 2026-04-09 | Artigo fgts publicado como satellite do cluster trabalhista |
 | 2026-04-09 | Artigo rescisao-trabalhista publicado como pilar do cluster trabalhista |

@@ -247,6 +247,7 @@ const ARTICLE_WHITELIST = [
   "fgts",
   "decimo-terceiro",
   "ferias-proporcionais",
+  "media-aritmetica",
 ];
 
 const articles = articlesData as Article[];

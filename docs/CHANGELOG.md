@@ -4,6 +4,7 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
 
+- **Published Knowledge Hub article: `media-aritmetica`** (Média Aritmética: O Que É, Como Calcular e Exemplos Práticos) - category: matematica, cluster: matematica-basica (satellite). Related calculators: media-aritmetica, media-ponderada, nota-minima-para-passar. Related articles: porcentagem, regra-de-tres. Objetivo: expandir cluster matematica-basica, aumentar cobertura de matemática básica e gerar tráfego orgânico massivo.
 - Added E-E-A-T authority block ("## Sobre o conteúdo") to all 39 Knowledge Hub articles before FAQ section to improve trust signals and AdSense approval chances.
 - **Published Knowledge Hub article: `taxa-metabolica-basal`** (Taxa Metabólica Basal: O Que É, Como Calcular e Quantas Calorias Seu Corpo Gasta em Repouso) - category: saude, cluster: saude-imc (satellite). Related calculators: taxa-metabolica-basal, calorias-diarias, imc, peso-ideal. Related articles: imc, peso-ideal, calorias-diarias. Objetivo: conectar IMC → Peso Ideal → TMB → Calorias Diárias para fortalecer cluster saúde e maximizar tempo de permanência.
 - **Published Knowledge Hub article: `calorias-diarias`** (Calorias Diárias: Quantas Calorias Você Deve Consumir por Dia) - category: saude, cluster: saude-imc (satellite). Related calculators: calorias-diarias, taxa-metabolica-basal. Related articles: imc, peso-ideal. Objetivo: completar base metabólica do cluster saúde para aumentar autoridade e aprovação AdSense.
