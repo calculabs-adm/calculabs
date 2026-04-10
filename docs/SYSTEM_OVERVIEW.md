@@ -79,5 +79,5 @@ Execução: `bun run src/lib/validate-article.ts [slug]`
 
 ## Última Atualização
 
-2026-04-10 — Performance UX/CWV: Header convertido para Server Component (menos JS inicial), fontes com `display: swap`, Clarity em `lazyOnload` e ajustes de carregamento para reduzir impacto em LCP/CLS.
+2026-04-10 — LCP fix: CookieConsent lazy-loaded (ssr: false) para remover banner como candidato LCP, preconnect para GTM/AdSense, browserslist otimizado para reduzir polyfills. Header convertido para Server Component (menos JS inicial), fontes com `display: swap`, Clarity em `lazyOnload` e ajustes de carregamento para reduzir impacto em LCP/CLS.
 2026-04-09 — Atualização: 75 calculadoras, 42 artigos publicados, Knowledge Hub expandido com artigo sobre mediana no cluster matematica-basica.

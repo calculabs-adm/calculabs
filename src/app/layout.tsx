@@ -1,12 +1,17 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import CookieConsent from "@/components/consent/CookieConsent";
 import GtmLoader from "@/components/consent/GtmLoader";
 import AdsenseLoader from "@/components/ads/AdsenseLoader";
+
+// Lazy load CookieConsent to prevent LCP impact
+const CookieConsent = dynamic(() => import("@/components/consent/CookieConsent"), {
+  ssr: false,
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -93,6 +98,8 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://www.clarity.ms" />
         <link rel="dns-prefetch" href="https://www.clarity.ms" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}

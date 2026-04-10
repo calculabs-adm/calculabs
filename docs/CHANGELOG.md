@@ -4,6 +4,9 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
 
+- LCP critical fix: lazy-loaded `CookieConsent` component with `ssr: false` to prevent cookie banner from being LCP candidate, reducing LCP from 5.3s baseline by removing server-side render impact.
+- Preconnect optimization: added preconnect for GTM and AdSense domains in document head to reduce third-party loading latency.
+- Browserslist tuning: updated to target only last 2 versions of major browsers (Chrome, Edge, Safari, Firefox) to eliminate unnecessary polyfills and reduce JS bundle size.
 - Core Web Vitals optimization pass: migrated `Header` to Server Component (removed global `use client` hydration path), preserving search via GET form and dedicated `/busca` route to reduce initial JS/TBT and improve above-the-fold render timing.
 - Font and third-party loading tuning: set `display: "swap"` on `next/font` declarations and moved Microsoft Clarity script strategy from `afterInteractive` to `lazyOnload` with `dns-prefetch` to avoid impacting initial paint/LCP.
 - Performance optimization: Updated TypeScript target to ES2020, added modern browserslist config, preconnect for third-party scripts (Clarity), reducing polyfills and improving Core Web Vitals LCP scores
