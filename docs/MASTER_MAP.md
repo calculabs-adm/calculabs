@@ -117,8 +117,6 @@ Mapa central do projeto CalcuLabs contendo clusters, artigos, calculadoras e rel
 | **Pillar** | `porcentagem` | Porcentagem: O Que É, Como Calcular e Aplicações Práticas no Dia a Dia |
 | Satellite | `regra-de-tres` | Regra de Três: Como Calcular, Tipos e Aplicações Práticas |
 | Satellite | `variacao-percentual` | Variação Percentual: Como Calcular Aumento e Queda Percentual na Prática |
-| Satellite | `regra-de-tres` | Regra de Três: Como Calcular, Tipos e Aplicações Práticas |
-| Satellite | `variacao-percentual` | Variação Percentual: Como Calcular Aumento e Queda Percentual na Prática |
 | Satellite | `media-aritmetica` | Média Aritmética: O Que É, Como Calcular e Exemplos Práticos |
 | Satellite | `media-ponderada` | Média Ponderada: O Que É, Como Calcular e Quando Usar |
 

@@ -53,6 +53,7 @@ Inventário oficial de artigos do Knowledge Hub. Todo artigo DEVE estar registra
 | 38 | ferias-proporcionais | Férias Proporcionais: Como Calcular, Quem Tem Direito e Quanto Você Deve Receber | trabalhista | satellite | publicado | high |
 | 39 | media-aritmetica | Média Aritmética: O Que É, Como Calcular e Exemplos Práticos | matematica-basica | satellite | publicado | high |
 | 40 | media-ponderada | Média Ponderada: O Que É, Como Calcular e Quando Usar | matematica-basica | satellite | publicado | high |
+| 41 | financiamento-imobiliario | Financiamento Imobiliário: Como Funciona, Como Calcular e Como Escolher o Melhor | gestao-financeira-pessoal | satellite | publicado | high |
 
 
 ---
