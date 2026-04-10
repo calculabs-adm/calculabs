@@ -59,7 +59,7 @@ Inventário oficial de artigos do Knowledge Hub. Todo artigo DEVE estar registra
 
 ## Última Atualização
 
-2026-04-11 — Inventário sincronizado com 40 artigos publicados. Clusters: engenharia-cimento (7), fisica-basica (9), juros-compostos (2), gestao-financeira-pessoal (8), matematica-basica (4), saude-imc (3), trabalhista (4). Artigos restaurados de backup local.
+2026-04-11 — Inventário sincronizado com 41 artigos publicados. Clusters: engenharia-cimento (7), fisica-basica (9), juros-compostos (2), gestao-financeira-pessoal (9), matematica-basica (5), saude-imc (3), trabalhista (4). Todos os artigos restaurados e validados.
 
 2026-04-08 — Artigo "taxa-metabolica-basal" adicionado ao cluster saude-imc. Cluster agora com 4 artigos (1 pillar, 3 satellites).
 

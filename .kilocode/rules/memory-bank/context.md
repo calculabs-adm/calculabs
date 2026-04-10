@@ -52,7 +52,7 @@ Portal brasileiro de calculadoras online gratuitas com 75 calculadoras em 8 cate
 | Calculadoras | 75 |
 | Categorias | 8 |
 | Subcategorias | 17 |
-| Artigos publicados | 40 |
+| Artigos publicados | 41 |
 | Clusters | 3 |
 | Páginas institucionais | 4 (/sobre, /contato, /privacidade, /termos) |
 

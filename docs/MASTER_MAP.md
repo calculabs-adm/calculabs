@@ -117,8 +117,9 @@ Mapa central do projeto CalcuLabs contendo clusters, artigos, calculadoras e rel
 | **Pillar** | `porcentagem` | Porcentagem: O Que É, Como Calcular e Aplicações Práticas no Dia a Dia |
 | Satellite | `regra-de-tres` | Regra de Três: Como Calcular, Tipos e Aplicações Práticas |
 | Satellite | `variacao-percentual` | Variação Percentual: Como Calcular Aumento e Queda Percentual na Prática |
+| Satellite | `regra-de-tres` | Regra de Três: Como Calcular, Tipos e Aplicações Práticas |
+| Satellite | `variacao-percentual` | Variação Percentual: Como Calcular Aumento e Queda Percentual na Prática |
 | Satellite | `media-aritmetica` | Média Aritmética: O Que É, Como Calcular e Exemplos Práticos |
-| Satellite | `media-ponderada` | Média Ponderada: O Que É, Como Calcular e Quando Usar |
 | Satellite | `media-ponderada` | Média Ponderada: O Que É, Como Calcular e Quando Usar |
 
 **Calculadoras relacionadas:**
@@ -131,7 +132,7 @@ Mapa central do projeto CalcuLabs contendo clusters, artigos, calculadoras e rel
 | `juros-simples` | Calculadora de Juros Simples |
 | `juros-compostos` | Calculadora de Juros Compostos |
 
-**Status:** Cluster completo (1 pillar + 3 satellites). Base sólida estabelecida com conceitos fundamentais da matemática básica, pronto para expansão em geometria e álgebra.
+**Status:** Cluster completo (1 pillar + 4 satellites). Base sólida estabelecida com conceitos fundamentais da matemática básica, pronto para expansão em geometria e álgebra.
 
 ---
 

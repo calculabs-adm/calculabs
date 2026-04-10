@@ -3688,5 +3688,63 @@
       "cluster_name": "matematica-basica",
       "satellites": []
     }
+  },
+  {
+    "slug": "media-ponderada",
+    "title": "Média Ponderada: O Que É, Como Calcular e Quando Usar",
+    "category": "matematica",
+    "meta_title": "Média Ponderada: Como Calcular, Fórmula e Exemplos Práticos",
+    "meta_description": "Aprenda média ponderada completa: fórmula, cálculo passo a passo, diferenças da média simples e aplicações em notas escolares e provas.",
+    "search_intent": "informacional",
+    "summary": "A média ponderada é essencial quando alguns valores têm mais importância que outros. Neste guia completo, você aprende a fórmula, cálculos passo a passo, aplicações em provas escolares e diferenças com média aritmética simples. Com exemplos práticos e calculadoras online.",
+    "content": "<h1>Média Ponderada: O Que É, Como Calcular e Quando Usar</h1>\n\n<p>A média ponderada é um conceito matemático fundamental que vai além da média aritmética simples. Enquanto a média comum trata todos os valores com igual importância, a média ponderada permite dar pesos diferentes para cada elemento, refletindo sua relevância relativa. Este conceito é crucial em situações do dia a dia, especialmente na educação, finanças e estatística. Neste guia completo, vamos explorar tudo sobre média ponderada: conceito, fórmula, aplicações práticas e diferenças com outros tipos de média.</p>\n\n<h2>O que é média ponderada</h2>\n\n<p>A média ponderada é uma medida estatística que calcula a média de um conjunto de valores, mas considerando que alguns desses valores têm maior importância (peso) que outros. Em vez de somar todos os valores e dividir pelo número de elementos (como na média aritmética), a média ponderada multiplica cada valor pelo seu peso correspondente, soma esses produtos e divide pela soma dos pesos.</p>\n\n<h2>Para que serve a média ponderada</h2>\n\n<p>A média ponderada serve para calcular médias quando alguns valores têm maior importância. É usada em educação, finanças, estatística e comércio.</p>\n\n<h2>Diferença entre média simples e média ponderada</h2>\n\n<p>Média simples: pesos iguais. Média ponderada: pesos diferentes refletindo importância.</p>\n\n<h2>Como calcular média ponderada (fórmula)</h2>\n\n<p>Fórmula: Σ (valor × peso) / Σ pesos</p>\n\n<p>Use nossa <a href=\"/matematica/basica/media-ponderada\">calculadora de média ponderada</a></p>\n\n<h2>Como calcular média ponderada passo a passo</h2>\n\n<p>1. Multiplique cada valor pelo peso. 2. Some os produtos. 3. Some os pesos. 4. Divida.</p>\n\n<h2>Exemplos práticos completos</h2>\n\n<p>Exemplo 1: Notas escolares com pesos.</p>\n<p>Exemplo 2: Média de vendas.</p>\n<p>Exemplo 3: Índice de inflação.</p>\n\n<h2>Erros comuns ao calcular média ponderada</h2>\n\n<p>Erros incluem confundir pesos com valores, esquecer soma de pesos, usar percentuais incorretamente.</p>\n\n<h2>Dicas práticas para usar no dia a dia</h2>\n\n<p>Use calculadoras, organize dados, verifique contexto.</p>\n\n<h2>Conclusão</h2>\n\n<p>A média ponderada é essencial para decisões justas. Use nossas calculadoras!</p>",
+    "publishedAt": "2026-04-09",
+    "faq": [
+      {
+        "q": "O que é média ponderada?",
+        "a": "Média que considera pesos diferentes."
+      }
+    ],
+    "how_to": [
+      "Identifique valores e pesos",
+      "Multiplique",
+      "Some produtos",
+      "Some pesos",
+      "Divida"
+    ],
+    "entities": [
+      "média ponderada",
+      "peso estatístico"
+    ],
+    "semantic_keywords": [
+      "média ponderada",
+      "calcular média ponderada"
+    ],
+    "examples": [
+      "Notas escolares",
+      "Vendas",
+      "Índices econômicos"
+    ],
+    "comparisons": [
+      "Simples vs ponderada"
+    ],
+    "related_calculators": [
+      "media-ponderada",
+      "media-aritmetica"
+    ],
+    "related_articles": [
+      "porcentagem"
+    ],
+    "internal_links": [
+      "media-aritmetica",
+      "porcentagem"
+    ],
+    "featured_snippet_answer": "Média ponderada: Σ(x×p) / Σp",
+    "priority": "high",
+    "cluster": {
+      "is_pillar": false,
+      "cluster_name": "matematica-basica",
+      "satellites": []
+    }
   }
 ]
