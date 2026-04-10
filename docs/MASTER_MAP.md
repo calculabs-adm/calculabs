@@ -131,7 +131,7 @@ Mapa central do projeto CalcuLabs contendo clusters, artigos, calculadoras e rel
 | `juros-simples` | Calculadora de Juros Simples |
 | `juros-compostos` | Calculadora de Juros Compostos |
 
-**Status:** Cluster completo (1 pillar + 5 satellites). Base sólida estabelecida com conceitos fundamentais da matemática básica, pronto para expansão em geometria e álgebra.
+**Status:** Cluster completo (1 pillar + 3 satellites). Base sólida estabelecida com conceitos fundamentais da matemática básica, pronto para expansão em geometria e álgebra.
 
 ---
 
