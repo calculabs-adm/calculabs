@@ -105,14 +105,17 @@ export default function RootLayout({
         <GtmLoader />
         <AdsenseLoader />
         <CookieConsentWrapper />
-        <Script id="microsoft-clarity" strategy="lazyOnload">
+        <Script
+          id="clarity-script"
+          strategy="afterInteractive"
+        >
           {`
-(function(c,l,a,r,i,t,y){
-    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-})(window, document, "clarity", "script", "w98ypnj8f4");
-`}
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "w98ypnj8f4");
+  `}
         </Script>
       </body>
     </html>

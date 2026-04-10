@@ -4,7 +4,7 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
 
-- CSP comprehensive fix: updated Content Security Policy in next.config.ts to allow all necessary scripts while maintaining security - added script-src-elem with 'self' and 'unsafe-inline' for Next.js internal scripts, expanded frame-src for AdSense iframes, removed restrictive font-src https restriction, ensuring no CSP blocking of _next/static, Clarity, GTM, or AdSense functionality.
+- Clarity implementation fix: corrected Microsoft Clarity script strategy from lazyOnload to afterInteractive for immediate data collection, updated script ID to clarity-script, ensuring proper execution with CSP active and no performance impact.
 - LCP critical fix: lazy-loaded `CookieConsent` component with `ssr: false` to prevent cookie banner from being LCP candidate, reducing LCP from 5.3s baseline by removing server-side render impact.
 - Preconnect optimization: added preconnect for GTM and AdSense domains in document head to reduce third-party loading latency.
 - Browserslist tuning: updated to target only last 2 versions of major browsers (Chrome, Edge, Safari, Firefox) to eliminate unnecessary polyfills and reduce JS bundle size.
