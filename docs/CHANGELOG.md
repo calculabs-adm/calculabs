@@ -4,6 +4,7 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
 
+- CSP security fix: updated Content Security Policy in next.config.ts to properly allow Microsoft Clarity scripts, connections, and images without compromising XSS protection - eliminates console errors and enables heatmap functionality.
 - LCP critical fix: lazy-loaded `CookieConsent` component with `ssr: false` to prevent cookie banner from being LCP candidate, reducing LCP from 5.3s baseline by removing server-side render impact.
 - Preconnect optimization: added preconnect for GTM and AdSense domains in document head to reduce third-party loading latency.
 - Browserslist tuning: updated to target only last 2 versions of major browsers (Chrome, Edge, Safari, Firefox) to eliminate unnecessary polyfills and reduce JS bundle size.

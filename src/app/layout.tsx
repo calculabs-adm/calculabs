@@ -1,17 +1,12 @@
 import type { Metadata } from "next";
-import dynamic from "next/dynamic";
 import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import CookieConsentWrapper from "@/components/consent/CookieConsentWrapper";
 import GtmLoader from "@/components/consent/GtmLoader";
 import AdsenseLoader from "@/components/ads/AdsenseLoader";
-
-// Lazy load CookieConsent to prevent LCP impact
-const CookieConsent = dynamic(() => import("@/components/consent/CookieConsent"), {
-  ssr: false,
-});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -109,7 +104,7 @@ export default function RootLayout({
         <Footer />
         <GtmLoader />
         <AdsenseLoader />
-        <CookieConsent />
+        <CookieConsentWrapper />
         <Script id="microsoft-clarity" strategy="lazyOnload">
           {`
 (function(c,l,a,r,i,t,y){
