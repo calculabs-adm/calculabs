@@ -4,7 +4,7 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
 
-- Clarity implementation fix: corrected Microsoft Clarity script strategy from lazyOnload to afterInteractive for immediate data collection, updated script ID to clarity-script, ensuring proper execution with CSP active and no performance impact.
+- refactor: remove direct Microsoft Clarity implementation, migrating to GTM for better CSP compatibility and centralized tracking management.
 - LCP critical fix: lazy-loaded `CookieConsent` component with `ssr: false` to prevent cookie banner from being LCP candidate, reducing LCP from 5.3s baseline by removing server-side render impact.
 - Preconnect optimization: added preconnect for GTM and AdSense domains in document head to reduce third-party loading latency.
 - Browserslist tuning: updated to target only last 2 versions of major browsers (Chrome, Edge, Safari, Firefox) to eliminate unnecessary polyfills and reduce JS bundle size.
