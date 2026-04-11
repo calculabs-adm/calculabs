@@ -77,7 +77,16 @@ Execução: `bun run src/lib/validate-article.ts [slug]`
 - `/privacidade` — Política de Privacidade (LGPD)
 - `/termos` — Termos de Uso
 
+## Busca
+
+A rota `/busca` executa busca unificada em dois conjuntos de dados estáticos:
+- Calculadoras (`src/data/calculators.json`): nome, descrição e keywords
+- Artigos (`src/data/articles.json` via whitelist): título, resumo, semantic_keywords e entities
+
+Os resultados são tipados por conteúdo (calculadora/artigo), com destino de navegação específico por tipo.
+
 ## Última Atualização
 
+2026-04-11 — Correção da busca: `/busca` passou a retornar calculadoras + artigos do Knowledge Hub, com UX/meta alinhadas ao comportamento real e estado vazio genérico de resultados.
 2026-04-10 — LCP fix: CookieConsent lazy-loaded (ssr: false) para remover banner como candidato LCP, preconnect para GTM/AdSense, browserslist otimizado para reduzir polyfills. Header convertido para Server Component (menos JS inicial), fontes com `display: swap`, Clarity em `lazyOnload` e ajustes de carregamento para reduzir impacto em LCP/CLS.
 2026-04-09 — Atualização: 75 calculadoras, 42 artigos publicados, Knowledge Hub expandido com artigo sobre mediana no cluster matematica-basica.

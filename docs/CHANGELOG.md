@@ -4,6 +4,7 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
 
+- fix: busca unificada em `/busca` agora indexa calculadoras e artigos do Knowledge Hub, com resultados tipados, links corretos por tipo e texto de UX/SEO alinhado ao comportamento real.
 - refactor: implement GTM globally in layout.tsx using next/script for 100% page coverage, removing consent-dependent loading that was causing missing tags on some pages.
 - LCP critical fix: lazy-loaded `CookieConsent` component with `ssr: false` to prevent cookie banner from being LCP candidate, reducing LCP from 5.3s baseline by removing server-side render impact.
 - Preconnect optimization: added preconnect for GTM and AdSense domains in document head to reduce third-party loading latency.

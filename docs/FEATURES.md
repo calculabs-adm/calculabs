@@ -17,7 +17,10 @@
 ### 3. Busca
 - Busca no header via formulário GET server-first (sem hidratação client-side global)
 - Página de busca dedicada (`/busca`)
-- Filtro por nome, descrição e keywords
+- Busca unificada de calculadoras e artigos do Knowledge Hub
+- Filtro em calculadoras: nome, descrição e keywords
+- Filtro em artigos: título, resumo, semantic_keywords e entities
+- Resultados com tipagem visual (badge "Calculadora"/"Artigo") e links específicos por tipo
 
 ### 4. Conteúdo Educacional (por calculadora)
 - Exibição da fórmula

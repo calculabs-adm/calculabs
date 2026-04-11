@@ -2,6 +2,7 @@
 
 ## Recently Completed
 
+- [x] Fixed unified search in `/busca`: page now returns calculators + Knowledge Hub articles, aligns Header promise ("Buscar calculadoras e artigos"), updates search UX labels/empty state, and refreshes search metadata text to match real behavior.
 - [x] Advanced Core Web Vitals optimization pass (real/perceived LCP): Header migrated from client typeahead to Server Component with GET search form, reducing global hydration and initial JS/TBT while preserving `/busca` flow.
 - [x] Rendering-priority tuning: `next/font` updated with `display: swap`; Microsoft Clarity script switched from `afterInteractive` to `lazyOnload` and DNS prefetch added to minimize above-the-fold competition.
 - [x] CLS hardening maintained for monetization blocks via reserved ad space (`minHeight`) and no change to GTM/tracking behavior.
@@ -78,6 +79,7 @@ Portal brasileiro de calculadoras online gratuitas com 75 calculadoras em 8 cate
 
 | Date | Changes |
 |------|---------|
+| 2026-04-11 | Busca corrigida para retorno unificado (calculadoras + artigos) na rota `/busca`, com UX/meta alinhadas |
 | 2026-04-10 | Advanced CWV/LCP optimization: Header moved to Server Component, next/font swap display, Clarity lazyOnload + dns-prefetch |
 | 2026-04-08 | Added E-E-A-T authority block to all Knowledge Hub articles |
 | 2026-04-09 | Artigo financiamento-imobiliario publicado como satellite do cluster gestao-financeira-pessoal |

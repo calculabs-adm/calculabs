@@ -95,7 +95,7 @@ Exemplo: `/financas-pessoais/juros-investimentos/juros-compostos`
 | Rota | Tipo | Função |
 |------|------|--------|
 | `/` | Static | Homepage |
-| `/busca?q=` | Dynamic | Busca de calculadoras |
+| `/busca?q=` | Dynamic | Busca unificada de calculadoras + artigos |
 | `/:categoria` | SSG | Lista de subcategorias |
 | `/:categoria/:subcategoria/:calculo` | SSG | Página da calculadora |
 | `/conhecimento/:slug` | SSG | Página de artigo (Knowledge Hub) |
