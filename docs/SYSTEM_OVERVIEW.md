@@ -77,13 +77,20 @@ Execução: `bun run src/lib/validate-article.ts [slug]`
 - `/privacidade` — Política de Privacidade (LGPD)
 - `/termos` — Termos de Uso
 
-## Busca
+## Sistema de Busca
 
-A rota `/busca` executa busca unificada em dois conjuntos de dados estáticos:
-- Calculadoras (`src/data/calculators.json`): nome, descrição e keywords
-- Artigos (`src/data/articles.json` via whitelist): título, resumo, semantic_keywords e entities
+**Header com Dropdown Interativo**:
+- Sugestões em tempo real ao digitar 2+ caracteres
+- Ícones diferenciados: calculadoras (azul) e artigos (verde)
+- Navegação direta para o conteúdo selecionado
+- Link para "Ver todos os resultados" → `/busca`
 
-Os resultados são tipados por conteúdo (calculadora/artigo), com destino de navegação específico por tipo.
+**Página de Busca Unificada (`/busca`)**:
+- Busca em dois conjuntos de dados estáticos:
+  - Calculadoras (`src/data/calculators.json`): nome, descrição e keywords
+  - Artigos (`src/data/articles.json` via whitelist): título, resumo, semantic_keywords e entities
+- Resultados tipados com badges visuais
+- Destino de navegação específico por tipo de conteúdo
 
 ## Última Atualização
 

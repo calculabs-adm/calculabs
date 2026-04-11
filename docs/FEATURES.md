@@ -15,12 +15,13 @@
 - URLs amigáveis: `/{categoria}/{subcategoria}/{calculadora}`
 
 ### 3. Busca
-- Busca no header via formulário GET server-first (sem hidratação client-side global)
-- Página de busca dedicada (`/busca`)
-- Busca unificada de calculadoras e artigos do Knowledge Hub
-- Filtro em calculadoras: nome, descrição e keywords
-- Filtro em artigos: título, resumo, semantic_keywords e entities
-- Resultados com tipagem visual (badge "Calculadora"/"Artigo") e links específicos por tipo
+- **Dropdown interativo no header**: Sugestões em tempo real ao digitar (2+ caracteres)
+- **Sugestões separadas**: Ícones diferenciados para calculadoras (azul) e artigos (verde)
+- **Busca unificada**: Calculadoras e artigos do Knowledge Hub
+- Página de busca dedicada (`/busca`) como fallback
+- Filtro inteligente: nome, descrição, keywords, semantic_keywords e entities
+- Navegação direta: Clique na sugestão para ir diretamente ao conteúdo
+- Link para "Ver todos os resultados" quando há mais opções
 
 ### 4. Conteúdo Educacional (por calculadora)
 - Exibição da fórmula
