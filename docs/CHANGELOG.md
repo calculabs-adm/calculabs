@@ -4,7 +4,7 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
 
-- fix: add all Microsoft Clarity subdomains (c.clarity.ms, static.clarity.ms) to CSP script-src, connect-src, and img-src to allow complete GTM integration.
+- refactor: move CSP from next.config.ts to middleware.ts for reliable header application across all routes and platforms, ensuring Clarity scripts load without blocking.
 - LCP critical fix: lazy-loaded `CookieConsent` component with `ssr: false` to prevent cookie banner from being LCP candidate, reducing LCP from 5.3s baseline by removing server-side render impact.
 - Preconnect optimization: added preconnect for GTM and AdSense domains in document head to reduce third-party loading latency.
 - Browserslist tuning: updated to target only last 2 versions of major browsers (Chrome, Edge, Safari, Firefox) to eliminate unnecessary polyfills and reduce JS bundle size.
