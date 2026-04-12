@@ -4,6 +4,7 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
 
+- **Published Knowledge Hub article: `peso-outros-planetas`** (Peso em Outros Planetas: Como Calcular o Efeito da Gravidade no Seu Peso) - category: ciencia, cluster: fisica-basica (satellite). Related calculators: peso-outros-planetas, forca-lei-de-newton. Related articles: gravidade-e-peso, pressao-na-fisica, energia-na-fisica. Objetivo: expandir cluster fisica-basica, conectar com gravidade e peso, aumentar autoridade em física planetária.
 - fix: **sistema de busca completamente restaurado** - dropdown interativo no header com sugestões separadas de calculadoras e artigos, navegação direta, e página `/busca` como fallback unificado com resultados tipados.
 - fix: busca unificada em `/busca` agora indexa calculadoras e artigos do Knowledge Hub, com resultados tipados, links corretos por tipo e texto de UX/SEO alinhado ao comportamento real.
 - refactor: implement GTM globally in layout.tsx using next/script for 100% page coverage, removing consent-dependent loading that was causing missing tags on some pages.
